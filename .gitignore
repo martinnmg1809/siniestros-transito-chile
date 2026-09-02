@@ -16,3 +16,6 @@ venv/
 clima_ruta5.npz
 cache_clima.json
 coef_modelo.npy
+modelo_final.json
+riesgo.json
+pagina.html

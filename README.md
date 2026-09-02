@@ -332,6 +332,9 @@ por tramo.
 | `clima.py` | Serie horaria de precipitación 2020–2024 para las 60 celdas ERA5 de la Ruta 5. |
 | `modelo.py` | Modelo Poisson tramo × hora con validación temporal (§6). |
 | `modelo_clima.py` | Igual, con precipitación, para medir cuánto aporta el clima. |
+| `entrenar.py` | Ajusta el modelo final sobre 2020–2024 y guarda `modelo_final.json`. |
+| `riesgo.py` | Combina el modelo con el pronóstico de Open-Meteo: riesgo por tramo y hora. |
+| `generar_pagina.py` | Genera `pagina.html`, autocontenida, para correr por cron cada hora. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
 ### Cómo reproducir todo desde cero
@@ -344,6 +347,15 @@ python3 feriados.py            # calendario -> feriados.json
 python3 clima.py               # 60 llamadas, ~5 min -> clima_ruta5.npz
 python3 modelo.py 5            # modelo y validación temporal
 python3 modelo_clima.py        # cuánto aporta el clima
+
+python3 entrenar.py            # modelo final -> modelo_final.json
+python3 generar_pagina.py      # pronóstico + página -> pagina.html
+```
+
+La página se regenera sola con un cron cada hora:
+
+```
+0 * * * * cd /ruta/al/repo && python3 generar_pagina.py
 ```
 
 La extracción y los hotspots corren con la biblioteca estándar. El modelo necesita
