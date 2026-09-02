@@ -1,0 +1,13 @@
+# Datos crudos regenerables con descargar_conaset.py
+*.json
+!package.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
