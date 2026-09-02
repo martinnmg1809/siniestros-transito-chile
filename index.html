@@ -1,0 +1,338 @@
+<meta charset="utf-8">
+<title>Riesgo Ruta 5 Sur</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Riesgo de siniestros por tramo y hora en la Ruta 5 Sur, recalculado en vivo con el pronóstico de lluvia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --ground:#E9EBE6; --surface:#F6F7F4; --sunk:#DFE2DC;
+  --ink:#161A1B; --ink-2:#4A5350; --ink-3:#7C8681;
+  --line:#CFD4CC; --accent:#0F5C43; --accent-soft:#DCE7E1;
+  --rain:#3D7FA8;
+  --q0:#9AA6A0; --q1:#C9942A; --q2:#B33A22;
+  --shadow:0 1px 2px rgba(22,26,27,.06),0 8px 24px -16px rgba(22,26,27,.28);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#101315; --surface:#181C1E; --sunk:#0B0E0F;
+    --ink:#E8EBE7; --ink-2:#A2ADA8; --ink-3:#6C7772;
+    --line:#2A3134; --accent:#4FBF95; --accent-soft:#17302A;
+    --rain:#5FA3CC; --q0:#5D6B66; --q1:#D9A63C; --q2:#D0553A;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101315; --surface:#181C1E; --sunk:#0B0E0F;
+  --ink:#E8EBE7; --ink-2:#A2ADA8; --ink-3:#6C7772;
+  --line:#2A3134; --accent:#4FBF95; --accent-soft:#17302A;
+  --rain:#5FA3CC; --q0:#5D6B66; --q1:#D9A63C; --q2:#D0553A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -16px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;
+  font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:40px 24px 72px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:28px}
+h1{font-size:clamp(30px,5vw,44px);font-weight:700;letter-spacing:-.025em;
+  margin:6px 0 8px;text-wrap:balance;line-height:1.05}
+.sub{color:var(--ink-2);font-size:14px;margin:0}
+
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:14px;margin-bottom:34px}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:16px 18px;box-shadow:var(--shadow)}
+.metric .v{font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1.05;
+  display:block;margin:4px 0 2px}
+.metric .n{font-size:12.5px;color:var(--ink-2);line-height:1.4}
+.pill{display:inline-block;padding:2px 9px;border-radius:2px;font-size:12px;
+  font-weight:600;letter-spacing:.02em}
+
+section{margin-bottom:40px}
+h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;
+  color:var(--ink-2);margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.hint{font-size:13px;color:var(--ink-3);margin:10px 0 16px;max-width:64ch}
+
+/* tira kilométrica */
+.strip{overflow-x:auto;padding-bottom:4px}
+.grid{display:grid;grid-template-columns:148px repeat(12,minmax(30px,1fr));
+  gap:2px;min-width:640px}
+.grid .hd{font-size:11px;color:var(--ink-3);text-align:center;padding-bottom:6px;
+  font-weight:600}
+.grid .hd.now{color:var(--accent)}
+.rowlab{font-size:11.5px;color:var(--ink-2);display:flex;align-items:center;
+  justify-content:flex-end;gap:7px;padding-right:9px;white-space:nowrap;
+  border-right:1px solid var(--line)}
+.rowlab .rg{color:var(--ink-2);font-size:9.5px;letter-spacing:.05em;
+  text-transform:uppercase;font-weight:600}
+.rowlab.nueva{border-top:1px solid var(--ink-3)}
+.cell{height:15px;border-radius:1px;position:relative}
+.cell[data-rain="1"]::after{content:"";position:absolute;inset:auto 0 0 0;height:2px;
+  background:var(--rain)}
+.legend{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:14px;
+  font-size:12px;color:var(--ink-2)}
+.ramp{display:flex;gap:2px}
+.ramp i{width:22px;height:9px;border-radius:1px;display:block}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+tr:last-child td{border-bottom:none}
+.tag{font-size:11.5px;padding:2px 7px;border-radius:2px;margin-right:5px;
+  white-space:nowrap;display:inline-block}
+.tag.rain{background:var(--rain);color:#fff}
+.tag.other{background:var(--sunk);color:var(--ink-2);border:1px solid var(--line)}
+
+.notes{font-family:"Source Serif 4",Georgia,serif;font-size:15.5px;line-height:1.65;
+  color:var(--ink-2);max-width:66ch}
+.notes p{margin:0 0 13px}
+.notes strong{color:var(--ink);font-weight:600}
+.notes code{font-family:"IBM Plex Mono",monospace;font-size:13px;
+  background:var(--sunk);padding:1px 5px;border-radius:2px}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--ink-3)}
+a{color:var(--accent)}
+@media (prefers-reduced-motion:no-preference){
+  .cell{transition:outline-color .12s}
+}
+.cell:hover{outline:2px solid var(--ink);outline-offset:1px}
+
+.aviso{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--q2);
+  border-radius:3px;padding:18px 20px;color:var(--ink-2);font-size:14.5px}
+.vivo{color:var(--accent);font-weight:600}
+.vivo::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--accent);margin-right:6px;vertical-align:middle}
+.cargando{color:var(--ink-3);font-size:14px;padding:60px 0;text-align:center}
+</style>
+<div class="wrap">
+  <div id="app"><p class="cargando">Consultando el pronóstico y calculando el riesgo…</p></div>
+  <div id="notas" hidden>
+<section>
+  <h2>Cómo leer esto</h2>
+  <div class="notes">
+    <p><strong>Esto no dice dónde habrá un accidente.</strong> La tasa base es de
+    <code>0,13&nbsp;%</code> por tramo-hora: en toda la Ruta 5 Sur se esperan
+    <code>3,95</code> siniestros en 12 horas repartidos en 1.275 km. Cualquier sistema que
+    prometa señalar el kilómetro y la hora exactos está sobrevendiendo. Lo que sí se puede
+    afirmar es cuántos siniestros esperar en la ruta completa y qué tramos concentran el
+    riesgo.</p>
+
+    <p><strong>El mapa fijo hace casi todo el trabajo.</strong> En validación temporal
+    (entrena 2020–2023, prueba 2024), vigilar el 5&nbsp;% de las horas-tramo más riesgosas
+    cubre el 15,0&nbsp;% de los siniestros reales usando solo la ubicación, y el 19,2&nbsp;%
+    sumando hora, día, feriado y clima. La capa dinámica aporta un 28&nbsp;% relativo: es
+    real, no es transformadora.</p>
+
+    <p><strong>La lluvia es el factor más fuerte del modelo</strong> (2,12x sobre calzada
+    seca), por encima de la hora punta de las 18:00 (1,70x). Y probablemente esté
+    subestimada: la precipitación viene del reanálisis ERA5, que promedia sobre celdas de
+    25&nbsp;km y se pierde casi la mitad de las lluvias que registra Carabineros en terreno
+    (kappa 0,26). El error de medición atenúa el coeficiente hacia 1.</p>
+
+    <p><strong>Lo que falta.</strong> No hay flujo vehicular horario: el censo del MOP
+    entrega un promedio anual por punto, así que el modelo no puede separar «hay más
+    autos» de «conducir a esta hora es más peligroso por auto». Los datos son de
+    Carabineros y subregistran los siniestros sin lesionados. El campo de ruta solo está
+    poblado hasta 2024.</p>
+  </div>
+</section>
+<footer>
+  Siniestros: CONASET / Carabineros de Chile, 14.425 registros 2020–2024 en la Ruta 5 Sur.
+  Pronóstico: <a href="https://open-meteo.com">Open-Meteo</a>, consultado por tu navegador
+  al abrir esta página. Feriados: CONASET.
+  Modelo Poisson sobre 11,2 millones de celdas tramo × hora.
+  <a href="https://github.com/martinnmg1809/siniestros-transito-chile">Código y datos</a>.
+</footer>
+</div>
+</div>
+<script>
+const DATA = {"banda_km":25,"cortes":[0.1,0.5],"coef":{"tramo":[0.3912441011596927,-0.9258861788634121,-0.590275820452238,0.6247187918400026,0.467532597143816,0.42105661927864535,1.0856223616727916,1.0080920540518483,0.4051066468265024,0.26810211016897484,0.10096520015137511,0.802787826239631,1.1007738265574785,1.1935662810815588,1.007544757372614,1.0075447573726126,0.9787833833450081,0.7568216247616865,0.6111712939579919,1.4500243100604955,1.2763807562475877,1.4500243100604948,1.126701186959967,1.0473073112865574,1.2331722742178008,0.8819789371078316,0.7991577970659735,1.0039017345701515,0.5418559460816046,0.3323470296645662,0.3816385839500487,0.7555616855348959,1.1567693986899397,0.24472867829217498,0.6862598628545473,1.0173139328958907,1.2360129077483766,1.5527232298164093,1.9873777383796303,1.636169211584754,0.4352330533993323,0.3881012016044126,0.38073271720126406,0.5941004508208088,1.6703599991095044,0.5256835693920354,-0.06636861005240689,0.8698433062283811,1.036621891039203,1.4920303474152197,1.4455645711099092,1.4165438271851498,1.16488619626912,1.2305287559035067,1.665348874373321,0.8793510883218989,0.38682349017788337,0.3542109881948431,0.4339540512666769,-0.17475089166835248,0.7382367397106087,0.7881260483254013,0.6007064137798004,0.733285535106099,1.0589380654016032,-0.16325538323334074,0.5745853698987121,0.6007064137798006,0.1116301700834897,-0.06695304095653686,0.7601744966966084,0.06985111495390867,0.20911882228678136,0.23943313823474266,0.42888818299395765,0.6467915193231055,0.8050254741905437,0.557077206827975,0.9778573868590981,0.2831005455294478,-0.8070889202598084,1.000728681532965,0.6297810281671486,-0.36672507280226596,0.4811534106875928,0.03604533909846553,-0.3997370784064303,-0.39973707840642875,0.6014837113437681,-0.2883009250352083,-0.9705563729591387,-0.258837138572308,-0.14839231305805808,-0.18747688206153532,-0.08689764108383506,-0.014514049327881317,-0.0380795210765507,0.10348347995285614,0.20094921234923568,0.23748472819481975,-0.20528118743455973,-0.19187238378178278,-0.3083238453504637,0.5189360364881477,0.08223251845397805,-0.02796309912457143,-0.48677202165849787,-0.03950744317951153,-0.735601336707047,-1.3809422738551898,-0.6921754255510603,1.110806035461951,0.4272044033823415,-0.6306147937468719,0.3948195365774869,-0.21298254110864076,-0.24091200883581998,0.11532837300465991,-0.26958010526007753,0.34463981635644786,-0.1006626432392508,0.03593781207668931,0.057018107256949856,-0.17642660013917855,0.3976111668044427,0.13794840690422702,-0.3104444722469721,-0.19726703378563706,-0.1707405502937849,0.6753913339844718,0.7204751944512438,1.0268740783184807,-0.40848030733073987,-0.6224890818465694,-0.704303584687088,0.534701916718237,0.8299286613974457,0.6818800284786373,0.8959818333057133,0.7183377803347878,0.4429668551721562,-0.848752875777259,-0.5191314002031431,-0.5191314002031409,-0.6814725877714816,-0.051080314170110726,-0.36693020598936066,-0.22376635254044716,0.11607585053909249,-0.09755152786623,-0.6049032541868171,-0.16925083529816692,-0.0593823444089176,-0.3449300071943173,-1.2723916187185897,-0.5395863374622962,-0.7764078820301703,-0.24410761722042973,-0.7186091256944669,-0.7186091256944656,-0.037188631235331275,-0.6918003219987932,-0.6131681287685937,-0.6131681287685925,0.10826400400178825,-0.25860996016256343,-0.23146266176806476,-0.07340129938977613,-0.5308755143339317,-0.6829486642216298,-0.5308755143339312,-0.8130190676153926,-0.5669528516886119,-0.2934019068745233,-0.7116414279597906,-0.036906483787089966,-0.8474182681822278,-0.3529954512126434,-0.29340190687452405,-0.1595724143145081,-0.13433927482846658,0.10863033639481012,0.06856072508342004,0.25490504542938125,-0.8989426632542498,-0.33024954864939426,-0.4106971137295119,-1.2472492253609797,-0.7498455621523367,-0.5859800825279979,-0.5124925914103875,-0.7185432825588858,-0.3005310491830043,-0.11998919444447687,-0.5299147261793792,-1.0147911326468795,-0.026999333152825815,0.20385213073734829,0.13339139495111,0.09628560146009393,0.36183934472772744,0.6085838130039692,0.642537341632514,1.2887179430487425,0.5248134730151958,0.6203182737755014,-0.31666608388735046,-0.6046910863202843,-0.8291132868606143,-0.8762072712584948,-1.0314738486942945,-1.5935707740750913,-1.4297351930507685,-1.2163195668164284,-0.5022825613820626,-1.2344819309724668,-0.763941088684567,-1.301502529361787,-1.2994330775407397,-0.8969080567147251,-0.36332690859370476,-0.0893511054294695,-0.404498721572009,-0.9976688393703331,-1.5248041436449433,-0.6803177614289071,-1.5248041436449433,-1.7917598133297723,-1.1580098539678747,-1.1580098539678751,-0.9865068275617894,-0.9865068275617905,-0.5570364513357179,-0.33333027863860687,-0.1976105194623904,-0.15466780585473866,1.0964093178419327,0.08810163887765338,0.5169452308400885,-0.2593050700200815,0.06827533245928454,-0.5352282909392623,-0.9990476555456692,-1.5260912771133468,-1.1703180584284378,-1.4466833916962931,-0.9990476555456701,-1.7929684662216947,-0.7598227249342402,-1.2976550221073624,-0.9958153255251543,-1.3685731336946771,-0.4653055923296527,-0.49350881284625636,-1.293425939128028],"hora":[-0.4061597501974285,-0.5048949166931673,-0.6086252286142027,-0.6138760562860816,-0.49250182597085423,-0.5599231272453837,-0.24469085772050495,0.24474133807914528,0.4737740166563457,0.23627316173315283,0.17955110801564536,0.17273959302981218,0.15954215956983603,0.19046542610679118,0.20315904938119614,0.22971127881413156,0.31994017585792855,0.3961237266784993,0.5241478847558901,0.3938094368186523,0.19009542302484295,-0.008660054184543853,-0.1435021436861703,-0.35218793529218456],"dow":[0.07578098852567651,-0.0756751100440007,-0.02941567651727366,-0.03296851968991092,0.10514731346144446,-0.01124246170040204,-0.052574651398068765],"mes":[0.21519633553488104,0.3389146489624025,-0.04716954682177868,-0.0588182430266951,-0.09988391287295544,-0.1539891226531852,0.07233453951819574,-0.08952948224524317,-0.02495006895274127,-0.1445483369039256,-0.08743021910310188,0.058925291195211144],"feriado":[-0.0747333250594837,0.10501149643892194,-0.13795284821529208,0.08672655945375404],"lluvia":[-0.3515863497283917,-0.07048207152289303,0.4011203038969424],"intercepto":-6.6841664531070855},"tramos":[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175,180,185,190,195,200,205,210,215,220,225,230,235,240,245,250,255,260,265,270,275,280,285,290,295,300,305,310,315,320,325,330,335,340,345,350,355,360,365,370,375,380,385,390,395,400,405,410,415,420,425,430,435,440,445,450,455,460,465,470,475,480,485,490,495,500,505,510,515,520,525,530,535,540,545,550,555,560,565,570,575,580,585,590,595,600,605,610,615,620,625,630,635,640,645,650,655,660,665,670,675,680,685,690,695,700,705,710,715,720,725,730,735,740,745,750,755,760,765,770,775,780,785,790,795,800,805,810,815,820,825,830,835,840,845,850,855,860,865,870,875,880,885,890,895,900,905,910,915,920,925,930,935,940,945,950,955,960,965,970,975,980,985,990,995,1000,1005,1010,1015,1020,1025,1030,1035,1040,1045,1050,1055,1060,1065,1070,1075,1080,1085,1090,1095,1100,1105,1110,1115,1120,1125,1130,1135,1140,1145,1150,1155,1160,1165,1170,1175,1180,1185,1190,1195,1200,1205,1210,1215,1220,1225,1230,1235,1240,1245,1250,1255,1260,1265,1270],"banda_ix":[0,0,0,0,0,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,8,8,8,8,8,9,9,9,9,9,10,10,10,10,10,11,11,11,11,11,12,12,12,12,12,13,13,13,13,13,14,14,14,14,14,15,15,15,15,15,16,16,16,16,16,17,17,17,17,17,18,18,18,18,18,19,19,19,19,19,20,20,20,20,20,21,21,21,21,21,22,22,22,22,22,23,23,23,23,23,24,24,24,24,24,25,25,25,25,25,26,26,26,26,26,27,27,27,27,27,28,28,28,28,28,29,29,29,29,29,30,30,30,30,30,31,31,31,31,31,32,32,32,32,32,33,33,33,33,33,34,34,34,34,34,35,35,35,35,35,36,36,36,36,36,37,37,37,37,37,38,38,38,38,38,39,39,39,39,39,40,40,40,40,40,41,41,41,41,41,42,42,42,42,42,43,43,43,43,43,44,44,44,44,44,45,45,45,45,45,46,46,46,46,46,47,47,47,47,47,48,48,48,48,48,49,49,49,49,49,50,50,50,50,50],"bandas":[0,25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850,875,900,925,950,975,1000,1025,1050,1075,1100,1125,1150,1175,1200,1225,1250],"regiones":["R. Metropolitana","R. Metropolitana","O'Higgins","O'Higgins","O'Higgins","O'Higgins","Maule","Maule","Maule","Maule","Maule","Maule","Maule","Maule","Ñuble","Ñuble","Ñuble","Ñuble","Biobío","Biobío","Biobío","Biobío","La Araucanía","La Araucanía","La Araucanía","La Araucanía","La Araucanía","La Araucanía","La Araucanía","La Araucanía","La Araucanía","Los Ríos","Los Ríos","Los Ríos","Los Ríos","Los Ríos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos","Los Lagos"],"tramo_celda":[59,59,59,59,58,58,58,58,58,58,57,57,57,57,57,57,56,56,56,56,56,56,55,54,54,54,54,54,54,53,53,53,53,53,53,52,52,52,52,52,52,52,51,50,50,50,50,50,50,49,48,48,48,48,48,48,47,47,47,47,47,46,46,46,46,46,46,46,45,45,45,45,45,44,43,43,43,43,43,43,43,42,41,41,41,41,41,41,40,40,40,40,40,39,37,37,37,38,38,38,36,35,35,36,36,36,36,34,34,34,34,34,33,33,31,31,31,31,31,32,30,30,30,30,29,29,28,28,28,28,28,27,27,27,27,27,27,27,26,26,25,25,25,25,23,24,24,24,24,24,24,23,22,22,22,22,22,21,21,21,19,19,19,19,20,20,20,18,18,18,18,18,18,17,17,17,17,17,17,16,16,16,16,16,16,15,14,14,14,14,14,12,12,13,13,13,13,11,11,11,11,11,11,10,10,10,10,10,9,9,9,8,8,8,7,7,7,7,5,5,6,5,5,5,5,5,5,5,4,4,4,4,4,4,4,3,3,3,3,3,3,2,2,2,2,2,2,2,0,0,0,0,0,1,1],"celdas":[[-43.0,-73.75],[-43.0,-73.5],[-42.75,-73.75],[-42.5,-73.75],[-42.25,-73.75],[-42.0,-73.75],[-41.75,-73.75],[-41.75,-73.5],[-41.75,-73.25],[-41.5,-73.25],[-41.5,-73.0],[-41.25,-73.0],[-41.0,-73.25],[-41.0,-73.0],[-40.75,-73.25],[-40.75,-73.0],[-40.5,-73.0],[-40.25,-73.0],[-40.0,-72.75],[-39.75,-73.0],[-39.75,-72.75],[-39.5,-73.0],[-39.5,-72.75],[-39.25,-72.75],[-39.25,-72.5],[-39.0,-72.75],[-39.0,-72.5],[-38.75,-72.5],[-38.5,-72.5],[-38.25,-72.5],[-38.25,-72.25],[-38.0,-72.5],[-38.0,-72.25],[-37.75,-72.5],[-37.75,-72.25],[-37.5,-72.5],[-37.5,-72.25],[-37.25,-72.5],[-37.25,-72.25],[-37.0,-72.5],[-37.0,-72.25],[-36.75,-72.25],[-36.5,-72.25],[-36.5,-72.0],[-36.25,-72.0],[-36.25,-71.75],[-36.0,-71.75],[-35.75,-71.75],[-35.5,-71.75],[-35.5,-71.5],[-35.25,-71.5],[-35.25,-71.25],[-35.0,-71.25],[-34.75,-71.0],[-34.5,-71.0],[-34.5,-70.75],[-34.25,-70.75],[-34.0,-70.75],[-33.75,-70.75],[-33.5,-70.75]],"basal_hora":0.3289773763911695,"feriados":{"2019-12-31":"inicio","2020-01-01":"final","2020-04-09":"inicio","2020-04-10":"intermedio","2020-04-11":"intermedio","2020-04-12":"final","2020-04-30":"inicio","2020-05-01":"intermedio","2020-05-02":"intermedio","2020-05-03":"final","2020-05-20":"inicio","2020-05-21":"intermedio","2020-05-22":"intermedio","2020-05-23":"intermedio","2020-05-24":"final","2020-06-19":"inicio","2020-06-20":"intermedio","2020-06-21":"final","2020-06-26":"inicio","2020-06-27":"intermedio","2020-06-28":"intermedio","2020-06-29":"final","2020-07-15":"inicio","2020-07-16":"intermedio","2020-07-17":"intermedio","2020-07-18":"intermedio","2020-07-19":"final","2020-08-14":"inicio","2020-08-15":"intermedio","2020-08-16":"final","2020-09-17":"inicio","2020-09-18":"intermedio","2020-09-19":"intermedio","2020-09-20":"final","2020-10-09":"inicio","2020-10-10":"intermedio","2020-10-11":"intermedio","2020-10-12":"final","2020-10-30":"inicio","2020-10-31":"intermedio","2020-11-01":"final","2020-12-04":"inicio","2020-12-05":"intermedio","2020-12-06":"intermedio","2020-12-07":"intermedio","2020-12-08":"final","2020-12-24":"inicio","2020-12-25":"intermedio","2020-12-26":"intermedio","2020-12-27":"final","2020-12-31":"inicio","2021-01-01":"intermedio","2021-01-02":"intermedio","2021-01-03":"final","2021-04-01":"inicio","2021-04-02":"intermedio","2021-04-03":"intermedio","2021-04-04":"final","2021-04-30":"inicio","2021-05-01":"intermedio","2021-05-02":"final","2021-05-20":"inicio","2021-05-21":"intermedio","2021-05-22":"intermedio","2021-05-23":"final","2021-06-18":"inicio","2021-06-19":"intermedio","2021-06-20":"intermedio","2021-06-21":"final","2021-06-25":"inicio","2021-06-26":"intermedio","2021-06-27":"intermedio","2021-06-28":"final","2021-07-15":"inicio","2021-07-16":"intermedio","2021-07-17":"intermedio","2021-07-18":"final","2021-08-13":"inicio","2021-08-14":"intermedio","2021-08-15":"final","2021-09-16":"inicio","2021-09-17":"intermedio","2021-09-18":"intermedio","2021-09-19":"final","2021-10-08":"inicio","2021-10-09":"intermedio","2021-10-10":"intermedio","2021-10-11":"final","2021-10-29":"inicio","2021-10-30":"intermedio","2021-10-31":"intermedio","2021-11-01":"final","2021-12-07":"inicio","2021-12-08":"final","2021-12-24":"inicio","2021-12-25":"intermedio","2021-12-26":"final","2021-12-31":"inicio","2022-01-01":"intermedio","2022-01-02":"final","2022-04-14":"inicio","2022-04-15":"intermedio","2022-04-16":"intermedio","2022-04-17":"final","2022-04-29":"inicio","2022-04-30":"intermedio","2022-05-01":"final","2022-05-20":"inicio","2022-05-21":"intermedio","2022-05-22":"final","2022-06-17":"inicio","2022-06-18":"intermedio","2022-06-19":"intermedio","2022-06-20":"intermedio","2022-06-21":"final","2022-06-24":"inicio","2022-06-25":"intermedio","2022-06-26":"intermedio","2022-06-27":"final","2022-07-15":"inicio","2022-07-16":"intermedio","2022-07-17":"final","2022-08-12":"inicio","2022-08-13":"intermedio","2022-08-14":"intermedio","2022-08-15":"final","2022-09-15":"inicio","2022-09-16":"intermedio","2022-09-17":"intermedio","2022-09-18":"intermedio","2022-09-19":"final","2022-10-07":"inicio","2022-10-08":"intermedio","2022-10-09":"intermedio","2022-10-10":"final","2022-10-28":"inicio","2022-10-29":"intermedio","2022-10-30":"intermedio","2022-10-31":"intermedio","2022-11-01":"final","2022-12-07":"inicio","2022-12-08":"final","2022-12-23":"inicio","2022-12-24":"intermedio","2022-12-25":"final","2022-12-30":"inicio","2022-12-31":"intermedio","2023-01-01":"intermedio","2023-01-02":"final","2023-04-06":"inicio","2023-04-07":"intermedio","2023-04-08":"intermedio","2023-04-09":"final","2023-04-28":"inicio","2023-04-29":"intermedio","2023-04-30":"intermedio","2023-05-01":"final","2023-05-19":"inicio","2023-05-20":"intermedio","2023-05-21":"final","2023-06-20":"inicio","2023-06-21":"final","2023-06-23":"inicio","2023-06-24":"intermedio","2023-06-25":"intermedio","2023-06-26":"final","2023-07-14":"inicio","2023-07-15":"intermedio","2023-07-16":"final","2023-08-11":"inicio","2023-08-12":"intermedio","2023-08-13":"intermedio","2023-08-14":"intermedio","2023-08-15":"final","2023-09-15":"inicio","2023-09-16":"intermedio","2023-09-17":"intermedio","2023-09-18":"intermedio","2023-09-19":"final","2023-10-06":"inicio","2023-10-07":"intermedio","2023-10-08":"intermedio","2023-10-09":"final","2023-10-26":"inicio","2023-10-27":"intermedio","2023-10-28":"intermedio","2023-10-29":"final","2023-12-07":"inicio","2023-12-08":"intermedio","2023-12-09":"intermedio","2023-12-10":"final","2023-12-22":"inicio","2023-12-23":"intermedio","2023-12-24":"intermedio","2023-12-25":"final","2023-12-29":"inicio","2023-12-30":"intermedio","2023-12-31":"intermedio","2024-01-01":"final","2024-03-28":"inicio","2024-03-29":"intermedio","2024-03-30":"intermedio","2024-03-31":"final","2024-04-30":"inicio","2024-05-01":"final","2024-05-17":"inicio","2024-05-18":"intermedio","2024-05-19":"intermedio","2024-05-20":"intermedio","2024-05-21":"final","2024-06-20":"inicio","2024-06-21":"intermedio","2024-06-22":"intermedio","2024-06-23":"final","2024-06-28":"inicio","2024-06-29":"intermedio","2024-06-30":"final","2024-07-12":"inicio","2024-07-13":"intermedio","2024-07-14":"intermedio","2024-07-15":"intermedio","2024-07-16":"final","2024-08-14":"inicio","2024-08-15":"final","2024-09-17":"inicio","2024-09-18":"intermedio","2024-09-19":"intermedio","2024-09-20":"intermedio","2024-09-21":"intermedio","2024-09-22":"final","2024-10-11":"inicio","2024-10-12":"intermedio","2024-10-13":"final","2024-10-30":"inicio","2024-10-31":"intermedio","2024-11-01":"intermedio","2024-11-02":"intermedio","2024-11-03":"final","2024-12-06":"inicio","2024-12-07":"intermedio","2024-12-08":"final","2024-12-24":"inicio","2024-12-25":"final"}};
+
+const B = DATA.banda_km, CORTES = DATA.cortes, C = DATA.coef;
+const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const DIAS = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
+const POS = ["no","inicio","intermedio","final"];
+const NOMPOS = {inicio:"salida a feriado", final:"regreso de feriado", intermedio:"feriado"};
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Rampa de riesgo: apagado -> ámbar -> señal. Separada del verde de identidad. */
+function color(v, vmax){
+  const t = vmax > 0 ? Math.pow(Math.min(v / vmax, 1), 1.25) : 0;
+  const [a, b, u] = t < .5
+    ? [[0x7E,0x8C,0x88],[0xC9,0x94,0x2A], t/.5]
+    : [[0xC9,0x94,0x2A],[0xB3,0x3A,0x22], (t-.5)/.5];
+  const c = a.map((x,i) => Math.round(x + (b[i]-x)*u));
+  return `rgba(${c[0]},${c[1]},${c[2]},${(0.14+0.86*t).toFixed(2)})`;
+}
+
+/* "Ahora" en hora de Chile, sin importar dónde esté el navegador. */
+function ahoraChile(){
+  return new Date().toLocaleString("sv-SE", {timeZone:"America/Santiago"}).replace(" ","T");
+}
+
+async function main(){
+  const lat = DATA.celdas.map(c => c[0].toFixed(2)).join(",");
+  const lon = DATA.celdas.map(c => c[1].toFixed(2)).join(",");
+  const url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +
+              "&longitude=" + lon + "&hourly=precipitation&forecast_days=2" +
+              "&timezone=America%2FSantiago";
+  let arr;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    arr = Array.isArray(j) ? j : [j];
+  } catch (e) {
+    document.getElementById("app").innerHTML =
+      '<div class="aviso"><strong>No se pudo obtener el pronóstico.</strong> ' +
+      'La página necesita alcanzar api.open-meteo.com para calcular el riesgo. ' +
+      esc(String(e.message || e)) + '</div>';
+    return;
+  }
+
+  const times = arr[0].hourly.time;
+  const ahora = ahoraChile().slice(0, 13);
+  let i0 = times.findIndex(t => t.slice(0, 13) >= ahora);
+  if (i0 < 0) i0 = 0;
+  const H = times.slice(i0, i0 + 12);
+  if (!H.length){ document.getElementById("app").innerHTML =
+    '<div class="aviso">El pronóstico no cubre las próximas horas.</div>'; return; }
+
+  const nT = DATA.tramos.length, nH = H.length;
+  const mu = [], lluv = [];
+  const ctx = H.map(t => {
+    const [y, m, d] = t.slice(0,10).split("-").map(Number);
+    const h = +t.slice(11,13);
+    const dow = (new Date(y, m-1, d).getDay() + 6) % 7;      // 0 = lunes
+    const f = DATA.feriados[t.slice(0,10)] || "no";
+    return {h, dow, mes:m-1, fer:POS.indexOf(f), fecha:t.slice(0,10), f};
+  });
+
+  for (let s = 0; s < nT; s++){
+    const serie = arr[DATA.tramo_celda[s]].hourly.precipitation;
+    const fila = [], filaL = [];
+    for (let j = 0; j < nH; j++){
+      const p = serie[i0 + j] ?? 0;
+      const cat = p >= CORTES[1] ? 2 : (p >= CORTES[0] ? 1 : 0);
+      const k = ctx[j];
+      fila.push(Math.exp(C.tramo[s] + C.intercepto + C.hora[k.h] + C.dow[k.dow]
+                         + C.mes[k.mes] + C.feriado[k.fer] + C.lluvia[cat]));
+      filaL.push(p);
+    }
+    mu.push(fila); lluv.push(filaL);
+  }
+
+  /* colapsar tramos de 5 km en bandas */
+  const nB = DATA.bandas.length;
+  const M = Array.from({length:nB}, () => new Array(nH).fill(0));
+  const LL = Array.from({length:nB}, () => new Array(nH).fill(0));
+  for (let s = 0; s < nT; s++){
+    const b = DATA.banda_ix[s];
+    for (let j = 0; j < nH; j++){ M[b][j] += mu[s][j]; LL[b][j] = Math.max(LL[b][j], lluv[s][j]); }
+  }
+
+  const total = mu.flat().reduce((a,b) => a+b, 0);
+  const basal = DATA.basal_hora * nH;
+  const ratio = total / basal;
+  const nLluvia = lluv.filter(f => f.some(p => p >= CORTES[0])).length;
+  const plano = M.flat().slice().sort((a,b) => a-b);
+  const vmax = plano[Math.floor(plano.length * 0.992)];
+  const prom = total / (nB * nH);
+
+  /* tramos top, con los factores que ELEVAN el riesgo en su hora peak */
+  const tot = mu.map(f => f.reduce((a,b) => a+b, 0));
+  const top = tot.map((v,i) => [v,i]).sort((a,b) => b[0]-a[0]).slice(0,8).map(([v,i]) => {
+    let j = 0; for (let q = 1; q < nH; q++) if (mu[i][q] > mu[i][j]) j = q;
+    const k = ctx[j], p = lluv[i][j], cat = p >= CORTES[1] ? 2 : (p >= CORTES[0] ? 1 : 0);
+    const mHora = Math.exp(C.hora[k.h] - C.hora.reduce((a,b)=>a+b,0)/24);
+    let mot = [];
+    if (cat) mot.push([cat === 2 ? "lluvia" : "llovizna", Math.exp(C.lluvia[cat]-C.lluvia[0])]);
+    mot.push([String(k.h).padStart(2,"0") + ":00", mHora]);
+    if (k.f !== "no") mot.push([NOMPOS[k.f], Math.exp(C.feriado[k.fer]-C.feriado[0])]);
+    mot = mot.filter(m => m[1] > 1.05).sort((a,b) => b[1]-a[1]).slice(0,2);
+    return {km: DATA.tramos[i], region: DATA.regiones[DATA.banda_ix[i]],
+            mult: v / (tot.reduce((a,b)=>a+b,0)/nT),
+            hora: String(k.h).padStart(2,"0") + ":00", mot};
+  });
+
+  /* ---- render ---- */
+  const d0 = ctx[0], dObj = new Date(...d0.fecha.split("-").map((x,i) => i===1 ? x-1 : +x));
+  const fecha = `${DIAS[d0.dow]} ${dObj.getDate()} de ${MESES[d0.mes]}`;
+  const fers = [...new Set(ctx.map(k => k.f).filter(f => f !== "no").map(f => NOMPOS[f]))];
+  const pillBg = ratio >= 1.15 ? "var(--q2)" : (ratio >= 1 ? "var(--q1)" : "var(--accent-soft)");
+  const pillFg = ratio >= 1 ? "#fff" : "var(--accent)";
+
+  const cab = H.map((t,i) => `<div class="hd mono${i===0?" now":""}">${t.slice(11,13)}</div>`).join("");
+  const filas = DATA.bandas.map((b,bi) => {
+    const nueva = bi === 0 || DATA.regiones[bi] !== DATA.regiones[bi-1];
+    const celdas = H.map((t,j) =>
+      `<div class="cell" data-rain="${LL[bi][j] >= CORTES[0] ? 1 : 0}" title="km ${b}-${b+B} · ${t.slice(11,16)} · ${M[bi][j].toFixed(4)} esperados · ${(M[bi][j]/prom).toFixed(1)}x la banda promedio${LL[bi][j] >= CORTES[0] ? " · lluvia " + LL[bi][j].toFixed(1) + " mm/h" : ""}" style="background:${color(M[bi][j], vmax)}"></div>`).join("");
+    return `<div class="rowlab${nueva?" nueva":""}">${nueva?`<span class="rg">${esc(DATA.regiones[bi])}</span>`:""}<span class="mono">${b}</span></div>${celdas}`;
+  }).join("");
+  const barras = H.map((_,j) => {
+    let s = 0; for (let bi = 0; bi < nB; bi++) s += M[bi][j];
+    return `<div class="hd mono" style="color:var(--ink-2)">${s.toFixed(2)}</div>`;
+  }).join("");
+  const tt = top.map(t => `<tr><td class="mono"><strong>km ${t.km}–${t.km+5}</strong></td>
+    <td style="color:var(--ink-3)">${esc(t.region)}</td>
+    <td class="mono"><strong>${t.mult.toFixed(1)}x</strong></td>
+    <td class="mono">${t.hora}</td>
+    <td>${t.mot.length ? t.mot.map(m => `<span class="tag ${["lluvia","llovizna"].includes(m[0])?"rain":"other"}">${esc(m[0])} ${m[1].toFixed(2)}x</span>`).join("") : '<span style="color:var(--ink-3)">—</span>'}</td></tr>`).join("");
+
+  document.getElementById("app").innerHTML = `
+<header>
+  <div class="eyebrow">Ruta 5 Sur · Santiago – Puerto Montt · próximas 12 horas</div>
+  <h1>Riesgo de siniestros</h1>
+  <p class="sub mono">${fecha}, ${H[0].slice(11,16)} – ${H[nH-1].slice(11,16)}
+    · <span class="vivo">calculado ahora</span> · hora de Chile</p>
+</header>
+<div class="metrics">
+  <div class="metric"><div class="eyebrow">Siniestros esperados</div>
+    <span class="v mono">${total.toFixed(1)}</span>
+    <div class="n">en los ${nT} tramos de la ruta, próximas ${nH} h</div></div>
+  <div class="metric"><div class="eyebrow">Contra un día normal</div>
+    <span class="v mono">${ratio.toFixed(2)}x</span>
+    <div class="n"><span class="pill" style="background:${pillBg};color:${pillFg}">${ratio>=1?"+":""}${((ratio-1)*100).toFixed(0)}%</span> basal ${basal.toFixed(1)} siniestros</div></div>
+  <div class="metric"><div class="eyebrow">Lluvia pronosticada</div>
+    <span class="v mono" style="color:var(--rain)">${nLluvia}</span>
+    <div class="n">de ${nT} tramos con precipitación en la ventana${fers.length?" · "+esc(fers.join(", ")):""}</div></div>
+</div>
+<section>
+  <h2>Kilómetro por hora</h2>
+  <p class="hint">Cada fila es un tramo de ${B} km, de norte (Santiago, km 0) a sur
+    (Los Lagos, km ${DATA.bandas[nB-1]}). El color es el número de siniestros esperados en
+    esa celda: las bandas oscuras son las que menos concentran riesgo, no las que están
+    «mejor de lo normal». La línea azul inferior marca las horas con lluvia pronosticada.</p>
+  <div class="strip"><div class="grid"><div></div>${cab}${filas}
+    <div class="rowlab" style="border:none;padding-top:7px"><span class="rg">esperados</span></div>${barras}
+  </div></div>
+  <div class="legend"><span>menor</span><span class="ramp">${
+    [1,2,3,4,5,6,7,8].map(k => `<i style="background:${color(vmax*k/8, vmax)}"></i>`).join("")
+  }</span><span>mayor</span>
+  <span style="margin-left:8px"><i style="display:inline-block;width:14px;height:3px;background:var(--rain);vertical-align:middle"></i> lluvia</span></div>
+</section>
+<section>
+  <h2>Dónde y por qué</h2>
+  <p class="hint">Los ocho tramos de 5 km con mayor riesgo acumulado en la ventana.
+    «vs tramo promedio» compara contra el tramo medio de la ruta en esta misma ventana:
+    es concentración espacial, no elevación temporal. Los factores listados son solo los
+    que <em>elevan</em> el riesgo en la hora peak.</p>
+  <table><thead><tr><th>Tramo</th><th>Región</th><th>vs tramo promedio</th>
+    <th>Hora peak</th><th>Factores dominantes</th></tr></thead><tbody>${tt}</tbody></table>
+</section>
+` + document.getElementById("notas").innerHTML;
+}
+main();
+
+</script>

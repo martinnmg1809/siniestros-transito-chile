@@ -334,7 +334,8 @@ por tramo.
 | `modelo_clima.py` | Igual, con precipitación, para medir cuánto aporta el clima. |
 | `entrenar.py` | Ajusta el modelo final sobre 2020–2024 y guarda `modelo_final.json`. |
 | `riesgo.py` | Combina el modelo con el pronóstico de Open-Meteo: riesgo por tramo y hora. |
-| `generar_pagina.py` | Genera `pagina.html`, autocontenida, para correr por cron cada hora. |
+| `generar_pagina.py` | Genera `pagina.html`: snapshot estático, para correr por cron cada hora. |
+| `generar_live.py` | Genera `index.html`: versión **en vivo**, recalcula en el navegador en cada visita. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
 ### Cómo reproducir todo desde cero
@@ -352,11 +353,23 @@ python3 entrenar.py            # modelo final -> modelo_final.json
 python3 generar_pagina.py      # pronóstico + página -> pagina.html
 ```
 
-La página se regenera sola con un cron cada hora:
+Hay dos versiones de la página:
+
+**`pagina.html`** — snapshot estático. Los números quedan horneados al generarla, así que
+necesita un cron para mantenerse al día:
 
 ```
 0 * * * * cd /ruta/al/repo && python3 generar_pagina.py
 ```
+
+**`index.html`** — en vivo, y es la recomendada. Embebe los 306 coeficientes del modelo y
+el calendario de feriados (33 KB en total); el navegador pide el pronóstico a Open-Meteo
+y recalcula el riesgo en cada visita. Sin cron y sin servidor: siempre muestra las 12
+horas siguientes al momento en que se abre.
+
+Requiere un host estático donde el navegador pueda alcanzar `api.open-meteo.com`
+(la API responde `access-control-allow-origin: *`). **No funciona embebida en un artifact
+de claude.ai**, cuyo CSP bloquea todo host externo.
 
 La extracción y los hotspots corren con la biblioteca estándar. El modelo necesita
 `numpy` y `scipy`.
