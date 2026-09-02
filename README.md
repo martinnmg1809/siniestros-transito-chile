@@ -163,10 +163,26 @@ Alternativas nacionales (más fieles pero más trabajo): la
 JSON) y el [Explorador Climático CR2](https://explorador.cr2.cl/). La DMC tiene menos
 estaciones que puntos de la carretera, así que en la práctica hay que interpolar igual.
 
-**Validación cruzada disponible:** las capas regionales de 2023 traen el `Estado_Atm` que
-reportó Carabineros. Se puede contrastar contra lo que dice Open-Meteo para esa misma hora
-y lugar, y medir el acuerdo. Eso es un resultado publicable por sí solo y justifica
-metodológicamente el uso del reanálisis para el resto de los años.
+**Resultado de la validación (medido, no supuesto):** contrastando los 6.096 siniestros
+de Biobío 2023 que sí traen `Estado_Atm` observado contra lo que dice ERA5 para esa misma
+celda y hora:
+
+| Métrica | Valor |
+|---|---|
+| Acuerdo global | 84,7 % |
+| **Sensibilidad** | **47,2 %** |
+| Precisión | 26,7 % |
+| **Kappa de Cohen** | **0,262** |
+
+**El reanálisis NO reproduce la observación de Carabineros.** Se pierde más de la mitad de
+las lluvias registradas en terreno. La causa es estructural: ERA5 promedia sobre celdas de
+~25 km y la lluvia en la zona centro-sur es localizada, así que un chubasco sobre la
+carretera se diluye en la celda. Reproducir con esto el campo `Estado_Atm` para 2020-2025
+**no es viable**.
+
+Pero esa es una pregunta distinta a la que importa. Que ERA5 no reproduzca *la etiqueta*
+no implica que la precipitación no *prediga siniestros*. Eso se midió por separado y la
+respuesta fue la contraria — ver §6.
 
 ---
 
@@ -209,40 +225,71 @@ de fin de semana largo.
 
 ---
 
-## 6. Veredicto: qué construir
+## 6. Resultados del modelo (medidos)
 
-### 🟢 Muy factible — Mapa de puntos calientes de Ruta 5 Sur
-**Esfuerzo: bajo. Riesgo: ninguno. Ya está demostrado arriba.**
+Modelo Poisson sobre la grilla tramo (5 km) × hora, 255 tramos × 43.848 horas =
+**11,2 millones de celdas**. Validación **temporal**: entrena 2020-2023 (11.820 siniestros),
+prueba 2024 (2.605). Nunca aleatoria — hay autocorrelación y una partición al azar infla
+los resultados.
 
-Datos completos, limpios, georreferenciados con kilómetro. Agregación por tramo de 1–5 km,
-ponderada por severidad (fallecidos ≫ graves > leves), sobre mapa interactivo.
-Se puede enriquecer con: filtro por año / hora / tipo / causa, comparación contra los
-`Puntos_criticos` oficiales de CONASET, y normalización por TMDA del MOP.
+### ¿Predice?
 
-### 🟡 Factible con diseño cuidadoso — Modelo de riesgo relativo
-**Esfuerzo: medio-alto. Riesgo: metodológico, no de datos.**
+La métrica es operativa: *si dedicas el N % de las horas-tramo disponibles a vigilar las de
+mayor riesgo predicho, ¿qué porcentaje de los siniestros reales de 2024 cubres?*
 
-Modelo Poisson sobre grilla tramo × hora × día, o case-crossover. Salida: *"en este tramo,
-un viernes a las 20:00 con lluvia, el riesgo es 3,4× el basal"*. Esto es honesto, verificable
-y responde tu pregunta original. Requiere el join con Open-Meteo (§4) y el calendario de
-feriados (`base_feriados`).
+| Modelo | Desvianza ↓ | top 5 % | top 10 % | top 20 % |
+|---|---|---|---|---|
+| Tasa constante | 0,0 % | 2,1 % | 5,7 % | 15,4 % |
+| **Solo tramo** (mapa estático) | 4,1 % | **15,0 %** | 26,3 % | 43,5 % |
+| + hora, día, mes, feriado | 4,7 % | 17,8 % | 29,4 % | 47,3 % |
+| **+ clima** | **5,1 %** | **19,2 %** | **30,6 %** | 47,5 % |
 
-### 🔴 No recomendado — "Sistema que predice accidentes"
-**Un accidente en un km-hora específico es un evento de probabilidad ~10⁻⁵.** Ningún modelo
-con estos datos va a decir "mañana a las 15:20 en el km 193 habrá un choque". Prometer eso
-lleva a un modelo con AUC engañosamente alta (por el desbalance) y sin utilidad real.
-La versión útil de esa idea es 🟡: predecir el *número esperado* de siniestros por tramo-hora,
-que es lo que usan las policías de tránsito para asignar patrullas.
+**Lectura honesta: el componente espacial hace casi todo el trabajo.** El mapa estático ya
+captura el 15 % de los siniestros en el 5 % del tiempo — tres veces mejor que el azar.
+Agregar hora, día, feriado y clima lo sube a 19,2 %, una mejora relativa del 28 %. Es real
+y vale la pena, pero no es transformadora: quien prometa que el modelo dinámico cambia el
+juego respecto de un buen mapa de puntos calientes, está exagerando.
 
-### Producto sugerido
+### Efectos estimados (multiplicadores sobre la celda promedio)
 
-Un solo entregable con dos capas:
-1. **Mapa base:** hotspots de Ruta 5 Sur por tramo, coloreados por índice de severidad.
-2. **Capa de condiciones:** selectores de hora, día de la semana, clima y feriado que
-   recalculan el riesgo relativo de cada tramo según el modelo Poisson.
+| Variable | Efecto |
+|---|---|
+| **Lluvia > 0,5 mm/h** | **2,12×** |
+| Llovizna 0,1–0,5 mm/h | 1,31× |
+| 18:00 | 1,70× |
+| 09:00 / 15:00 | 1,29× |
+| 03:00 | 0,54× |
+| Día de salida de feriado (`inicio`) | 1,22× |
+| Último día de feriado (`final`) | 1,17× |
+| Día feriado intermedio | 0,93× |
+| Viernes | 1,11× |
 
-Así el mapa (garantizado) sostiene al modelo (interesante), y si el modelo queda flojo el
-proyecto igual tiene un resultado sólido.
+Tres hallazgos que no eran obvios:
+
+1. **La lluvia es el factor más fuerte del modelo**, por encima de la hora punta. Y esto
+   ocurre *pese* a que la medición del clima es ruidosa (§4) — el efecto real probablemente
+   sea mayor, porque el error de medida atenúa los coeficientes hacia 1.
+2. **El día de salida a un fin de semana largo es más peligroso que el feriado mismo**
+   (1,22× vs 0,93×). Por eso conviene el campo `Dia_del_feriado` de CONASET, que marca el
+   período completo, en vez de una lista de feriados legales.
+3. **El día de la semana casi no aporta** (0,93–1,11×). La hora sí (3,1× entre las 03:00 y
+   las 18:00). Si hay que elegir variables, la hora vale y el día no.
+
+### Veredicto sobre qué construir
+
+**🟢 Mapa de puntos calientes** — resuelto y validado. Es la base y aporta el grueso de la
+señal.
+
+**🟡 Capa dinámica de riesgo** — funciona, aporta un 28 % relativo sobre el mapa estático, y
+su valor se concentra en los eventos de lluvia, que es justo cuando un panel alimentado por
+pronóstico le gana a un mapa fijo.
+
+**🔴 "Sistema que predice accidentes"** — sigue descartado, y ahora con números. La tasa base
+es de **0,13 % por tramo-hora**; en toda la Ruta 5 Sur se esperan **3,95 siniestros en 12
+horas**. Ningún modelo con estos datos dirá "mañana a las 15:20 en el km 193 habrá un
+choque", y una interfaz que muestre "probabilidad: 1,5 %" por tramo no le sirve a nadie.
+Lo que sí se puede mostrar es el conteo esperado de la ruta completa y el riesgo relativo
+por tramo.
 
 ---
 
@@ -279,7 +326,12 @@ proyecto igual tiene un resultado sólido.
 | `README.md` | Este informe de factibilidad. |
 | `descargar_conaset.py` | Descarga cualquier capa del ArcGIS Hub de CONASET, con paginación. Sin API key. |
 | `json_a_csv.py` | Convierte la salida a CSV comprimido (fechas epoch → ISO). |
-| `hotspots.py` | Prueba de concepto: agrega Ruta 5 Sur en tramos de N km y ordena por frecuencia y letalidad. |
+| `hotspots.py` | Agrega Ruta 5 Sur en tramos de N km y ordena por frecuencia y letalidad. |
+| `feriados.py` | Calendario de feriados de Chile 2019–2024 (243 fechas), con fin de semana largo completo. |
+| `validar_clima.py` | Contrasta la reconstrucción ERA5 contra el clima observado por Carabineros (§4). |
+| `clima.py` | Serie horaria de precipitación 2020–2024 para las 60 celdas ERA5 de la Ruta 5. |
+| `modelo.py` | Modelo Poisson tramo × hora con validación temporal (§6). |
+| `modelo_clima.py` | Igual, con precipitación, para medir cuánto aporta el clima. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
 ### Cómo reproducir todo desde cero
@@ -287,10 +339,15 @@ proyecto igual tiene un resultado sólido.
 ```bash
 python3 descargar_conaset.py --where "Ruta LIKE 'RUTA 5%'" --salida ruta5.json
 python3 json_a_csv.py ruta5.json ruta5_2020_2024.csv.gz
-python3 hotspots.py 5
+python3 hotspots.py 5          # mapa estático
+python3 feriados.py            # calendario -> feriados.json
+python3 clima.py               # 60 llamadas, ~5 min -> clima_ruta5.npz
+python3 modelo.py 5            # modelo y validación temporal
+python3 modelo_clima.py        # cuánto aporta el clima
 ```
 
-Solo requiere Python 3 de la biblioteca estándar — no hay dependencias que instalar.
+La extracción y los hotspots corren con la biblioteca estándar. El modelo necesita
+`numpy` y `scipy`.
 El `.json` crudo está en `.gitignore` porque es regenerable y pesa 16 MB.
 
 ---

@@ -11,3 +11,8 @@ venv/
 
 # Sistema
 .DS_Store
+
+# Artefactos regenerables
+clima_ruta5.npz
+cache_clima.json
+coef_modelo.npy
