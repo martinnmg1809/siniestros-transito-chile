@@ -1,4 +1,14 @@
-# Factibilidad: análisis y predicción de siniestros de tránsito en autopistas de Chile
+# Siniestros de tránsito en autopistas de Chile
+
+### 🔴 [Ver la página en vivo →](https://martinnmg1809.github.io/siniestros-transito-chile/)
+
+Riesgo por tramo y hora en la Ruta 5 Sur, recalculado en tu navegador con el pronóstico
+de lluvia del momento. Sin servidor y sin cron: la ventana de 12 horas se cuenta desde
+que abres la página.
+
+---
+
+## Factibilidad: análisis y predicción de siniestros en autopistas
 
 Informe de factibilidad basado en **datos reales verificados el 2026-09-01** consultando
 directamente las APIs públicas. Todas las cifras de este documento fueron obtenidas
@@ -370,6 +380,8 @@ horas siguientes al momento en que se abre.
 Requiere un host estático donde el navegador pueda alcanzar `api.open-meteo.com`
 (la API responde `access-control-allow-origin: *`). **No funciona embebida en un artifact
 de claude.ai**, cuyo CSP bloquea todo host externo.
+
+Publicada en GitHub Pages: <https://martinnmg1809.github.io/siniestros-transito-chile/>
 
 La extracción y los hotspots corren con la biblioteca estándar. El modelo necesita
 `numpy` y `scipy`.
