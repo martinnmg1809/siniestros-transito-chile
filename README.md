@@ -9,6 +9,10 @@ que abres la página.
 Dos vistas: **tira horaria** (51 bandas de 25 km × 12 horas) y **mapa** de la ruta a
 escala real, coloreada por riesgo, con un control para recorrer las 12 horas.
 
+Si Open-Meteo no responde, la página no se cae: calcula con calzada seca y lo advierte.
+Sin el clima el modelo conserva la mayor parte de la señal (17,8 % contra 19,2 % de
+captura en el top 5 %).
+
 ---
 
 ## Factibilidad: análisis y predicción de siniestros en autopistas
