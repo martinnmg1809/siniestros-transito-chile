@@ -2,16 +2,43 @@
 
 ### 🔴 [Ver la página en vivo →](https://martinnmg1809.github.io/siniestros-transito-chile/)
 
-Riesgo por tramo y hora en la Ruta 5 Sur, recalculado en tu navegador con el pronóstico
-de lluvia del momento. Sin servidor y sin cron: la ventana de 12 horas se cuenta desde
-que abres la página.
+Riesgo por tramo y hora en **10 carreteras de Chile**, recalculado en tu navegador con el
+pronóstico de lluvia del momento. Sin servidor y sin cron: la ventana de 12 horas se
+cuenta desde que abres la página.
 
-Dos vistas: **tira horaria** (51 bandas de 25 km × 12 horas) y **mapa** de la ruta a
-escala real, coloreada por riesgo, con un control para recorrer las 12 horas.
+Cada ruta trae dos vistas: **tira horaria** (bandas de km × 12 horas) y **mapa** a escala
+real coloreado por riesgo, con un control para recorrer las horas. El pronóstico se pide
+solo para la ruta que estás mirando y se cachea por hora, así el costo contra la cuota de
+Open-Meteo no crece con el número de rutas.
 
 Si Open-Meteo no responde, la página no se cae: calcula con calzada seca y lo advierte.
-Sin el clima el modelo conserva la mayor parte de la señal (17,8 % contra 19,2 % de
-captura en el top 5 %).
+
+### Rutas publicadas
+
+Captura = porcentaje de los siniestros reales de 2024 cubiertos al vigilar el 5 % de las
+horas-tramo más riesgosas. «Solo ubicación» es el mapa estático, sin hora ni clima.
+
+| Ruta | Siniestros 2020–2024 | Tramos | Captura top 5 % | Solo ubicación |
+|---|---:|---|---:|---:|
+| RUTA 5 SUR | 14.282 | 251 × 5 km | 19.1 % | 14.9 % |
+| RUTA 5 NORTE | 5.765 | 208 × 10 km | 41.2 % | 37.6 % |
+| RUTA 160 | 1.621 | 28 × 5 km | 29.1 % | 24.2 % |
+| RUTA 68 | 1.382 | 22 × 5 km | 8.6 % | 4.8 % |
+| I-50 | 1.243 | 25 × 5 km | 19.2 % | 14.5 % |
+| RUTA 66 | 1.146 | 23 × 5 km | 23.9 % | 22.1 % |
+| RUTA 180 | 747 | 12 × 5 km | 13.8 % | 8.7 % |
+| 115 CH | 719 | 24 × 5 km | 32.7 % | 29.4 % |
+| RUTA 57 | 701 | 14 × 5 km | 16.7 % | 13.2 % |
+| 199 CH | 603 | 22 × 5 km | 13.4 % | 8.0 % |
+
+**Cinco rutas quedaron fuera** aunque tenían datos suficientes: Ruta 78, 41 CH, F-30-E,
+J-60 y Ruta 148. En todas ellas el modelo completo **no supera al mapa estático** en la
+validación sobre 2024, es decir, sumar hora, día, feriado y clima aporta ruido en vez de
+señal. Publicarlas como predicción dinámica sería falso.
+
+Otras tres se descartaron antes, en la limpieza: Ruta 60 CH y Ruta 7 porque su kilometraje
+no describe la posición sobre la ruta ni después de corregir unidades (correlación 0,57 y
+0,85), y Ruta 150 por tener solo 5 tramos.
 
 ---
 
@@ -352,7 +379,13 @@ por tramo.
 | `entrenar.py` | Ajusta el modelo final sobre 2020–2024 y guarda `modelo_final.json`. |
 | `riesgo.py` | Combina el modelo con el pronóstico de Open-Meteo: riesgo por tramo y hora. |
 | `generar_pagina.py` | Genera `pagina.html`: snapshot estático, para correr por cron cada hora. |
-| `generar_live.py` | Genera `index.html`: versión **en vivo** con las dos vistas, recalcula en el navegador. |
+| `rutas.py` | Selecciona y limpia las rutas viables. Resuelve el kilometraje en unidades mezcladas. |
+| `preparar.py` | Tramos, geometría, celdas de clima, ciudades y bandas por ruta. |
+| `clima_rutas.py` | Precipitación horaria 2020–2024 de las 191 celdas ERA5 de todas las rutas. |
+| `entrenar_rutas.py` | Un modelo por ruta, validación temporal y filtro contra el mapa estático. |
+| `generar_multi.py` | Genera `index.html`: página en vivo con todas las rutas y sus dos vistas. |
+| `generar_live.py` | Versión anterior de una sola ruta (Ruta 5 Sur). Se conserva como referencia. |
+| `siniestros_rutas.csv.gz` | 82.026 siniestros con ruta asignada, 2020–2024. |
 | `ciudades.json` | 11 ciudades de referencia sobre la ruta, derivadas de la comuna modal por zona. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
@@ -369,6 +402,17 @@ python3 modelo_clima.py        # cuánto aporta el clima
 
 python3 entrenar.py            # modelo final -> modelo_final.json
 python3 generar_pagina.py      # pronóstico + página -> pagina.html
+```
+
+Para las 10 rutas:
+
+```bash
+python3 descargar_conaset.py --where "Ruta IS NOT NULL AND Ruta<>''" --salida todas.json
+python3 rutas.py todas.json    # selección y limpieza -> rutas.json
+python3 preparar.py            # estructuras por ruta -> rutas_datos.json
+python3 clima_rutas.py         # 191 celdas, ~40 min, resumible -> clima_rutas.npz
+python3 entrenar_rutas.py      # un modelo por ruta -> modelos.json
+python3 generar_multi.py       # página final -> index.html
 ```
 
 Hay dos versiones de la página:

@@ -19,3 +19,6 @@ coef_modelo.npy
 modelo_final.json
 riesgo.json
 pagina.html
+clima_celdas.jsonl
+clima_rutas.npz
+cuentas.npz
