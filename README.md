@@ -6,6 +6,9 @@ Riesgo por tramo y hora en la Ruta 5 Sur, recalculado en tu navegador con el pro
 de lluvia del momento. Sin servidor y sin cron: la ventana de 12 horas se cuenta desde
 que abres la página.
 
+Dos vistas: **tira horaria** (51 bandas de 25 km × 12 horas) y **mapa** de la ruta a
+escala real, coloreada por riesgo, con un control para recorrer las 12 horas.
+
 ---
 
 ## Factibilidad: análisis y predicción de siniestros en autopistas
@@ -345,7 +348,8 @@ por tramo.
 | `entrenar.py` | Ajusta el modelo final sobre 2020–2024 y guarda `modelo_final.json`. |
 | `riesgo.py` | Combina el modelo con el pronóstico de Open-Meteo: riesgo por tramo y hora. |
 | `generar_pagina.py` | Genera `pagina.html`: snapshot estático, para correr por cron cada hora. |
-| `generar_live.py` | Genera `index.html`: versión **en vivo**, recalcula en el navegador en cada visita. |
+| `generar_live.py` | Genera `index.html`: versión **en vivo** con las dos vistas, recalcula en el navegador. |
+| `ciudades.json` | 11 ciudades de referencia sobre la ruta, derivadas de la comuna modal por zona. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
 ### Cómo reproducir todo desde cero

@@ -40,24 +40,94 @@ function ahoraChile(){
   return new Date().toLocaleString("sv-SE", {timeZone:"America/Santiago"}).replace(" ","T");
 }
 
+/* ---------------- vista mapa ---------------- */
+/* La Ruta 5 Sur recorre 9,7 grados de latitud y solo 3,2 de longitud: dibujada a
+   escala real es una línea casi vertical. Se respeta esa proporción (corrigiendo
+   longitud por cos(lat)) en vez de ensancharla, y las etiquetas van al costado. */
+function proyector(){
+  const pts = DATA.tramos.map(k => DATA.geometria[k]);
+  const lats = pts.map(p => p[0]), lons = pts.map(p => p[1]);
+  const latMin = Math.min(...lats), latMax = Math.max(...lats);
+  const lonMin = Math.min(...lons), lonMax = Math.max(...lons);
+  const kx = Math.cos((latMin + latMax) / 2 * Math.PI / 180);
+  const alto = 1000, esc = alto / (latMax - latMin);
+  const ancho = (lonMax - lonMin) * kx * esc;
+  return {
+    pts, ancho, alto,
+    p: ll => [((ll[1] - lonMin) * kx * esc), (latMax - ll[0]) * esc],
+  };
+}
+
+function svgMapa(mu, vmax, j){
+  const P = proyector(), n = DATA.tramos.length;
+  const MARGEN = 190;                      // espacio a la derecha para etiquetas
+  const vb = `-14 -18 ${P.ancho + MARGEN} ${P.alto + 36}`;
+
+  let trazo = "";
+  for (let i = 0; i < n - 1; i++){
+    const a = P.p(P.pts[i]), b = P.p(P.pts[i + 1]);
+    trazo += `<line x1="${a[0].toFixed(1)}" y1="${a[1].toFixed(1)}" x2="${b[0].toFixed(1)}" y2="${b[1].toFixed(1)}" stroke="${color(mu[i][j], vmax)}" stroke-width="11" stroke-linecap="round"><title>km ${DATA.tramos[i]}–${DATA.tramos[i]+5} · ${mu[i][j].toFixed(4)} esperados</title></line>`;
+  }
+
+  let ciudades = "";
+  for (const c of DATA.ciudades){
+    const [x, y] = P.p([c.lat, c.lon]);
+    const lx = P.ancho + 30;
+    ciudades += `<line x1="${(x+9).toFixed(1)}" y1="${y.toFixed(1)}" x2="${lx-8}" y2="${y.toFixed(1)}" class="guia"/>`
+      + `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" class="ciudad"/>`
+      + `<text x="${lx}" y="${(y+5).toFixed(1)}" class="etq">${esc(c.nombre)}</text>`
+      + `<text x="${lx}" y="${(y+22).toFixed(1)}" class="etqkm">km ${c.km}</text>`;
+  }
+  return `<svg viewBox="${vb}" class="mapa" role="img" aria-label="Mapa de la Ruta 5 Sur coloreado por riesgo">${trazo}${ciudades}</svg>`;
+}
+
 async function main(){
   const lat = DATA.celdas.map(c => c[0].toFixed(2)).join(",");
   const lon = DATA.celdas.map(c => c[1].toFixed(2)).join(",");
   const url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +
               "&longitude=" + lon + "&hourly=precipitation&forecast_days=2" +
               "&timezone=America%2FSantiago";
-  let arr;
-  try {
-    const r = await fetch(url);
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    const j = await r.json();
-    arr = Array.isArray(j) ? j : [j];
-  } catch (e) {
-    document.getElementById("app").innerHTML =
-      '<div class="aviso"><strong>No se pudo obtener el pronóstico.</strong> ' +
-      'La página necesita alcanzar api.open-meteo.com para calcular el riesgo. ' +
-      esc(String(e.message || e)) + '</div>';
-    return;
+  /* El pronóstico solo cambia una vez por hora, y cada carga cuesta 60 llamadas
+     contra la cuota gratuita de Open-Meteo. Se cachea por hora en el navegador:
+     así una visita repetida dentro de la misma hora no vuelve a pedir nada. */
+  const claveHora = ahoraChile().slice(0, 13);
+  const leerCache = () => {
+    try {
+      const c = JSON.parse(localStorage.getItem("riesgo-r5-pronostico") || "null");
+      return c && c.hora === claveHora ? c.datos : null;
+    } catch (e) { return null; }
+  };
+  const guardarCache = datos => {
+    try {
+      localStorage.setItem("riesgo-r5-pronostico",
+        JSON.stringify({hora: claveHora, datos}));
+    } catch (e) { /* modo privado o almacenamiento lleno: seguir sin cachear */ }
+  };
+
+  let arr = leerCache(), desdeCache = !!arr;
+  if (!arr){
+    for (let intento = 0; intento < 2 && !arr; intento++){
+      try {
+        if (intento) await new Promise(r => setTimeout(r, 1500));
+        const ctrl = new AbortController();
+        const reloj = setTimeout(() => ctrl.abort(), 15000);
+        const r = await fetch(url, {signal: ctrl.signal});
+        clearTimeout(reloj);
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const j = await r.json();
+        arr = Array.isArray(j) ? j : [j];
+        guardarCache(arr);
+      } catch (e) {
+        if (intento) {
+          document.getElementById("app").innerHTML =
+            '<div class="aviso"><strong>No se pudo obtener el pronóstico.</strong> ' +
+            'Esta página consulta api.open-meteo.com desde tu navegador para calcular ' +
+            'el riesgo, y ahora mismo no responde (' + esc(String(e.message || e)) +
+            '). Vuelve a intentar en unos minutos.</div>';
+          return;
+        }
+      }
+    }
   }
 
   const times = arr[0].hourly.time;
@@ -149,12 +219,16 @@ async function main(){
     <td class="mono">${t.hora}</td>
     <td>${t.mot.length ? t.mot.map(m => `<span class="tag ${["lluvia","llovizna"].includes(m[0])?"rain":"other"}">${esc(m[0])} ${m[1].toFixed(2)}x</span>`).join("") : '<span style="color:var(--ink-3)">—</span>'}</td></tr>`).join("");
 
+  /* vmax global de las 12 horas: así el mapa cambia de verdad al mover la hora */
+  const planoMu = mu.flat().slice().sort((a,b) => a-b);
+  const vmaxMapa = planoMu[Math.floor(planoMu.length * 0.995)];
+
   document.getElementById("app").innerHTML = `
 <header>
   <div class="eyebrow">Ruta 5 Sur · Santiago – Puerto Montt · próximas 12 horas</div>
   <h1>Riesgo de siniestros</h1>
   <p class="sub mono">${fecha}, ${H[0].slice(11,16)} – ${H[nH-1].slice(11,16)}
-    · <span class="vivo">calculado ahora</span> · hora de Chile</p>
+    · <span class="vivo">${desdeCache ? "recalculado" : "calculado ahora"}</span> · hora de Chile</p>
 </header>
 <div class="metrics">
   <div class="metric"><div class="eyebrow">Siniestros esperados</div>
@@ -167,7 +241,11 @@ async function main(){
     <span class="v mono" style="color:var(--rain)">${nLluvia}</span>
     <div class="n">de ${nT} tramos con precipitación en la ventana${fers.length?" · "+esc(fers.join(", ")):""}</div></div>
 </div>
-<section>
+<div class="tabs" role="tablist">
+  <button class="tab activa" id="t-tira" role="tab" aria-selected="true">Tira horaria</button>
+  <button class="tab" id="t-mapa" role="tab" aria-selected="false">Mapa</button>
+</div>
+<section id="sec-tira">
   <h2>Kilómetro por hora</h2>
   <p class="hint">Cada fila es un tramo de ${B} km, de norte (Santiago, km 0) a sur
     (Los Lagos, km ${DATA.bandas[nB-1]}). El color es el número de siniestros esperados en
@@ -181,7 +259,20 @@ async function main(){
   }</span><span>mayor</span>
   <span style="margin-left:8px"><i style="display:inline-block;width:14px;height:3px;background:var(--rain);vertical-align:middle"></i> lluvia</span></div>
 </section>
-<section>
+<section id="sec-mapa" hidden>
+  <h2>Mapa de la ruta</h2>
+  <p class="hint">La ruta a escala real, coloreada por el riesgo de cada tramo de 5 km en
+    la hora seleccionada. Mueve el control para recorrer las 12 horas: la escala de color
+    es la misma en todas, así que los cambios que veas son cambios reales de riesgo.</p>
+  <div class="ctrl">
+    <label for="hora">Hora</label>
+    <input type="range" id="hora" min="0" max="${nH-1}" value="0" step="1">
+    <span class="mono" id="horaVal">${H[0].slice(11,16)}</span>
+    <span class="mono" id="horaTot" style="color:var(--ink-3)"></span>
+  </div>
+  <div class="mapawrap" id="mapa"></div>
+</section>
+<section id="sec-tabla">
   <h2>Dónde y por qué</h2>
   <p class="hint">Los ocho tramos de 5 km con mayor riesgo acumulado en la ventana.
     «vs tramo promedio» compara contra el tramo medio de la ruta en esta misma ventana:
@@ -191,6 +282,27 @@ async function main(){
     <th>Hora peak</th><th>Factores dominantes</th></tr></thead><tbody>${tt}</tbody></table>
 </section>
 ` + document.getElementById("notas").innerHTML;
+
+  /* --- interacción --- */
+  const pintarMapa = j => {
+    document.getElementById("mapa").innerHTML = svgMapa(mu, vmaxMapa, j);
+    document.getElementById("horaVal").textContent = H[j].slice(11,16);
+    let s = 0; for (let bi = 0; bi < nB; bi++) s += M[bi][j];
+    document.getElementById("horaTot").textContent = `· ${s.toFixed(2)} esperados en la ruta`;
+  };
+  document.getElementById("hora").addEventListener("input", e => pintarMapa(+e.target.value));
+
+  const tira = document.getElementById("sec-tira"), mapa = document.getElementById("sec-mapa");
+  const bT = document.getElementById("t-tira"), bM = document.getElementById("t-mapa");
+  const ver = esMapa => {
+    tira.hidden = esMapa; mapa.hidden = !esMapa;
+    bT.classList.toggle("activa", !esMapa); bM.classList.toggle("activa", esMapa);
+    bT.setAttribute("aria-selected", String(!esMapa));
+    bM.setAttribute("aria-selected", String(esMapa));
+    if (esMapa && !mapa.dataset.listo){ pintarMapa(+document.getElementById("hora").value); mapa.dataset.listo = "1"; }
+  };
+  bT.addEventListener("click", () => ver(false));
+  bM.addEventListener("click", () => ver(true));
 }
 main();
 """
@@ -241,12 +353,44 @@ EXTRA_CSS = """
 .vivo::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
   background:var(--accent);margin-right:6px;vertical-align:middle}
 .cargando{color:var(--ink-3);font-size:14px;padding:60px 0;text-align:center}
+
+/* pestañas de vista */
+.tabs{display:flex;gap:2px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.tab{font-family:inherit;font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:600;color:var(--ink-3);background:none;border:none;cursor:pointer;
+  padding:9px 16px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab:hover{color:var(--ink-2)}
+.tab.activa{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+/* control de hora */
+.ctrl{display:flex;align-items:center;gap:13px;margin:0 0 20px;flex-wrap:wrap}
+.ctrl label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.ctrl input[type=range]{flex:1;min-width:200px;max-width:380px;accent-color:var(--accent)}
+.ctrl input[type=range]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ctrl .mono{font-size:14px;font-weight:600}
+
+/* mapa */
+.mapawrap{background:var(--surface);border:1px solid var(--line);border-radius:3px;
+  padding:20px 14px;overflow-x:auto}
+.mapa{display:block;margin:0 auto;height:min(78vh,860px);max-width:100%}
+.mapa .ciudad{fill:var(--surface);stroke:var(--ink-2);stroke-width:2}
+.mapa .guia{stroke:var(--line);stroke-width:1}
+.mapa .etq{fill:var(--ink);font-family:"Archivo",sans-serif;font-size:19px;font-weight:600}
+.mapa .etqkm{fill:var(--ink-3);font-family:"IBM Plex Mono",monospace;font-size:15px}
 """
 
 
 def main():
     m = json.load(open("modelo_final.json"))
     fer = json.load(open("feriados.json"))
+    ciudades = json.load(open("ciudades.json"))
+    # el km 0 de la Ruta 5 Sur es Santiago por definición
+    g0 = m["geometria"][str(min(m["tramos"]))]
+    ciudades = [{"nombre": "Santiago", "km": 0,
+                 "lat": round(g0[0], 4), "lon": round(g0[1], 4)}] + [
+        {k: c[k] for k in ("nombre", "km", "lat", "lon")} for c in ciudades]
     tramos = m["tramos"]
     regs = regiones_por_banda()
     bandas = sorted({int(t // BANDA) * BANDA for t in tramos})
@@ -263,6 +407,9 @@ def main():
         "tramo_celda": m["tramo_celda"],
         "celdas": m["celdas"],
         "basal_hora": m["basal_ruta_hora"],
+        "geometria": {str(t): [round(v, 4) for v in m["geometria"][str(t)]]
+                      for t in tramos},
+        "ciudades": ciudades,
         "feriados": {k: v["dia"] for k, v in fer.items() if v["dia"] in
                      ("inicio", "intermedio", "final")},
     }
@@ -277,6 +424,7 @@ def main():
 <style>{CSS}{EXTRA_CSS}</style>
 <div class="wrap">
   <div id="app"><p class="cargando">Consultando el pronóstico y calculando el riesgo…</p></div>
+  <div id="vistas" hidden></div>
   <div id="notas" hidden>{NOTAS}</div>
 </div>
 <script>
