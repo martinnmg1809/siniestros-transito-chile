@@ -1,0 +1,718 @@
+% =============================================================================
+%  Etapa I - Propuesta y Definicion del Problema
+%  Proyecto Semestral de Data Science
+%
+%  Compilar con:  pdflatex etapa1.tex   (dos veces, para el indice)
+%
+%  Paquetes usados: geometry, babel, booktabs, longtable, array, amsmath,
+%  hyperref, enumitem, xcolor, titlesec, fancyhdr.
+%  Todos vienen en texlive-latex-recommended y texlive-latex-extra, y estan
+%  disponibles en Overleaf sin instalar nada.
+% =============================================================================
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% --- Margenes -----------------------------------------------------------------
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=3cm]{geometry}
+
+% --- Tablas -------------------------------------------------------------------
+\usepackage{booktabs}   % \toprule \midrule \bottomrule
+\usepackage{longtable}  % tablas que cruzan de pagina
+\usepackage{array}      % columnas p{} con formato
+
+% --- Matematicas --------------------------------------------------------------
+\usepackage{amsmath}
+
+% --- Listas mas compactas -----------------------------------------------------
+\usepackage{enumitem}
+\setlist{itemsep=2pt,parsep=0pt,topsep=4pt}
+
+% --- Color y titulos ----------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{azul}{HTML}{1F4E79}
+
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{azul}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{azul}}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+
+% --- Numeracion de paginas ----------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% --- Enlaces ------------------------------------------------------------------
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+% =============================================================================
+%  PORTADA
+% =============================================================================
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+
+{\Huge\bfseries\color{azul} Riesgo de siniestros de tránsito\\[0.3em]
+en carreteras de Chile\par}
+
+\vspace{1.2cm}
+{\Large\bfseries Etapa I --- Propuesta y Definición del Problema\par}
+
+\vspace{2.5cm}
+{\large Proyecto Semestral de Data Science\par}
+
+\vspace{0.6cm}
+{\large 11 de septiembre de 2026\par}
+
+\vspace{3cm}
+\begin{tabular}{l}
+\textbf{Integrantes del equipo:}\\[0.4em]
+% -------- COMPLETAR AQUÍ (4 a 5 integrantes) --------
+Nombre Apellido\\
+Nombre Apellido\\
+Nombre Apellido\\
+Nombre Apellido\\
+% ---------------------------------------------------
+\end{tabular}
+
+\vfill
+{\small
+\textbf{Repositorio:} \url{https://github.com/martinnmg1809/siniestros-transito-chile}\\[0.3em]
+\textbf{Prototipo funcional:} \url{https://martinnmg1809.github.io/siniestros-transito-chile}
+\par}
+
+\end{titlepage}
+
+% =============================================================================
+%  ÍNDICE
+% =============================================================================
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section{Resumen de la propuesta}
+
+En Chile mueren cerca de 1.400 personas al año en siniestros de tránsito. La
+respuesta institucional se apoya en mapas de puntos críticos que se publican una
+vez al año y que, por construcción, describen \textbf{dónde} ocurrieron los
+siniestros pero no \textbf{cuándo} el riesgo se eleva.
+
+Este proyecto propone estimar el \textbf{número esperado de siniestros por tramo
+de carretera y por hora}, combinando el registro histórico georreferenciado de
+Carabineros ---publicado por CONASET--- con variables de contexto conocidas por
+anticipado: pronóstico de precipitación, hora del día, día de la semana y
+calendario de feriados.
+
+El problema se formula como una \textbf{regresión de conteos sobre datos
+espacio-temporales}, no como una clasificación. Esa decisión es el eje
+conceptual de la propuesta y se justifica en la sección~\ref{sec:enfoque}: un
+siniestro en un tramo y hora concretos es un evento con probabilidad cercana al
+0,13\,\%, de modo que cualquier clasificador binario alcanzaría una exactitud
+superior al 99\,\% prediciendo siempre «no habrá siniestro», sin aportar
+información alguna.
+
+El entregable final es doble: un modelo validado temporalmente y una interfaz
+que traduce sus estimaciones a una decisión operativa concreta: \emph{qué tramos
+vigilar en las próximas doce horas}.
+
+% =============================================================================
+\section{Contexto del problema}
+
+\subsection{Dominio de aplicación}
+
+El proyecto se sitúa en la \textbf{seguridad vial interurbana chilena},
+específicamente en la red de carreteras y autopistas concesionadas administradas
+por el Ministerio de Obras Públicas y fiscalizadas por Carabineros de Chile.
+
+La magnitud del fenómeno es la siguiente, según los informes nacionales de
+CONASET:
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Año} & \textbf{Siniestros} & \textbf{Fallecidos} & \textbf{Lesionados}\\
+\midrule
+2023 & 78.238 & 1.635 & 45.679\\
+2024 & 75.653 & 1.439 & 42.400\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+La cifra de fallecidos bajó un 12\,\% entre 2023 y 2024, pero se mantiene en un
+orden de magnitud que sitúa al tránsito entre las principales causas de muerte
+por causas externas en el país.
+
+\subsection{Por qué la red interurbana}
+
+De los 436.521 siniestros georreferenciados que CONASET publica para el período
+2020--2025, 96.290 ocurren en \textbf{zona rural} y 340.231 en zona urbana.
+Aunque la zona urbana concentra más eventos, la red interurbana presenta tres
+características que la hacen un dominio más tratable y más relevante para este
+proyecto:
+
+\begin{enumerate}
+  \item \textbf{La letalidad es mayor.} Las velocidades de operación en
+  carretera son sustancialmente más altas, de modo que un mismo número de
+  siniestros produce más fallecidos.
+
+  \item \textbf{La geometría es unidimensional.} Una carretera se describe por
+  su kilometraje, lo que permite una referenciación lineal precisa y una unidad
+  de análisis natural: el tramo. En zona urbana el evento ocurre en una red de
+  intersecciones cuya topología es mucho más compleja de modelar.
+
+  \item \textbf{La intervención es concentrable.} Un patrullaje o una
+  señalización variable desplegada en un tramo específico de carretera cubre la
+  totalidad del flujo que circula por él, algo que no ocurre en una malla urbana
+  con múltiples rutas alternativas.
+\end{enumerate}
+
+\subsection{La problemática concreta}
+
+CONASET publica hoy capas de \textbf{puntos críticos} con periodicidad anual.
+Esta información es valiosa pero tiene una limitación estructural: es
+\textbf{estática}. Un tramo aparece marcado como crítico porque históricamente
+acumuló siniestros, y esa marca es la misma un martes a las 3 de la madrugada
+con la calzada seca que un viernes a las 18:00 bajo lluvia.
+
+La consecuencia práctica es que la asignación de recursos de fiscalización no
+puede priorizarse en el tiempo. Se sabe \emph{dónde} mirar, pero no
+\emph{cuándo} mirar con más atención.
+
+Esta brecha existe pese a que las variables que modulan el riesgo son
+\textbf{conocidas con antelación}: el pronóstico meteorológico está disponible
+con horas o días de anticipación, y la hora, el día de la semana y el calendario
+de feriados son deterministas.
+
+% =============================================================================
+\section{Justificación}
+
+\subsection{Relevancia}
+
+La justificación del proyecto no reside en predecir siniestros individuales
+---algo que la sección~\ref{sec:problema} descarta explícitamente--- sino en
+\textbf{mejorar la eficiencia con que se asignan recursos escasos de
+fiscalización}.
+
+El argumento es cuantificable. Si un cuerpo de fiscalización puede cubrir una
+fracción limitada de la red en un turno determinado, la pregunta operativa es
+qué fracción de los siniestros reales quedaría cubierta por esa asignación.
+Nuestra evidencia preliminar (sección~\ref{sec:evidencia}) indica que:
+
+\begin{itemize}
+  \item Con la información estática actual ---solo la ubicación histórica---
+  vigilar el 5\,\% de las horas-tramo disponibles cubre el \textbf{14,9\,\%} de
+  los siniestros reales del año siguiente.
+  \item Incorporando hora, día, feriado y pronóstico de lluvia, esa cobertura
+  sube al \textbf{19,2\,\%}.
+\end{itemize}
+
+La diferencia es una mejora relativa del 28\,\% en la eficiencia de cobertura,
+obtenida \textbf{sin desplegar un solo recurso adicional}: únicamente
+reordenando cuándo se despliegan los que ya existen.
+
+\subsection{Beneficiarios e impacto esperado}
+
+\begin{center}
+\begin{tabular}{p{0.32\textwidth}p{0.58\textwidth}}
+\toprule
+\textbf{Actor} & \textbf{Uso concreto de la herramienta}\\
+\midrule
+Carabineros (SIAT y unidades de tránsito) & Priorización temporal de patrullajes
+y controles preventivos\\
+\addlinespace
+Concesionarias viales & Anticipación del despliegue de asistencia en ruta y
+señalización variable\\
+\addlinespace
+CONASET / MOP & Complemento dinámico a los mapas anuales de puntos críticos\\
+\addlinespace
+Conductores & Información de riesgo por tramo antes de emprender un viaje\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Por qué este proyecto es viable ahora}
+
+Tres condiciones habilitantes se cumplen simultáneamente, y ninguna de ellas era
+cierta hace algunos años:
+
+\begin{enumerate}
+  \item \textbf{Los datos están abiertos y georreferenciados.} CONASET publica
+  los registros de Carabineros en servicios ArcGIS de acceso público, con
+  coordenadas y kilometraje de ruta, sin necesidad de convenios ni credenciales.
+
+  \item \textbf{El clima histórico y pronosticado es accesible sin costo.}
+  Existen APIs de reanálisis meteorológico con resolución horaria y cobertura
+  global que permiten reconstruir las condiciones de cada siniestro pasado y
+  consultar el pronóstico de las próximas horas.
+
+  \item \textbf{La entrega no requiere infraestructura.} El modelo, una vez
+  ajustado, se reduce a un conjunto reducido de coeficientes, lo que permite
+  publicar el resultado como una página estática sin servidor ni base de datos.
+\end{enumerate}
+
+% =============================================================================
+\section{Definición del problema}
+\label{sec:problema}
+
+\subsection{Pregunta central}
+
+\begin{quote}
+\textbf{¿Cuántos siniestros de tránsito se espera que ocurran en cada tramo de
+una carretera chilena durante las próximas doce horas, y qué tramos concentran
+el riesgo, dadas la hora, el día de la semana, el calendario de feriados y el
+pronóstico de precipitación?}
+\end{quote}
+
+\subsection{Unidad de análisis}
+
+La unidad de análisis es la \textbf{celda tramo $\times$ hora}: un segmento de
+carretera de longitud fija (5\,km como caso base) durante una hora calendario
+determinada. Para la Ruta 5 Sur, el período 2020--2024 genera 251 tramos
+$\times$ 43.848 horas, es decir, aproximadamente \textbf{11,0 millones de
+celdas}.
+
+\subsection{Qué se busca resolver, y qué no}
+
+Delimitar esto es esencial para la coherencia del proyecto, y constituye la
+principal decisión conceptual de la propuesta.
+
+\medskip
+\noindent\textbf{El proyecto SÍ busca responder:}
+\begin{itemize}
+  \item Cuántos siniestros esperar en una ruta completa en una ventana de doce
+  horas.
+  \item Qué tramos concentran el riesgo dentro de esa ventana, y en qué
+  proporción respecto del tramo promedio.
+  \item Cuánto eleva el riesgo cada factor de contexto: lluvia, hora punta, día
+  de salida a un fin de semana largo.
+\end{itemize}
+
+\medskip
+\noindent\textbf{El proyecto NO busca responder:}
+\begin{itemize}
+  \item Si un tramo y hora específicos tendrán un siniestro. La tasa base es de
+  \textbf{0,133\,\% por tramo-hora}; en toda la Ruta 5 Sur se esperan
+  \textbf{4,0 siniestros en doce horas} repartidos a lo largo de 1.226\,km. Una
+  afirmación del tipo «mañana a las 15:20 en el km 193 habrá una colisión» no es
+  alcanzable con estos datos, ni con ningún otro conjunto de datos
+  observacionales de esta naturaleza.
+  \item Las causas del siniestro. El registro contiene una causa asignada por el
+  funcionario que concurrió al lugar, pero el diseño observacional no permite
+  inferencia causal.
+\end{itemize}
+
+\medskip
+Esta delimitación no es una limitación del método, sino una propiedad del
+fenómeno: los siniestros son eventos raros en el espacio-tiempo. Reconocerlo
+explícitamente es lo que permite formular un objetivo que sí es alcanzable y
+verificable.
+
+% =============================================================================
+\section{Enfoque propuesto}
+\label{sec:enfoque}
+
+\subsection{Tipo de problema de Ciencia de Datos}
+
+El problema se formula como una \textbf{regresión de conteos sobre datos
+espacio-temporales}, mediante un modelo lineal generalizado de Poisson con
+enlace logarítmico y término de exposición (\emph{offset}).
+
+Formalmente, para la celda correspondiente al tramo $s$ y la hora $t$:
+
+\begin{equation*}
+Y_{st} \sim \mathrm{Poisson}(\lambda_{st})
+\end{equation*}
+\begin{equation*}
+\log \lambda_{st} = \alpha_s + \beta_{h(t)} + \gamma_{d(t)} + \delta_{m(t)}
++ \phi_{f(t)} + \psi_{c(s,t)} + \log E_{st}
+\end{equation*}
+
+donde $\alpha_s$ es el efecto del tramo, $\beta$ la hora del día, $\gamma$ el
+día de la semana, $\delta$ el mes, $\phi$ la posición respecto de un feriado,
+$\psi$ la categoría de precipitación y $E_{st}$ la exposición en horas.
+
+\subsection{Justificación del enfoque, frente a las alternativas}
+
+\paragraph{Por qué no clasificación binaria.} Sería el enfoque intuitivo
+---«¿habrá o no habrá siniestro?»--- y es el que descartamos con mayor
+convicción. Con una tasa base de 0,133\,\%, un clasificador que responda siempre
+«no» alcanza un 99,87\,\% de exactitud y un AUC que puede parecer razonable, sin
+contener información útil. Además, la clasificación descarta información: dos
+celdas con riesgo esperado de 0,001 y 0,05 siniestros son ambas «clase
+negativa», cuando su riesgo difiere en un factor de cincuenta. La magnitud es
+precisamente lo que interesa a quien asigna recursos.
+
+\paragraph{Por qué no series de tiempo puras.} Un modelo ARIMA o similar sobre
+el conteo agregado de la ruta capturaría la estacionalidad temporal pero
+\textbf{perdería la dimensión espacial}, que es donde nuestra evidencia
+preliminar indica que reside la mayor parte de la señal. La pregunta operativa
+no es cuántos siniestros habrá en la ruta, sino en qué tramo.
+
+\paragraph{Por qué no clustering.} Es un enfoque no supervisado y aquí sí existe
+una variable respuesta observada: el conteo de siniestros. Puede ser útil como
+análisis exploratorio complementario para agrupar tramos con perfiles de riesgo
+similares, pero no responde la pregunta central.
+
+\paragraph{Por qué Poisson y no otra regresión.} La variable respuesta es un
+conteo entero no negativo, con gran mayoría de ceros, y el término de exposición
+permite modelar celdas con distinta cantidad de horas observadas. Se contrastará
+contra una \textbf{binomial negativa} para evaluar sobredispersión, y contra un
+\textbf{\emph{gradient boosting} con objetivo de Poisson} para capturar
+interacciones no aditivas.
+
+\subsection{Marco metodológico}
+
+Se adopta \textbf{CRISP-DM}, por tres razones concretas:
+
+\begin{enumerate}
+  \item Su primera fase es \emph{Business Understanding}, que en este proyecto
+  es la fase crítica: la decisión de formular el problema como conteos y no como
+  clasificación es una decisión de entendimiento del dominio, no técnica.
+
+  \item Es \textbf{iterativo entre preparación de datos y modelado}, lo cual es
+  necesario aquí: los problemas de calidad del kilometraje descritos en la
+  sección~\ref{sec:limitaciones} solo se hicieron visibles al intentar modelar.
+
+  \item Su fase de \emph{Deployment} es un entregable explícito, coherente con
+  que el resultado del proyecto sea una interfaz operativa y no solo un modelo.
+\end{enumerate}
+
+\subsection{Estrategia de validación}
+
+Dos decisiones metodológicas definen la validación:
+
+\paragraph{Partición temporal, no aleatoria.} Se entrena con 2020--2023 y se
+evalúa con 2024. Una partición aleatoria sobre datos con autocorrelación
+espacio-temporal filtraría información del futuro al conjunto de entrenamiento e
+inflaría artificialmente las métricas.
+
+\paragraph{Métrica operativa por sobre métrica estadística.} Además de la
+desvianza de Poisson, la métrica principal es la \textbf{curva de captura}:
+\emph{si se dedica el N\,\% de las horas-tramo disponibles a vigilar las de
+mayor riesgo estimado, qué porcentaje de los siniestros reales del período de
+prueba queda cubierto}. Esta métrica traduce directamente el desempeño del
+modelo a la decisión que se busca apoyar.
+
+\paragraph{El baseline exigente es el mapa estático.} No basta con superar al
+azar. El modelo debe superar a un modelo que use \textbf{únicamente la ubicación
+del tramo}, porque ese es el estado del arte actual: es lo que ya publica
+CONASET. Si añadir hora, clima y feriados no mejora la captura fuera de muestra,
+esa capa está añadiendo ruido y no debe publicarse.
+
+% =============================================================================
+\section{Objetivos del proyecto}
+
+\subsection{Objetivo general}
+
+Desarrollar y validar un sistema reproducible que estime el número esperado de
+siniestros de tránsito por tramo y hora en carreteras de Chile, en función de
+variables de contexto conocidas por anticipado, y comunicar sus estimaciones en
+una interfaz que apoye la priorización temporal y espacial de recursos de
+fiscalización.
+
+\subsection{Objetivos específicos}
+
+Cada objetivo se acompaña de una \textbf{meta verificable} al cierre del
+proyecto.
+
+\begin{longtable}[c]{p{0.46\textwidth}p{0.46\textwidth}}
+\toprule
+\textbf{Objetivo específico} & \textbf{Meta verificable}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Objetivo específico} & \textbf{Meta verificable}\\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+\textbf{OE1.} Consolidar un conjunto de datos reproducible de siniestros con
+ruta y kilometraje validados, a partir de las fuentes abiertas de CONASET.
+& Al menos 80.000 siniestros con ruta asignada; $\geq$ 95\,\% con coordenadas
+válidas; pipeline ejecutable de extremo a extremo con un solo comando.\\
+\addlinespace
+
+\textbf{OE2.} Diagnosticar y corregir los problemas de calidad del campo de
+kilometraje, documentando el criterio aplicado.
+& Correlación $\geq$ 0,95 entre el kilometraje declarado y la posición
+geográfica proyectada, en toda ruta que se incorpore al modelo.\\
+\addlinespace
+
+\textbf{OE3.} Cuantificar el efecto de las condiciones meteorológicas, la hora,
+el día de la semana y los feriados sobre la tasa de siniestros.
+& Efectos multiplicativos estimados con intervalo de confianza para cada
+variable, sobre la Ruta 5 Sur y al menos cuatro rutas adicionales.\\
+\addlinespace
+
+\textbf{OE4.} Ajustar un modelo de conteos que supere de forma demostrable al
+baseline puramente espacial en validación temporal.
+& Captura en el 5\,\% superior de horas-tramo al menos 3 puntos porcentuales por
+encima del modelo de solo ubicación, evaluado sobre 2024.\\
+\addlinespace
+
+\textbf{OE5.} Comparar al menos tres especificaciones de modelo y seleccionar
+una con criterio explícito.
+& Tabla comparativa Poisson / binomial negativa / \emph{gradient boosting} con
+desvianza y curva de captura fuera de muestra.\\
+\addlinespace
+
+\textbf{OE6.} Extender el análisis a múltiples rutas, aplicando el criterio de
+validación como filtro de publicación.
+& Al menos 5 rutas publicadas que superen el baseline estático, y documentación
+explícita de las rutas descartadas con su motivo.\\
+\addlinespace
+
+\textbf{OE7.} Entregar una interfaz operativa que muestre el riesgo de las
+próximas 12 horas por tramo, en dos vistas complementarias.
+& Interfaz accesible públicamente, que se actualice con el pronóstico vigente y
+que degrade de forma controlada si la fuente meteorológica no responde.\\
+\addlinespace
+
+\textbf{OE8.} Documentar de forma explícita las limitaciones del sistema y la
+incertidumbre de sus estimaciones.
+& Sección de limitaciones que aborde al menos: ausencia de flujo vehicular
+horario, subregistro del registro policial y error de medición de la variable
+meteorológica.\\
+
+\end{longtable}
+
+% =============================================================================
+\section{Evidencia preliminar de factibilidad}
+\label{sec:evidencia}
+
+Se realizó una exploración inicial para verificar que los datos sostienen la
+propuesta antes de comprometerse con ella. Los resultados de esta sección son
+\textbf{preliminares} y se presentan como sustento de viabilidad, no como
+resultados finales del proyecto.
+
+\subsection{Disponibilidad de datos}
+
+\begin{center}
+\begin{tabular}{p{0.30\textwidth}p{0.60\textwidth}}
+\toprule
+\textbf{Fuente} & \textbf{Contenido verificado}\\
+\midrule
+CONASET --- ArcGIS Hub & 436.521 siniestros georreferenciados 2020--2025, con
+fecha, hora, tipo, causa, ruta y kilometraje\\
+\addlinespace
+CONASET --- capa de feriados & Calendario 2019--2024, que distingue el día de
+salida, los días intermedios y el de regreso de cada fin de semana largo\\
+\addlinespace
+CONASET --- capas regionales 2023 & Estado atmosférico y condición de calzada
+observados en terreno\\
+\addlinespace
+Open-Meteo & Precipitación horaria, histórica y pronosticada, sin credenciales\\
+\addlinespace
+MOP --- Plan Nacional de Censos & 863 puntos censales con Tránsito Medio Diario
+Anual por rol de ruta\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+De los 82.026 siniestros con ruta asignada, la \textbf{Ruta 5 Sur} concentra
+14.282 tras limpieza, 2,5 veces más que la siguiente ruta con más registros.
+
+\subsection{Resultados preliminares del modelo}
+
+Ajustando el modelo descrito en la sección~\ref{sec:enfoque} sobre la Ruta 5
+Sur, con entrenamiento en 2020--2023 y prueba sobre los 2.585 siniestros de
+2024:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Modelo} & \textbf{Captura top 5\,\%} & \textbf{Captura top 10\,\%}\\
+\midrule
+Tasa constante (azar)      & 2,1\,\%  & 5,7\,\%\\
+Solo ubicación del tramo   & 14,9\,\% & 26,3\,\%\\
+\textbf{Modelo completo}   & \textbf{19,2\,\%} & \textbf{30,6\,\%}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent\textbf{Efectos multiplicativos estimados} sobre la celda promedio:
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Variable} & \textbf{Efecto}\\
+\midrule
+Lluvia superior a 0,5\,mm/h              & \textbf{2,13$\times$}\\
+Llovizna (0,1--0,5\,mm/h)                & 1,31$\times$\\
+Hora punta (18:00)                       & 1,68$\times$\\
+Día de salida a un fin de semana largo   & 1,19$\times$\\
+Día feriado intermedio                   & 0,93$\times$\\
+Madrugada (02:00)                        & 0,52$\times$\\
+Día de la semana (rango completo)        & 0,93$\times$ -- 1,10$\times$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+Tres hallazgos preliminares orientan el trabajo restante:
+
+\begin{enumerate}
+  \item \textbf{La componente espacial aporta la mayor parte de la señal.} El
+  mapa estático ya alcanza el 14,9\,\% de captura. La capa dinámica añade 4,3
+  puntos. Es una mejora real y verificable, pero conviene declararla en su
+  magnitud correcta y no sobrevenderla.
+
+  \item \textbf{La precipitación es el factor de contexto más fuerte}, por
+  encima de la hora punta.
+
+  \item \textbf{El día de salida a un feriado es más riesgoso que el feriado
+  mismo} (1,19$\times$ frente a 0,93$\times$), lo que sugiere que la variable
+  relevante es el desplazamiento y no la fecha feriada en sí.
+\end{enumerate}
+
+\subsection{Una validación que arrojó resultado negativo}
+
+Se evaluó si el reanálisis meteorológico reproduce la observación de estado
+atmosférico registrada por Carabineros, contrastando 6.096 siniestros de la
+Región del Biobío en 2023. El acuerdo resultó \textbf{débil}: índice kappa de
+Cohen de 0,262 y sensibilidad de 47,2\,\%, es decir, el reanálisis no detecta
+más de la mitad de las lluvias registradas en terreno. La causa es estructural:
+el reanálisis promedia sobre celdas de aproximadamente 25\,km, y la
+precipitación en la zona centro-sur del país es localizada.
+
+Este resultado obliga a una distinción conceptual que se incorpora al proyecto:
+\textbf{reproducir la etiqueta observada y predecir el conteo de siniestros son
+dos preguntas distintas}. El reanálisis falla en la primera y, sin embargo, la
+precipitación resulta el predictor más fuerte del modelo. El error de medición
+atenúa el coeficiente estimado hacia 1, de modo que el efecto real de la lluvia
+es probablemente mayor que el 2,13$\times$ estimado.
+
+% =============================================================================
+\section{Datos, riesgos y limitaciones}
+\label{sec:limitaciones}
+
+\subsection{Problemas de calidad identificados}
+
+\paragraph{Unidades mezcladas en el kilometraje.} En varias rutas una fracción
+de los registros expresa la ubicación en metros: el valor 84.300 de la Ruta 68
+corresponde en realidad al km 84,3. Sin embargo, la Ruta 5 Sur alcanza
+legítimamente el km 1.226, por lo que una corrección global destruiría sus
+datos. El criterio adoptado es \textbf{por ruta}: se elige la transformación que
+maximiza la correlación entre el kilometraje declarado y la posición geográfica
+proyectada sobre el eje de la ruta. En la Ruta 68 esa correlación pasa de 0,139 a
+0,999; en la Ruta 5 Sur se mantiene en 0,998 sin transformar.
+
+\paragraph{Campo de ruta incompleto.} Los registros de 2025 existen en la base
+pero no tienen el campo de ruta poblado, lo que limita el período utilizable a
+2020--2024.
+
+\subsection{Limitaciones que se declararán en el resultado final}
+
+\begin{center}
+\begin{tabular}{p{0.38\textwidth}p{0.52\textwidth}}
+\toprule
+\textbf{Limitación} & \textbf{Consecuencia}\\
+\midrule
+\textbf{Ausencia de flujo vehicular horario.} El censo del MOP entrega un
+promedio anual por punto censal.
+& El modelo no puede separar «hay más vehículos a esta hora» de «conducir a esta
+hora es más peligroso por vehículo». Para priorizar recursos esto es
+indiferente; para una afirmación causal sobre el riesgo, no.\\
+\addlinespace
+\textbf{Subregistro del registro policial.} La fuente son partes de Carabineros.
+& Los siniestros sin lesionados y aquellos donde no concurrió personal policial
+están subrepresentados.\\
+\addlinespace
+\textbf{Error de medición de la variable meteorológica.}
+& Los coeficientes de precipitación están atenuados; el efecto real es
+probablemente mayor.\\
+\addlinespace
+\textbf{Modelos no comparables entre rutas.} Cada ruta tiene su propio modelo y
+su propio nivel basal.
+& Un factor de «2,0$\times$» en una ruta no equivale al mismo factor en otra.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Riesgos del proyecto y mitigación}
+
+\begin{center}
+\begin{tabular}{p{0.42\textwidth}p{0.48\textwidth}}
+\toprule
+\textbf{Riesgo} & \textbf{Mitigación}\\
+\midrule
+Rutas con pocos datos producen modelos que son puro ruido
+& El criterio de publicación exige superar al baseline estático en validación
+temporal; las rutas que no lo cumplen se documentan pero no se publican\\
+\addlinespace
+Dependencia de una API externa para el pronóstico
+& La interfaz calcula con calzada seca y lo advierte cuando la fuente no
+responde; el modelo sin clima conserva la mayor parte de su capacidad\\
+\addlinespace
+Sobreajuste por el número de parámetros de tramo
+& Regularización L2 sobre los efectos de tramo y validación estrictamente
+temporal\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Plan de trabajo}
+
+El plan se alinea con las cuatro entregas de la asignatura y con las fases de
+CRISP-DM.
+
+\begin{center}
+\begin{tabular}{p{0.22\textwidth}p{0.24\textwidth}p{0.42\textwidth}}
+\toprule
+\textbf{Etapa} & \textbf{Fase CRISP-DM} & \textbf{Actividades principales}\\
+\midrule
+\textbf{I} --- Propuesta (11 sep)
+& \emph{Business Understanding}
+& Definición del problema, formulación como regresión de conteos, objetivos
+medibles\\
+\addlinespace
+\textbf{II} --- Avance (22--26 oct)
+& \emph{Data Understanding} y \emph{Data Preparation}
+& Consolidación del dataset, corrección del kilometraje, análisis exploratorio,
+primer modelo Poisson con resultados preliminares\\
+\addlinespace
+\textbf{III} --- Presentación técnica (16--19 nov)
+& \emph{Modeling} y \emph{Evaluation}
+& Comparación Poisson / binomial negativa / \emph{gradient boosting}, selección
+con criterio explícito, validación temporal, extensión a múltiples rutas\\
+\addlinespace
+\textbf{IV} --- Feria de Proyectos (2 dic)
+& \emph{Deployment}
+& Interfaz operativa, póster, video resumen y comunicación a audiencia no
+especializada\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =============================================================================
+\section{Fuentes}
+
+\begin{itemize}
+  \item CONASET. \emph{Portal de mapas y datos abiertos.}
+  \url{https://mapas-conaset.opendata.arcgis.com}
+  \item CONASET. \emph{Informe Nacional de Siniestros de Tránsito en Chile
+  2024.}
+  \item CONASET. \emph{Informe Nacional de Siniestros de Tránsito en Chile
+  2023.}
+  \item Carabineros de Chile. \emph{Anuario Estadístico de Accidentes en el
+  Tránsito} (sistema SIEC 2).
+  \item Ministerio de Obras Públicas, Dirección de Vialidad. \emph{Plan Nacional
+  de Censos Viales.}
+  \item Open-Meteo. \emph{Historical Weather API} y \emph{Forecast API}
+  (reanálisis ERA5).
+  \item Dirección Meteorológica de Chile. \emph{Portal de Servicios Climáticos.}
+\end{itemize}
+
+\end{document}
