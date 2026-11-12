@@ -1,0 +1,10 @@
+anio,alcance_longitudinal_km,distancia_max_eje_km,tramos_candidatos,tramos_total,siniestros_en_tramos_candidatos,siniestros_total,tramos_con_exposicion_validada,nota
+2022,5,2,38,255,316,3370,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2022,10,2,68,255,555,3370,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2022,25,2,100,255,911,3370,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2023,5,2,38,255,294,2863,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2023,10,2,68,255,547,2863,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2023,25,2,100,255,869,2863,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2024,5,2,38,255,293,2605,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2024,10,2,68,255,487,2605,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"
+2024,25,2,100,255,763,2605,0,"Candidato espacial; no acredita rama, continuidad ni publicación previa"

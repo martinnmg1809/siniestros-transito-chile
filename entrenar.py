@@ -14,6 +14,7 @@ import collections, csv, gzip, json
 import numpy as np
 
 from modelo import ajustar
+from clima_utc import cargar_cache
 from modelo_clima import CORTES, N_HORAS, cuentas, diseño, grilla_tiempo, agrupar
 
 KM_MAX, TRAMO = 2200, 5
@@ -41,7 +42,7 @@ def geometria(tramos):
 
 
 if __name__ == "__main__":
-    z = np.load("clima_ruta5.npz", allow_pickle=True)
+    z = cargar_cache()
     tramos = [int(t) for t in z["tramos"]]
     idx_c, P, celdas = z["idx_celda"], z["precip"], z["celdas"]
     fer = json.load(open("feriados.json"))
@@ -50,6 +51,7 @@ if __name__ == "__main__":
     Y = cuentas(tramos)
     n_tr = len(tramos)
     lluvia = np.digitize(P[idx_c], CORTES).astype(np.int32)
+    lluvia[:, z["exposicion_tiempo"] == 0] = 0
 
     dims = (n_tr, 24, 7, 12, 4, 3)
     tr_ix = np.repeat(np.arange(n_tr), N_HORAS).reshape(n_tr, N_HORAS)
@@ -57,17 +59,29 @@ if __name__ == "__main__":
            + lluvia).ravel()
 
     todo = np.ones(cod.shape, bool)
-    c, y, e = agrupar(cod, Y.ravel().astype(float), todo, int(np.prod(dims)))
+    exposicion = np.tile(z["exposicion_tiempo"], n_tr)
+    excluidos = int(Y.ravel()[exposicion == 0].sum())
+    print(f"Eventos en horas inexistentes excluidos: {excluidos}")
+    c, y, e = agrupar(cod, Y.ravel().astype(float), todo, int(np.prod(dims)), exposicion)
     print(f"{len(c):,} celdas agrupadas | {int(y.sum())} siniestros | "
           f"{int(e.sum()):,} horas-tramo")
 
-    b = ajustar(diseño(c, dims, True), y, e)
+    b, diagnostico = ajustar(diseño(c, dims, True), y, e, devolver_diagnostico=True)
     off = np.cumsum([0] + list(dims))
 
     # Conteo esperado por hora en toda la ruta, en condiciones promedio
     basal = float(y.sum() / e.sum() * n_tr)
 
     json.dump({
+        "tipo_modelo": "Poisson",
+        "seleccion_final": False,
+        "estado": "Modelo de frecuencia; sin exposición vehicular validada",
+        "entrenamiento": [2020, 2024],
+        "calendario_cobertura": [2020, 2024],
+        "meteorologia": json.loads(str(z["metadatos"])),
+        "diagnostico_ajuste": diagnostico,
+        "registros_entrenamiento": int(y.sum()),
+        "eventos_hora_inexistente_excluidos": excluidos,
         "tramo_km": TRAMO,
         "tramos": tramos,
         "cortes_lluvia": CORTES,

@@ -8,6 +8,8 @@ tramo-hora, así que una probabilidad por tramo no le sirve a nadie. Lo accionab
 es el conteo esperado de la ruta completa y el riesgo relativo de cada tramo.
 """
 import datetime, json, urllib.parse, urllib.request
+from zoneinfo import ZoneInfo
+from feriados import validar_cobertura
 
 import numpy as np
 
@@ -20,20 +22,29 @@ def pronostico(celdas, horas=12):
         "latitude": ",".join(f"{c[0]:.2f}" for c in celdas),
         "longitude": ",".join(f"{c[1]:.2f}" for c in celdas),
         "hourly": "precipitation", "forecast_days": 2,
-        "timezone": "America/Santiago"})
+        "timezone": "GMT"})
     d = json.load(urllib.request.urlopen(f"{FORECAST}?{p}", timeout=120))
     if isinstance(d, dict):
         d = [d]
     tiempos = d[0]["hourly"]["time"]
-    ahora = datetime.datetime.now().replace(minute=0, second=0, microsecond=0)
-    i0 = next((i for i, t in enumerate(tiempos)
-               if datetime.datetime.fromisoformat(t) >= ahora), 0)
-    P = np.array([[0.0 if v is None else v
-                   for v in r["hourly"]["precipitation"]] for r in d])
-    return tiempos[i0:i0 + horas], P[:, i0:i0 + horas]
+    ahora = datetime.datetime.now(datetime.timezone.utc).replace(minute=0, second=0, microsecond=0)
+    utc = [datetime.datetime.fromisoformat(t).replace(tzinfo=datetime.timezone.utc) for t in tiempos]
+    indices = [i for i, t in enumerate(utc) if t >= ahora][:horas]
+    if len(d) != len(celdas) or len(indices) != horas:
+        raise ValueError("Pronóstico incompleto")
+    if any(r["hourly"]["time"] != tiempos for r in d):
+        raise ValueError("Celdas de pronóstico con timestamps incompatibles")
+    P = np.array([r["hourly"]["precipitation"] for r in d], dtype=float)[:, indices]
+    if not np.isfinite(P).all() or (P < 0).any():
+        raise ValueError("Lluvia pronosticada faltante o inválida; no se asume seco")
+    local = [utc[i].astimezone(ZoneInfo("America/Santiago")).isoformat(timespec="minutes") for i in indices]
+    return local, P
 
 
 def calcular(modelo, feriados, horas=12):
+    ahora = datetime.datetime.now(ZoneInfo("America/Santiago"))
+    validar_cobertura([ahora.date(), (ahora + datetime.timedelta(hours=horas)).date()],
+                     modelo.get("calendario_cobertura", (2020, 2024)))
     c = modelo["coef"]
     tramos = modelo["tramos"]
     tc = np.array(modelo["tramo_celda"])
@@ -53,7 +64,7 @@ def calcular(modelo, feriados, horas=12):
     mu = np.exp(eta)
 
     return {
-        "generado": datetime.datetime.now().isoformat(timespec="minutes"),
+        "generado": ahora.isoformat(timespec="minutes"),
         "horas": tiempos,
         "tramos": tramos,
         "mu": mu.tolist(),

@@ -21,17 +21,33 @@ def calendario():
         "returnGeometry": "false", "returnDistinctValues": "true",
         "resultRecordCount": 4000, "f": "json"})
     d = json.load(urllib.request.urlopen(f"{URL}?{p}", timeout=120))
+    if d.get("error") or d.get("exceededTransferLimit"):
+        raise ValueError("Calendario truncado o fuente con error")
     cal = {}
     for x in d["features"]:
         a = x["attributes"]
         if not a.get("Fecha"):
             continue
         dd, mm, yy = a["Fecha"].split("-")
-        cal[f"{yy}-{mm}-{dd}"] = {
+        fecha = f"{yy}-{mm}-{dd}"
+        valor = {
             "feriado": (a.get("Feriado") or "").strip(),
             "dia": (a.get("Dia_del_feriado") or "").strip().lower(),
         }
+        if valor["dia"] not in ("inicio", "intermedio", "final"):
+            raise ValueError(f"Posición de feriado desconocida: {fecha}: {valor}")
+        if fecha in cal and cal[fecha]["dia"] != valor["dia"]:
+            raise ValueError(f"Posiciones contradictorias para {fecha}")
+        cal[fecha] = valor
     return cal
+
+
+def validar_cobertura(fechas, cobertura=(2020, 2024)):
+    """La extracción histórica no se puede extrapolar a feriados de otros años."""
+    for fecha in fechas:
+        anio = int(str(fecha)[:4])
+        if not cobertura[0] <= anio <= cobertura[1]:
+            raise ValueError(f"Calendario histórico cubre {cobertura[0]}-{cobertura[1]}, no {anio}; actualizar antes de inferir")
 
 
 if __name__ == "__main__":

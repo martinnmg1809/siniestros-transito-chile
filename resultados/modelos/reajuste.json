@@ -1,0 +1,49 @@
+{
+  "modelo": "Poisson_clima",
+  "ajuste_desde": 2020,
+  "ajuste_hasta": 2024,
+  "eleccion": "Nombre y parámetros elegidos con validación de 2022/2023; sin usar puntuación de 2024",
+  "evaluacion_del_artefacto": "Ninguna prueba futura: reajuste posterior a la evaluación histórica",
+  "estado": "Artefacto de investigación; sin sustitución del prototipo operativo",
+  "uso": "Requiere construir los mismos atributos y verificar vigencia del flujo, calendario y pronósticos",
+  "filas_comprobacion_persistencia": 1000,
+  "predicciones_identicas_al_recargar": true,
+  "metricas_artefacto_evaluado2024_reproducidas": {
+    "siniestros": 2605,
+    "esperados": 3374.2501255212874,
+    "observado_esperado": 0.7720233838911257,
+    "desvianza_por_hora": 0.015163311363923845,
+    "captura5": 0.19001919385796545,
+    "captura10": 0.304318618042228,
+    "captura20": 0.472168905950096,
+    "captura5_turno": 0.15844529750479847,
+    "mae_12h_calendario": 1.9703278190618767
+  },
+  "artefacto_recalibrado": "resultados/modelos/artefactos/candidato_reajustado2020_2024_recalibrado_con2024.joblib",
+  "factor_recalibracion_final": 0.7720233838911257,
+  "anio_factor_final": 2024,
+  "sha256_recalibrado": "0cb2dfd3d3a6a0540128690374f60273b3157d61f4cb7af2d082daf7dcc87d55",
+  "recalibracion": "Factor global del año previo; no modifica el ranking ni escoge variantes con resultados del año objetivo",
+  "hashes_codigo_postproceso": {
+    "reajustar_candidato.py": "1874d20135acac47f1f73c20bd3f2ca7986cbc3a8af2251f02f8c0bc1bfad3f2",
+    "calibracion_modelos.py": "03b856d522a74b83767e011697581b8bced19c619401d51b66834f7e59bf7fbf"
+  },
+  "artefacto": "resultados/modelos/artefactos/candidato_reajustado2020_2024.joblib",
+  "sha256": "6a4e9ed26ea4ad65333783a70d64675b9ac97aa62217526af3eb4ddc4fed6e48",
+  "ajustes": [
+    {
+      "cohorte": "ruta_completa",
+      "familia": "Poisson",
+      "variante": "clima",
+      "ajuste_hasta": 2024,
+      "parametros": {
+        "l2": 0.3
+      },
+      "convergio": true,
+      "iteraciones": 175,
+      "objetivo": 91903.60438712398,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 34.35729296700083
+    }
+  ]
+}

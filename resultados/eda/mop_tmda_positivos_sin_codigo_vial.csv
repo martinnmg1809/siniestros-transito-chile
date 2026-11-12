@@ -1,0 +1,963 @@
+capa,objectid,rama,estacion,anio_medicion,rol_original,tipo_rol,tmda,rol_vacio,tmda_positivo_sin_rol
+0,13386,3,09-161,2024,S/ ROL,sin_rol_identificado,165.0,False,False
+0,13424,3,09-199,2024,S/ ROL,sin_rol_identificado,256.0,False,False
+0,13435,3,07-240,2024,S/ ROL,sin_rol_identificado,531.0,False,False
+0,13447,3,09-197,2024,S/ ROL,sin_rol_identificado,287.0,False,False
+0,13477,1,10-261,2024,S/ ROL,sin_rol_identificado,8795.0,False,False
+0,13477,2,10-261,2024,S/ ROL,sin_rol_identificado,7212.0,False,False
+0,13479,3,08-251,2024,S /ROL,sin_rol_identificado,22.0,False,False
+0,13515,1,09-112,2024,S/ ROL,sin_rol_identificado,1368.0,False,False
+0,13538,4,08-245,2024,S/ ROL,sin_rol_identificado,106.0,False,False
+0,13539,3,08-257,2024,S/ ROL,sin_rol_identificado,1997.0,False,False
+0,13540,3,08-249,2024,S / ROL,sin_rol_identificado,4416.0,False,False
+0,13554,3,09-181,2024,S/ ROL,sin_rol_identificado,535.0,False,False
+0,13593,4,16-164,2024,S/ ROL,sin_rol_identificado,525.0,False,False
+0,13595,3,09-201,2024,S/ ROL,sin_rol_identificado,447.0,False,False
+0,13608,3,09-196,2024,S/ ROL,sin_rol_identificado,308.0,False,False
+0,13659,4,09-191,2024,S/ ROL,sin_rol_identificado,972.0,False,False
+0,13713,1,09-134,2024,S/ ROL,sin_rol_identificado,551.0,False,False
+0,13713,2,09-134,2024,S/ ROL,sin_rol_identificado,448.0,False,False
+0,13799,3,09-151,2024,S/ ROL,sin_rol_identificado,218.0,False,False
+0,13807,2,09-194,2024,S/ ROL,sin_rol_identificado,946.0,False,False
+0,13807,3,09-194,2024,S/ ROL,sin_rol_identificado,385.0,False,False
+0,13807,4,09-194,2024,S/ ROL,sin_rol_identificado,1252.0,False,False
+0,13850,3,09-244,2024,S/ ROL,sin_rol_identificado,33.0,False,False
+0,13853,3,09-228,2024,S/ ROL,sin_rol_identificado,13.0,False,False
+0,14330,1,02-072,2025,S/ROL,sin_rol_identificado,2452.0,False,False
+0,14330,2,02-072,2025,S/ROL,sin_rol_identificado,1416.0,False,False
+0,14330,3,02-072,2025,S/ROL,sin_rol_identificado,1143.0,False,False
+0,14341,3,05-180,2025,S/ ROL,sin_rol_identificado,712.0,False,False
+0,14397,3,02-073,2025,S/ROL,sin_rol_identificado,3701.0,False,False
+0,14437,1,02-060,2025,S/ROL,sin_rol_identificado,873.0,False,False
+0,14437,2,02-060,2025,S/ROL,sin_rol_identificado,680.0,False,False
+0,14437,3,02-060,2025,S/ROL,sin_rol_identificado,298.0,False,False
+0,14465,3,02-079,2025,S/ROL,sin_rol_identificado,100.0,False,False
+0,14467,3,03-085,2025,S/ROL,sin_rol_identificado,304.0,False,False
+0,14519,4,13-137,2025,S/ROL,sin_rol_identificado,1169.0,False,False
+0,14528,4,13-156,2025,S/ROL,sin_rol_identificado,1818.0,False,False
+1,7975,1,09-156,2022,S/ ROL,sin_rol_identificado,8619.0,False,False
+1,7975,2,09-156,2022,S/ ROL,sin_rol_identificado,7628.0,False,False
+1,7985,2,09-194,2022,S/ ROL,sin_rol_identificado,776.0,False,False
+1,7985,3,09-194,2022,S/ ROL,sin_rol_identificado,550.0,False,False
+1,7985,4,09-194,2022,S/ ROL,sin_rol_identificado,1143.0,False,False
+1,8029,1,10-261,2022,S/ ROL,sin_rol_identificado,8778.0,False,False
+1,8029,2,10-261,2022,S/ ROL,sin_rol_identificado,7207.0,False,False
+1,8033,4,08-245,2022,S/ ROL,sin_rol_identificado,126.0,False,False
+1,8038,3,08-249,2022,S / ROL,sin_rol_identificado,5286.0,False,False
+1,8039,3,08-251,2022,S /ROL,sin_rol_identificado,28.0,False,False
+1,8046,3,08-249,2022,S / ROL,sin_rol_identificado,5286.0,False,False
+1,8089,3,09-201,2022,S/ ROL,sin_rol_identificado,471.0,False,False
+1,8119,3,09-196,2022,S/ ROL,sin_rol_identificado,235.0,False,False
+1,8129,3,09-197,2022,S/ ROL,sin_rol_identificado,331.0,False,False
+1,8168,1,09-134,2022,S/ ROL,sin_rol_identificado,495.0,False,False
+1,8168,2,09-134,2022,S/ ROL,sin_rol_identificado,383.0,False,False
+1,8204,3,09-181,2022,S/ ROL,sin_rol_identificado,508.0,False,False
+1,8248,1,09-193,2022,S/ ROL,sin_rol_identificado,2512.0,False,False
+1,8248,2,09-193,2022,S/ ROL,sin_rol_identificado,1954.0,False,False
+1,8252,1,09-168,2022,S/ ROL,sin_rol_identificado,2763.0,False,False
+1,8252,2,09-168,2022,S/ ROL,sin_rol_identificado,2458.0,False,False
+1,8278,3,09-161,2022,S/ ROL,sin_rol_identificado,165.0,False,False
+1,8290,1,09-165,2022,S/ ROL,sin_rol_identificado,3704.0,False,False
+1,8290,2,09-165,2022,S/ ROL,sin_rol_identificado,3589.0,False,False
+1,8355,3,09-206,2022,S/ ROL,sin_rol_identificado,67.0,False,False
+1,8365,1,09-202,2022,S/ ROL,sin_rol_identificado,969.0,False,False
+1,8365,2,09-202,2022,S/ ROL,sin_rol_identificado,671.0,False,False
+1,8366,3,09-151,2022,S/ ROL,sin_rol_identificado,183.0,False,False
+1,8414,3,09-199,2022,S/ ROL,sin_rol_identificado,325.0,False,False
+1,8439,1,09-167,2022,S/ ROL,sin_rol_identificado,3193.0,False,False
+1,8439,2,09-167,2022,S/ ROL,sin_rol_identificado,5073.0,False,False
+1,8460,3,07-240,2022,S/ ROL,sin_rol_identificado,494.0,False,False
+1,8714,1,02-060,2023,S/ROL,sin_rol_identificado,725.0,False,False
+1,8714,2,02-060,2023,S/ROL,sin_rol_identificado,570.0,False,False
+1,8714,3,02-060,2023,S/ROL,sin_rol_identificado,216.0,False,False
+1,8725,1,02-072,2023,S/ROL,sin_rol_identificado,1612.0,False,False
+1,8725,2,02-072,2023,S/ROL,sin_rol_identificado,824.0,False,False
+1,8725,3,02-072,2023,S/ROL,sin_rol_identificado,873.0,False,False
+1,8726,3,02-073,2023,S/ROL,sin_rol_identificado,3473.0,False,False
+1,8731,3,02-079,2023,S/ROL,sin_rol_identificado,74.0,False,False
+1,8776,3,03-085,2023,S/ROL,sin_rol_identificado,217.0,False,False
+1,8871,3,05-180,2023,S/ ROL,sin_rol_identificado,813.0,False,False
+1,8918,3,13-120,2023,S/ ROL,sin_rol_identificado,1745.0,False,False
+1,8918,4,13-120,2023,S/ ROL,sin_rol_identificado,4115.0,False,False
+1,8935,4,13-137,2023,S/ROL,sin_rol_identificado,891.0,False,False
+1,8954,4,13-156,2023,S/ROL,sin_rol_identificado,1390.0,False,False
+2,7139,3,06-128,2021,S/ Rol,sin_rol_identificado,3294.0,False,False
+2,7156,3,06-145,2021,S/ Rol,sin_rol_identificado,208.0,False,False
+2,7206,1,02-072,2021,S/ROL,sin_rol_identificado,1984.0,False,False
+2,7206,2,02-072,2021,S/ROL,sin_rol_identificado,799.0,False,False
+2,7206,3,02-072,2021,S/ROL,sin_rol_identificado,1330.0,False,False
+2,7219,3,05-180,2021,S/ ROL,sin_rol_identificado,386.0,False,False
+2,7229,3,06-169,2021,S/ Rol,sin_rol_identificado,1263.0,False,False
+2,7281,3,02-073,2021,S/ROL,sin_rol_identificado,3481.0,False,False
+2,7326,1,02-060,2021,S/ROL,sin_rol_identificado,948.0,False,False
+2,7326,2,02-060,2021,S/ROL,sin_rol_identificado,740.0,False,False
+2,7326,3,02-060,2021,S/ROL,sin_rol_identificado,259.0,False,False
+2,7327,3,03-042,2021,S/ROL,sin_rol_identificado,50.0,False,False
+2,7349,3,13-090,2021,S/ Rol,sin_rol_identificado,842.0,False,False
+2,7358,3,02-079,2021,S/ROL,sin_rol_identificado,6.0,False,False
+2,7361,3,03-085,2021,S/Rol,sin_rol_identificado,276.0,False,False
+2,7374,3,13-120,2021,S/ Rol,sin_rol_identificado,2587.0,False,False
+2,7374,4,13-120,2021,S/ Rol,sin_rol_identificado,4667.0,False,False
+2,7377,4,13-119,2021,S/ Rol,sin_rol_identificado,831.0,False,False
+2,7975,1,09-156,2022,S/ ROL,sin_rol_identificado,8619.0,False,False
+2,7975,2,09-156,2022,S/ ROL,sin_rol_identificado,7628.0,False,False
+2,7985,2,09-194,2022,S/ ROL,sin_rol_identificado,776.0,False,False
+2,7985,3,09-194,2022,S/ ROL,sin_rol_identificado,550.0,False,False
+2,7985,4,09-194,2022,S/ ROL,sin_rol_identificado,1143.0,False,False
+2,8029,1,10-261,2022,S/ ROL,sin_rol_identificado,8778.0,False,False
+2,8029,2,10-261,2022,S/ ROL,sin_rol_identificado,7207.0,False,False
+2,8033,4,08-245,2022,S/ ROL,sin_rol_identificado,126.0,False,False
+2,8038,3,08-249,2022,S / ROL,sin_rol_identificado,5286.0,False,False
+2,8039,3,08-251,2022,S /ROL,sin_rol_identificado,28.0,False,False
+2,8046,3,08-249,2022,S / ROL,sin_rol_identificado,5286.0,False,False
+2,8089,3,09-201,2022,S/ ROL,sin_rol_identificado,471.0,False,False
+2,8119,3,09-196,2022,S/ ROL,sin_rol_identificado,235.0,False,False
+2,8129,3,09-197,2022,S/ ROL,sin_rol_identificado,331.0,False,False
+2,8168,1,09-134,2022,S/ ROL,sin_rol_identificado,495.0,False,False
+2,8168,2,09-134,2022,S/ ROL,sin_rol_identificado,383.0,False,False
+2,8204,3,09-181,2022,S/ ROL,sin_rol_identificado,508.0,False,False
+2,8248,1,09-193,2022,S/ ROL,sin_rol_identificado,2512.0,False,False
+2,8248,2,09-193,2022,S/ ROL,sin_rol_identificado,1954.0,False,False
+2,8252,1,09-168,2022,S/ ROL,sin_rol_identificado,2763.0,False,False
+2,8252,2,09-168,2022,S/ ROL,sin_rol_identificado,2458.0,False,False
+2,8278,3,09-161,2022,S/ ROL,sin_rol_identificado,165.0,False,False
+2,8290,1,09-165,2022,S/ ROL,sin_rol_identificado,3704.0,False,False
+2,8290,2,09-165,2022,S/ ROL,sin_rol_identificado,3589.0,False,False
+2,8355,3,09-206,2022,S/ ROL,sin_rol_identificado,67.0,False,False
+2,8365,1,09-202,2022,S/ ROL,sin_rol_identificado,969.0,False,False
+2,8365,2,09-202,2022,S/ ROL,sin_rol_identificado,671.0,False,False
+2,8366,3,09-151,2022,S/ ROL,sin_rol_identificado,183.0,False,False
+2,8414,3,09-199,2022,S/ ROL,sin_rol_identificado,325.0,False,False
+2,8439,1,09-167,2022,S/ ROL,sin_rol_identificado,3193.0,False,False
+2,8439,2,09-167,2022,S/ ROL,sin_rol_identificado,5073.0,False,False
+2,8460,3,07-240,2022,S/ ROL,sin_rol_identificado,494.0,False,False
+3,4617,1,09-193,2018,S/ROL,sin_rol_identificado,1662.0,False,False
+3,4617,2,09-193,2018,S/ROL,sin_rol_identificado,1240.0,False,False
+3,4621,1,09-168,2018,S/ROL,sin_rol_identificado,1876.0,False,False
+3,4621,2,09-168,2018,S/ROL,sin_rol_identificado,1634.0,False,False
+3,4636,3,10-194,2018,S/ROL,sin_rol_identificado,151.0,False,False
+3,4649,3,09-161,2018,S/ROL,sin_rol_identificado,576.0,False,False
+3,4664,3,09-187,2018,S/ROL,sin_rol_identificado,21.0,False,False
+3,4738,4,09-191,2018,S/ROL,sin_rol_identificado,1021.0,False,False
+3,4739,3,09-206,2018,S/ROL,sin_rol_identificado,41.0,False,False
+3,4749,1,09-202,2018,S/ROL,sin_rol_identificado,944.0,False,False
+3,4749,2,09-202,2018,S/ROL,sin_rol_identificado,683.0,False,False
+3,4750,3,09-151,2018,S/ROL,sin_rol_identificado,130.0,False,False
+3,4780,3,07-197,2018,S/Rol,sin_rol_identificado,1977.0,False,False
+3,4800,3,09-199,2018,S/ROL,sin_rol_identificado,235.0,False,False
+3,4821,3,09-147,2018,S/ROL,sin_rol_identificado,141.0,False,False
+3,4828,1,09-167,2018,S/ROL,sin_rol_identificado,2320.0,False,False
+3,4828,2,09-167,2018,S/ROL,sin_rol_identificado,3462.0,False,False
+3,4831,3,09-182,2018,S/ROL,sin_rol_identificado,16.0,False,False
+3,4842,1,10-261,2018,S/ROL,sin_rol_identificado,7712.0,False,False
+3,4842,2,10-261,2018,S/ROL,sin_rol_identificado,6217.0,False,False
+3,4850,3,09-207,2018,S/ROL,sin_rol_identificado,109.0,False,False
+3,4860,1,09-112,2018,S/ROL,sin_rol_identificado,1342.0,False,False
+3,4861,4,09-153,2018,S/ROL,sin_rol_identificado,279.0,False,False
+3,4876,4,16-164,2018,S/R,sin_rol_identificado,84.0,False,False
+3,4879,3,09-201,2018,S/ROL,sin_rol_identificado,390.0,False,False
+3,4909,3,09-196,2018,S/ROL,sin_rol_identificado,168.0,False,False
+3,4919,3,09-197,2018,S/ROL,sin_rol_identificado,167.0,False,False
+3,4959,1,09-134,2018,S/ROL,sin_rol_identificado,422.0,False,False
+3,4959,2,09-134,2018,S/ROL,sin_rol_identificado,366.0,False,False
+3,4982,3,10-200,2018,S/Rol,sin_rol_identificado,567.0,False,False
+3,4999,3,09-181,2018,S/ROL,sin_rol_identificado,517.0,False,False
+3,5011,1,09-156,2018,S/ROL,sin_rol_identificado,5940.0,False,False
+3,5011,2,09-156,2018,S/ROL,sin_rol_identificado,5158.0,False,False
+3,5024,2,09-194,2018,S/ROL,sin_rol_identificado,601.0,False,False
+3,5024,3,09-194,2018,S/ROL,sin_rol_identificado,417.0,False,False
+3,5024,4,09-194,2018,S/ROL,sin_rol_identificado,837.0,False,False
+3,5466,4,15-062,2019,S /Rol,sin_rol_identificado,55.0,False,False
+3,5473,3,03-085,2019,S/Rol,sin_rol_identificado,294.0,False,False
+3,5486,3,13-120,2019,S/ Rol,sin_rol_identificado,1695.0,False,False
+3,5486,4,13-120,2019,S/ Rol,sin_rol_identificado,3710.0,False,False
+3,5551,3,06-169,2019,S/ Rol,sin_rol_identificado,787.0,False,False
+3,5661,3,06-128,2019,S/ Rol,sin_rol_identificado,2706.0,False,False
+3,5678,3,06-145,2019,S/ Rol,sin_rol_identificado,190.0,False,False
+4,3005,3,12-031,2016,S/Rol,sin_rol_identificado,72.0,False,False
+4,3027,1,12-037,2016,S/Rol,sin_rol_identificado,2896.0,False,False
+4,3033,3,11-027,2016,S/ROL,sin_rol_identificado,171.0,False,False
+4,3055,1,11-033,2016,S/Rol,sin_rol_identificado,209.0,False,False
+4,3058,3,11-030,2016,S/ROL,sin_rol_identificado,95.0,False,False
+4,3077,4,10-083,2016,S/Rol,sin_rol_identificado,684.0,False,False
+4,3080,1,10-186,2016,S/Rol,sin_rol_identificado,13728.0,False,False
+4,3089,3,10-141,2016,S/Rol,sin_rol_identificado,683.0,False,False
+4,3131,3,10-134,2016,S/Rol,sin_rol_identificado,141.0,False,False
+4,3132,1,10-162,2016,S/Rol,sin_rol_identificado,319.0,False,False
+4,3137,3,10-176,2016,S/Rol,sin_rol_identificado,653.0,False,False
+4,3140,3,10-180,2016,S/Rol,sin_rol_identificado,1103.0,False,False
+4,3141,3,10-181,2016,S/Rol,sin_rol_identificado,278.0,False,False
+4,3143,3,10-189,2016,S/Rol,sin_rol_identificado,5172.0,False,False
+4,3158,1,10-187,2016,S/Rol,sin_rol_identificado,15987.0,False,False
+4,3210,4,09-027,2016,S/Rol,sin_rol_identificado,136.0,False,False
+4,3241,4,09-061,2016,S/R,sin_rol_identificado,164.0,False,False
+4,3257,3,09-102,2016,S/R,sin_rol_identificado,899.0,False,False
+4,3258,4,09-010,2016,S/R,sin_rol_identificado,501.0,False,False
+4,3268,3,09-120,2016,-,marcador,360.0,False,False
+4,3275,2,09-125,2016,S/R,sin_rol_identificado,620.0,False,False
+4,3277,3,09-127,2016,S/ROL,sin_rol_identificado,143.0,False,False
+4,3278,3,09-128,2016,S/Rol,sin_rol_identificado,166.0,False,False
+4,3280,3,09-130,2016,S/ROL,sin_rol_identificado,280.0,False,False
+4,3281,3,09-131,2016,S/ROL,sin_rol_identificado,1495.0,False,False
+4,3282,3,09-132,2016,S/ROL,sin_rol_identificado,257.0,False,False
+4,3289,3,08-008,2016,S/R,sin_rol_identificado,11965.0,False,False
+4,3291,1,08-142,2016,S/R,sin_rol_identificado,3977.0,False,False
+4,3297,4,08-017,2016,S/R,sin_rol_identificado,6.0,False,False
+4,3318,1,08-041,2016,S/R,sin_rol_identificado,25615.0,False,False
+4,3326,1,08-055,2016,S/R,sin_rol_identificado,44729.0,False,False
+4,3333,4,08-067,2016,S/R,sin_rol_identificado,92.0,False,False
+4,3337,1,08-073,2016,S/R,sin_rol_identificado,4135.0,False,False
+4,3337,2,08-073,2016,S/R,sin_rol_identificado,3503.0,False,False
+4,3348,3,08-088,2016,S/Rol,sin_rol_identificado,5502.0,False,False
+4,3380,1,08-127,2016,S/R,sin_rol_identificado,44641.0,False,False
+4,3381,1,08-147,2016,S/R,sin_rol_identificado,9566.0,False,False
+4,3387,1,08-143,2016,S/R,sin_rol_identificado,13416.0,False,False
+4,3387,2,08-143,2016,S/R,sin_rol_identificado,15048.0,False,False
+4,3388,1,08-144,2016,S/R,sin_rol_identificado,36311.0,False,False
+4,4277,3,05-146,2017,S /Rol,sin_rol_identificado,9745.0,False,False
+4,4473,4,06-116,2017,S/R,sin_rol_identificado,5615.0,False,False
+4,4488,4,06-097,2017,S/R,sin_rol_identificado,910.0,False,False
+4,4535,4,05-145,2017,S /Rol,sin_rol_identificado,3233.0,False,False
+5,3391,3,07-151,2015,,ausente,475.0,True,True
+5,3394,3,07-155,2015,,ausente,203.0,True,True
+5,3395,3,07-156,2015,,ausente,913.0,True,True
+5,3396,4,07-157,2015,,ausente,1548.0,True,True
+5,3397,3,07-158,2015,,ausente,4411.0,True,True
+5,3398,3,07-159,2015,,ausente,3017.0,True,True
+5,3399,2,07-160,2015,S/R,sin_rol_identificado,2088.0,False,False
+5,3399,3,07-160,2015,,ausente,388.0,True,True
+5,3401,3,07-161,2015,,ausente,642.0,True,True
+5,3402,4,07-162,2015,,ausente,488.0,True,True
+5,3403,3,07-163,2015,,ausente,1243.0,True,True
+5,3404,3,07-164,2015,,ausente,1100.0,True,True
+5,3406,4,07-166,2015,S/R,sin_rol_identificado,1195.0,False,False
+5,3407,2,07-167,2015,S/R,sin_rol_identificado,271.0,False,False
+5,3407,3,07-167,2015,,ausente,650.0,True,True
+5,3408,3,07-168,2015,,ausente,701.0,True,True
+5,3409,3,07-169,2015,,ausente,781.0,True,True
+5,3410,3,07-154,2015,,ausente,2100.0,True,True
+5,3411,3,07-170,2015,,ausente,3645.0,True,True
+5,3412,3,07-171,2015,,ausente,1301.0,True,True
+5,3413,3,07-172,2015,,ausente,1111.0,True,True
+5,3415,3,07-174,2015,,ausente,1260.0,True,True
+5,3416,3,07-175,2015,,ausente,635.0,True,True
+5,3417,3,07-176,2015,,ausente,282.0,True,True
+5,3418,3,07-177,2015,,ausente,1324.0,True,True
+5,3418,4,07-177,2015,,ausente,1973.0,True,True
+5,3419,3,07-178,2015,,ausente,132.0,True,True
+5,3421,3,07-179,2015,,ausente,411.0,True,True
+5,3422,3,07-180,2015,,ausente,873.0,True,True
+5,3423,2,07-181,2015,S/R,sin_rol_identificado,1637.0,False,False
+5,3423,3,07-181,2015,,ausente,106.0,True,True
+5,3424,3,07-182,2015,,ausente,1539.0,True,True
+5,3425,3,07-150,2015,,ausente,466.0,True,True
+5,3426,3,07-183,2015,,ausente,510.0,True,True
+5,3427,3,07-184,2015,,ausente,160.0,True,True
+5,3427,4,07-184,2015,,ausente,171.0,True,True
+5,3428,3,07-185,2015,,ausente,353.0,True,True
+5,3429,3,07-186,2015,,ausente,2949.0,True,True
+5,3430,3,07-187,2015,,ausente,557.0,True,True
+5,3431,4,07-188,2015,,ausente,1265.0,True,True
+5,3432,3,07-189,2015,,ausente,357.0,True,True
+5,3433,3,07-190,2015,,ausente,473.0,True,True
+5,3434,2,07-191,2015,S/R,sin_rol_identificado,1169.0,False,False
+5,3434,3,07-191,2015,,ausente,89.0,True,True
+5,3435,3,07-192,2015,,ausente,8819.0,True,True
+5,3435,4,07-192,2015,,ausente,6138.0,True,True
+5,3436,3,07-193,2015,,ausente,262.0,True,True
+5,3437,3,07-194,2015,,ausente,1019.0,True,True
+5,3438,3,07-195,2015,,ausente,1906.0,True,True
+5,3439,3,07-196,2015,,ausente,594.0,True,True
+5,3439,4,07-196,2015,,ausente,422.0,True,True
+5,3440,3,07-197,2015,S/R,sin_rol_identificado,1009.0,False,False
+5,3440,4,07-197,2015,,ausente,139.0,True,True
+5,3442,3,07-199,2015,,ausente,38.0,True,True
+5,3443,3,07-200,2015,,ausente,131.0,True,True
+5,3444,3,07-201,2015,,ausente,140.0,True,True
+5,3445,3,07-202,2015,,ausente,334.0,True,True
+5,3446,3,07-203,2015,,ausente,252.0,True,True
+5,3447,3,07-204,2015,,ausente,2540.0,True,True
+5,3448,3,07-205,2015,,ausente,103.0,True,True
+5,3449,3,07-206,2015,,ausente,199.0,True,True
+5,3450,3,07-152,2015,,ausente,504.0,True,True
+5,3451,3,07-207,2015,,ausente,556.0,True,True
+5,3452,3,07-208,2015,,ausente,285.0,True,True
+5,3453,3,07-209,2015,,ausente,79.0,True,True
+5,3454,3,07-210,2015,,ausente,162.0,True,True
+5,3455,3,07-211,2015,,ausente,686.0,True,True
+5,3456,3,07-212,2015,,ausente,382.0,True,True
+5,3457,3,07-213,2015,,ausente,191.0,True,True
+5,3458,3,07-214,2015,,ausente,258.0,True,True
+5,3459,3,07-215,2015,,ausente,551.0,True,True
+5,3460,3,07-216,2015,,ausente,839.0,True,True
+5,3461,3,07-217,2015,,ausente,1431.0,True,True
+5,3462,3,07-218,2015,,ausente,32.0,True,True
+5,3463,3,07-219,2015,,ausente,1039.0,True,True
+5,3464,3,07-220,2015,,ausente,263.0,True,True
+5,3465,3,07-221,2015,,ausente,265.0,True,True
+5,3468,3,07-227,2015,,ausente,2309.0,True,True
+5,3469,4,07-225,2015,,ausente,2972.0,True,True
+5,3481,3,07-228,2015,,ausente,465.0,True,True
+5,3483,3,07-229,2015,,ausente,131.0,True,True
+5,3485,3,07-231,2015,,ausente,1824.0,True,True
+5,3486,3,07-232,2015,,ausente,1343.0,True,True
+5,3492,3,07-235,2015,,ausente,170.0,True,True
+5,3493,3,07-236,2015,,ausente,363.0,True,True
+5,3494,3,07-237,2015,,ausente,837.0,True,True
+5,3498,3,07-238,2015,,ausente,1045.0,True,True
+5,3499,2,07-239,2015,S/R,sin_rol_identificado,278.0,False,False
+5,3499,3,07-239,2015,,ausente,167.0,True,True
+5,3500,3,07-240,2015,S/R,sin_rol_identificado,382.0,False,False
+5,3500,4,07-240,2015,,ausente,465.0,True,True
+5,3502,3,13-103,2015,,ausente,1799.0,True,True
+5,3503,3,13-107,2015,,ausente,4594.0,True,True
+5,3504,3,13-108,2015,,ausente,699.0,True,True
+5,3507,4,13-101,2015,,ausente,1687.0,True,True
+5,3508,3,13-102,2015,,ausente,3149.0,True,True
+5,3512,3,13-100,2015,,ausente,2693.0,True,True
+5,3514,3,13-097,2015,,ausente,3865.0,True,True
+5,3515,3,13-098,2015,,ausente,7061.0,True,True
+5,3517,3,13-110,2015,,ausente,1270.0,True,True
+5,3518,3,13-113,2015,,ausente,891.0,True,True
+5,3519,3,13-106,2015,,ausente,7896.0,True,True
+5,3521,3,13-099,2015,,ausente,5735.0,True,True
+5,3522,3,13-109,2015,,ausente,2825.0,True,True
+5,3523,3,13-114,2015,,ausente,342.0,True,True
+5,3524,3,13-104,2015,,ausente,4737.0,True,True
+5,3525,3,13-111,2015,,ausente,6351.0,True,True
+5,3527,3,13-089,2015,,ausente,2198.0,True,True
+5,3530,3,13-105,2015,,ausente,8600.0,True,True
+5,3532,3,13-112,2015,,ausente,1810.0,True,True
+5,3536,3,06-090,2015,,ausente,2837.0,True,True
+5,3540,3,06-092,2015,,ausente,358.0,True,True
+5,3541,3,06-093,2015,,ausente,3441.0,True,True
+5,3542,3,06-094,2015,,ausente,4602.0,True,True
+5,3543,3,06-095,2015,,ausente,9156.0,True,True
+5,3544,3,06-096,2015,,ausente,1742.0,True,True
+5,3545,3,06-097,2015,,ausente,3899.0,True,True
+5,3545,4,06-097,2015,,ausente,709.0,True,True
+5,3546,3,06-098,2015,,ausente,1904.0,True,True
+5,3547,4,06-099,2015,,ausente,268.0,True,True
+5,3548,3,06-100,2015,,ausente,245.0,True,True
+5,3549,3,06-101,2015,,ausente,867.0,True,True
+5,3550,4,06-102,2015,,ausente,1578.0,True,True
+5,3551,3,06-103,2015,,ausente,2997.0,True,True
+5,3552,4,06-104,2015,,ausente,506.0,True,True
+5,3553,3,06-105,2015,,ausente,928.0,True,True
+5,3554,3,06-091,2015,,ausente,3032.0,True,True
+5,3555,3,06-106,2015,,ausente,2839.0,True,True
+5,3556,4,06-107,2015,,ausente,1096.0,True,True
+5,3557,3,06-108,2015,,ausente,3648.0,True,True
+5,3558,3,06-109,2015,,ausente,1033.0,True,True
+5,3559,3,06-110,2015,,ausente,1415.0,True,True
+5,3560,3,06-111,2015,S/R,sin_rol_identificado,1537.0,False,False
+5,3560,4,06-111,2015,,ausente,2084.0,True,True
+5,3561,3,06-112,2015,,ausente,304.0,True,True
+5,3562,3,06-113,2015,,ausente,293.0,True,True
+5,3563,3,06-114,2015,,ausente,1272.0,True,True
+5,3564,3,06-115,2015,,ausente,3707.0,True,True
+5,3565,3,06-116,2015,,ausente,4756.0,True,True
+5,3565,4,06-116,2015,,ausente,5659.0,True,True
+5,3566,3,06-117,2015,,ausente,135.0,True,True
+5,3567,3,06-118,2015,,ausente,1046.0,True,True
+5,3568,4,06-119,2015,,ausente,193.0,True,True
+5,3569,3,06-120,2015,,ausente,83.0,True,True
+5,3570,4,06-121,2015,,ausente,1822.0,True,True
+5,3571,3,06-122,2015,,ausente,828.0,True,True
+5,3572,3,06-123,2015,,ausente,966.0,True,True
+5,3573,3,06-124,2015,,ausente,2075.0,True,True
+5,3574,3,06-125,2015,,ausente,357.0,True,True
+5,3575,3,06-126,2015,,ausente,386.0,True,True
+5,3576,4,06-127,2015,,ausente,1285.0,True,True
+5,3577,3,06-128,2015,,ausente,2576.0,True,True
+5,3577,4,06-128,2015,,ausente,4414.0,True,True
+5,3578,3,06-129,2015,,ausente,1123.0,True,True
+5,3579,3,06-130,2015,,ausente,1736.0,True,True
+5,3580,3,06-131,2015,,ausente,1658.0,True,True
+5,3581,3,06-132,2015,,ausente,1976.0,True,True
+5,3582,4,06-133,2015,,ausente,613.0,True,True
+5,3583,3,06-134,2015,,ausente,982.0,True,True
+5,3584,4,06-135,2015,,ausente,219.0,True,True
+5,3585,3,06-136,2015,,ausente,3108.0,True,True
+5,3586,3,06-137,2015,,ausente,842.0,True,True
+5,3587,3,06-138,2015,,ausente,1070.0,True,True
+5,3588,4,06-139,2015,,ausente,491.0,True,True
+5,3589,3,06-140,2015,,ausente,877.0,True,True
+5,3590,3,06-141,2015,,ausente,660.0,True,True
+5,3591,3,06-142,2015,,ausente,980.0,True,True
+5,3592,3,06-143,2015,,ausente,295.0,True,True
+5,3593,3,06-144,2015,,ausente,457.0,True,True
+5,3594,2,06-145,2015,S/R,sin_rol_identificado,4026.0,False,False
+5,3594,3,06-145,2015,,ausente,197.0,True,True
+5,3595,3,06-146,2015,,ausente,3362.0,True,True
+5,3596,3,06-147,2015,,ausente,1067.0,True,True
+5,3597,3,06-148,2015,,ausente,1571.0,True,True
+5,3598,4,06-149,2015,,ausente,177.0,True,True
+5,3599,3,06-152,2015,,ausente,3433.0,True,True
+5,3600,3,06-156,2015,,ausente,36.0,True,True
+5,3601,3,06-157,2015,,ausente,141.0,True,True
+5,3602,3,06-158,2015,,ausente,6582.0,True,True
+5,3603,3,06-159,2015,,ausente,152.0,True,True
+5,3604,2,06-154,2015,S/R,sin_rol_identificado,6468.0,False,False
+5,3604,3,06-154,2015,,ausente,10362.0,True,True
+5,3604,4,06-154,2015,,ausente,7497.0,True,True
+5,3605,3,06-155,2015,,ausente,908.0,True,True
+5,3606,3,05-125,2015,,ausente,463.0,True,True
+5,3607,3,05-126,2015,,ausente,6016.0,True,True
+5,3608,3,05-127,2015,,ausente,577.0,True,True
+5,3609,3,05-128,2015,,ausente,508.0,True,True
+5,3610,3,05-129,2015,,ausente,3655.0,True,True
+5,3611,3,05-130,2015,,ausente,3746.0,True,True
+5,3612,3,05-131,2015,,ausente,2684.0,True,True
+5,3613,3,05-132,2015,,ausente,780.0,True,True
+5,3614,3,05-133,2015,,ausente,13919.0,True,True
+5,3615,3,05-134,2015,,ausente,9932.0,True,True
+5,3616,4,05-135,2015,,ausente,2996.0,True,True
+5,3617,4,05-136,2015,,ausente,4277.0,True,True
+5,3618,3,05-137,2015,,ausente,616.0,True,True
+5,3618,4,05-137,2015,,ausente,806.0,True,True
+5,3619,3,05-138,2015,,ausente,638.0,True,True
+5,3620,3,05-139,2015,,ausente,2242.0,True,True
+5,3620,4,05-139,2015,,ausente,6072.0,True,True
+5,3621,3,05-140,2015,,ausente,3421.0,True,True
+5,3624,3,05-141,2015,,ausente,3958.0,True,True
+5,3625,3,05-142,2015,S/R,sin_rol_identificado,714.0,False,False
+5,3625,4,05-142,2015,,ausente,422.0,True,True
+5,3626,3,05-143,2015,,ausente,1021.0,True,True
+5,3627,3,05-144,2015,,ausente,1309.0,True,True
+5,3628,3,05-145,2015,,ausente,1604.0,True,True
+5,3628,4,05-145,2015,,ausente,3075.0,True,True
+5,3629,2,05-146,2015,,ausente,7046.0,True,True
+5,3629,3,05-146,2015,,ausente,8911.0,True,True
+5,3630,3,05-147,2015,,ausente,269.0,True,True
+5,3631,3,05-148,2015,,ausente,719.0,True,True
+5,3632,3,05-149,2015,,ausente,2278.0,True,True
+5,3633,3,05-150,2015,,ausente,3365.0,True,True
+5,3635,3,05-151,2015,,ausente,1857.0,True,True
+5,3636,3,05-152,2015,,ausente,2369.0,True,True
+5,3637,3,05-153,2015,,ausente,1489.0,True,True
+5,3637,4,05-153,2015,,ausente,592.0,True,True
+5,3639,3,05-156,2015,,ausente,1038.0,True,True
+5,3640,3,05-157,2015,,ausente,502.0,True,True
+5,3642,3,05-154,2015,,ausente,1304.0,True,True
+5,3662,3,04-078,2015,,ausente,3109.0,True,True
+5,3663,3,04-079,2015,,ausente,1463.0,True,True
+5,3664,3,04-080,2015,,ausente,2217.0,True,True
+5,3665,3,04-081,2015,,ausente,527.0,True,True
+5,3666,3,04-082,2015,,ausente,76.0,True,True
+5,3667,3,04-083,2015,,ausente,965.0,True,True
+5,3668,3,04-084,2015,,ausente,681.0,True,True
+5,3669,3,04-085,2015,,ausente,147.0,True,True
+5,3670,3,04-086,2015,,ausente,466.0,True,True
+5,3671,3,04-087,2015,,ausente,233.0,True,True
+5,3672,3,04-088,2015,,ausente,1661.0,True,True
+5,3673,3,04-089,2015,,ausente,277.0,True,True
+5,3674,3,04-090,2015,,ausente,1352.0,True,True
+5,3676,3,04-091,2015,,ausente,3726.0,True,True
+5,3677,3,04-092,2015,,ausente,80.0,True,True
+5,3678,3,04-093,2015,,ausente,502.0,True,True
+5,3679,3,04-094,2015,,ausente,462.0,True,True
+5,3680,3,04-095,2015,,ausente,567.0,True,True
+5,3689,4,01-031,2015,,ausente,183.0,True,True
+5,3690,3,01-041,2015,,ausente,85.0,True,True
+5,3691,3,01-032,2015,,ausente,5963.0,True,True
+5,3692,3,01-033,2015,,ausente,1480.0,True,True
+5,3693,4,01-034,2015,,ausente,51.0,True,True
+5,3694,3,01-035,2015,,ausente,57.0,True,True
+5,3695,3,01-036,2015,,ausente,49.0,True,True
+5,3696,3,01-037,2015,,ausente,587.0,True,True
+5,3697,3,01-038,2015,,ausente,177.0,True,True
+5,3699,3,01-040,2015,,ausente,166.0,True,True
+5,3700,3,15-044,2015,,ausente,2177.0,True,True
+5,3702,3,15-045,2015,,ausente,74.0,True,True
+5,3703,3,15-046,2015,,ausente,61.0,True,True
+5,3704,3,15-047,2015,,ausente,48.0,True,True
+5,3705,3,15-041,2015,,ausente,291.0,True,True
+5,3706,3,15-042,2015,,ausente,2256.0,True,True
+5,3707,3,15-048,2015,,ausente,407.0,True,True
+5,3708,3,15-049,2015,,ausente,86.0,True,True
+5,3710,3,15-050,2015,,ausente,180.0,True,True
+5,3711,3,15-051,2015,,ausente,128.0,True,True
+5,3712,3,15-052,2015,,ausente,73.0,True,True
+5,3713,3,15-043,2015,,ausente,549.0,True,True
+5,3714,3,15-053,2015,,ausente,36.0,True,True
+5,3717,3,07-243,2015,,ausente,1179.0,True,True
+5,3730,3,06-161,2015,,ausente,106.0,True,True
+5,3731,3,06-160,2015,,ausente,299.0,True,True
+5,3732,3,15-057,2015,,ausente,228.0,True,True
+5,3733,3,15-058,2015,,ausente,114.0,True,True
+5,3734,3,15-059,2015,,ausente,50.0,True,True
+5,3735,3,15-060,2015,,ausente,29.0,True,True
+5,3736,3,15-054,2015,,ausente,601.0,True,True
+5,3737,3,15-055,2015,,ausente,4391.0,True,True
+5,3738,3,15-056,2015,,ausente,1628.0,True,True
+5,3739,3,02-062,2015,,ausente,762.0,True,True
+5,3739,4,02-062,2015,,ausente,1180.0,True,True
+5,3741,3,02-063,2015,,ausente,1029.0,True,True
+5,3742,3,02-064,2015,,ausente,346.0,True,True
+5,3744,2,02-065,2015,,ausente,6422.0,True,True
+5,3744,3,02-065,2015,,ausente,5627.0,True,True
+5,3746,3,02-066,2015,,ausente,85.0,True,True
+5,3747,3,02-074,2015,,ausente,156.0,True,True
+5,3748,3,02-067,2015,,ausente,814.0,True,True
+5,3749,3,02-068,2015,,ausente,1076.0,True,True
+5,3750,3,02-069,2015,,ausente,560.0,True,True
+5,3752,3,02-071,2015,,ausente,282.0,True,True
+5,3753,2,02-072,2015,S/R,sin_rol_identificado,664.0,False,False
+5,3753,3,02-072,2015,,ausente,844.0,True,True
+5,3754,3,02-073,2015,,ausente,3103.0,True,True
+5,3756,2,02-075,2015,S/R,sin_rol_identificado,183.0,False,False
+5,3756,3,02-075,2015,,ausente,129.0,True,True
+5,3757,3,03-049,2015,,ausente,24.0,True,True
+5,3758,3,03-050,2015,,ausente,1181.0,True,True
+5,3759,3,03-051,2015,,ausente,141.0,True,True
+5,3760,3,03-052,2015,,ausente,1373.0,True,True
+5,3761,3,03-053,2015,,ausente,3144.0,True,True
+5,3762,3,03-054,2015,,ausente,257.0,True,True
+5,3763,3,03-055,2015,,ausente,27.0,True,True
+5,3764,3,03-056,2015,,ausente,75.0,True,True
+5,3765,3,03-057,2015,,ausente,44.0,True,True
+5,3766,3,03-058,2015,,ausente,1661.0,True,True
+5,3767,3,03-059,2015,,ausente,15517.0,True,True
+5,3768,3,03-060,2015,,ausente,950.0,True,True
+5,3769,3,03-061,2015,,ausente,39.0,True,True
+5,3770,3,03-062,2015,,ausente,82.0,True,True
+5,3771,3,03-063,2015,,ausente,36.0,True,True
+5,3772,3,03-064,2015,,ausente,218.0,True,True
+5,3773,3,03-065,2015,,ausente,636.0,True,True
+5,3774,3,03-066,2015,,ausente,12.0,True,True
+5,3776,3,03-068,2015,,ausente,177.0,True,True
+5,3777,3,03-069,2015,,ausente,538.0,True,True
+5,3778,3,03-070,2015,,ausente,778.0,True,True
+5,3779,3,03-071,2015,,ausente,62.0,True,True
+5,3780,3,03-072,2015,,ausente,159.0,True,True
+5,3781,3,03-073,2015,,ausente,96.0,True,True
+5,3782,3,03-074,2015,,ausente,166.0,True,True
+5,3782,4,03-074,2015,,ausente,235.0,True,True
+5,3783,3,03-075,2015,,ausente,462.0,True,True
+5,3784,3,03-076,2015,,ausente,124.0,True,True
+5,3785,3,03-077,2015,,ausente,138.0,True,True
+5,3786,3,03-078,2015,,ausente,93.0,True,True
+5,3787,3,03-079,2015,,ausente,329.0,True,True
+5,3787,4,03-079,2015,,ausente,279.0,True,True
+5,3789,3,01-029,2015,,ausente,270.0,True,True
+5,3790,3,01-030,2015,,ausente,619.0,True,True
+5,3794,3,02-048,2015,,ausente,391.0,True,True
+5,3796,2,02-050,2015,S/R,sin_rol_identificado,70.0,False,False
+5,3796,3,02-050,2015,,ausente,51.0,True,True
+5,3797,3,02-051,2015,,ausente,1341.0,True,True
+5,3798,3,02-052,2015,,ausente,1003.0,True,True
+5,3799,2,02-053,2015,S/R,sin_rol_identificado,859.0,False,False
+5,3799,3,02-053,2015,,ausente,342.0,True,True
+5,3800,3,02-054,2015,,ausente,1608.0,True,True
+5,3802,3,02-056,2015,,ausente,744.0,True,True
+5,3804,3,02-058,2015,,ausente,390.0,True,True
+5,3805,3,02-059,2015,,ausente,189.0,True,True
+5,3806,2,02-060,2015,S/R,sin_rol_identificado,556.0,False,False
+5,3806,3,02-060,2015,,ausente,496.0,True,True
+5,3807,3,02-061,2015,,ausente,89.0,True,True
+5,3808,3,03-042,2015,,ausente,42.0,True,True
+5,3809,3,03-043,2015,,ausente,1270.0,True,True
+5,3810,3,03-044,2015,,ausente,45.0,True,True
+5,3810,4,03-044,2015,,ausente,131.0,True,True
+5,3811,3,03-045,2015,,ausente,11.0,True,True
+5,3812,3,03-046,2015,,ausente,110.0,True,True
+5,3813,3,03-047,2015,,ausente,113.0,True,True
+5,3814,3,03-048,2015,,ausente,3.0,True,True
+5,3818,3,04-067,2015,,ausente,703.0,True,True
+5,3819,3,04-068,2015,,ausente,2044.0,True,True
+5,3820,4,04-069,2015,,ausente,417.0,True,True
+5,3826,3,04-075,2015,,ausente,172.0,True,True
+5,3827,3,04-076,2015,,ausente,150.0,True,True
+5,3828,3,05-120,2015,,ausente,447.0,True,True
+5,3831,3,05-123,2015,,ausente,1150.0,True,True
+5,3833,3,13-087,2015,,ausente,1411.0,True,True
+5,3835,3,13-090,2015,,ausente,784.0,True,True
+5,3836,3,13-091,2015,,ausente,301.0,True,True
+5,3837,3,13-092,2015,,ausente,547.0,True,True
+5,3839,3,04-077,2015,,ausente,3376.0,True,True
+5,3840,3,12-002,2014,,ausente,202.0,True,True
+5,3841,3,12-006,2014,,ausente,8.0,True,True
+5,3842,3,12-008,2014,,ausente,246.0,True,True
+5,3843,3,12-010,2014,,ausente,3203.0,True,True
+5,3844,3,12-014,2014,,ausente,576.0,True,True
+5,3845,3,12-016,2014,,ausente,272.0,True,True
+5,3846,3,12-029,2014,,ausente,230.0,True,True
+5,3847,3,12-026,2014,,ausente,159.0,True,True
+5,3848,3,12-021,2014,,ausente,103.0,True,True
+5,3849,3,12-001,2014,,ausente,372.0,True,True
+5,3850,3,12-003,2014,,ausente,769.0,True,True
+5,3851,3,12-018,2014,,ausente,139.0,True,True
+5,3852,2,12-031,2014,S/R,sin_rol_identificado,224.0,False,False
+5,3852,3,12-031,2014,,ausente,46.0,True,True
+5,3854,3,12-012,2014,,ausente,27.0,True,True
+5,3856,3,12-023,2014,,ausente,5.0,True,True
+5,3857,3,12-033,2014,,ausente,99.0,True,True
+5,3858,3,12-019,2014,,ausente,103.0,True,True
+5,3859,3,12-015,2014,,ausente,90.0,True,True
+5,3860,4,12-013,2014,,ausente,345.0,True,True
+5,3861,3,12-020,2014,,ausente,263.0,True,True
+5,3862,3,12-005,2014,,ausente,104.0,True,True
+5,3863,3,12-035,2014,,ausente,10.0,True,True
+5,3864,3,12-036,2014,,ausente,252.0,True,True
+5,3864,4,12-036,2014,,ausente,197.0,True,True
+5,3866,3,12-007,2014,,ausente,964.0,True,True
+5,3867,4,12-017,2014,,ausente,50.0,True,True
+5,3868,3,12-025,2014,,ausente,25.0,True,True
+5,3868,4,12-025,2014,,ausente,24.0,True,True
+5,3869,3,12-027,2014,,ausente,43.0,True,True
+5,3870,2,12-032,2014,S/R,sin_rol_identificado,128.0,False,False
+5,3870,3,12-032,2014,,ausente,92.0,True,True
+5,3870,4,12-032,2014,,ausente,122.0,True,True
+5,3871,4,12-024,2014,,ausente,84.0,True,True
+5,3872,3,12-039,2014,,ausente,278.0,True,True
+5,3872,4,12-039,2014,,ausente,71.0,True,True
+5,3873,1,12-040,2014,S/R,sin_rol_identificado,356.0,False,False
+5,3875,3,12-042,2014,,ausente,175.0,True,True
+5,3876,2,12-043,2014,,ausente,87.0,True,True
+5,3876,3,12-043,2014,,ausente,24.0,True,True
+5,3877,3,12-044,2014,,ausente,17.0,True,True
+5,3877,4,12-044,2014,,ausente,11.0,True,True
+5,3878,3,11-005,2014,,ausente,713.0,True,True
+5,3879,3,11-015,2014,,ausente,272.0,True,True
+5,3880,3,11-027,2014,,ausente,135.0,True,True
+5,3882,3,11-002,2014,,ausente,368.0,True,True
+5,3883,3,11-003,2014,,ausente,64.0,True,True
+5,3884,3,11-004,2014,,ausente,728.0,True,True
+5,3885,3,11-013,2014,,ausente,269.0,True,True
+5,3886,3,11-024,2014,,ausente,588.0,True,True
+5,3887,3,11-017,2014,,ausente,89.0,True,True
+5,3888,3,11-012,2014,,ausente,205.0,True,True
+5,3889,3,11-018,2014,,ausente,17.0,True,True
+5,3890,3,11-006,2014,,ausente,414.0,True,True
+5,3891,3,11-021,2014,,ausente,1365.0,True,True
+5,3892,3,11-029,2014,,ausente,28.0,True,True
+5,3893,3,11-019,2014,,ausente,113.0,True,True
+5,3894,3,11-020,2014,,ausente,591.0,True,True
+5,3895,3,11-007,2014,,ausente,258.0,True,True
+5,3896,3,11-008,2014,,ausente,691.0,True,True
+5,3897,3,11-009,2014,,ausente,231.0,True,True
+5,3898,3,11-022,2014,,ausente,586.0,True,True
+5,3899,3,11-010,2014,,ausente,478.0,True,True
+5,3900,3,11-011,2014,,ausente,354.0,True,True
+5,3901,2,11-026,2014,,ausente,795.0,True,True
+5,3901,3,11-026,2014,,ausente,409.0,True,True
+5,3903,3,11-032,2014,,ausente,123.0,True,True
+5,3904,3,11-028,2014,,ausente,35.0,True,True
+5,3905,3,11-030,2014,,ausente,77.0,True,True
+5,3909,3,10-022,2014,,ausente,931.0,True,True
+5,3910,3,10-027,2014,,ausente,5902.0,True,True
+5,3911,3,10-065,2014,,ausente,374.0,True,True
+5,3912,3,10-069,2014,,ausente,207.0,True,True
+5,3913,3,10-076,2014,,ausente,1186.0,True,True
+5,3913,4,10-076,2014,,ausente,826.0,True,True
+5,3914,3,10-077,2014,,ausente,126.0,True,True
+5,3914,4,10-077,2014,,ausente,179.0,True,True
+5,3915,4,10-078,2014,,ausente,167.0,True,True
+5,3916,3,10-081,2014,,ausente,767.0,True,True
+5,3917,3,10-086,2014,,ausente,1387.0,True,True
+5,3918,3,10-093,2014,,ausente,405.0,True,True
+5,3919,3,10-102,2014,,ausente,376.0,True,True
+5,3920,3,10-106,2014,,ausente,271.0,True,True
+5,3920,4,10-106,2014,,ausente,485.0,True,True
+5,3921,3,10-109,2014,,ausente,1253.0,True,True
+5,3922,3,10-082,2014,,ausente,298.0,True,True
+5,3923,3,10-113,2014,,ausente,734.0,True,True
+5,3924,3,10-083,2014,,ausente,477.0,True,True
+5,3924,4,10-083,2014,,ausente,399.0,True,True
+5,3925,3,10-122,2014,,ausente,213.0,True,True
+5,3926,3,10-137,2014,,ausente,693.0,True,True
+5,3926,4,10-137,2014,,ausente,622.0,True,True
+5,3927,1,10-186,2014,S/R,sin_rol_identificado,9567.0,False,False
+5,3928,3,10-073,2014,,ausente,2656.0,True,True
+5,3928,4,10-073,2014,,ausente,1184.0,True,True
+5,3929,3,10-084,2014,,ausente,686.0,True,True
+5,3930,3,10-111,2014,,ausente,423.0,True,True
+5,3931,3,10-066,2014,,ausente,101.0,True,True
+5,3932,3,10-103,2014,,ausente,1141.0,True,True
+5,3933,3,10-105,2014,,ausente,196.0,True,True
+5,3934,3,10-108,2014,,ausente,3269.0,True,True
+5,3935,3,10-138,2014,,ausente,372.0,True,True
+5,3936,2,10-141,2014,,ausente,789.0,True,True
+5,3936,3,10-141,2014,,ausente,497.0,True,True
+5,3937,3,10-129,2014,,ausente,1389.0,True,True
+5,3938,3,10-097,2014,,ausente,1018.0,True,True
+5,3939,3,10-100,2014,,ausente,670.0,True,True
+5,3939,4,10-100,2014,,ausente,565.0,True,True
+5,3940,3,10-098,2014,,ausente,110.0,True,True
+5,3941,3,10-101,2014,,ausente,173.0,True,True
+5,3942,3,10-104,2014,,ausente,971.0,True,True
+5,3943,3,10-121,2014,,ausente,152.0,True,True
+5,3944,3,10-068,2014,,ausente,397.0,True,True
+5,3946,3,10-074,2014,,ausente,586.0,True,True
+5,3947,3,10-094,2014,,ausente,651.0,True,True
+5,3948,3,10-118,2014,,ausente,273.0,True,True
+5,3951,3,10-096,2014,,ausente,160.0,True,True
+5,3952,3,10-139,2014,,ausente,106.0,True,True
+5,3953,3,10-070,2014,,ausente,127.0,True,True
+5,3955,3,10-116,2014,,ausente,1783.0,True,True
+5,3956,3,10-079,2014,,ausente,135.0,True,True
+5,3957,3,10-020,2014,,ausente,122.0,True,True
+5,3958,3,10-075,2014,,ausente,77.0,True,True
+5,3959,3,10-017,2014,,ausente,932.0,True,True
+5,3960,3,10-110,2014,,ausente,4284.0,True,True
+5,3962,3,10-090,2014,,ausente,522.0,True,True
+5,3963,3,10-099,2014,,ausente,280.0,True,True
+5,3963,4,10-099,2014,,ausente,379.0,True,True
+5,3964,3,10-136,2014,,ausente,76.0,True,True
+5,3965,2,10-144,2014,,ausente,4784.0,True,True
+5,3965,3,10-144,2014,,ausente,1198.0,True,True
+5,3966,3,10-142,2014,,ausente,634.0,True,True
+5,3967,3,10-112,2014,,ausente,633.0,True,True
+5,3968,3,10-023,2014,,ausente,1711.0,True,True
+5,3970,3,10-087,2014,,ausente,81.0,True,True
+5,3971,3,10-095,2014,,ausente,438.0,True,True
+5,3972,3,10-019,2014,,ausente,9411.0,True,True
+5,3973,3,10-018,2014,,ausente,416.0,True,True
+5,3974,3,10-091,2014,,ausente,384.0,True,True
+5,3975,3,10-067,2014,,ausente,953.0,True,True
+5,3976,3,10-085,2014,,ausente,233.0,True,True
+5,3977,3,10-107,2014,,ausente,179.0,True,True
+5,3978,2,10-134,2014,,ausente,186.0,True,True
+5,3978,3,10-134,2014,,ausente,90.0,True,True
+5,3979,1,10-162,2014,S/R,sin_rol_identificado,414.0,False,False
+5,3983,3,10-174,2014,,ausente,139.0,True,True
+5,3984,2,10-176,2014,,ausente,148.0,True,True
+5,3984,3,10-176,2014,,ausente,415.0,True,True
+5,3985,3,10-177,2014,,ausente,217.0,True,True
+5,3986,3,10-178,2014,,ausente,1367.0,True,True
+5,3987,1,10-180,2014,S/R,sin_rol_identificado,1343.0,False,False
+5,3987,2,10-180,2014,,ausente,1303.0,True,True
+5,3987,3,10-180,2014,,ausente,1285.0,True,True
+5,3988,2,10-181,2014,,ausente,419.0,True,True
+5,3988,3,10-181,2014,,ausente,290.0,True,True
+5,3990,2,10-189,2014,,ausente,22079.0,True,True
+5,3990,3,10-189,2014,,ausente,5353.0,True,True
+5,3991,2,10-190,2014,,ausente,428.0,True,True
+5,3991,3,10-190,2014,,ausente,779.0,True,True
+5,3993,3,10-024,2014,,ausente,409.0,True,True
+5,3994,3,10-025,2014,,ausente,7746.0,True,True
+5,3995,3,10-030,2014,,ausente,480.0,True,True
+5,3996,3,10-071,2014,,ausente,186.0,True,True
+5,3997,3,10-072,2014,,ausente,326.0,True,True
+5,3998,3,10-080,2014,,ausente,244.0,True,True
+5,3998,4,10-080,2014,,ausente,275.0,True,True
+5,4000,3,10-089,2014,,ausente,195.0,True,True
+5,4001,3,10-092,2014,,ausente,215.0,True,True
+5,4002,3,10-123,2014,,ausente,219.0,True,True
+5,4006,3,11-035,2014,,ausente,129.0,True,True
+5,4007,4,11-036,2014,,ausente,534.0,True,True
+5,4008,3,14-035,2014,,ausente,1395.0,True,True
+5,4009,3,14-036,2014,,ausente,1551.0,True,True
+5,4010,3,14-051,2014,,ausente,1304.0,True,True
+5,4011,4,14-059,2014,,ausente,413.0,True,True
+5,4013,3,14-061,2014,,ausente,1643.0,True,True
+5,4014,3,14-063,2014,,ausente,160.0,True,True
+5,4016,3,14-058,2014,,ausente,106.0,True,True
+5,4018,3,14-062,2014,,ausente,265.0,True,True
+5,4020,3,14-039,2014,,ausente,882.0,True,True
+5,4021,3,14-002,2014,,ausente,2682.0,True,True
+5,4022,3,14-034,2014,,ausente,150.0,True,True
+5,4023,3,14-049,2014,,ausente,555.0,True,True
+5,4024,3,14-033,2014,,ausente,421.0,True,True
+5,4026,3,14-158,2014,,ausente,1152.0,True,True
+5,4027,3,14-032,2014,,ausente,274.0,True,True
+5,4028,3,14-130,2014,,ausente,999.0,True,True
+5,4029,3,14-048,2014,,ausente,998.0,True,True
+5,4030,3,14-135,2014,,ausente,3065.0,True,True
+5,4033,3,14-053,2014,,ausente,520.0,True,True
+5,4034,3,14-055,2014,,ausente,883.0,True,True
+5,4035,3,14-037,2014,,ausente,1371.0,True,True
+5,4037,3,14-042,2014,,ausente,367.0,True,True
+5,4042,3,14-044,2014,,ausente,1896.0,True,True
+5,4044,3,14-054,2014,,ausente,456.0,True,True
+5,4045,2,14-126,2014,,ausente,395.0,True,True
+5,4045,3,14-126,2014,,ausente,237.0,True,True
+5,4048,2,09-012,2014,S/R,sin_rol_identificado,200.0,False,False
+5,4048,3,09-012,2014,,ausente,52.0,True,True
+5,4049,3,09-013,2014,,ausente,523.0,True,True
+5,4050,3,09-015,2014,,ausente,2289.0,True,True
+5,4051,3,09-016,2014,,ausente,157.0,True,True
+5,4052,3,09-019,2014,,ausente,83.0,True,True
+5,4053,3,09-022,2014,,ausente,128.0,True,True
+5,4054,3,09-023,2014,,ausente,140.0,True,True
+5,4056,3,09-025,2014,,ausente,1012.0,True,True
+5,4057,3,09-027,2014,,ausente,187.0,True,True
+5,4057,4,09-027,2014,,ausente,103.0,True,True
+5,4058,3,09-030,2014,,ausente,620.0,True,True
+5,4059,3,09-031,2014,,ausente,73.0,True,True
+5,4060,3,09-032,2014,,ausente,44.0,True,True
+5,4061,3,09-034,2014,,ausente,131.0,True,True
+5,4062,2,09-035,2014,,ausente,299.0,True,True
+5,4062,3,09-035,2014,,ausente,719.0,True,True
+5,4063,3,09-036,2014,,ausente,995.0,True,True
+5,4064,3,09-037,2014,,ausente,89.0,True,True
+5,4065,3,09-038,2014,,ausente,146.0,True,True
+5,4066,3,09-040,2014,,ausente,177.0,True,True
+5,4067,3,09-041,2014,,ausente,69.0,True,True
+5,4068,3,09-043,2014,,ausente,678.0,True,True
+5,4069,2,09-045,2014,S/R,sin_rol_identificado,3057.0,False,False
+5,4069,3,09-045,2014,,ausente,213.0,True,True
+5,4070,3,09-046,2014,S/R,sin_rol_identificado,385.0,False,False
+5,4070,4,09-046,2014,,ausente,1600.0,True,True
+5,4071,3,09-047,2014,,ausente,216.0,True,True
+5,4072,3,09-048,2014,,ausente,502.0,True,True
+5,4073,1,09-052,2014,S/R,sin_rol_identificado,3998.0,False,False
+5,4073,3,09-052,2014,,ausente,721.0,True,True
+5,4074,3,09-058,2014,,ausente,70.0,True,True
+5,4075,2,09-072,2014,S/R,sin_rol_identificado,1164.0,False,False
+5,4075,3,09-072,2014,,ausente,312.0,True,True
+5,4076,3,09-081,2014,,ausente,3599.0,True,True
+5,4077,3,09-082,2014,,ausente,5642.0,True,True
+5,4078,3,09-083,2014,,ausente,615.0,True,True
+5,4081,2,09-107,2014,S/R,sin_rol_identificado,59.0,False,False
+5,4081,3,09-107,2014,,ausente,17.0,True,True
+5,4082,3,09-053,2014,,ausente,944.0,True,True
+5,4083,3,09-054,2014,,ausente,252.0,True,True
+5,4084,3,09-055,2014,,ausente,301.0,True,True
+5,4085,3,09-056,2014,,ausente,286.0,True,True
+5,4086,3,09-057,2014,,ausente,318.0,True,True
+5,4087,3,09-060,2014,,ausente,1299.0,True,True
+5,4088,3,09-061,2014,,ausente,544.0,True,True
+5,4088,4,09-061,2014,,ausente,102.0,True,True
+5,4089,3,09-063,2014,,ausente,245.0,True,True
+5,4090,3,09-064,2014,,ausente,112.0,True,True
+5,4091,3,09-065,2014,,ausente,715.0,True,True
+5,4092,1,09-067,2014,S/R,sin_rol_identificado,1697.0,False,False
+5,4092,3,09-067,2014,,ausente,133.0,True,True
+5,4093,3,09-068,2014,,ausente,143.0,True,True
+5,4094,3,09-076,2014,,ausente,90.0,True,True
+5,4095,2,09-070,2014,S/R,sin_rol_identificado,2311.0,False,False
+5,4095,3,09-070,2014,,ausente,1568.0,True,True
+5,4096,3,09-075,2014,,ausente,182.0,True,True
+5,4097,4,09-077,2014,,ausente,1012.0,True,True
+5,4098,3,09-078,2014,,ausente,79.0,True,True
+5,4099,3,09-087,2014,,ausente,74.0,True,True
+5,4101,2,09-096,2014,S/R,sin_rol_identificado,62.0,False,False
+5,4101,3,09-096,2014,,ausente,267.0,True,True
+5,4102,1,09-099,2014,S/R,sin_rol_identificado,752.0,False,False
+5,4104,2,09-102,2014,,ausente,288.0,True,True
+5,4104,3,09-102,2014,,ausente,349.0,True,True
+5,4105,2,09-010,2014,,ausente,444.0,True,True
+5,4105,3,09-010,2014,,ausente,281.0,True,True
+5,4105,4,09-010,2014,,ausente,383.0,True,True
+5,4107,2,09-106,2014,,ausente,654.0,True,True
+5,4107,3,09-106,2014,,ausente,239.0,True,True
+5,4108,3,09-108,2014,,ausente,509.0,True,True
+5,4109,1,09-109,2014,S/R,sin_rol_identificado,655.0,False,False
+5,4113,2,09-115,2014,S/R,sin_rol_identificado,803.0,False,False
+5,4113,3,09-115,2014,,ausente,313.0,True,True
+5,4116,2,09-121,2014,,ausente,2335.0,True,True
+5,4116,3,09-121,2014,,ausente,247.0,True,True
+5,4116,4,09-121,2014,,ausente,820.0,True,True
+5,4126,2,08-011,2014,,ausente,1604.0,True,True
+5,4126,3,08-011,2014,,ausente,524.0,True,True
+5,4127,3,08-013,2014,,ausente,2199.0,True,True
+5,4128,3,08-014,2014,,ausente,152.0,True,True
+5,4129,3,08-015,2014,,ausente,916.0,True,True
+5,4130,4,08-016,2014,,ausente,66.0,True,True
+5,4131,3,08-017,2014,,ausente,44.0,True,True
+5,4131,4,08-017,2014,,ausente,76.0,True,True
+5,4132,3,08-018,2014,,ausente,482.0,True,True
+5,4133,3,08-019,2014,,ausente,341.0,True,True
+5,4134,3,08-020,2014,,ausente,1190.0,True,True
+5,4135,3,08-021,2014,,ausente,106.0,True,True
+5,4137,3,08-023,2014,,ausente,335.0,True,True
+5,4138,3,08-024,2014,,ausente,402.0,True,True
+5,4139,3,08-025,2014,,ausente,115.0,True,True
+5,4140,4,08-026,2014,,ausente,516.0,True,True
+5,4141,4,08-027,2014,,ausente,574.0,True,True
+5,4142,3,08-149,2014,,ausente,586.0,True,True
+5,4143,3,08-030,2014,,ausente,2631.0,True,True
+5,4144,3,08-031,2014,,ausente,4257.0,True,True
+5,4145,3,08-032,2014,,ausente,297.0,True,True
+5,4146,3,08-034,2014,,ausente,159.0,True,True
+5,4147,3,08-035,2014,,ausente,120.0,True,True
+5,4148,3,08-037,2014,,ausente,283.0,True,True
+5,4150,3,08-039,2014,,ausente,91.0,True,True
+5,4151,3,08-040,2014,,ausente,412.0,True,True
+5,4153,3,08-044,2014,,ausente,1070.0,True,True
+5,4154,3,08-045,2014,,ausente,2765.0,True,True
+5,4155,2,08-046,2014,,ausente,3271.0,True,True
+5,4155,3,08-046,2014,,ausente,1214.0,True,True
+5,4156,3,08-047,2014,,ausente,331.0,True,True
+5,4156,4,08-047,2014,,ausente,547.0,True,True
+5,4157,3,08-050,2014,,ausente,54.0,True,True
+5,4158,3,08-052,2014,,ausente,230.0,True,True
+5,4159,4,08-053,2014,,ausente,153.0,True,True
+5,4161,1,08-055,2014,S/R,sin_rol_identificado,41738.0,False,False
+5,4162,3,08-059,2014,,ausente,2445.0,True,True
+5,4162,4,08-059,2014,,ausente,393.0,True,True
+5,4165,2,08-063,2014,,ausente,1912.0,True,True
+5,4165,3,08-063,2014,,ausente,160.0,True,True
+5,4166,3,08-065,2014,,ausente,928.0,True,True
+5,4167,2,08-066,2014,,ausente,1758.0,True,True
+5,4167,3,08-066,2014,,ausente,89.0,True,True
+5,4168,3,08-067,2014,,ausente,728.0,True,True
+5,4168,4,08-067,2014,,ausente,137.0,True,True
+5,4169,2,08-068,2014,,ausente,1781.0,True,True
+5,4169,3,08-068,2014,,ausente,405.0,True,True
+5,4170,3,08-071,2014,,ausente,208.0,True,True
+5,4171,3,08-072,2014,,ausente,154.0,True,True
+5,4172,3,08-073,2014,,ausente,627.0,True,True
+5,4173,3,08-074,2014,,ausente,1632.0,True,True
+5,4174,3,08-075,2014,,ausente,361.0,True,True
+5,4175,2,08-076,2014,,ausente,2513.0,True,True
+5,4175,3,08-076,2014,,ausente,796.0,True,True
+5,4176,3,08-077,2014,,ausente,1171.0,True,True
+5,4177,3,08-080,2014,,ausente,477.0,True,True
+5,4178,3,08-081,2014,,ausente,196.0,True,True
+5,4179,3,08-084,2014,,ausente,145.0,True,True
+5,4180,3,08-085,2014,,ausente,1106.0,True,True
+5,4181,3,08-086,2014,,ausente,8575.0,True,True
+5,4182,3,08-087,2014,,ausente,256.0,True,True
+5,4183,3,08-088,2014,,ausente,4499.0,True,True
+5,4184,3,08-089,2014,,ausente,398.0,True,True
+5,4185,3,08-090,2014,,ausente,265.0,True,True
+5,4186,3,08-091,2014,,ausente,209.0,True,True
+5,4187,3,08-092,2014,,ausente,2544.0,True,True
+5,4187,4,08-092,2014,,ausente,1085.0,True,True
+5,4188,3,08-093,2014,,ausente,385.0,True,True
+5,4189,2,08-094,2014,,ausente,162.0,True,True
+5,4189,3,08-094,2014,,ausente,148.0,True,True
+5,4191,3,08-098,2014,,ausente,1990.0,True,True
+5,4193,3,08-100,2014,,ausente,3286.0,True,True
+5,4194,3,08-101,2014,,ausente,6094.0,True,True
+5,4195,3,08-102,2014,,ausente,645.0,True,True
+5,4196,3,08-103,2014,,ausente,464.0,True,True
+5,4197,3,08-104,2014,,ausente,249.0,True,True
+5,4198,3,08-105,2014,,ausente,411.0,True,True
+5,4199,3,08-106,2014,,ausente,187.0,True,True
+5,4201,3,08-108,2014,,ausente,347.0,True,True
+5,4202,3,08-109,2014,,ausente,385.0,True,True
+5,4203,3,08-110,2014,,ausente,259.0,True,True
+5,4204,3,08-111,2014,,ausente,1871.0,True,True
+5,4205,3,08-112,2014,,ausente,545.0,True,True
+5,4206,3,08-115,2014,,ausente,2578.0,True,True
+5,4207,3,08-116,2014,,ausente,1971.0,True,True
+5,4208,3,08-117,2014,,ausente,148.0,True,True
+5,4209,3,08-118,2014,,ausente,293.0,True,True
+5,4210,2,08-120,2014,,ausente,8958.0,True,True
+5,4210,3,08-120,2014,,ausente,7609.0,True,True
+5,4211,2,08-121,2014,,ausente,2469.0,True,True
+5,4211,3,08-121,2014,,ausente,178.0,True,True
+5,4212,3,08-124,2014,,ausente,320.0,True,True
+5,4214,3,08-126,2014,,ausente,243.0,True,True
+5,4216,2,08-147,2014,,ausente,8027.0,True,True
+5,4216,3,08-147,2014,,ausente,8528.0,True,True
+5,4221,1,08-136,2014,S/R,sin_rol_identificado,3750.0,False,False
+5,4222,3,08-143,2014,,ausente,4087.0,True,True
+5,4227,1,09-112,2014,S/R,sin_rol_identificado,1222.0,False,False
+5,4228,3,09-122,2014,,ausente,45.0,True,True
+5,4229,3,09-123,2014,,ausente,97.0,True,True
+5,4230,3,09-124,2014,,ausente,329.0,True,True
+5,4231,3,09-125,2014,,ausente,489.0,True,True
+5,4231,4,09-125,2014,,ausente,209.0,True,True
+5,4232,4,09-126,2014,,ausente,642.0,True,True
+5,4233,3,09-127,2014,,ausente,85.0,True,True
+5,4234,1,09-128,2014,S/R,sin_rol_identificado,574.0,False,False
+5,4234,3,09-128,2014,,ausente,124.0,True,True
+5,4235,3,09-129,2014,,ausente,250.0,True,True
+5,4236,3,09-130,2014,,ausente,217.0,True,True
+5,4237,3,09-131,2014,,ausente,561.0,True,True
+5,4238,3,09-132,2014,,ausente,205.0,True,True

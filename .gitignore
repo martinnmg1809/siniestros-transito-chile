@@ -22,3 +22,13 @@ pagina.html
 clima_celdas.jsonl
 clima_rutas.npz
 cuentas.npz
+
+# Fuentes públicas crudas, descargables con los scripts; no versionar cachés.
+data/fuentes/
+resultados/**/*.npz
+resultados/**/artefactos/
+resultados/flujo/ramas_mop.csv
+!resultados/**/auditoria.json
+!resultados/flujo/fuentes_dgc.json
+!resultados/modelos/reajuste.json
+resultados/modelos_pre_normalizacion/

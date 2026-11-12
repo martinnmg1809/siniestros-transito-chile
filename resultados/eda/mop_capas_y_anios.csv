@@ -1,0 +1,7 @@
+capa,titulo,estaciones_en_fuente,ramas_con_rol,anios_observados,filas_fuera_anios_titulo,tmda_cero,tmda_faltante
+0,2024 Sur - 2025 Norte,863,3452,"2024,2025",0,1088,0
+1,2022 Sur - 2023 Norte,863,3452,"2022,2023",0,1145,0
+2,2020 Sur - 2021 Norte,817,3268,"2021,2022",2016,1095,0
+3,2018 Sur - 2019 Norte,801,3204,"2018,2019",0,1096,1
+4,2016 Sur - 2017 Norte,848,3392,"2016,2017",0,1179,0
+5,2014 Sur - 2015 Norte,848,1521,"2014,2015",0,0,15

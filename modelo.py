@@ -2,10 +2,9 @@
 """
 Modelo Poisson de siniestros por tramo x hora en la Ruta 5 Sur.
 
-Un siniestro en un tramo-hora concreto es un evento de probabilidad ~0,13 %, así que
-no tiene sentido clasificar "hay/no hay accidente". Lo que se modela es la TASA
-esperada de siniestros por tramo y hora, que es lo que permite decir "este tramo, este
-viernes a las 20:00, tiene 4x el riesgo basal".
+El objetivo es estimar el conteo esperado por tramo y hora para priorizar vigilancia.
+Se elige regresión por ese objetivo; la rareza del evento no impide matemáticamente
+usar clasificación. Sin flujo vehicular, las tasas son por hora, no por conductor.
 
 Estructura: en vez de materializar los 11,2 millones de celdas (tramo x fecha x hora),
 se agrupa por (tramo, hora, día de semana, mes, tipo de feriado) con un offset igual al
@@ -22,8 +21,9 @@ import collections, csv, datetime, gzip, json, sys
 import numpy as np
 from scipy import sparse
 from scipy.optimize import minimize
+from evaluacion import captura, curva_captura, desvianza
 
-TRAMO = int(sys.argv[1]) if len(sys.argv) > 1 else 5
+TRAMO = 5
 KM_MAX = 2200
 ANIOS_TRAIN = (2020, 2021, 2022, 2023)
 ANIO_TEST = 2024
@@ -34,18 +34,10 @@ POS_FERIADO = ["no", "inicio", "intermedio", "final"]
 # ---------------------------------------------------------------- datos
 
 def cargar():
-    with gzip.open("ruta5_2020_2024.csv.gz", "rt", encoding="utf-8") as f:
-        filas = [r for r in csv.DictReader(f) if r["Ruta"] == "RUTA 5 SUR"]
+    from datos_ruta5 import cargar_eventos
+    datos, _ = cargar_eventos(tramo_km=TRAMO)
     fer = json.load(open("feriados.json"))
-    out = []
-    for r in filas:
-        try:
-            km = float(r["Ubicación"])
-        except (TypeError, ValueError):
-            continue
-        if not (0 < km < KM_MAX) or not r["FECHA"] or not r["Hora_aprox"]:
-            continue
-        out.append((int(km // TRAMO) * TRAMO, r["FECHA"], int(float(r["Hora_aprox"]))))
+    out = [(int(r.tramo), r.fecha.date().isoformat(), int(r.hora)) for r in datos.itertuples()]
     return out, fer
 
 
@@ -56,12 +48,14 @@ def tipo_dia(fecha, fer):
 
 
 def agrupar(sinis, fer, anios, tramos):
-    """-> (claves, y, exposicion_dias) agregando por (tramo, hora, dow, mes, feriado)."""
+    """Conteos agrupados y exposición horaria, incluyendo cambios de horario."""
+    import pandas as pd
     dias = collections.Counter()
-    d, fin = datetime.date(min(anios), 1, 1), datetime.date(max(anios), 12, 31)
-    while d <= fin:
-        dias[tipo_dia(d.isoformat(), fer)] += 1
-        d += datetime.timedelta(days=1)
+    for anio in sorted(set(anios)):
+        horas = pd.date_range(f"{anio}-01-01", f"{anio + 1}-01-01",
+                              tz="America/Santiago", freq="h", inclusive="left")
+        for h in horas:
+            dias[(h.hour,) + tipo_dia(h.date().isoformat(), fer)] += 1
 
     cuenta = collections.Counter()
     for km, fecha, hora in sinis:
@@ -70,11 +64,10 @@ def agrupar(sinis, fer, anios, tramos):
 
     claves, y, expo = [], [], []
     for tr in tramos:
-        for h in range(24):
-            for (dow, mes, f), n in dias.items():
-                claves.append((tr, h, dow, mes, f))
-                y.append(cuenta.get((tr, h, dow, mes, f), 0))
-                expo.append(n)
+        for (h, dow, mes, f), n in dias.items():
+            claves.append((tr, h, dow, mes, f))
+            y.append(cuenta.get((tr, h, dow, mes, f), 0))
+            expo.append(n)
     return claves, np.array(y, float), np.array(expo, float)
 
 
@@ -97,17 +90,22 @@ def diseño(claves, tramos, con_tiempo=True):
 
 # ---------------------------------------------------------------- ajuste
 
-def ajustar(X, y, expo, l2=1.0):
+def ajustar(X, y, expo, l2=1.0, devolver_diagnostico=False):
+    y, expo = np.asarray(y, float), np.asarray(expo, float)
+    if (X.shape[0] != len(y) or y.shape != expo.shape or y.ndim != 1
+            or not np.isfinite(y).all() or not np.isfinite(expo).all()
+            or (y < 0).any() or (expo <= 0).any() or y.sum() <= 0
+            or not np.isfinite(l2) or l2 < 0):
+        raise ValueError("Datos o exposición inválidos para el ajuste Poisson")
     logE = np.log(expo)
 
     def nll(b):
         eta = X @ b + logE
-        eta = np.clip(eta, -30, 30)
         mu = np.exp(eta)
         return mu.sum() - y @ eta + l2 * b[:-1] @ b[:-1]
 
     def grad(b):
-        eta = np.clip(X @ b + logE, -30, 30)
+        eta = X @ b + logE
         g = X.T @ (np.exp(eta) - y)
         g[:-1] += 2 * l2 * b[:-1]
         return g
@@ -115,36 +113,21 @@ def ajustar(X, y, expo, l2=1.0):
     b0 = np.zeros(X.shape[1])
     b0[-1] = np.log(max(y.sum(), 1) / expo.sum())
     r = minimize(nll, b0, jac=grad, method="L-BFGS-B",
-                 options={"maxiter": 500, "maxfun": 600})
-    return r.x
-
-
-def desvianza(y, mu):
-    with np.errstate(divide="ignore", invalid="ignore"):
-        t = np.where(y > 0, y * np.log(y / mu), 0.0)
-    return 2 * (t - (y - mu)).sum()
-
-
-def captura(y, mu, expo, fracs=(0.05, 0.10, 0.20)):
-    """
-    Si dedicas el X% de las horas-tramo disponibles a vigilar las de mayor riesgo,
-    ¿qué % de los siniestros reales cubres?
-
-    Se ordena por TASA (mu/exposición), no por conteo esperado, y el eje X se acumula
-    en exposición y no en número de celdas: las celdas agrupadas representan distinta
-    cantidad de días, y sin esto el 5% de celdas no es el 5% del tiempo.
-    """
-    o = np.argsort(-(mu / expo))
-    cx = np.cumsum(expo[o]) / expo.sum()
-    cy = np.cumsum(y[o]) / y.sum()
-    return [(f, cy[np.searchsorted(cx, f)]) for f in fracs]
+                 options={"maxiter": 1000, "maxfun": 1500, "ftol": 1e-10})
+    if not r.success or not np.isfinite(r.x).all() or not np.isfinite(r.fun):
+        raise RuntimeError(f"Poisson no convergió: {r.message} (iteraciones={r.nit})")
+    info = {"convergio": bool(r.success), "iteraciones": int(r.nit),
+            "objetivo": float(r.fun), "mensaje": str(r.message)}
+    return (r.x, info) if devolver_diagnostico else r.x
 
 
 # ---------------------------------------------------------------- main
 
 if __name__ == "__main__":
+    TRAMO = int(sys.argv[1]) if len(sys.argv) > 1 else 5
     sinis, fer = cargar()
-    tramos = sorted({s[0] for s in sinis})
+    pasado = [s[0] for s in sinis if int(s[1][:4]) in ANIOS_TRAIN]
+    tramos = list(range(min(pasado), max(pasado) + TRAMO, TRAMO))
     print(f"Ruta 5 Sur | tramos de {TRAMO} km | {len(sinis)} siniestros | "
           f"{len(tramos)} tramos\n")
 

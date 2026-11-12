@@ -1,0 +1,130 @@
+{
+  "datos": {
+    "fuente": "/home/diego/DataScience/siniestros-transito-chile/ruta5_2020_2024.csv.gz",
+    "sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+    "registros_ruta": 14430,
+    "km_excluidos": 5,
+    "registros_validos": 14425,
+    "tramo_km": 5,
+    "por_anio": {
+      "2020": 2295,
+      "2021": 3292,
+      "2022": 3370,
+      "2023": 2863,
+      "2024": 2605
+    }
+  },
+  "fuera_del_dominio": 0,
+  "eventos_en_hora_inexistente_excluidos": 0,
+  "convencion_temporal": "24 etiquetas civiles por fecha; turnos 00-12 y 12-24 locales pueden durar 11/13 h en DST",
+  "meteorologia": {
+    "version": 2,
+    "modelo": "era5",
+    "zona": "America/Santiago",
+    "descarga_zona": "GMT",
+    "referencia_hasta": 2021,
+    "fuente": "https://archive-api.open-meteo.com/v1/archive",
+    "inicio": "2020-01-01",
+    "fin": "2024-12-31",
+    "referencia_sha256": "b8a046e3e684f499ad76cdce406c74c9dab8f5d9a0779e9be2f795f0f4922530",
+    "hora_repetida": "conteo conjunto y precipitación promedio; aproximación",
+    "hora_inexistente": "exposición cero; eventos incompatibles se auditan y excluyen"
+  },
+  "replicas_bootstrap": 2000,
+  "semilla": 42,
+  "diagnosticos": [
+    {
+      "anio_prueba": 2022,
+      "modelo": "M1",
+      "convergio": true,
+      "iteraciones": 57,
+      "objetivo": 32604.897051602176,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2022,
+      "modelo": "M2",
+      "convergio": true,
+      "iteraciones": 122,
+      "objetivo": 32076.541890322034,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2022,
+      "modelo": "M3",
+      "convergio": true,
+      "iteraciones": 160,
+      "objetivo": 31963.765995924077,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2023,
+      "modelo": "M1",
+      "convergio": true,
+      "iteraciones": 68,
+      "objetivo": 49228.172113831635,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2023,
+      "modelo": "M2",
+      "convergio": true,
+      "iteraciones": 137,
+      "objetivo": 48488.973361541,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2023,
+      "modelo": "M3",
+      "convergio": true,
+      "iteraciones": 108,
+      "objetivo": 48283.05760920643,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2024,
+      "modelo": "M1",
+      "convergio": true,
+      "iteraciones": 37,
+      "objetivo": 62772.88365556051,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2024,
+      "modelo": "M2",
+      "convergio": true,
+      "iteraciones": 146,
+      "objetivo": 61894.195042123705,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    },
+    {
+      "anio_prueba": 2024,
+      "modelo": "M3",
+      "convergio": true,
+      "iteraciones": 104,
+      "objetivo": 61608.123205379285,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH"
+    }
+  ],
+  "versiones": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3+dfsg",
+    "scipy": "1.14.1"
+  },
+  "seleccion": "Especificaciones originales y L2=1 fijos; 2024 ya fue inspeccionado en Entrega 2",
+  "calibracion": "Sin recalibrar con totales del año de prueba",
+  "recalibraciones": [
+    {
+      "anio_prueba": 2023,
+      "factor": 1.1918660891442074,
+      "origen": "observado/esperado fuera de muestra de 2022"
+    },
+    {
+      "anio_prueba": 2024,
+      "factor": 0.9396405587660664,
+      "origen": "observado/esperado fuera de muestra de 2023"
+    }
+  ],
+  "calendario_sha256": "1240f908d840f768d46b5f08ce628b901927fb5596c5d365b0694c7a25087b19",
+  "flujo": "No se usan candidatos TMDA ni transacciones como exposición validada"
+}

@@ -119,7 +119,14 @@ if __name__ == "__main__":
     por = cargar()
     salida, cuentas = {}, {}
     for nombre, cfg in sel.items():
-        limpios, _, _ = limpiar(por[nombre])
+        if nombre == "RUTA 5 SUR":
+            # Misma población que el análisis principal: no recortar kilómetros
+            # legítimos por percentiles para dibujar la ruta.
+            from datos_ruta5 import cargar_eventos
+            fuente, _ = cargar_eventos("siniestros_rutas.csv.gz", tramo_km=cfg["tramo"])
+            limpios = fuente.to_dict("records")
+        else:
+            limpios, _, _ = limpiar(por[nombre])
         limpios = [r for r in limpios if r["FECHA"] and r["Hora_aprox"]]
         d, Y = preparar(nombre, limpios, cfg["tramo"])
         salida[nombre] = d

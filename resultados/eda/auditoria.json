@@ -1,0 +1,192 @@
+{
+  "fecha_revision": "2026-11-12",
+  "tipo": "EDA descriptivo; sin ajuste de modelos",
+  "auditoria_eventos": {
+    "fuente": "/home/diego/DataScience/siniestros-transito-chile/ruta5_2020_2024.csv.gz",
+    "sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+    "registros_ruta": 14430,
+    "km_excluidos": 5,
+    "registros_validos": 14425,
+    "tramo_km": 5,
+    "por_anio": {
+      "2020": 2295,
+      "2021": 3292,
+      "2022": 3370,
+      "2023": 2863,
+      "2024": 2605
+    }
+  },
+  "resumen": {
+    "siniestros": {
+      "ids_duplicados": 0,
+      "filas_duplicadas_completas": 0,
+      "faltantes_criticos": 0,
+      "hora_invalida": 0,
+      "minutos_multiplos_5_pct": 93.93624393624394,
+      "km_enteros_pct": 82.4471403812825,
+      "dias_sin_eventos": 6,
+      "max_diario": 25,
+      "rho_km_latitud": -0.9984846180029566,
+      "severidad_negativa": 0,
+      "lesionados_incoherentes": 0,
+      "urbanos_pct": 6.772963604852686,
+      "top_tramos_n": 26,
+      "tramos_total": 255,
+      "discordantes_mas_5km": 5,
+      "discordantes_mas_10km": 5,
+      "discordantes_mas_25km": 5,
+      "discordancia_max_km": 1037.4725041972376,
+      "top10pct_tramos_concentracion_pct": 29.019064124783363
+    },
+    "mop": {
+      "filas_ramas": 18289,
+      "claves_unicas": 16265,
+      "ruta5_claves_unicas": 381,
+      "claves_repetidas": 2016,
+      "claves_repetidas_con_conflicto": 0,
+      "filas_ruta5_2020": 0,
+      "coordenadas_invalidas": 0,
+      "slots_tmda_positivo_sin_rol": 704,
+      "tmda_cero": 5603,
+      "tmda_faltante": 16,
+      "ruta5_tmda_faltantes": 3,
+      "ceros_con_rol_marcador": 5538,
+      "fecha_disponibilidad_faltante": 18289
+    },
+    "dgc": {
+      "filas_versionadas": 252,
+      "periodos_unicos": 140,
+      "periodos_solapados": 112,
+      "periodos_faltantes": 0,
+      "revisiones_transacciones": 0,
+      "revisiones_promedio": 0,
+      "puntos_no_enteros": 0,
+      "contratos_con_cambio_puntos": 2
+    },
+    "clima": {
+      "celdas_era5": 59,
+      "tramos": 255,
+      "etiquetas_civiles": 43848,
+      "etiquetas_inexistentes_dst": 5,
+      "etiquetas_repetidas_dst": 5,
+      "nan_estructurales_era5": 295,
+      "faltantes_horas_existentes": 0,
+      "precipitacion_negativa": 0,
+      "pct_0mm_tramo_etiqueta": 80.98010145827827,
+      "max_mm_h": 11.199999809265137,
+      "celdas_sin_eventos_pct": 99.87347008689204,
+      "siniestros_hora_inexistente": 0,
+      "fuera_dominio": 0,
+      "limites": "Duplicación de valores al mapear ERA5 a tramos; las celdas no son mediciones meteorológicas independientes. Tasa cruda, no efecto causal ni por vehículo."
+    },
+    "calendario": {
+      "fechas_en_fuente": 243,
+      "fechas_en_periodo": 242,
+      "min_fecha_marcada": "2019-12-31",
+      "max_fecha_marcada": "2024-12-25",
+      "nota": "Calendario histórico derivado de CONASET; ausencia de una fecha no acredita día no feriado fuera de cobertura. No se verificó exhaustividad legal."
+    }
+  },
+  "fuentes": [
+    {
+      "archivo": "ruta5_2020_2024.csv.gz",
+      "sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba"
+    },
+    {
+      "archivo": "clima_ruta5.npz",
+      "sha256": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c"
+    },
+    {
+      "archivo": "feriados.json",
+      "sha256": "1240f908d840f768d46b5f08ce628b901927fb5596c5d365b0694c7a25087b19"
+    },
+    {
+      "archivo": "data/fuentes/dgc/anexo_2024_4t.xls",
+      "sha256": "9e399de7f90d612d37322c6397e6322523fb51c9915127b2fd4ff5bb1e05d35b"
+    },
+    {
+      "archivo": "data/fuentes/dgc/anexo_2023_4t.xls",
+      "sha256": "aabd11ecf4f181e1eb88d302de48f63ea4f9489dd75d008ba5d26d07bd143911"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_0.json",
+      "sha256": "150f21260a56366e07a773d333ff4bd5d430ea8de1dc4339585ce115bca65341"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_0_descarga.json",
+      "sha256": "e1fc493a07979eea5ec42ec30aa5ebc5b13bffcaa4a2d4955057d2b9e26ba279"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_0_metadata.json",
+      "sha256": "310ea96bdb6d701fac9ac9d86b4be477416f1b878b34d6a9aedf52f3b4104eca"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_1.json",
+      "sha256": "b4bd8c567a0e38efd97f784ebc731ac00a3b9af48712221d80b7c8c73342809a"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_1_descarga.json",
+      "sha256": "1ecadf44022cb86a0cd79828bcc8d32a8f1de03825f80bce225300f6742e0f20"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_1_metadata.json",
+      "sha256": "93d7de6eea0aee668891deda16bb8813d3b000b0c3125e29d765a83c9e2982be"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_2.json",
+      "sha256": "7107ecde446d6e7c0e90af809c27e8da76fb8e7abd336c1167a65c00f82e61d9"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_2_descarga.json",
+      "sha256": "669eb09bf8705adefe31101a12ec4faef39b0f0be681f30866f769fb12914b6c"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_2_metadata.json",
+      "sha256": "da4f1908959fa442a6694a8f15c1a78d3390d34bc00125296e8d5f93fc39bc30"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_3.json",
+      "sha256": "1dfdad7d3349674449fafe2e3762cbc625d5652acf11ecd3cba6de145990afaa"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_3_descarga.json",
+      "sha256": "6959d0d3b451edbdcd3e47fd1efd4764bb0e61d0670d53b1c1286cec410bf9e9"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_3_metadata.json",
+      "sha256": "3fa1ffaba6fa26f6a025f0683beec96fc82efc3cd55b8896e083770c9e578e9f"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_4.json",
+      "sha256": "201b797b96e170e42c95d2a6e7d864b7dd102b0e86313d49bfb76b9a2db22edc"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_4_descarga.json",
+      "sha256": "2d93ad6507d4b9ab0ee37e20497bb69694ca4aafd6db1275f2b37424d936042c"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_4_metadata.json",
+      "sha256": "c9db435679b872bf314557e711c54b2e2a3283b2e48af8f598595513668e9040"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_5.json",
+      "sha256": "7e1496059ee6353201c1b9d0c9f108902c75578c51d9766543a26498bb619872"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_5_descarga.json",
+      "sha256": "d15ffb989bc634fa027943522af56297a67df95ee93ccb6c06c80b330c2dc7b5"
+    },
+    {
+      "archivo": "data/fuentes/mop/capa_5_metadata.json",
+      "sha256": "845df1c0e2935df6fb7da12dfd4deb4b1edc14a59f5330453c0a8996b4599dd8"
+    }
+  ],
+  "versiones": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3+dfsg",
+    "scipy": "1.14.1",
+    "matplotlib": "3.8.3",
+    "xlrd": "2.0.1"
+  },
+  "script_sha256": "db2f3ea24964d952e843c18918e617fff3c8608a01d818559e947c42b5e723fa"
+}

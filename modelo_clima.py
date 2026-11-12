@@ -66,9 +66,14 @@ def cuentas(tramos):
     return Y
 
 
-def agrupar(codigo, Y, mask, n_cod):
+def agrupar(codigo, Y, mask, n_cod, exposicion=None):
+    if exposicion is not None:
+        exposicion = np.asarray(exposicion, float)
+        if exposicion.shape != codigo.shape:
+            raise ValueError("Exposición incompatible con códigos")
+        mask = mask & (exposicion > 0)
     y = np.bincount(codigo[mask], weights=Y[mask], minlength=n_cod)
-    e = np.bincount(codigo[mask], minlength=n_cod)
+    e = np.bincount(codigo[mask], weights=None if exposicion is None else exposicion[mask], minlength=n_cod)
     ok = e > 0
     return np.flatnonzero(ok), y[ok], e[ok].astype(float)
 
@@ -92,53 +97,6 @@ def diseño(cods, dims, con_clima):
 
 
 if __name__ == "__main__":
-    z = np.load("clima_ruta5.npz", allow_pickle=True)
-    tramos = list(z["tramos"]); idx_c = z["idx_celda"]; P = z["precip"]
-    fer = json.load(open("feriados.json"))
-
-    hora, dow, mes, pos, anio = grilla_tiempo(fer)
-    Y = cuentas(tramos)
-    n_tr = len(tramos)
-    print(f"Ruta 5 Sur | {n_tr} tramos x {N_HORAS} horas = {n_tr * N_HORAS:,} celdas")
-    print(f"siniestros ubicados en la grilla: {Y.sum()}")
-
-    # clima por tramo-hora, discretizado
-    lluvia = np.digitize(P[idx_c], CORTES).astype(np.int32)      # (n_tr, T)
-    print(f"reparto de clima: seco {(lluvia == 0).mean():.1%} | "
-          f"llovizna {(lluvia == 1).mean():.1%} | lluvia {(lluvia == 2).mean():.1%}\n")
-
-    dims = (n_tr, 24, 7, 12, 4, 3)
-    tr_ix = np.repeat(np.arange(n_tr), N_HORAS).reshape(n_tr, N_HORAS)
-    cod = ((((tr_ix * 24 + hora) * 7 + dow) * 12 + mes) * 4 + pos) * 3 + lluvia
-    n_cod = int(np.prod(dims))
-
-    cod, Yf = cod.ravel(), Y.ravel().astype(float)
-    es_train = np.tile(anio <= 2023, n_tr)
-    es_test = np.tile(anio == 2024, n_tr)
-
-    res = {}
-    for nombre, con_clima in [("sin clima", False), ("con clima", True)]:
-        c_tr, y_tr, e_tr = agrupar(cod, Yf, es_train, n_cod)
-        c_te, y_te, e_te = agrupar(cod, Yf, es_test, n_cod)
-        b = ajustar(diseño(c_tr, dims, con_clima), y_tr, e_tr)
-        mu = np.exp(diseño(c_te, dims, con_clima) @ b + np.log(e_te))
-        res[nombre] = (y_te, mu, e_te, b)
-        print(f"{nombre}: {len(c_tr):,} celdas agrupadas en entrenamiento")
-
-    y_te, _, e_te, _ = res["sin clima"]
-    d0 = desvianza(y_te, e_te * (y_te.sum() / e_te.sum()))
-    print(f"\n{'modelo':<34}{'desvianza':>12}{'mejora':>9}"
-          f"{'top 5%':>9}{'top 10%':>9}{'top 20%':>9}")
-    for nombre, (y, mu, e, _) in res.items():
-        d = desvianza(y, mu)
-        c = captura(y, mu, e)
-        print(f"{nombre:<34}{d:>12,.0f}{(1 - d / d0) * 100:>8.1f}%"
-              + "".join(f"{v:>8.1%} " for _, v in c))
-
-    b = res["con clima"][3]
-    ef = b[sum(dims[:5]) - 0:]  # bloque de clima
-    off = np.cumsum([0] + list(dims))
-    ef = b[off[5]:off[5] + 3]
-    print("\nEfecto multiplicativo de la lluvia (1,00 = seco)")
-    for i, n in enumerate(["seco", "llovizna (0,1-0,5 mm/h)", "lluvia (>0,5 mm/h)"]):
-        print(f"  {n:<26}{np.exp(ef[i] - ef[0]):.3f}")
+    # La evaluación nueva integra DST, train/prueba y comparación incremental.
+    from validar_ruta5 import main
+    main()

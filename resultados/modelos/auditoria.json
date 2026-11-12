@@ -1,0 +1,789 @@
+{
+  "fecha_revision": "2026-11-12",
+  "datos": {
+    "fuente_siniestros": {
+      "fuente": "/home/diego/DataScience/siniestros-transito-chile/ruta5_2020_2024.csv.gz",
+      "sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+      "registros_ruta": 14430,
+      "km_excluidos": 5,
+      "registros_validos": 14425,
+      "tramo_km": 5,
+      "por_anio": {
+        "2020": 2295,
+        "2021": 3292,
+        "2022": 3370,
+        "2023": 2863,
+        "2024": 2605
+      }
+    },
+    "registros_modelado": 14420,
+    "ids_cuarentena": [
+      1334758,
+      1407830,
+      1408146,
+      1407806,
+      1429192
+    ],
+    "umbral_cuarentena_km": 25,
+    "eventos_dst_excluidos": 0,
+    "eventos_fuera_dominio": 0,
+    "referencia_hasta": 2021,
+    "era5": {
+      "version": 2,
+      "modelo": "era5",
+      "zona": "America/Santiago",
+      "descarga_zona": "GMT",
+      "referencia_hasta": 2021,
+      "fuente": "https://archive-api.open-meteo.com/v1/archive",
+      "inicio": "2020-01-01",
+      "fin": "2024-12-31",
+      "referencia_sha256": "b8a046e3e684f499ad76cdce406c74c9dab8f5d9a0779e9be2f795f0f4922530",
+      "hora_repetida": "conteo conjunto y precipitación promedio; aproximación",
+      "hora_inexistente": "exposición cero; eventos incompatibles se auditan y excluyen"
+    },
+    "flujo": "Proxy DGC por contrato, rezagado dos trimestres, con puntos de cobro rezagados",
+    "publicacion_historica_acreditada": false,
+    "cobertura": [
+      {
+        "anio": 2020,
+        "tramos_con_flujo": 153,
+        "tramos_total": 255,
+        "siniestros_con_flujo": 1149,
+        "siniestros_total": 2295,
+        "porcentaje_eventos": 50.06535947712418
+      },
+      {
+        "anio": 2021,
+        "tramos_con_flujo": 153,
+        "tramos_total": 255,
+        "siniestros_con_flujo": 1669,
+        "siniestros_total": 3288,
+        "porcentaje_eventos": 50.76034063260341
+      },
+      {
+        "anio": 2022,
+        "tramos_con_flujo": 153,
+        "tramos_total": 255,
+        "siniestros_con_flujo": 1872,
+        "siniestros_total": 3369,
+        "porcentaje_eventos": 55.565449688334816
+      },
+      {
+        "anio": 2023,
+        "tramos_con_flujo": 153,
+        "tramos_total": 255,
+        "siniestros_con_flujo": 1577,
+        "siniestros_total": 2863,
+        "porcentaje_eventos": 55.08208173244848
+      },
+      {
+        "anio": 2024,
+        "tramos_con_flujo": 153,
+        "tramos_total": 255,
+        "siniestros_con_flujo": 1491,
+        "siniestros_total": 2605,
+        "porcentaje_eventos": 57.23608445297505
+      }
+    ],
+    "prediccion": "Conteos por hora, no riesgo por vehículo-km",
+    "asociacion_contrato": "Intervalos interiores documentados, margen 1 km; no homogeneidad de tráfico acreditada",
+    "fuentes_flujo_sha256": {
+      "2023_4t": "aabd11ecf4f181e1eb88d302de48f63ea4f9489dd75d008ba5d26d07bd143911",
+      "2024_4t": "9e399de7f90d612d37322c6397e6322523fb51c9915127b2fd4ff5bb1e05d35b"
+    },
+    "clima_cache_sha256": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c"
+  },
+  "modelo_candidato_por_cv_pre2024": "Poisson_clima",
+  "captura5_media_cv_ruta_completa": {
+    "GradientBoosting_clima": 0.19114206973767,
+    "Hibrido_GradientBoosting_clima": 0.18812860617035165,
+    "Hibrido_GradientBoosting_clima_flujo": 0.18848685809999266,
+    "Hibrido_Poisson_clima": 0.1907654979598146,
+    "Hibrido_Poisson_clima_flujo": 0.1877620601720169,
+    "Hibrido_RandomForest_clima": 0.15788438835442253,
+    "Hibrido_RandomForest_clima_flujo": 0.1590371602269962,
+    "M1": 0.15143816040874,
+    "Poisson_clima": 0.19088767995925948,
+    "RandomForest_clima": 0.15443571459155803
+  },
+  "ajustes": [
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "Poisson_clima",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 110,
+      "objetivo": 35230.22556208264,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 8.051643286000399
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "Poisson_clima",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 288,
+      "objetivo": 34832.683207405265,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 17.38735212500069
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 9.009217738001098
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 17.09480416599945
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "RandomForest_clima",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 29.723491848000776
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "ruta_completa",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 52.32498128499901
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_calendario",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 78,
+      "objetivo": 18668.09422626038,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 3.3920377510003163
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_calendario",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 185,
+      "objetivo": 18507.04148504701,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 7.6378142349985865
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 83,
+      "objetivo": 18590.375355619923,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 3.572815276000256
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 134,
+      "objetivo": 18421.16268079704,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 5.828591886998765
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_calendario",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 6.191209478000019
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_calendario",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 10.011018250999768
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 6.456540221999603
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 12.823002518000067
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_calendario",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 19.614405607999288
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_calendario",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 34.880827498000144
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 25.005334181998478
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 42.3854423140001
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "Poisson_clima",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 123,
+      "objetivo": 56443.12048848271,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 20.054000122001526
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "Poisson_clima",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 180,
+      "objetivo": 56047.516839083255,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 20.256961163000597
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 24.898675972001
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 46.066080984999644
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "RandomForest_clima",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 43.93550529300046
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "ruta_completa",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 95.01862555499974
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_calendario",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 93,
+      "objetivo": 30815.69604195529,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 7.058850912999333
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_calendario",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 177,
+      "objetivo": 30652.81669303543,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 12.840425847000006
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 103,
+      "objetivo": 30671.682659109112,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 8.792704682000476
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 124,
+      "objetivo": 30498.811175011135,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 9.24751498600017
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_calendario",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 7.142961289000596
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_calendario",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 14.165426692999972
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 8.823389425000641
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 15.88040084900058
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_calendario",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 28.726694929000587
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_calendario",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 52.31862877800086
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 36.85439866000161
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 64.61416385899975
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "ruta_completa",
+      "modelo": "Poisson_clima",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 179,
+      "objetivo": 74822.81131015057,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 30.654886478001572
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "ruta_completa",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 24.08329259600032
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "ruta_completa",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 101.06115794300058
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_calendario",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 87,
+      "objetivo": 41461.545731472324,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 8.506923736000317
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 99,
+      "objetivo": 41246.98701501792,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 10.474126959999921
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_calendario",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 11.19627568299984
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 12.128302433999124
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_calendario",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 35.752292078999744
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 79.45564724700125
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima_flujo",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 99,
+      "objetivo": 18536.229613890137,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 5.208414115000778
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima_flujo",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 233,
+      "objetivo": 18411.652139551985,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 11.420935035999719
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima_flujo",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 7.124174974000198
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima_flujo",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 12.658568078000826
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima_flujo",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 46.32263997799964
+    },
+    {
+      "anio_prueba": 2022,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima_flujo",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 74.83854208999946
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima_flujo",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 113,
+      "objetivo": 30624.590302649598,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 8.112101194001298
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima_flujo",
+      "configuracion": 1,
+      "convergio": true,
+      "iteraciones": 219,
+      "objetivo": 30493.617460690613,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 15.323667128001034
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima_flujo",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 9.977407698001116
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima_flujo",
+      "configuracion": 1,
+      "iteraciones": 240,
+      "early_stopping": false,
+      "segundos_ajuste": 19.869891932999963
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima_flujo",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 66.78601443499974
+    },
+    {
+      "anio_prueba": 2023,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima_flujo",
+      "configuracion": 1,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 105.31811148400084
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "Poisson_clima_flujo",
+      "configuracion": 0,
+      "convergio": true,
+      "iteraciones": 124,
+      "objetivo": 41180.218646107896,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 12.053350673999375
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "GradientBoosting_clima_flujo",
+      "configuracion": 0,
+      "iteraciones": 160,
+      "early_stopping": false,
+      "segundos_ajuste": 13.221602838999388
+    },
+    {
+      "anio_prueba": 2024,
+      "cohorte": "con_contrato",
+      "modelo": "RandomForest_clima_flujo",
+      "configuracion": 0,
+      "arboles": 80,
+      "muestra_por_arbol": 80000,
+      "criterio": "poisson",
+      "hojas_sobre_filas_agrupadas": true,
+      "segundos_ajuste": 81.54765593800039
+    }
+  ],
+  "grillas": {
+    "Poisson": [
+      {
+        "l2": 3.0
+      },
+      {
+        "l2": 0.3
+      }
+    ],
+    "GradientBoosting": [
+      {
+        "max_leaf_nodes": 7,
+        "max_iter": 160
+      },
+      {
+        "max_leaf_nodes": 31,
+        "max_iter": 240
+      }
+    ],
+    "RandomForest": [
+      {
+        "max_depth": 12,
+        "min_samples_leaf": 100
+      },
+      {
+        "max_depth": 18,
+        "min_samples_leaf": 30
+      }
+    ]
+  },
+  "seleccion": "Ventana expansiva; 2022 prefijado, 2023 elige con 2022, 2024 con 2022/2023. Nunca por métricas de 2024.",
+  "tolerancia_simplicidad_pp": 0.1,
+  "replicas_bootstrap": 2000,
+  "semilla": 42,
+  "limites": [
+    "Reanálisis meteorológico, no evaluación con pronósticos emitidos en el pasado",
+    "Proxy trimestral por contrato, no medición horaria por tramo ni vehículo-km",
+    "Revisión actual de anexos: disponibilidad histórica de publicación no acreditada",
+    "2024 ya inspeccionado en entregas anteriores; evaluación histórica reutilizada",
+    "RF: bootstrap de 80.000 filas agrupadas por árbol; no muestreo por ocurrencia del siniestro"
+  ],
+  "versiones": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3+dfsg",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.6.0"
+  },
+  "hashes_codigo": {
+    "datos_modelado.py": "e31c91a7128f9dd9d48d9fd372ca2987c9f3ae4a54ba47f9fc9181c091147062",
+    "modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6",
+    "integrar_flujo.py": "9f63b16b870414994dd65f74dcdfbabc0b9eebbc9862d558592d8ef49752da9e",
+    "entrenar_comparacion.py": "f04689ce4e7f6017d48d60915512a7cc5634db996c6d915755b52fa47c49443b",
+    "reentrenar_flujo.py": "103ca6bf75e2b2bacd75fa7b44dec1246f251539bad70faebd851957f9fe7021"
+  },
+  "normalizacion_puntos": "Residuos ≤1e-6 respecto a entero se normalizan; valor algebraico original preservado. No acredita físicamente los puntos.",
+  "reutilizacion": "Modelos sin flujo conservados tras verificar hashes de código, fuentes, población y proxy. Solo se reajustaron variantes con flujo.",
+  "auditoria_previa_sha256": "786e4d9b64665ecbf53753c071cbbe67042fbbae5a7ef06985579ccd7299038d"
+}

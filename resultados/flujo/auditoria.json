@@ -1,0 +1,67 @@
+{
+  "auditoria_eventos": {
+    "fuente": "/home/diego/DataScience/siniestros-transito-chile/ruta5_2020_2024.csv.gz",
+    "sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+    "registros_ruta": 14430,
+    "km_excluidos": 5,
+    "registros_validos": 14425,
+    "tramo_km": 5,
+    "por_anio": {
+      "2020": 2295,
+      "2021": 3292,
+      "2022": 3370,
+      "2023": 2863,
+      "2024": 2605
+    }
+  },
+  "generado_utc": "2026-11-12T19:43:54.166430+00:00",
+  "descargas": [
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/0",
+      "descargado_utc": "2026-11-12T19:41:57.769310+00:00",
+      "registros": 863,
+      "sha256": "150f21260a56366e07a773d333ff4bd5d430ea8de1dc4339585ce115bca65341",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/1",
+      "descargado_utc": "2026-11-12T19:42:00.189324+00:00",
+      "registros": 863,
+      "sha256": "b4bd8c567a0e38efd97f784ebc731ac00a3b9af48712221d80b7c8c73342809a",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/2",
+      "descargado_utc": "2026-11-12T19:42:02.394174+00:00",
+      "registros": 817,
+      "sha256": "7107ecde446d6e7c0e90af809c27e8da76fb8e7abd336c1167a65c00f82e61d9",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/3",
+      "descargado_utc": "2026-11-12T19:42:04.612274+00:00",
+      "registros": 801,
+      "sha256": "1dfdad7d3349674449fafe2e3762cbc625d5652acf11ecd3cba6de145990afaa",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/4",
+      "descargado_utc": "2026-11-12T19:42:06.980303+00:00",
+      "registros": 848,
+      "sha256": "201b797b96e170e42c95d2a6e7d864b7dd102b0e86313d49bfb76b9a2db22edc",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Plan_Nacional_de_Censos/MapServer/5",
+      "descargado_utc": "2026-11-12T19:42:12.527392+00:00",
+      "registros": 848,
+      "sha256": "7e1496059ee6353201c1b9d0c9f108902c75578c51d9766543a26498bb619872",
+      "nota": "Fecha de descarga actual; no acredita publicación histórica"
+    }
+  ],
+  "ramas": 18289,
+  "ramas_ruta5": 406,
+  "claves_estacion_rama_anio_repetidas": 25,
+  "claves_con_tmda_discrepante_entre_capas": 0,
+  "nota": "No se suman ramas ni se deduce el año del nombre de la capa. Fechas de publicación histórica no acreditadas."
+}
