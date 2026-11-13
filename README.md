@@ -34,6 +34,29 @@ Se puede revisar, cambiar o pausar desde la sección de tareas programadas de la
 aplicación. Véase la [documentación oficial de tareas programadas](https://learn.chatgpt.com/docs/automations).
 La autenticación se conserva en el llavero del equipo, fuera del repositorio.
 
+## Plan de cierre técnico en dos días
+
+El **13 de noviembre de 2026** se preparó una
+[planificación en PDF para los cuatro integrantes](output/pdf/Plan_cierre_tecnico_2_dias.pdf),
+basada en el estado del proyecto del commit `4533870`, la rúbrica de la Etapa III y
+las observaciones del profesor. Organiza dos jornadas de siete horas, con entregables,
+revisiones cruzadas y criterios de aceptación:
+
+- **Diego:** integración, comprobación de código, reproducción y coherencia del README.
+- **Vicente:** trazabilidad, cobertura, unidades y límites del flujo vehicular.
+- **Martín:** justificación del modelo final, versiones del artefacto e interpretación.
+- **Cristóbal:** comparación temporal, métricas, aporte de lluvia/flujo y conclusiones.
+
+El documento prioriza cerrar la evidencia existente y corregir errores concretos;
+no propone repetir entrenamientos completos sin motivo. Máximo conserva la presentación
+y el notebook se prepara después del cierre técnico. Los horarios y las tareas son
+una propuesta de organización, **no un registro de trabajos ya ejecutados**. Esta
+actualización añade planificación; no modifica modelos, datos ni resultados.
+
+Se contrastaron las cifras de referencia con las salidas del repositorio y se revisó
+visualmente el PDF de ocho páginas. La planificación distingue los logros actuales de
+la exposición vehicular y la validación con pronósticos históricos aún pendientes.
+
 ## Desarrollo de la Entrega 3
 
 <!-- INICIO_MODELOS_ENTREGA3 -->
