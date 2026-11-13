@@ -1,7 +1,12 @@
 # Autoría de los commits
 
-- Mantener al usuario como autor y committer mediante la identidad de Git ya configurada.
-- En los commits que incluyan trabajo realizado con Codex, añadir al final del mensaje,
+- Mantener la identidad de Git configurada para el usuario y usarla como committer.
+- Por defecto, mantener al usuario como autor principal. Si solicita atribuir un commit
+  realizado por Codex a la cuenta Codex, usar únicamente para ese commit
+  `--author="Codex <noreply@openai.com>"` y añadir al usuario como coautor con su identidad
+  real de Git. No cambiar `user.name` ni `user.email` para lograr esa atribución.
+- En los commits con autor principal humano que incluyan trabajo realizado con Codex,
+  añadir al final del mensaje,
   separado del cuerpo por una línea en blanco:
 
   ```text

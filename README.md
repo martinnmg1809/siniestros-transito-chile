@@ -2,8 +2,8 @@
 
 ## Autoría y asistencia de Codex
 
-Los commits con trabajo realizado con Codex mantienen al integrante del equipo como
-autor principal e incluyen la siguiente coautoría:
+Por defecto, los commits con trabajo realizado con Codex mantienen al integrante del
+equipo como autor principal e incluyen la siguiente coautoría:
 
 ```text
 Co-authored-by: Codex <noreply@openai.com>
@@ -11,7 +11,10 @@ Co-authored-by: Codex <noreply@openai.com>
 
 Esta identidad corresponde a la cuenta [Codex](https://github.com/codex). La regla para
 futuros cambios está en [AGENTS.md](AGENTS.md) y se aplica solo cuando Codex contribuya
-al contenido del commit. El historial publicado conserva sus autores originales.
+al contenido del commit. A petición del equipo, un commit realizado por Codex también
+puede registrarlo como autor principal y al integrante como coautor. La identidad del
+usuario que publica el commit (committer) y su autenticación permanecen separadas de
+esa atribución. El historial publicado conserva sus autores originales.
 GitHub documenta este mecanismo en [commits con varios autores](https://docs.github.com/en/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors).
 
 ## Desarrollo de la Entrega 3
