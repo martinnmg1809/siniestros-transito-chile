@@ -57,6 +57,41 @@ Se contrastaron las cifras de referencia con las salidas del repositorio y se re
 visualmente el PDF de ocho páginas. La planificación distingue los logros actuales de
 la exposición vehicular y la validación con pronósticos históricos aún pendientes.
 
+## Avance de Diego: reproducción e integración
+
+**13 de noviembre de 2026.** Se completó la comprobación técnica inicial de Diego:
+
+- Instalación aislada comprobada con Python 3.12.14 y versiones fijadas en
+  [requirements-reproduccion.txt](requirements-reproduccion.txt). Se resolvió la
+  incompatibilidad de Matplotlib 3.8.3 con NumPy 2 usando Matplotlib 3.9.4;
+  `pip check` confirma un entorno sin conflictos.
+- Se añadió [verificar_cierre.py](verificar_cierre.py): comprueba integridad de código
+  y datos, cohortes, métricas, búsqueda/selección temporal y recalibración.
+  El modo `--con-artefactos` reproduce las nueve métricas de la candidata en
+  2023/2024 y comprueba 1.000 predicciones del reajuste, sin reentrenar.
+- **40 pruebas aprobadas** con fuentes locales: las 33 originales más siete que
+  detectan corrupción de tablas, mezcla de poblaciones y uso de información futura.
+- Se identificaron como históricos los comandos y afirmaciones del prototipo
+  anterior. La interfaz no se ha sincronizado con la candidata actual.
+
+La [ficha de reproducción de Diego](docs/cierre/01_reproducibilidad.md) contiene
+instalación, insumos fuera de Git, comandos, verificación y pendientes humanos.
+La evidencia está en [verificacion_local.md](resultados/cierre/verificacion_local.md).
+La revisión cruzada de Martín y la integración de las fichas de los otros integrantes
+siguen pendientes. Notebook y presentación continúan para el cierre posterior.
+
+Comprobación rápida desde la raíz del repositorio, después de instalar dependencias:
+
+```bash
+.venv/bin/python -m pip check
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python verificar_cierre.py
+```
+
+Una copia de Git permite comprobar las tablas; la prueba del anexo DGC real se omite
+si no está descargado (39 aprobadas y una omitida). La comprobación de predicciones
+requiere fuentes originales y artefactos locales, como explica la ficha.
+
 ## Desarrollo de la Entrega 3
 
 <!-- INICIO_MODELOS_ENTREGA3 -->
@@ -260,7 +295,7 @@ MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python resumir_modelos.py --ac
 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-**Comprobación: 33 pruebas pasaron.** Incluyen captura con empates y presupuesto,
+**Comprobación de la corrida del 12 de noviembre: 33 pruebas pasaron.** Incluyen captura con empates y presupuesto,
 UTC/DST, calendario fuera de cobertura, calidad de fuentes, fronteras de contratos,
 rezago temporal, selección sin usar el año de prueba y persistencia de las tres familias.
 La prueba nueva comprueba que se eliminan residuos numéricos de puntos de cobro sin
@@ -562,7 +597,12 @@ y `calibracion.csv`; las fuentes crudas y cachés son regenerables y están excl
 
 ## Prototipo y antecedentes de la entrega anterior
 
-### 🔴 [Ver la página en vivo →](https://martinnmg1809.github.io/siniestros-transito-chile/)
+Este bloque conserva el prototipo y las cifras de la entrega anterior. Su universo
+de Ruta 5 Sur (14.282 eventos y 251 tramos) difiere del experimento actual
+(14.420 y 255). No usar sus capturas, coeficientes ni interfaz como evidencia de
+la candidata nueva. La página no acredita inferencia operativa validada para 2026.
+
+### [Ver el prototipo histórico](https://martinnmg1809.github.io/siniestros-transito-chile/)
 
 Riesgo por tramo y hora en **10 carreteras de Chile**, recalculado en tu navegador con el
 pronóstico de lluvia del momento. Sin servidor y sin cron: la ventana de 12 horas se
@@ -903,7 +943,7 @@ por tramo.
 
 ---
 
-## 7. Plan de trabajo
+## 7. Plan de trabajo histórico de factibilidad
 
 1. **Extracción.** `python3 descargar_conaset.py` — ya funciona, ya bajó los 20.980 registros.
 2. **Limpieza.** Filtrar km implausibles (hay valores como 93.800 en el campo `Ubicación`),
@@ -933,7 +973,7 @@ por tramo.
 
 | Archivo | Qué es |
 |---|---|
-| `README.md` | Este informe de factibilidad. |
+| `README.md` | Estado actual, reproducción y antecedentes de factibilidad. |
 | `descargar_conaset.py` | Descarga cualquier capa del ArcGIS Hub de CONASET, con paginación. Sin API key. |
 | `json_a_csv.py` | Convierte la salida a CSV comprimido (fechas epoch → ISO). |
 | `hotspots.py` | Agrega Ruta 5 Sur en tramos de N km y ordena por frecuencia y letalidad. |
@@ -955,7 +995,11 @@ por tramo.
 | `ciudades.json` | 11 ciudades de referencia sobre la ruta, derivadas de la comuna modal por zona. |
 | `ruta5_2020_2024.csv.gz` | 20.980 siniestros de la Ruta 5 (2020–2024), 944 KB. |
 
-### Cómo reproducir todo desde cero
+### Reproducción histórica del prototipo
+
+Estos comandos pertenecen al flujo anterior. Para la Entrega 3 usar la
+[ficha de reproducción actual](docs/cierre/01_reproducibilidad.md); ejecutar el flujo
+antiguo no reproduce la comparación con flujo ni exporta la candidata nueva.
 
 ```bash
 python3 descargar_conaset.py --where "Ruta LIKE 'RUTA 5%'" --salida ruta5.json
@@ -990,10 +1034,11 @@ necesita un cron para mantenerse al día:
 0 * * * * cd /ruta/al/repo && python3 generar_pagina.py
 ```
 
-**`index.html`** — en vivo, y es la recomendada. Embebe los 306 coeficientes del modelo y
+**`index.html`** — prototipo anterior con consulta en vivo. Embebe los 306 coeficientes del modelo y
 el calendario de feriados (33 KB en total); el navegador pide el pronóstico a Open-Meteo
-y recalcula el riesgo en cada visita. Sin cron y sin servidor: siempre muestra las 12
-horas siguientes al momento en que se abre.
+y recalcula su salida en cada visita. Esta descripción refleja su diseño original;
+no certifica la vigencia del calendario embebido ni la validez de las próximas 12 horas.
+Antes de una demostración actual deben sincronizarse modelo, fuentes y calendario.
 
 Requiere un host estático donde el navegador pueda alcanzar `api.open-meteo.com`
 (la API responde `access-control-allow-origin: *`). **No funciona embebida en un artifact

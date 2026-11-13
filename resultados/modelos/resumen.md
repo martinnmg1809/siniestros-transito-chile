@@ -199,7 +199,7 @@ MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python resumir_modelos.py --ac
 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-**Comprobación: 33 pruebas pasaron.** Incluyen captura con empates y presupuesto,
+**Comprobación de la corrida del 12 de noviembre: 33 pruebas pasaron.** Incluyen captura con empates y presupuesto,
 UTC/DST, calendario fuera de cobertura, calidad de fuentes, fronteras de contratos,
 rezago temporal, selección sin usar el año de prueba y persistencia de las tres familias.
 La prueba nueva comprueba que se eliminan residuos numéricos de puntos de cobro sin
