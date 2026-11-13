@@ -1,5 +1,19 @@
 # Siniestros de tránsito en autopistas de Chile
 
+## Autoría y asistencia de Codex
+
+Los commits con trabajo realizado con Codex mantienen al integrante del equipo como
+autor principal e incluyen la siguiente coautoría:
+
+```text
+Co-authored-by: Codex <noreply@openai.com>
+```
+
+Esta identidad corresponde a la cuenta [Codex](https://github.com/codex). La regla para
+futuros cambios está en [AGENTS.md](AGENTS.md) y se aplica solo cuando Codex contribuya
+al contenido del commit. El historial publicado conserva sus autores originales.
+GitHub documenta este mecanismo en [commits con varios autores](https://docs.github.com/en/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors).
+
 ## Desarrollo de la Entrega 3
 
 <!-- INICIO_MODELOS_ENTREGA3 -->
