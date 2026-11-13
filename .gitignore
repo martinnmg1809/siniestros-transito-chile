@@ -31,4 +31,5 @@ resultados/flujo/ramas_mop.csv
 !resultados/**/auditoria.json
 !resultados/flujo/fuentes_dgc.json
 !resultados/modelos/reajuste.json
+!resultados/cierre/version_modelo.json
 resultados/modelos_pre_normalizacion/
