@@ -17,3 +17,22 @@
   no atribuirle cambios ajenos o realizados íntegramente por una persona.
 - Conservar la autoría y el historial de los commits publicados. Esta configuración se
   aplica a commits nuevos; no requiere reescribir el historial ni hacer force-push.
+
+## Mantenimiento programado
+
+- El usuario autorizó revisiones cada cuatro horas con correcciones, comprobación y
+  publicación directa en `origin/main`. La tarea programada está asociada al chat del
+  proyecto y se administra desde la aplicación; este archivo no inicia un proceso.
+- Leer el README y los cambios recientes. Priorizar errores reproducibles y documentación
+  que ayude al proyecto. Hacer una mejora acotada por ejecución y registrar la evidencia
+  en el README; si no hay una mejora justificada, informar sin crear commits de relleno.
+- Trabajar sobre `main` con un checkout limpio. Si hay cambios ajenos, otra rama activa
+  o divergencia, conservar ese trabajo e informar. Sincronizar solo mediante fast-forward.
+- Publicar únicamente cambios propios que pasen las comprobaciones pertinentes. Para
+  documentación revisar coherencia, enlaces y `git diff --check`; para código ejecutar
+  pruebas relacionadas. Comunicar el enlace al commit o el motivo concreto de un bloqueo.
+- Mantener notebook y presentación para la fase final. Conservar las fuentes originales,
+  la cuarentena, UTC/DST, la separación temporal y el criterio de selección acordado.
+  No cambiar el objetivo científico ni interpretar el proxy trimestral como vehículo-km.
+- No repetir entrenamientos completos o descargas grandes por rutina. Si una corrección
+  invalida resultados, actualizar la evidencia con el protocolo existente y documentarlo.

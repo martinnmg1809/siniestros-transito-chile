@@ -17,6 +17,23 @@ usuario que publica el commit (committer) y su autenticación permanecen separad
 esa atribución. El historial publicado conserva sus autores originales.
 GitHub documenta este mecanismo en [commits con varios autores](https://docs.github.com/en/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors).
 
+## Mantenimiento automático del repositorio
+
+El **13 de noviembre de 2026** se configuró la tarea **Revisar y mantener proyecto de
+siniestros**, asociada al chat del proyecto, con revisiones **cada cuatro horas**.
+El equipo autorizó corregir problemas concretos, comprobar los cambios y publicarlos
+directamente en `main`, actualizando este README con los avances y sus verificaciones.
+
+La tarea revisa código, pruebas y documentación; conserva el trabajo local ajeno y el
+alcance científico acordado. Si no hay una mejora justificada, no genera commits.
+Notebook y presentación continúan para la fase final; los entrenamientos completos
+no se repiten por rutina. Las instrucciones duraderas están en [AGENTS.md](AGENTS.md).
+
+La tarea local requiere **el equipo encendido y la aplicación de escritorio abierta**.
+Se puede revisar, cambiar o pausar desde la sección de tareas programadas de la
+aplicación. Véase la [documentación oficial de tareas programadas](https://learn.chatgpt.com/docs/automations).
+La autenticación se conserva en el llavero del equipo, fuera del repositorio.
+
 ## Desarrollo de la Entrega 3
 
 <!-- INICIO_MODELOS_ENTREGA3 -->
