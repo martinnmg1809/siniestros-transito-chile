@@ -26,6 +26,8 @@ provienen de `resultados/modelos/` en el commit `0c5e42c`.
 Las dos versiones tienen variantes recalibradas con un factor global: × 0,6687 (O/E de
 2023) y × 0,7720 (O/E de 2024). El factor cambia la escala de los conteos, no el orden de
 priorización. Ningún artefacto reemplaza al prototipo de la página web.
+El factor del reajustado (× 0,7720) no se presenta como calibración validada: corrige un
+sesgo de tendencia que el reajustado ya casi no tiene (× 1,002/año frente a × 1,054/año).
 
 ## Cómo se eligió
 
@@ -57,14 +59,22 @@ Poisson_clima obtuvo 19,09 % y Gradient Boosting, 19,11 %.
    incluyen la incertidumbre del reentrenamiento ni corrigen comparaciones múltiples.
 6. **Sobreestima el total por la tendencia anual.** 2020 (pandemia) deprime el inicio de
    la serie y el modelo proyecta un aumento que no ocurrió. Una tendencia sola reproduce
-   el O/E de 2022–2024 (0,71/0,67/0,76 frente a 0,69/0,67/0,77). Esto afecta la escala,
+   el O/E de 2022–2024 (0,71/0,67/0,76 frente a 0,69/0,67/0,77); en el modelo, × 1,054/año. Esto afecta la escala,
    no el orden de priorización (`tendencia_anual.py`).
 7. **El flujo vehicular no se incluye.** El proxy DGC cubre 153 de 255 tramos y no mostró
    una mejora clara.
 
-## Interpretación
+## Interpretación (razones de tasas, mismo tramo, día y mes)
 
-Pendiente de `resultados/cierre/contrastes_poisson.csv`: razones de tasas para lluvia
-frente a seco, feriado frente a día normal y cada hora frente a las 12:00. Se leen como
-"el modelo espera X veces más siniestros por hora, en el mismo tramo, día y mes". Son
-asociaciones, no causas.
+| Condición | Frente a | El modelo espera |
+|---|---|---|
+| Lluvia ≥0,5 mm/h | seco | **× 2,11** siniestros por hora |
+| Llovizna 0,1–0,5 mm/h | seco | × 1,28 |
+| 18:00 (hora más alta) | 12:00 | × 1,41 (08:00: × 1,38) |
+| 02:00 (hora más baja) | 12:00 | × 0,44 |
+| Inicio de feriado largo | día normal | × 1,18 (regreso: × 1,12; días intermedios: × 0,93) |
+
+Son asociaciones del modelo, no causas. Las horas y los feriados reflejan sobre todo
+cuánto tráfico hay; la lluvia es de reanálisis. Las cifras no tienen intervalos de
+confianza. La versión reajustada con 2020–2024 da razones casi iguales. Detalle y
+reproducción en `03_modelo_final.md`, sección 4.

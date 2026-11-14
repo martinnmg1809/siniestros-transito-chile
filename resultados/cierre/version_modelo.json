@@ -1,0 +1,77 @@
+{
+  "evaluado2024": {
+    "origen": "reajuste_local_con_codigo_versionado",
+    "parametros": {
+      "l2": 0.3
+    },
+    "ajuste": "2020-2023",
+    "iteraciones": 198,
+    "objetivo": 74822.81113259835,
+    "huella_coeficientes_sha256": "7d4913581dcec8232475fb055a07e4902fd0bf55da786b5d8a899a90c71005b9",
+    "razon_tasa_por_anio_tendencia": 1.0537106530023312,
+    "verificacion_2024": {
+      "objetivo_registrado": 74822.81131015057,
+      "iteraciones_registradas": 179,
+      "desvio_relativo_objetivo": 2.372969178239425e-09,
+      "tolerancias_relativas": {
+        "siniestros": 0.001,
+        "esperados": 0.001,
+        "observado_esperado": 0.001,
+        "desvianza_por_hora": 0.001,
+        "captura5": 1e-06,
+        "captura10": 0.001,
+        "captura20": 0.001,
+        "captura5_turno": 0.001,
+        "mae_12h_calendario": 0.001
+      },
+      "desvios_relativos": {
+        "siniestros": 0.0,
+        "esperados": 0.0001630046628588127,
+        "observado_esperado": 0.00016297809666909372,
+        "desvianza_por_hora": 8.20722332851091e-06,
+        "captura5": 2.921344423382357e-16,
+        "captura10": 0.0003153579312470166,
+        "captura20": 0.0,
+        "captura5_turno": 3.503489980797739e-16,
+        "mae_12h_calendario": 0.0001789743104722702
+      }
+    },
+    "metricas_2024": {
+      "siniestros": 2605,
+      "esperados": 3374.8001440253993,
+      "observado_esperado": 0.7718975609894351,
+      "desvianza_por_hora": 0.015163435812606563,
+      "captura5": 0.19001919385796545,
+      "captura10": 0.30441458733205373,
+      "captura20": 0.472168905950096,
+      "captura5_turno": 0.15844529750479847,
+      "mae_12h_calendario": 1.9706804571246976
+    }
+  },
+  "reajustado2020_2024": {
+    "origen": "reajuste_local_con_codigo_versionado",
+    "parametros": {
+      "l2": 0.3
+    },
+    "ajuste": "2020-2024",
+    "iteraciones": 182,
+    "objetivo": 91903.60429809794,
+    "objetivo_registrado": 91903.60438712398,
+    "iteraciones_registradas": 175,
+    "huella_coeficientes_sha256": "daa05daef7f72304532a84157fc25328e2d060b38ff2077ea394d53960b23d30",
+    "razon_tasa_por_anio_tendencia": 1.0019067118519616
+  },
+  "codigo_sha256": {
+    "contrastes_poisson.py": "5fd08992421b5dfc4f8e3e9d5d8f5af6238123406666c99167f813146850ebc1",
+    "datos_modelado.py": "e31c91a7128f9dd9d48d9fd372ca2987c9f3ae4a54ba47f9fc9181c091147062",
+    "modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6"
+  },
+  "fuentes": {
+    "clima_cache_sha256": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+    "clima_cache_registrado": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+    "fuentes_flujo_sha256": {
+      "2023_4t": "aabd11ecf4f181e1eb88d302de48f63ea4f9489dd75d008ba5d26d07bd143911",
+      "2024_4t": "9e399de7f90d612d37322c6397e6322523fb51c9915127b2fd4ff5bb1e05d35b"
+    }
+  }
+}

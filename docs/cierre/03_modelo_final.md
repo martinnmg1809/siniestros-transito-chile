@@ -2,10 +2,9 @@
 
 **Responsable:** Martín · **Revisor:** Diego (reproducción) · **Cifras:** Cristóbal
 **Base:** commit `0c5e42c` (los hashes de código coinciden con `resultados/modelos/auditoria.json`)
-**Estado al 13/11/2026:** borrador del Día 1. La auditoría de la selección, el inventario
-de versiones y la recalibración están completos y se verificaron con las salidas versionadas.
-Los contrastes del modelo tienen script y pruebas, pero **todavía no tienen resultados**
-(véase [Bloqueo](#bloqueo-y-cómo-completar-los-contrastes)).
+**Estado al 14/11/2026:** completo para revisión. La selección, las versiones, la
+recalibración y los contrastes están verificados. Faltan la firma del acta y la revisión
+cruzada del Día 2 (véase [Pendientes](#pendientes)).
 
 Resumen de una página para la presentación: [03b_ficha_modelo.md](03b_ficha_modelo.md).
 
@@ -102,8 +101,33 @@ Los artefactos están en `resultados/modelos/artefactos/`, que Git excluye. Seg�
 **Brecha detectada:** el repositorio no registra el sha256 de los artefactos evaluados
 (2022–2024). [`contrastes_poisson.py`](../../contrastes_poisson.py) agrega a
 `resultados/cierre/version_modelo.json` una huella de los coeficientes y del
-transformador. Esa huella no depende de la serialización de joblib, así que permite
-confirmar que dos ajustes son el mismo modelo aunque el archivo cambie.
+transformador. Esa huella no depende de la serialización de joblib.
+
+**Reproducción independiente (14/11/2026).** Sin los artefactos originales, ambas
+versiones se reajustaron desde cero con:
+- el código versionado (hashes iguales a los de `auditoria.json`);
+- el caché ERA5 regenerado, cuyo sha256 `6dbd686c…ff4c` es **idéntico** al registrado;
+- las versiones de bibliotecas de la auditoría: numpy 2.2.3, scipy 1.14.1, pandas 2.2.3
+  y scikit-learn 1.6.1.
+
+| Versión | Objetivo registrado | Objetivo reajustado | Desvío relativo | Iteraciones (reg. / local) |
+|---|---|---|---|---|
+| Evaluado 2024 | 74 822,81131 | 74 822,81113 | 2,4e-9 | 179 / 198 |
+| Reajustado 2020–2024 | 91 903,60439 | 91 903,60430 | 9,7e-9 | 175 / 182 |
+
+Los dos ajustes alcanzan el mismo óptimo; el local queda incluso marginalmente más abajo.
+L-BFGS se detiene en otro punto de una región casi plana según el orden de las
+operaciones de punto flotante. Por eso las métricas de 2024 del evaluado reajustado
+coinciden así con `metricas.csv`:
+- captura al 5 % y por turno: idénticas (desvío ~3e-16);
+- captura al 20 %: idéntica;
+- esperados, O/E y MAE: desvío ≤1,8e-4 relativo (3.374,80 frente a 3.374,25 esperados);
+- captura al 10 %: desvío 3,2e-4.
+
+El script exige el objetivo a 1e-8, la captura al 5 % a 1e-6 y el resto a 1e-3. Con los
+artefactos originales exige 1e-10 en todas las métricas. Las huellas locales son
+`7d491358…05b9` (evaluado) y `daa05dae…3d30` (reajustado). No equivalen a las de los
+archivos de Diego.
 
 ## 3. Recalibración: escala de conteos, separada del ranking
 
@@ -122,7 +146,9 @@ Las cifras provienen de `recalibracion_candidato.csv`:
 - En 2024, la recalibración baja el MAE, pero pasa de sobreestimar (O/E 0,77) a
   subestimar (O/E 1,15). Por eso no debe presentarse como una calibración resuelta.
 - El factor 0,7720 del artefacto reajustado está pensado para un año posterior a 2024 y
-  **no tiene prueba**.
+  **no tiene prueba**. Además, ese factor corrige el sesgo del modelo *evaluado*, cuya
+  tendencia era ×1,054/año. El reajustado casi no tiene tendencia (×1,002/año), así que
+  hereda una corrección pensada para otro sesgo (véase la subsección siguiente).
 - No se reutiliza el multiplicador de lluvia del prototipo antiguo ni sus intervalos.
 
 ### Por qué Poisson sobreestima: la tendencia anual aprende de 2020
@@ -149,8 +175,15 @@ registrada en los tres años. Gradient Boosting no extrapola: sus árboles manti
 entrenamiento, sin tendencia.
 
 Alcance de esta evidencia:
-- Es una reconstrucción aproximada, sin L2 ni el resto de los atributos. La cifra exacta
-  del modelo real (`razon_tasa_por_anio_tendencia`) la registra `contrastes_poisson.py`.
+- **Confirmado con el modelo real:** `version_modelo.json` registra una tendencia de
+  **×1,054/año** en el evaluado 2024; la aproximación daba ×1,063.
+- **Al incluir 2024, la tendencia casi desaparece:** el reajustado 2020–2024 tiene
+  ×1,002/año. Con una tendencia plana, el modelo promedia los cinco años. La
+  aproximación de solo tendencia con 2020–2024 deja su nivel de 2024 en 2.928 esperados
+  frente a 2.605 observados (O/E ≈ 0,89 dentro de muestra) y proyecta unos 2.940 para
+  2025. Si 2025 se pareciera a 2024, el factor 0,7720 llevaría O/E de ≈0,89 a ≈1,15.
+  Es el mismo patrón de corrección excesiva de 2023 y 2024. Es una aproximación, no una
+  prueba, pero basta para **no presentar el reajustado recalibrado como calibrado**.
 - **No afecta la elección:** el término de tendencia multiplica por igual a todas las
   filas de un mismo año, así que no cambia el orden de priorización ni la captura.
   Afecta solo la escala de los conteos, que es lo que corrige la recalibración.
@@ -166,74 +199,94 @@ Alcance de esta evidencia:
 ## 4. Interpretación: contrastes de predicción
 
 [`contrastes_poisson.py`](../../contrastes_poisson.py) responde preguntas del tipo
-"¿cuánto cambia la tasa esperada si cambia solo un atributo?":
+"¿cuánto cambia la tasa esperada si cambia solo un atributo?". Sus resultados están en
+`resultados/cierre/contrastes_poisson.csv`.
 
+**Método:**
 - **Pares observados, no combinaciones inventadas.** Toma las combinaciones observadas en
   2024 (tramo, hora, día, mes, feriado, lluvia, trimestre) y forma pares que difieren
   solo en el atributo contrastado. Usa el mismo constructor `datos_modelado.atributos`
-  que el entrenamiento y no modifica atributos con reglas paralelas.
-- **Contrastes definidos antes de ver resultados:**
-  - lluvia: llovizna (0,1–0,5 mm/h) y lluvia (≥0,5 mm/h) frente a seco (<0,1 mm/h);
-  - feriado: inicio, día intermedio y último día frente a día no feriado;
-  - hora: cada hora frente a las 12:00.
-- **Qué se informa:**
-  - el número de pares y la razón de tasas (mediana, mínimo y máximo);
-  - un ejemplo con tramo (km), fechas reales de 2024, horas de exposición y tasa por
-    hora de cada lado.
+  que el entrenamiento.
+- **Contrastes fijados antes de ver resultados:** lluvia frente a seco, cada posición de
+  feriado frente a día no feriado y cada hora frente a las 12:00.
+- **Razón constante, como se esperaba:** en todos los contrastes la razón es idéntica en
+  todos los pares (mínimo = máximo), porque el modelo es log-lineal sin interacciones.
+  Por eso una sola cifra resume cada contraste para cualquier tramo y fecha.
 
-  El ejemplo es el par con más horas de exposición. Se elige sin mirar siniestros.
-- **Cómo leer las razones:**
-  - el modelo es log-lineal y no tiene interacciones, así que la razón debe ser igual en
-    todos los pares (mínimo = máximo). Las pruebas lo verifican;
-  - una razón de 1,3 para la lluvia significa que el modelo espera 30 % más siniestros
-    por hora que con seco, en el mismo tramo, hora, día y mes;
-  - es una **asociación del modelo**, no un efecto causal, no es riesgo por vehículo-km
-    y puede reflejar cambios de exposición no medidos, como un menor tráfico con lluvia;
-  - la penalización L2 acerca las razones a 1;
-  - solo se interpretan **diferencias entre categorías**, nunca un coeficiente aislado de
-    la codificación completa.
-- **Ejemplo por turno**, en `ejemplo_turno_poisson.csv`:
-  - turno fijado a priori: viernes 12/07/2024, de 12:00 a 24:00, hora local;
-  - incluye los tramos que entran en el presupuesto del 5 %, con sus conteos esperados
-    original y recalibrado (× 0,6687, factor de 2023) y lo observado;
-  - la última fila es el agregado de la ruta.
+### Resultados (evaluado 2024; entre paréntesis, reajustado 2020–2024)
 
-  Es un ejemplo histórico. Un solo turno no mide precisión por tramo. El MAE registrado
-  es el error del total de la ruta por turno, no un error por tramo.
+| Contraste | Referencia | Razón de tasas | Pares observados | Lectura |
+|---|---|---|---|---|
+| Llovizna (0,1–0,5 mm/h) | seco | **× 1,28** (1,30) | 175.689 | 28 % más siniestros esperados por hora |
+| Lluvia (≥0,5 mm/h) | seco | **× 2,11** (2,10) | 120.365 | el doble de siniestros esperados por hora |
+| Inicio de feriado largo | día no feriado | **× 1,18** (1,19) | 61.679 | más alto el día de salida |
+| Día intermedio de feriado | día no feriado | **× 0,93** (0,93) | 97.045 | algo más bajo |
+| Último día de feriado | día no feriado | **× 1,12** (1,16) | 67.649 | más alto el día de regreso |
+| 02:00–05:00 | 12:00 | **× 0,44–0,48** | ~37.000 por hora | la mitad que a mediodía |
+| 08:00 | 12:00 | **× 1,38** | 38.846 | punta de la mañana |
+| 18:00 | 12:00 | **× 1,41** | 38.313 | punta de la tarde, la hora más alta |
 
-## Bloqueo y cómo completar los contrastes
+Perfil horario completo frente a las 12:00 (evaluado):
+- madrugada: 00 h ×0,56, 01 h ×0,51, 02 h ×0,44, 03 h ×0,46, 04 h ×0,48, 05 h ×0,47,
+  06 h ×0,66;
+- mañana: 07 h ×1,06, 08 h ×1,38, 09 h ×1,09, 10 h ×1,01, 11 h ×1,00;
+- tarde: 13 h ×1,01, 14 h ×1,05, 15 h ×1,06, 16 h ×1,17, 17 h ×1,25, 18 h ×1,41,
+  19 h ×1,27;
+- noche: 20 h ×1,01, 21 h ×0,86, 22 h ×0,71, 23 h ×0,58.
 
-Para reconstruir el modelo se necesitan `clima_ruta5.npz` (ERA5), `feriados.json` y los
-anexos DGC, y ninguno de ellos está en Git. En esta sesión:
+Las dos versiones dan razones casi iguales (diferencias ≤0,04): la interpretación no
+depende de si se incluye 2024.
 
-- `feriados.json` se descargó y su sha256 `1240f908…7b19` coincide con
-  `resultados/eda/auditoria.json`;
-- los anexos DGC 2023-4T y 2024-4T coinciden con los hashes de `auditoria.json`;
-- **ERA5 quedó bloqueado:** Open‑Meteo respondió *"Daily API request limit exceeded"*.
+**Ejemplo concreto (lluvia).** Tramo km 0–5, viernes de agosto de 2024 a las 03:00:
+- seco (09/08): 0,00084 siniestros esperados por hora;
+- lluvia ≥0,5 mm/h (02/08): 0,00176.
 
-Hay dos formas de completarlo:
+Los valores absolutos son pequeños porque un tramo de 5 km en una hora rara vez tiene un
+siniestro. La utilidad está en sumar y ordenar muchas horas-tramo, no en predecir una sola.
 
-1. **Recomendada:** Diego, que tiene `clima_ruta5.npz` y `resultados/modelos/artefactos/`,
-   ejecuta:
-   ```
-   .venv/bin/python contrastes_poisson.py
-   ```
-   Con los artefactos, el script verifica las métricas de 2024 con tolerancia 1e-10 y
-   registra el sha256 de cada archivo. Así se cumple también la comprobación de recarga
-   acordada con Diego.
-2. Sin artefactos, el script reajusta las dos versiones con la configuración ya elegida
-   (alrededor de 1 minuto cada una) y se detiene en dos casos:
-   - si el evaluado no reproduce `metricas.csv` de 2024 (tolerancia 1e-6);
-   - si el reajustado no reproduce el objetivo de `reajuste.json`.
+**Cómo leer y cómo no leer estas cifras:**
+- Son **asociaciones del modelo**, no efectos causales. El modelo predice conteos, no
+  riesgo por vehículo-km.
+- Lluvia, hora y feriado también cambian cuánto tráfico hay. Por ejemplo, ×0,44 a las
+  02:00 refleja sobre todo menos vehículos, no conducción más segura. Las puntas de
+  08:00 y 18:00 coinciden con los desplazamientos diarios. En feriados, el aumento al
+  inicio y al final y la baja en los días intermedios coinciden con el patrón de salida
+  y regreso.
+- La lluvia es de reanálisis ERA5 en celdas de 0,25°, no la medida en la carretera ni un
+  pronóstico emitido antes del turno.
+- La penalización L2 acerca las razones a 1, así que pueden estar levemente atenuadas.
+- Las cifras **no tienen intervalos de confianza**: no se reutilizan los intervalos del
+  multiplicador de lluvia del prototipo antiguo.
 
-   Antes hay que regenerar ERA5 con `python clima_utc.py` cuando la API lo permita, y
-   comprobar que el hash del caché sea igual a `clima_cache_sha256` en `auditoria.json`.
-   `version_modelo.json` registra ambos hashes.
+### Ejemplo de turno y agregado de la ruta
 
-Salidas: `resultados/cierre/contrastes_poisson.csv`, `ejemplo_turno_poisson.csv` y
-`version_modelo.json`. Pruebas: `tests/test_contrastes.py`, con 5 casos sobre datos
-sintéticos que verifican el emparejamiento, la constancia de las razones, la invariancia
-ante recalibración y el presupuesto del turno.
+El archivo es `resultados/cierre/ejemplo_turno_poisson.csv`. El turno se fijó a priori:
+viernes 12/07/2024, de 12:00 a 24:00, hora local, con el modelo evaluado.
+
+- **Presupuesto del 5 %:** 12,75 tramos (12 completos y el 13.º al 75 %). Encabezan
+  km 190, 270, 220, 195 y 185, con 0,09–0,14 siniestros esperados en el turno.
+- **En los tramos priorizados:** ocurrieron 2 de los 5 siniestros del turno (km 190 y
+  km 95).
+- **Agregado de la ruta:** 6,35 esperados (4,24 recalibrados con ×0,6687) frente a 5
+  observados.
+
+Es un ejemplo histórico ilustrativo: un turno no mide la precisión del modelo. El MAE
+registrado (1,97; 1,68 recalibrado) es el error del **total de la ruta** por turno en
+2024, no un error por tramo.
+
+### Cómo se reprodujo
+
+```
+python feriados.py                     # sha256 igual a resultados/eda/auditoria.json
+python flujo_concesiones.py --descargar  # anexos DGC con hashes de auditoria.json
+python clima_utc.py                    # ERA5; sha256 igual a auditoria.json
+python contrastes_poisson.py           # ~2 min; reajusta y verifica si no hay artefactos
+python tendencia_anual.py              # solo usa salidas versionadas
+```
+
+Open‑Meteo limita las descargas: el 13/11 se agotó el cupo diario y la descarga se
+completó el 14/11 con reintentos espaciados. Pruebas: `tests/test_contrastes.py` y
+`tests/test_tendencia.py`, con datos sintéticos.
 
 ## 5. Borrador del acta (para firmar el Día 2 con la tabla de Cristóbal)
 
@@ -244,15 +297,20 @@ ante recalibración y el presupuesto del turno.
 > (+4,11 pp, IC 95 % [2,10; 6,08]). En ese año, Gradient Boosting obtuvo mejores
 > métricas, lo que no cambia la elección. Los conteos esperados requieren recalibración
 > con el O/E del año anterior. La recalibración cambia la escala, no el orden. Su
-> resultado en 2024 pasó de sobreestimar a subestimar. El artefacto reajustado con
-> 2020–2024 no tiene prueba futura y queda como artefacto de investigación. El modelo
+> resultado en 2024 pasó de sobreestimar a subestimar. La sobreestimación se explica por
+> la tendencia anual aprendida desde 2020 (×1,054/año), sin efecto sobre el orden. El
+> artefacto reajustado con 2020–2024 no tiene prueba futura y queda como artefacto de
+> investigación; su factor de recalibración no se presenta como calibración validada.
+> Asociaciones del modelo: lluvia ≥0,5 mm/h ×2,11 frente a seco; 18:00 ×1,41 y 02:00
+> ×0,44 frente a las 12:00; inicio de feriado largo ×1,18. El modelo
 > predice conteos por hora con lluvia de reanálisis (no pronósticos emitidos) y no
 > estima riesgo por vehículo-km.
 
 ## Pendientes
 
-- [ ] Ejecutar `contrastes_poisson.py` (Diego o tras regenerar ERA5) e incorporar cifras
-      a la sección 4.
-- [x] Hipótesis de tendencia respaldada con `tendencia_anual.py`. Falta registrar la cifra exacta del modelo (`razon_tasa_por_anio_tendencia`).
-- [ ] Cristóbal: verificar las cifras de las secciones 1 y 3 contra su tabla maestra.
-- [ ] Día 2: firmar el acta (sección 5) y registrar el sha256 de los artefactos evaluados.
+- [x] Contrastes calculados y verificados (sección 4).
+- [x] Tendencia confirmada con el modelo real (×1,054/año evaluado; ×1,002/año reajustado).
+- [ ] Cristóbal: verificar las cifras de las secciones 1, 3 y 4 contra su tabla maestra.
+- [ ] Diego: si conserva los artefactos originales, ejecutar `contrastes_poisson.py` con
+      ellos (verificación a 1e-10) y registrar su sha256.
+- [ ] Día 2: firmar el acta (sección 5).

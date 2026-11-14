@@ -137,8 +137,24 @@ def cargar_o_reajustar(version, datos, carpeta, seleccion, reajuste):
     return modelo, meta
 
 
-def verificar_evaluado(modelo, datos, metricas, origen):
-    """El modelo evaluado debe reproducir metricas.csv de 2024 antes de interpretarse."""
+def objetivo_registrado(auditoria):
+    """Objetivo del ajuste Poisson_clima evaluado en 2024 según auditoria.json."""
+    filas = [a for a in auditoria["ajustes"] if a.get("anio_prueba") == 2024
+             and a.get("cohorte") == "ruta_completa" and a.get("modelo") == NOMBRE]
+    if len(filas) != 1:
+        raise ValueError("auditoria.json no registra un único ajuste Poisson_clima de 2024")
+    return filas[0]
+
+
+def verificar_evaluado(modelo, datos, metricas, meta, auditoria):
+    """El modelo evaluado debe reproducir metricas.csv de 2024 antes de interpretarse.
+
+    Artefacto original: todas las métricas a 1e-10. Reajuste local: el objetivo
+    debe coincidir con el registrado (mismo óptimo, rtol 1e-8); L-BFGS puede
+    detenerse en otro punto de una región plana según el orden de las operaciones
+    de punto flotante, así que la captura al 5 % (criterio de selección) se exige
+    a 1e-6 y el resto de métricas a 1e-3. Todos los desvíos quedan registrados.
+    """
     from datos_modelado import agrupar_modelado, atributos, expandir_prediccion
     from validar_ruta5 import resumen
     filas = np.arange(len(datos["tramos"]))
@@ -147,11 +163,22 @@ def verificar_evaluado(modelo, datos, metricas, origen):
     obtenido = resumen(y, mu, e)
     fila = metricas.loc[metricas.anio_prueba.eq(2024) & metricas.cohorte.eq("ruta_completa")
                         & metricas.modelo.eq(NOMBRE) & metricas.particion.eq("prueba")].iloc[0]
-    rtol = 1e-10 if origen == "artefacto" else 1e-6
     desvio = {k: float(abs(v - fila[k]) / max(abs(fila[k]), 1e-300)) for k, v in obtenido.items()}
-    if max(desvio.values()) > rtol:
-        raise RuntimeError(f"El modelo no reproduce metricas.csv de 2024: {desvio}")
-    return mu, y, obtenido, {"tolerancia_relativa": rtol, "desvio_relativo_maximo": max(desvio.values())}
+    if meta["origen"] == "artefacto":
+        tolerancias = {k: 1e-10 for k in desvio}
+        verificacion = {}
+    else:
+        ref = objetivo_registrado(auditoria)
+        verificacion = {"objetivo_registrado": ref["objetivo"], "iteraciones_registradas": ref["iteraciones"],
+                        "desvio_relativo_objetivo": abs(meta["objetivo"] - ref["objetivo"]) / abs(ref["objetivo"])}
+        if verificacion["desvio_relativo_objetivo"] > 1e-8:
+            raise RuntimeError(f"El reajuste no alcanza el objetivo registrado: {verificacion}")
+        tolerancias = {k: (1e-6 if k == "captura5" else 1e-3) for k in desvio}
+    fuera = {k: v for k, v in desvio.items() if v > tolerancias[k]}
+    if fuera:
+        raise RuntimeError(f"El modelo no reproduce metricas.csv de 2024: {fuera}")
+    verificacion.update({"tolerancias_relativas": tolerancias, "desvios_relativos": desvio})
+    return mu, y, obtenido, verificacion
 
 
 def tabla_contrastes(version, modelo, datos):
@@ -227,7 +254,7 @@ def main():
         meta["huella_coeficientes_sha256"] = huella(modelo)
         meta["razon_tasa_por_anio_tendencia"] = razon_tendencia(modelo)
         if version == "evaluado2024":
-            mu, y, obtenido, meta["verificacion_2024"] = verificar_evaluado(modelo, datos, metricas, meta["origen"])
+            mu, y, obtenido, meta["verificacion_2024"] = verificar_evaluado(modelo, datos, metricas, meta, auditoria)
             meta["metricas_2024"] = obtenido
             fila = recal.loc[recal.anio_prueba.eq(2024) & recal.ajuste.eq("recalibrado")].iloc[0]
             turno = ejemplo_turno(mu, y, datos, args.turno, float(fila.factor), int(fila.anio_factor))
