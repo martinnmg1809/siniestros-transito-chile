@@ -136,7 +136,7 @@ El TMDA del MOP (PNCV) no se usa. Motivos: ningún registro con año de medició
 | Sensibilidad urbana y umbrales de lluvia (requieren corrida nueva) | Equipo |
 | Párrafo para el README y decisión de integrar | Diego |
 
-Matriz completa: `resultados/cierre/matriz_compromisos.csv`. No se revisó la sección 10 de la entrega 2 más allá de su texto en el notebook ni la diapositiva 14 de la presentación (no está disponible).
+Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados: pauta del profesor, sección 10 del notebook de la Entrega 2 y diapositiva 14 de la Presentación 1. De esta última, "más rutas" se agregó como C11 sin verificar; el resto ya estaba cubierto.
 
 ## 9. Cómo reproducir
 
