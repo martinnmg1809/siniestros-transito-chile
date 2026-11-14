@@ -1,5 +1,7 @@
 # Datos y flujo · ficha de cierre
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 Versión: base `a65a02d` (rama `cierre/vicente-flujo`) · 14 de noviembre de 2026 · Autor: Vicente (con asistencia de Claude) ·
 Revisor: Cristóbal (pendiente) · Población: 14.420 eventos / 255 tramos de 5 km.
 Estado: borrador para revisión; nada de esta ficha se ha firmado por el revisor.

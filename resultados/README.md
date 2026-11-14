@@ -1,5 +1,7 @@
 # Resultados y evidencia
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 | Carpeta | Uso |
 |---|---|
 | modelos | Comparación vigente de Entrega III: tablas, figuras y auditorías; 14.420 siniestros |

@@ -1,5 +1,7 @@
 # Organización del repositorio
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 Reorganización del 14/11/2026, a partir del commit `974c8cd`.
 La finalidad es facilitar navegación, reproducción y colaboración mientras se
 completan las fichas del equipo. No se editaron notebook, presentación, datos

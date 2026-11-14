@@ -1,5 +1,7 @@
 # Catálogo de código
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 Ejecutar desde la raíz con `python proyecto.py <nombre> [opciones]`.
 `python proyecto.py --listar` muestra el catálogo completo. Para importar desde
 un notebook ejecutado en la raíz, hacer primero `import proyecto`; después pueden

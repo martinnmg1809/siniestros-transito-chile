@@ -1,5 +1,7 @@
 # Datos
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 - `siniestros/`: CSV comprimidos originales de CONASET versionados en Git.
 - `fuentes/`: respuestas y anexos crudos descargados, con sus metadatos. Excluidos de Git.
 - `calendario/`: `feriados.json` histórico; archivo local regenerable, excluido de Git.

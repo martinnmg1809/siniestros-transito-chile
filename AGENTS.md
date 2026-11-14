@@ -1,5 +1,10 @@
 # Autoría de los commits
 
+Nombre oficial del proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+Usarlo en documentos y títulos vigentes. El caso validado actual sigue siendo
+Ruta 5 Sur; el nombre no amplía el alcance científico. El identificador propuesto
+de GitHub y su estado administrativo están en `docs/identidad_proyecto.md`.
+
 - Mantener la identidad de Git configurada para el usuario y usarla como committer.
 - Por defecto, mantener al usuario como autor principal. Si solicita atribuir un commit
   realizado por Codex a la cuenta Codex, usar únicamente para ese commit

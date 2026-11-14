@@ -1,5 +1,7 @@
 # Registro de migración
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 `migracion_estructura.csv` registra la ubicación anterior y actual de los archivos
 reorganizados y sus hashes antes/después. Los caminos relativos se interpretan desde
 la raíz del proyecto. Algunas filas incluyen salidas locales opcionales no versionadas.

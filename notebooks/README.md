@@ -1,5 +1,7 @@
 # Notebook de la entrega final
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 El notebook final documentado se colocará aquí cuando estén cerrados los modelos,
 la interpretación y las revisiones del equipo. No se creó ni modificó un notebook
 durante la reorganización.

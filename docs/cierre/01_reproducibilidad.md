@@ -1,5 +1,7 @@
 # Diego: reproducción e integración técnica
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 Estado al 13 de noviembre de 2026. Versión de entrada: `0c5e42c`.
 Esta ficha registra trabajo ejecutado por Diego con asistencia de Codex.
 La revisión cruzada de Martín y la integración de las entregas de los demás

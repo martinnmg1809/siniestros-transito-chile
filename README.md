@@ -1,7 +1,16 @@
-# Predicción de siniestros en la Ruta 5 Sur
+# Predicción dinámica de siniestros en carreteras chilenas
 
 Proyecto de Ciencia de Datos para estimar conteos de siniestros por tramo y hora
 y apoyar la priorización de vigilancia en ventanas de 12 horas.
+
+**Problemática:** conocer los puntos con más siniestros históricos ayuda a ubicar
+zonas prioritarias, pero no describe cómo cambia su frecuencia según la hora,
+el calendario y la lluvia. El proyecto estudia esa variación para orientar dónde
+concentrar recursos de vigilancia y cuántos siniestros esperar en una ventana.
+
+**Alcance actual:** el proyecto tiene un nombre general para carreteras chilenas;
+la evaluación técnica de la Entrega III se concentra en **Ruta 5 Sur**. El prototipo
+multirruta es un antecedente y no amplía por sí solo el alcance validado.
 
 La Entrega III compara Poisson, Gradient Boosting y Random Forest con calendario,
 lluvia y un proxy de circulación. El experimento actual utiliza **14.420 siniestros,
@@ -17,6 +26,8 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
+
+[Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
 
 ## Organización
 
@@ -90,6 +101,12 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se adoptó el nombre oficial **Predicción dinámica de siniestros en
+carreteras chilenas** en la documentación vigente, el plan PDF y los títulos del
+prototipo y sus generadores. El cambio del identificador y la descripción de GitHub
+queda pendiente del propietario: la cuenta conectada tiene escritura, sin administración.
+Se mantienen los enlaces actuales hasta completar ese cambio.
 
 El **14/11/2026** se reorganizaron código, datos y documentos por función. Se añadió
 el lanzador, se actualizaron rutas y se conservaron las auditorías originales y

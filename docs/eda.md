@@ -1,5 +1,7 @@
 # Análisis exploratorio y decisiones de datos
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 <!-- INICIO_EDA_ENTREGA3 -->
 ### Bitácora del EDA previo al entrenamiento
 

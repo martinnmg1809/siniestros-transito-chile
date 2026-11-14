@@ -408,9 +408,9 @@ def main():
         for k in orden)
 
     html = f"""<meta charset="utf-8">
-<title>Riesgo en Carreteras de Chile</title>
+<title>Predicción dinámica de siniestros en carreteras chilenas</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Riesgo de siniestros por tramo y hora en {len(rutas)} carreteras de Chile, recalculado en vivo con el pronóstico de lluvia.">
+<meta name="description" content="Predicción dinámica de siniestros en carreteras chilenas. Estimación de conteos por tramo y hora para priorizar vigilancia. Caso de evaluación actual: Ruta 5 Sur; interfaz histórica.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -418,7 +418,8 @@ def main():
 <div class="wrap">
   <header>
     <div class="eyebrow">{len(rutas)} carreteras de Chile · próximas 12 horas</div>
-    <h1>Riesgo de siniestros</h1>
+    <h1>Predicción dinámica de siniestros en carreteras chilenas</h1>
+    <p>Estimación de siniestros por tramo y hora para apoyar la priorización de vigilancia. Prototipo histórico; la evaluación técnica actual se concentra en Ruta 5 Sur.</p>
   </header>
   <div class="selector">
     <label for="ruta">Carretera</label>

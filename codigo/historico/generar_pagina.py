@@ -284,7 +284,7 @@ def render(d):
     pill_bg = "var(--q2)" if ratio >= 1.15 else ("var(--q1)" if up else "var(--accent-soft)")
     pill_fg = "#fff" if ratio >= 1 else "var(--accent)"
 
-    return f"""<title>Riesgo Ruta 5 Sur</title>
+    return f"""<title>Predicción dinámica de siniestros en carreteras chilenas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -292,7 +292,8 @@ def render(d):
 <div class="wrap">
 <header>
   <div class="eyebrow">Ruta 5 Sur · Santiago – Puerto Montt · próximas 12 horas</div>
-  <h1>Riesgo de siniestros</h1>
+  <h1>Predicción dinámica de siniestros en carreteras chilenas</h1>
+    <p>Estimación de siniestros por tramo y hora para apoyar la priorización de vigilancia. Prototipo histórico; la evaluación técnica actual se concentra en Ruta 5 Sur.</p>
   <p class="sub mono">{fecha}, {hs[0].strftime('%H:%M')} – {hs[-1].strftime('%H:%M')}
     · generado {d['generado'].strftime('%d-%m-%Y %H:%M')}</p>
 </header>

@@ -1,5 +1,7 @@
 # Plan de trabajo · Vicente · Datos y flujo (cierre técnico Ruta 5 Sur)
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 > **Para quién es este documento.** Lo lee primero un modelo intermedio (Sonnet) para entender el encargo y,
 > después, lo ejecuta un agente de código (Claude Code) en otra sesión sobre el repositorio
 > `siniestros-transito-chile`. Está escrito para que se pueda seguir **sin contexto adicional**.

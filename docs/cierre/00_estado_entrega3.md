@@ -1,5 +1,7 @@
 # Estado de la Entrega III y siguiente integración
 
+Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+
 Actualización: 14 de noviembre de 2026. Responsable de integración: Diego.
 Referencia docente: anuncio de la Presentación Técnica Final copiado por Diego en
 el chat el 14/11/2026; complementa la rúbrica y las observaciones anteriores.
