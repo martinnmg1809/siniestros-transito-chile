@@ -13,7 +13,7 @@ registros se conservan; sus puntuaciones no son comparaciones directas con esta 
 
 #### Incorporación del flujo y cambios de código
 
-- [integrar_flujo.py](../../integrar_flujo.py) documenta intervalos interiores de seis contratos
+- [integrar_flujo.py](../../codigo/datos/integrar_flujo.py) documenta intervalos interiores de seis contratos
   de Ruta 5, excluye baipases de kilometraje propio, fronteras inciertas y aplica margen
   de 1 km. Fuentes y páginas están en [limites_documentados.csv](limites_documentados.csv).
   Es una asignación de contexto por contrato; no acredita flujo uniforme por tramo.
@@ -32,10 +32,10 @@ registros se conservan; sus puntuaciones no son comparaciones directas con esta 
 - PNCV continúa separado: sus estaciones parciales, ceros sin interpretar y falta de año
   2020 no se convierten en una exposición completa. `exposicion_validada.csv` permanece
   vacía. **Se modelan conteos; no se estima riesgo por vehículo-km.**
-- [datos_modelado.py](../../datos_modelado.py) alinea las fuentes, mantiene la referencia espacial
+- [datos_modelado.py](../../codigo/datos/datos_modelado.py) alinea las fuentes, mantiene la referencia espacial
   de 2020–2021, verifica las celdas del caché ERA5 tras la cuarentena y conserva exposición
   horaria 0/1/2 por horario de verano. La agrupación conserva conteos y exposición.
-- [modelos_conteo.py](../../modelos_conteo.py) implementa las tres familias con pérdida/criterio
+- [modelos_conteo.py](../../codigo/modelos/modelos_conteo.py) implementa las tres familias con pérdida/criterio
   Poisson. La regresión incluye offset horario y penalización L2; GB usa categorías nativas;
   RF usa categorías codificadas, 80 árboles y un máximo de 80.000 filas agrupadas por árbol.
   GB/RF ajustan tasa con peso igual a exposición y luego recuperan el conteo esperado.
@@ -193,9 +193,9 @@ en `candidato_reajustado2020_2024_recalibrado_con2024.joblib`; tampoco tiene eva
 Con las fuentes descargadas, ejecutar desde la raíz del repositorio:
 
 ```bash
-OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python entrenar_comparacion.py
-OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python reajustar_candidato.py
-MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python resumir_modelos.py --actualizar-readme
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python proyecto.py entrenar_comparacion
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python proyecto.py reajustar_candidato
+MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py resumir_modelos --actualizar-readme
 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m unittest discover -s tests -v
 ```
 
@@ -204,7 +204,7 @@ UTC/DST, calendario fuera de cobertura, calidad de fuentes, fronteras de contrat
 rezago temporal, selección sin usar el año de prueba y persistencia de las tres familias.
 La prueba nueva comprueba que se eliminan residuos numéricos de puntos de cobro sin
 redondear fracciones reales. Se repitieron las variantes de flujo después de esta
-corrección con [reentrenar_flujo.py](../../reentrenar_flujo.py), verificando hashes antes de
+corrección con [reentrenar_flujo.py](../../codigo/modelos/reentrenar_flujo.py), verificando hashes antes de
 conservar los ajustes sin flujo. La corrida completa desde cero ya incluye el arreglo.
 
 Siguen abiertas la validación con pronósticos meteorológicos emitidos en el pasado,

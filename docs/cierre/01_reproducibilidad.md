@@ -29,6 +29,7 @@ Se comprobó además una copia independiente formada solo por archivos que se
 publicarán en Git: el verificador pasa y la suite descubre 40 pruebas, con 39
 aprobadas y una omitida por ausencia del XLS DGC. La regeneración en una carpeta
 temporal produjo los tres PNG y un `resumen.md` idéntico al publicado.
+Tras la reorganización, usar siempre `python proyecto.py <comando>` desde la raíz.
 El registro de comandos está en [comprobaciones](../../resultados/cierre/comprobaciones.md).
 
 ## Instalación para otro integrante
@@ -40,7 +41,7 @@ python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements-reproduccion.txt
 .venv/bin/python -m pip check
 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python verificar_cierre.py
+.venv/bin/python proyecto.py verificar_cierre
 ```
 
 Si ya hay una `.venv` con paquetes del sistema, crear otra carpeta de entorno
@@ -62,16 +63,16 @@ tras la integración del 14/11 se esperan 43 pruebas descubiertas, 42 aprobadas 
 
 | Insumo local | Procedencia y recuperación | Control de versión |
 |---|---|---|
-| `ruta5_2020_2024.csv.gz` | Ya versionado en Git; evitar reemplazarlo por una descarga nueva durante la reproducción | SHA256 en `resultados/modelos/auditoria.json` |
-| `feriados.json` | Copia original del equipo o `python feriados.py` | SHA256 en `resultados/eda/auditoria.json`; cobertura histórica 2020-2024 |
-| `clima_ruta5.npz` | Copia v2 original; alternativamente `python clima.py` reconstruye el caché desde respuestas ERA5 parciales o la API | SHA256 en auditoría de modelos; 59 celdas, alineación UTC/DST |
-| `data/fuentes/dgc/anexo_2023_4t.xls` y `anexo_2024_4t.xls` | Copias originales; alternativamente `python flujo_concesiones.py --descargar` | URL y SHA256 en `resultados/flujo/fuentes_dgc.json` y auditoría de modelos |
+| `data/siniestros/ruta5_2020_2024.csv.gz` | Ya versionado en Git; evitar reemplazarlo por una descarga nueva durante la reproducción | SHA256 en `resultados/modelos/auditoria.json` |
+| `data/calendario/feriados.json` | Copia original del equipo o `python proyecto.py feriados` | SHA256 en `resultados/eda/auditoria.json`; cobertura histórica 2020-2024 |
+| `data/cache/clima_ruta5.npz` | Copia v2 original; alternativamente `python proyecto.py clima` reconstruye el caché desde respuestas ERA5 parciales o la API | SHA256 en auditoría de modelos; 59 celdas, alineación UTC/DST |
+| `data/fuentes/dgc/anexo_2023_4t.xls` y `anexo_2024_4t.xls` | Copias originales; alternativamente `python proyecto.py flujo_concesiones --descargar` | URL y SHA256 en `resultados/flujo/fuentes_dgc.json` y auditoría de modelos |
 | `resultados/modelos/artefactos/*.joblib` | Copias locales de confianza del equipo o regeneración con los scripts de entrenamiento | Dos hashes finales en `reajuste.json`; hashes de los evaluados 2023/2024 en el informe local |
 
 Las respuestas parciales ERA5 se guardan en `data/fuentes/era5/`; conservarlas con
 sus metadatos permite reconstruir el caché sin red. Para repetir el EDA completo
 también hacen falta las seis capas PNCV y sus metadatos en `data/fuentes/mop/`;
-se descargan mediante `python flujo_vehicular.py --descargar`. La lista y hashes
+se descargan mediante `python proyecto.py flujo_vehicular --descargar`. La lista y hashes
 originales están en `resultados/eda/auditoria.json`.
 
 Descargar hoy puede devolver otra revisión. Si un hash cambia, no modificar el
@@ -82,7 +83,7 @@ en esta verificación. Los modelos serializados se cargan solo desde copias del 
 ## Comprobación con las fuentes originales disponibles
 
 ```bash
-OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python verificar_cierre.py --con-artefactos --salida resultados/cierre/verificacion_local.md
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python proyecto.py verificar_cierre --con-artefactos --salida resultados/cierre/verificacion_local.md
 ```
 
 El comando devuelve código 0 si pasa o 1 si encuentra inconsistencia. No descarga
@@ -99,7 +100,7 @@ Copiar a una carpeta temporal `auditoria.json`, `metricas.csv`, `bootstrap.csv`,
 `resultados/modelos/`. Ejecutar:
 
 ```bash
-MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python resumir_modelos.py --salida /ruta/temporal
+MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py resumir_modelos --salida /ruta/temporal
 ```
 
 Esto genera tres PNG y `resumen.md` desde las tablas. Sin `--actualizar-readme`
@@ -111,9 +112,9 @@ cambiar los bytes de las imágenes; las tablas numéricas y el texto deben coinc
 Con insumos verificados, primero guardar las salidas existentes y usar otra carpeta:
 
 ```bash
-OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python entrenar_comparacion.py --salida resultados/nueva_corrida
-OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python reajustar_candidato.py --salida resultados/nueva_corrida
-MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python resumir_modelos.py --salida resultados/nueva_corrida
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python proyecto.py entrenar_comparacion --salida resultados/nueva_corrida
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python proyecto.py reajustar_candidato --salida resultados/nueva_corrida
+MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py resumir_modelos --salida resultados/nueva_corrida
 ```
 
 No se repitió el entrenamiento durante este cierre. El modelo evaluado en 2024
@@ -140,7 +141,15 @@ evaluación con pronósticos meteorológicos emitidos antes de decidir.
 ## Integración posterior de Vicente (14/11/2026)
 
 La ficha 02 y sus tablas están incorporadas; ejecutar también
-`.venv/bin/python cierre_flujo.py --comprobar`. El total actual es 43 pruebas con
+`.venv/bin/python proyecto.py cierre_flujo --comprobar`. El total actual es 43 pruebas con
 fuentes locales. Las cifras de 40 anteriores conservan el registro del 13/11.
 La integración está descrita en [estado de entrega](00_estado_entrega3.md);
 faltan las fichas 03/04 y la revisión cruzada humana de Martín.
+
+## Reorganización posterior (14/11/2026)
+
+La ejecución actual utiliza `python proyecto.py <comando>` y los datos se ubican
+en las carpetas indicadas arriba. El total actual es 45 pruebas con fuentes locales;
+en la copia pública, 44 aprobadas y una omitida. Los recuentos anteriores conservan
+la historia de cada etapa. Los modelos siguen usando los mismos nombres de módulos
+para poder recargarse. Ver [guía de carpetas](../estructura.md).

@@ -30,7 +30,7 @@ Detalle por fuente: `resultados/cierre/fuentes_flujo.csv`.
 
 ## 3. Cobertura
 
-Tabla completa en `resultados/cierre/cobertura_flujo_detalle.csv` (regenerable con `python cierre_flujo.py`).
+Tabla completa en `resultados/cierre/cobertura_flujo_detalle.csv` (regenerable con `python proyecto.py cierre_flujo`).
 
 | Año | Tramos con flujo | Siniestros con flujo / total | % eventos |
 |---|---|---|---|
@@ -144,7 +144,7 @@ Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados
 ## 9. Cómo reproducir
 
 ```bash
-.venv/bin/python cierre_flujo.py --comprobar
+.venv/bin/python proyecto.py cierre_flujo --comprobar
 .venv/bin/python -m unittest discover -s tests -p test_modelado.py -v
 ```
 
@@ -153,7 +153,7 @@ Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados
 ## 10. Salidas de comprobación (14/11/2026, commit `ef1ae9d`)
 
 ```text
-$ .venv/bin/python cierre_flujo.py
+$ .venv/bin/python proyecto.py cierre_flujo
 antes_primer_contrato       43
 con_contrato               153
 despues_ultimo_contrato     39

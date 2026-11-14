@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import proyecto
 from integrar_flujo import asignar_contratos, flujo_rezagado, normalizar_puntos
 from modelos_conteo import ModeloConteo, ModeloHibrido, elegir_configuracion
 from datos_modelado import cuarentena_espacial

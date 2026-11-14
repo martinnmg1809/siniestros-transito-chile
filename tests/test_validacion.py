@@ -9,6 +9,7 @@ import pandas as pd
 from scipy import sparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import proyecto
 from evaluacion import captura, curva_captura, pesos_seleccion, captura_turnos, bootstrap_pareado, desvianza
 from modelo import ajustar, agrupar
 from datos_ruta5 import cargar_eventos, referencia_entrenamiento, exposicion_civil

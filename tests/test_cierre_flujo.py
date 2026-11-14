@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class CierreFlujoTests(unittest.TestCase):
     def ejecutar(self, salida):
-        return subprocess.run([sys.executable, str(ROOT / "cierre_flujo.py"),
+        return subprocess.run([sys.executable, str(ROOT / "proyecto.py"), "cierre_flujo",
                                "--comprobar", "--salida", str(salida)], cwd=ROOT,
                               capture_output=True, text=True)
 

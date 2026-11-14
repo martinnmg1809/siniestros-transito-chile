@@ -10,6 +10,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+import proyecto
 from verificar_cierre import verificar_tablas
 
 
@@ -20,13 +21,17 @@ class CierreTests(unittest.TestCase):
         self.raiz = Path(self.tmp.name)
         self.salida = self.raiz / "resultados/modelos"
         self.salida.mkdir(parents=True)
+        (self.raiz / "config").mkdir()
+        shutil.copy2(ROOT / "config/migracion_estructura.csv", self.raiz / "config/migracion_estructura.csv")
         for archivo in (ROOT / "resultados/modelos").iterdir():
             if archivo.suffix in (".csv", ".json"):
                 shutil.copy2(archivo, self.salida / archivo.name)
         a = json.loads((self.salida / "auditoria.json").read_text())
         r = json.loads((self.salida / "reajuste.json").read_text())
         for archivo in list(a["hashes_codigo"] | r["hashes_codigo_postproceso"]) + ["ruta5_2020_2024.csv.gz"]:
-            shutil.copy2(ROOT / archivo, self.raiz / archivo)
+            destino = proyecto.ruta(archivo, self.raiz)
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(proyecto.ruta(archivo), destino)
 
     def modificar(self, nombre, cambio):
         ruta = self.salida / f"{nombre}.csv"
@@ -37,7 +42,7 @@ class CierreTests(unittest.TestCase):
     def test_evidencia_publicada_sin_fuentes_locales_ni_modelos(self):
         mensajes, _, _, _ = verificar_tablas(self.raiz)
         self.assertGreaterEqual(len(mensajes), 5)
-        self.assertFalse((self.raiz / "clima_ruta5.npz").exists())
+        self.assertFalse(proyecto.ruta("clima_ruta5.npz", self.raiz).exists())
         self.assertFalse((self.salida / "artefactos").exists())
 
     def test_detecta_mezcla_de_poblacion_entre_cohortes(self):
@@ -70,7 +75,7 @@ class CierreTests(unittest.TestCase):
             verificar_tablas(self.raiz)
 
     def test_detecta_codigo_distinto_del_que_genero_el_modelo(self):
-        archivo = self.raiz / "datos_modelado.py"
+        archivo = proyecto.ruta("datos_modelado.py", self.raiz)
         archivo.write_text(archivo.read_text() + "\n# versión diferente\n")
         with self.assertRaisesRegex(ValueError, "Hash distinto"):
             verificar_tablas(self.raiz)
