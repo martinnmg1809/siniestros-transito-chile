@@ -7,6 +7,8 @@ de versiones y la recalibración están completos y se verificaron con las salid
 Los contrastes del modelo tienen script y pruebas, pero **todavía no tienen resultados**
 (véase [Bloqueo](#bloqueo-y-cómo-completar-los-contrastes)).
 
+Resumen de una página para la presentación: [03b_ficha_modelo.md](03b_ficha_modelo.md).
+
 Este documento no cambia modelos, datos ni métricas. No vuelve a elegir modelo ni amplía la grilla.
 
 ## 1. La decisión: `Poisson_clima`, elegido sin usar 2024
