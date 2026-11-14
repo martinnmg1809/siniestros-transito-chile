@@ -25,6 +25,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [EDA y decisiones de calidad de datos](docs/eda.md).
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
+- [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -101,6 +102,15 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se revisaron fuentes oficiales de CONASET mediante búsqueda y
+consultas REST pequeñas: se confirmó que hay 68.994 registros geográficos de 2025,
+pero con ruta en blanco y kilómetro 0. La cartografía de Ruta 5 Sur es una fuente
+candidata para investigar su asignación; no se integró 2025 al modelo. La capa
+Reporte_diario_2026 llega al 13/07/2026 y carece de la resolución tramo/hora de nuestro
+objetivo. Las capas de feriados consultadas abarcan 2020–2024. Se conservaron
+[hallazgos, límites y consultas reproducibles](docs/fuentes_conaset.md), sin
+descargar bases completas, reentrenar ni modificar datos o resultados vigentes.
 
 El **14/11/2026** se adoptó el nombre oficial **Predicción dinámica de siniestros en
 carreteras chilenas** en la documentación vigente, el plan PDF y los títulos del

@@ -1,0 +1,850 @@
+{
+  "fecha_consulta": "2026-11-14",
+  "tipo": "Investigación de fuentes; sin entrenamiento ni modificación del experimento vigente",
+  "catalogo_url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/?f=pjson",
+  "nota": "Las fechas de captura y de edición de servicios no acreditan primera publicación. Las respuestas pequeñas se guardaron localmente; las muestras individuales no se versionan.",
+  "consultas": [
+    {
+      "id": "base2025_fechas",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "AÑO=2025",
+        "outStatistics": [
+          {
+            "statisticType": "min",
+            "onStatisticField": "FECHA",
+            "outStatisticFieldName": "min_valor"
+          },
+          {
+            "statisticType": "max",
+            "onStatisticField": "FECHA",
+            "outStatisticFieldName": "max_valor"
+          },
+          {
+            "statisticType": "count",
+            "onStatisticField": "FECHA",
+            "outStatisticFieldName": "count_valor"
+          }
+        ],
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "min_valor": 1735689600000,
+          "max_valor": 1767139200000,
+          "count_valor": 68994
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2025_fechas.json",
+      "sha256_raw": "32c2ee5a88e402e517233311da95920cf394bbd8013c6e5ea8fb55e153b97560"
+    },
+    {
+      "id": "base2025_rutas_distintas",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "AÑO=2025",
+        "returnDistinctValues": "true",
+        "outFields": "Ruta",
+        "resultRecordCount": 20,
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "Ruta": " "
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2025_rutas_distintas.json",
+      "sha256_raw": "a61943cc54cd474a19d6a7033223d34056727273675fd0628f8629ce78664304"
+    },
+    {
+      "id": "base2025_km_distintos",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "AÑO=2025",
+        "returnDistinctValues": "true",
+        "outFields": "Ubicación",
+        "resultRecordCount": 20,
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "Ubicación": 0
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2025_km_distintos.json",
+      "sha256_raw": "2b212ee0ffdae63fe138c6ca7fc7f4976b7fb5e14658c669d0be769e7a7ca555"
+    },
+    {
+      "id": "base2025_geo",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "AÑO=2025 AND Latitud IS NOT NULL AND longitud IS NOT NULL AND Latitud<>0 AND longitud<>0",
+        "returnCountOnly": "true"
+      },
+      "resultado": {
+        "count": 68994
+      },
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2025_geo.json",
+      "sha256_raw": "3bac96e1fca0855a2f1f37749129adef039a1c49dc6490714e12c2939445d904"
+    },
+    {
+      "id": "base2026_count",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "AÑO=2026",
+        "returnCountOnly": "true"
+      },
+      "resultado": {
+        "count": 0
+      },
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2026_count.json",
+      "sha256_raw": "1c4eef03e65767d95c7fbc0f20d1c8785699e5f7f46dbf24faaffe655f2d9082"
+    },
+    {
+      "id": "reporte2026_fechas",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Reporte_diario_2026/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "outStatistics": [
+          {
+            "statisticType": "min",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "min_valor"
+          },
+          {
+            "statisticType": "max",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "max_valor"
+          },
+          {
+            "statisticType": "count",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "count_valor"
+          }
+        ],
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "min_valor": "2026-01-01",
+          "max_valor": "2026-07-13",
+          "count_valor": 702
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/reporte2026_fechas.json",
+      "sha256_raw": "54754666e7be91dc87c73e09b6c071f8db2d0c9d967a4f6b63392f9b0d63ddd7"
+    },
+    {
+      "id": "reporte2025_fechas",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Reporte_diario_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "outStatistics": [
+          {
+            "statisticType": "min",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "min_valor"
+          },
+          {
+            "statisticType": "max",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "max_valor"
+          },
+          {
+            "statisticType": "count",
+            "onStatisticField": "Fecha",
+            "outStatisticFieldName": "count_valor"
+          }
+        ],
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "min_valor": "2025-01-01",
+          "max_valor": "2025-12-31",
+          "count_valor": 1287
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/reporte2025_fechas.json",
+      "sha256_raw": "3fa14eb63a9dbd25674f1607ebe3e5432ef045faa9f78ca9e7a376b765196e01"
+    },
+    {
+      "id": "feriados_anios",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/base_feriados/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "groupByFieldsForStatistics": "Año_feriado",
+        "orderByFields": "Año_feriado",
+        "outStatistics": [
+          {
+            "statisticType": "count",
+            "onStatisticField": "IdAccidente",
+            "outStatisticFieldName": "count_valor"
+          }
+        ],
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "count_valor": 7795,
+          "Año_feriado": 2020
+        },
+        {
+          "count_valor": 10153,
+          "Año_feriado": 2021
+        },
+        {
+          "count_valor": 11219,
+          "Año_feriado": 2022
+        },
+        {
+          "count_valor": 10623,
+          "Año_feriado": 2023
+        },
+        {
+          "count_valor": 9226,
+          "Año_feriado": 2024
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/feriados_anios.json",
+      "sha256_raw": "90d5bed8034d5fa5a35132b820bf32c429150e9fe3ab44b52a3a134fd688abbd"
+    },
+    {
+      "id": "fechas_feriados",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/fechas_feriado/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "Año_feriado,Feriado,Numero_de_dias,Fecha_inicio,Fecha_termino",
+        "resultRecordCount": 100,
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Año Nuevo ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "31-12-2019",
+          "Fecha_termino": "01-01-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Dia Asuncion de la virgen ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "14-08-2020",
+          "Fecha_termino": "16-08-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Día de la Virgen del Carmen ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "15-07-2020",
+          "Fecha_termino": "19-07-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Dia de las iglesias evangelicas y protestantes ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "30-10-2020",
+          "Fecha_termino": "01-11-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Dia de los pueblos indigenas ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "19-06-2020",
+          "Fecha_termino": "21-06-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Dia del trabajador ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "30-04-2020",
+          "Fecha_termino": "03-05-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Encuentro de dos mundos ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "09-10-2020",
+          "Fecha_termino": "12-10-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Fiestas Patrias ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "17-09-2020",
+          "Fecha_termino": "20-09-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Glorias navales ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "20-05-2020",
+          "Fecha_termino": "24-05-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Inmaculada concepción ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "04-12-2020",
+          "Fecha_termino": "08-12-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Navidad ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "24-12-2020",
+          "Fecha_termino": "27-12-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "San Pedro y San Pablo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "26-06-2020",
+          "Fecha_termino": "29-06-2020"
+        },
+        {
+          "Año_feriado": 2020,
+          "Feriado": "Semana Santa ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "09-04-2020",
+          "Fecha_termino": "12-04-2020"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Año Nuevo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "31-12-2020",
+          "Fecha_termino": "03-01-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Dia Asuncion de la virgen ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "13-08-2021",
+          "Fecha_termino": "15-08-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Día de la Virgen del Carmen ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "15-07-2021",
+          "Fecha_termino": "18-07-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Dia de las iglesias evangelicas y protestantes ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "29-10-2021",
+          "Fecha_termino": "01-11-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Dia de los pueblos indigenas ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "18-06-2021",
+          "Fecha_termino": "21-06-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Dia del trabajador ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "30-04-2021",
+          "Fecha_termino": "02-05-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Encuentro de dos mundos ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "08-10-2021",
+          "Fecha_termino": "11-10-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Fiestas Patrias ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "16-09-2021",
+          "Fecha_termino": "19-09-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Glorias navales ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "20-05-2021",
+          "Fecha_termino": "23-05-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Inmaculada concepción ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "07-12-2021",
+          "Fecha_termino": "08-12-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Navidad ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "24-12-2021",
+          "Fecha_termino": "26-12-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "San Pedro y San Pablo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "25-06-2021",
+          "Fecha_termino": "28-06-2021"
+        },
+        {
+          "Año_feriado": 2021,
+          "Feriado": "Semana Santa ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "01-04-2021",
+          "Fecha_termino": "04-04-2021"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Año Nuevo ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "31-12-2021",
+          "Fecha_termino": "02-01-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Dia Asuncion de la virgen ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "12-08-2022",
+          "Fecha_termino": "15-08-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Día de la Virgen del Carmen ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "15-07-2022",
+          "Fecha_termino": "17-07-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Dia de las iglesias evangelicas y protestantes ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "28-10-2022",
+          "Fecha_termino": "01-11-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Dia de los pueblos indigenas ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "17-06-2022",
+          "Fecha_termino": "21-06-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Dia del trabajador ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "29-04-2022",
+          "Fecha_termino": "01-05-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Encuentro de dos mundos ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "07-10-2022",
+          "Fecha_termino": "10-10-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Fiestas Patrias ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "15-09-2022",
+          "Fecha_termino": "19-09-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Glorias navales ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "20-05-2022",
+          "Fecha_termino": "22-05-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Inmaculada concepción ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "07-12-2022",
+          "Fecha_termino": "08-12-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Navidad ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "23-12-2022",
+          "Fecha_termino": "25-12-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "San Pedro y San Pablo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "24-06-2022",
+          "Fecha_termino": "27-06-2022"
+        },
+        {
+          "Año_feriado": 2022,
+          "Feriado": "Semana Santa ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "14-04-2022",
+          "Fecha_termino": "17-04-2022"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Año Nuevo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "30-12-2022",
+          "Fecha_termino": "02-01-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Dia Asuncion de la virgen ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "11-08-2023",
+          "Fecha_termino": "15-08-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Día de la Virgen del Carmen ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "14-07-2023",
+          "Fecha_termino": "16-07-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Dia de las iglesias evangelicas y protestantes ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "26-10-2023",
+          "Fecha_termino": "29-10-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Dia de los pueblos indigenas ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "20-06-2023",
+          "Fecha_termino": "21-06-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Dia del trabajador ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "28-04-2023",
+          "Fecha_termino": "01-05-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Encuentro de dos mundos ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "06-10-2023",
+          "Fecha_termino": "09-10-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Fiestas Patrias ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "15-09-2023",
+          "Fecha_termino": "19-09-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Glorias navales ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "19-05-2023",
+          "Fecha_termino": "21-05-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Inmaculada concepción ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "07-12-2023",
+          "Fecha_termino": "10-12-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Navidad ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "22-12-2023",
+          "Fecha_termino": "25-12-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "San Pedro y San Pablo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "23-06-2023",
+          "Fecha_termino": "26-06-2023"
+        },
+        {
+          "Año_feriado": 2023,
+          "Feriado": "Semana Santa ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "06-04-2023",
+          "Fecha_termino": "09-04-2023"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Año Nuevo ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "29-12-2023",
+          "Fecha_termino": "01-01-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Dia Asuncion de la virgen ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "14-08-2024",
+          "Fecha_termino": "15-08-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Día de la Virgen del Carmen ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "12-07-2024",
+          "Fecha_termino": "16-07-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Dia de las iglesias evangelicas y protestantes ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "30-10-2024",
+          "Fecha_termino": "03-11-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Dia de los pueblos indigenas ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "20-06-2024",
+          "Fecha_termino": "23-06-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Dia del trabajador ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "30-04-2024",
+          "Fecha_termino": "01-05-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Encuentro de dos mundos ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "11-10-2024",
+          "Fecha_termino": "13-10-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Fiestas Patrias ",
+          "Numero_de_dias": 6,
+          "Fecha_inicio": "17-09-2024",
+          "Fecha_termino": "22-09-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Glorias navales ",
+          "Numero_de_dias": 5,
+          "Fecha_inicio": "17-05-2024",
+          "Fecha_termino": "21-05-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Inmaculada concepción ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "06-12-2024",
+          "Fecha_termino": "08-12-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Navidad ",
+          "Numero_de_dias": 2,
+          "Fecha_inicio": "24-12-2024",
+          "Fecha_termino": "25-12-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "San Pedro y San Pablo ",
+          "Numero_de_dias": 3,
+          "Fecha_inicio": "28-06-2024",
+          "Fecha_termino": "30-06-2024"
+        },
+        {
+          "Año_feriado": 2024,
+          "Feriado": "Semana Santa ",
+          "Numero_de_dias": 4,
+          "Fecha_inicio": "28-03-2024",
+          "Fecha_termino": "31-03-2024"
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/fechas_feriados.json",
+      "sha256_raw": "9a743f353040877ca30b8523d7575ed78cfc482814bd84f0612bad31c3ea3417"
+    },
+    {
+      "id": "ruta5sur_conteo",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/rutas_con_indicador/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL='Ruta 5 Sur'",
+        "returnCountOnly": "true"
+      },
+      "resultado": {
+        "count": 1
+      },
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/ruta5sur_conteo.json",
+      "sha256_raw": "23fd853f673e7a07d1a1987fc53a82d68b33a01f7c9b2ffd0db581695aaee3cf"
+    },
+    {
+      "id": "ruta5sur_extension",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/rutas_con_indicador/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL='Ruta 5 Sur'",
+        "returnExtentOnly": "true",
+        "outSR": 4326
+      },
+      "resultado": {
+        "extent": {
+          "xmin": -73.83437192960541,
+          "ymin": -43.12084760495952,
+          "xmax": -70.65444994662703,
+          "ymax": -33.4461905987437,
+          "spatialReference": {
+            "wkid": 4326,
+            "latestWkid": 4326
+          }
+        }
+      },
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/ruta5sur_extension.json",
+      "sha256_raw": "4a0ab8a6f43e244e99b0ae3d1109d24b0c038920e0bf19fd1588f65e743f8c68"
+    },
+    {
+      "id": "base2_rango",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_de_siniestros_2/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "outStatistics": [
+          {
+            "statisticType": "min",
+            "onStatisticField": "Año",
+            "outStatisticFieldName": "min_anio"
+          },
+          {
+            "statisticType": "max",
+            "onStatisticField": "Año",
+            "outStatisticFieldName": "max_anio"
+          }
+        ],
+        "returnGeometry": "false"
+      },
+      "resultado": [
+        {
+          "min_anio": 2020,
+          "max_anio": 2024
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base2_rango.json",
+      "sha256_raw": "ed5661b826d5436f47fd9f780ea6c1ba9fd52814b3ae104353550e45eced7c09"
+    },
+    {
+      "id": "base_anios",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "returnGeometry": "false",
+        "groupByFieldsForStatistics": "AÑO",
+        "orderByFields": "AÑO",
+        "outStatistics": [
+          {
+            "statisticType": "count",
+            "onStatisticField": "ID",
+            "outStatisticFieldName": "count_valor"
+          }
+        ]
+      },
+      "resultado": [
+        {
+          "count_valor": 58823,
+          "AÑO": 2020
+        },
+        {
+          "count_valor": 78405,
+          "AÑO": 2021
+        },
+        {
+          "count_valor": 82953,
+          "AÑO": 2022
+        },
+        {
+          "count_valor": 75303,
+          "AÑO": 2023
+        },
+        {
+          "count_valor": 72043,
+          "AÑO": 2024
+        },
+        {
+          "count_valor": 68994,
+          "AÑO": 2025
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/base_anios.json",
+      "sha256_raw": "3500b84a5284c6580a6691febd000a35a10ccbe54d00197f23133b51f656ef7f"
+    },
+    {
+      "id": "para2024_anios",
+      "url": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/base_para_2024/FeatureServer/0/query",
+      "parametros": {
+        "f": "json",
+        "where": "1=1",
+        "returnGeometry": "false",
+        "groupByFieldsForStatistics": "Año",
+        "orderByFields": "Año",
+        "outStatistics": [
+          {
+            "statisticType": "count",
+            "onStatisticField": "IdAccidente",
+            "outStatisticFieldName": "count_valor"
+          }
+        ]
+      },
+      "resultado": [
+        {
+          "count_valor": 89983,
+          "Año": 2019
+        },
+        {
+          "count_valor": 64707,
+          "Año": 2020
+        },
+        {
+          "count_valor": 80751,
+          "Año": 2021
+        },
+        {
+          "count_valor": 86050,
+          "Año": 2022
+        },
+        {
+          "count_valor": 78238,
+          "Año": 2023
+        },
+        {
+          "count_valor": 75653,
+          "Año": 2024
+        }
+      ],
+      "respuesta_raw_local": "data/fuentes/conaset/revision_2026_11_14/para2024_anios.json",
+      "sha256_raw": "18f04768d093a93af1d3d1f33aeb9dfb67cd015385c76dce031d64e7e173d359"
+    }
+  ]
+}
