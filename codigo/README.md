@@ -18,3 +18,8 @@ usarse los nombres de módulos existentes, por ejemplo `from modelos_conteo impo
 Algunos módulos de datos y métricas son bibliotecas, no tareas que deban ejecutarse.
 Los nombres cortos se conservan deliberadamente: los modelos serializados con joblib
 los necesitan al recargarse. El lanzador prepara sus rutas sin modificar los modelos.
+
+Para revisar CONASET 2025 antes de incorporarlo: `descargar_revision_conaset`
+conserva una instantánea nacional 2024/2025 comprobada y `explorar_conaset_2025`
+produce el EDA aislado. [Uso, evidencia y condiciones](../docs/eda_conaset_2025.md).
+Estos comandos no alimentan el entrenamiento ni asignan kilómetros a los eventos.

@@ -26,6 +26,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
+- [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -102,6 +103,18 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se descargaron instantáneas nacionales comprobadas de CONASET
+2024 (72.043 filas) y 2025 (68.994), conservando originales fuera de Git. El
+[EDA separado](docs/eda_conaset_2025.md) incluye calidad, cobertura, calendario,
+repeticiones, distribuciones y contraste con el histórico: coinciden los 2.605
+eventos de Ruta 5 Sur 2024 en los 19 campos comparados. En 2025 todos carecen de
+ruta/kilómetro utilizable; los 73 puntos fuera del recuadro continental están
+etiquetados Isla de Pascua. La diferencia con el total nacional publicado es de
+4.087 siniestros y no se imputó su causa. **2025 no se incorporó al modelo.** Se
+añadieron descargador, EDA reproducible, agregados, figura y auditoría; se mantienen
+los resultados 2020–2024 y los pendientes operativos del piloto. Pasan 51 pruebas,
+incluidas seis nuevas, y la verificación del cierre existente, sin reentrenar.
 
 El **14/11/2026** se revisaron fuentes oficiales de CONASET mediante búsqueda y
 consultas REST pequeñas: se confirmó que hay 68.994 registros geográficos de 2025,

@@ -4,7 +4,10 @@ Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
 
 Consulta: 14 de noviembre de 2026. Se revisaron páginas oficiales y se consultaron
 directamente metadatos, conteos, fechas extremas y valores distintos de capas REST.
-No se descargaron las bases completas ni se alteró el experimento 2020–2024.
+En esa revisión inicial no se descargaron las bases completas ni se alteró el
+experimento 2020–2024. Posteriormente se descargaron los años nacionales 2024 y
+2025 para un [EDA separado con auditoría](eda_conaset_2025.md): las conclusiones
+de incorporación y las verificaciones nuevas están en ese documento.
 
 ## Hallazgos principales
 
