@@ -25,6 +25,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [EDA y decisiones de calidad de datos](docs/eda.md).
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
+- [Ficha final de evaluación e interpretación](docs/cierre/04_interpretacion.md).
 - [Aporte de Cristóbal: integración, comprobaciones e interpretación](docs/cierre/integracion_cristobal.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
@@ -105,14 +106,24 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   pero aún falta contrastarlo con siniestros observados y evaluar su desempeño.
 - La exposición vehicular real y las fechas de publicación histórica DGC siguen
   sin acreditarse. Un proxy trimestral no permite estimar riesgo por conductor.
-- El aporte de Cristóbal está integrado: comparación, lluvia/flujo, generalización
-  y calibración. Falta incorporar la ficha narrativa 04 y constancia de su revisión
-  de la ficha 02; los commits recibidos traen tablas, figuras y generadores. La ficha
-  de selección de Martín y las revisiones humanas indicadas siguen pendientes.
+- Las fichas de datos/flujo e interpretación están completas, con revisión técnica
+  realizada por encargo de Diego y asistencia de Codex sobre los aportes de Vicente
+  y Cristóbal. Sigue pendiente la ficha de selección de Martín y su revisión humana
+  de reproducción. Sensibilidad urbana y de umbrales de lluvia no se ejecutaron.
 - Notebook y presentación se preparan al estabilizar código y resultados; Máximo
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026**, a petición de Diego, se completaron la
+[ficha 04 de interpretación](docs/cierre/04_interpretacion.md) y la revisión de la
+[ficha 02 de datos y flujo](docs/cierre/02_datos_flujo.md), conservando la autoría
+original de Cristóbal y Vicente. Se verificaron los dos hashes DGC, cobertura
+153/255, 5.100 registros tramo-trimestre, rezago y comparabilidad de cohortes.
+Pasan las siete pruebas de modelado relacionadas y el verificador de cierre.
+La matriz de compromisos y los pendientes del equipo reflejan el cierre documental;
+TMDA, disponibilidad histórica y evaluación operativa siguen sin acreditarse.
+No se reentrenó ni se modificaron modelos o tablas de métricas.
 
 El **14/11/2026** se incorporaron por fast-forward los tres commits de Cristóbal
 (`07df973`, `dbe7ef7`, `3963bd3`), conservando su autoría. Sus seis CSV se

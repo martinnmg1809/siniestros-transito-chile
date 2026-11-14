@@ -14,10 +14,10 @@ que siguen son acuerdos del equipo, no nuevas exigencias atribuidas al profesor.
 | Requisito mínimo | Evidencia disponible | Trabajo necesario para la entrega final |
 |---|---|---|
 | Iteraciones y correcciones | README; matriz_compromisos.csv; cuarentena, captura con empates, UTC/DST y revisión de fuentes | Diego integra la matriz y las comprobaciones; Máximo utiliza sus conclusiones en la presentación |
-| Comparación de modelos | metricas.csv, busqueda_temporal.csv y bootstrap.csv en resultados/modelos; Poisson, GB y RF, con/sin flujo | Tablas y figuras de Cristóbal recibidas y comprobadas; incorporar su lectura en la ficha narrativa 04 |
+| Comparación de modelos | metricas.csv, busqueda_temporal.csv y bootstrap.csv en resultados/modelos; Poisson, GB y RF, con/sin flujo | Tablas, figuras y ficha 04 completas; llevar sus conclusiones al notebook y presentación |
 | Selección del modelo final | auditoria.json: candidata Poisson_clima, elegida con 2022/2023 y regla de simplicidad; reajuste.json | Martín entrega la ficha 03 y justifica elección, variantes de calibración y artefacto; no elegir retrospectivamente con 2024 |
-| Validación y generalización | Ventanas expansivas; train/prueba; IC semanales; verificar_cierre.py; pruebas automatizadas | Cristóbal/Martín explican estabilidad, brechas y límites; 2024 se declara evaluación histórica reutilizada |
-| Interpretación | Ficha de Vicente, diferencias e IC; calibración, MAE y ejemplos por elaborar | Cristóbal cierra ficha 04; Martín aporta contrastes del modelo; evitar causalidad y confusión entre conteos y riesgo por vehículo |
+| Validación y generalización | Ventanas expansivas; train/prueba; IC semanales; verificar_cierre.py; pruebas automatizadas | Ficha 04 explica estabilidad, brechas y límites; Martín completa la justificación del modelo en ficha 03 |
+| Interpretación | Fichas 02/04, diferencias e IC; calibración, MAE y ejemplos interpretativos | Ficha 04 completada; integrar su interpretación en los entregables y preparar la defensa del equipo |
 | Conexión con el problema | Conteos por tramo/hora y priorización de vigilancia, captura global y por turno de 12 h | Explicar por separado dónde priorizar y cuántos eventos esperar; MAE actual agregado por cohorte/turno no acredita error por tramo |
 
 Los nombres de tablas de la segunda columna se refieren a `resultados/modelos/`,
@@ -55,25 +55,29 @@ se reprodujeron exactamente en una carpeta temporal; los generadores pasan a
 `codigo/evaluacion` según la organización acordada. Se conserva el contenido de
 las tablas y figuras recibido. Consultar la [revisión de integración](integracion_cristobal.md).
 
-Diego informó que Cristóbal terminó su parte. En los commits recibidos todavía no
-aparecen la ficha narrativa 04 ni una constancia de revisión de la ficha 02. El
-aporte técnico queda recibido e integrado; esa ausencia documental no significa
-que Cristóbal no haya realizado la revisión fuera del repositorio.
+Al recibir esos commits aún faltaban la ficha narrativa 04 y la revisión de la
+ficha 02. Por encargo posterior de Diego, se completaron ambas con asistencia de
+Codex. El cierre se documenta en la [ficha 04](04_interpretacion.md) y el
+[registro de revisión de datos](../../resultados/cierre/revision_vicente.md).
+No se atribuye esa revisión a los integrantes originales.
 
 ## Pendientes reales y responsables
 
-- **Diego:** integraciones técnicas de Vicente y Cristóbal realizadas; recibir las fichas
-  03 y 04, comprobar su coherencia y repetir las verificaciones tras esos cambios.
-- **Vicente:** trabajo recibido e integrado; la revisión de contenido de Cristóbal
-  sigue pendiente. Exposición vehicular y publicación histórica quedan como límites,
-  no como requisitos supuestamente cumplidos por incluir un proxy.
-- **Martín:** ficha de modelo final e interpretación de artefactos. Sigue pendiente
-  su revisión cruzada humana de la reproducción de Diego.
-- **Cristóbal:** tablas, figuras y generadores recibidos y comprobados. Queda por
-  incorporar al repositorio la ficha narrativa 04 y la constancia de revisión de
-  la ficha 02; la lectura técnica de integración ya está disponible como apoyo.
-- **Máximo:** presentación. Recibe tablas, figuras y conclusiones verificadas; esta
-  integración no modifica la presentación.
+- **Diego:** fichas 02 y 04 integradas y revisadas. Recibir la ficha 03 de Martín,
+  coordinar el notebook documentado y comprobar coherencia del paquete final.
+- **Vicente:** aporte de datos y flujo completado y revisado técnicamente por
+  encargo de Diego. Exposición vehicular y publicación histórica permanecen como
+  limitaciones documentadas; no se exige resolverlas para afirmar este cierre.
+- **Martín:** ficha 03 de modelo final y artefactos; revisión cruzada humana de
+  la reproducción de Diego. Estos trabajos siguen pendientes.
+- **Cristóbal:** aporte técnico integrado y ficha narrativa 04 completada por
+  encargo de Diego. La interpretación y revisión de la ficha 02 están documentadas.
+  Corresponde al equipo leer las conclusiones y preparar su defensa.
+- **Máximo:** preparar la presentación con las tablas, figuras y conclusiones
+  verificadas. No se ha modificado su presentación.
+
+Sensibilidad urbana y de umbrales de lluvia siguen como análisis no ejecutados
+del equipo, visibles en la matriz. El cierre de estas fichas no los da por cumplidos.
 
 El notebook anotado sigue siendo obligatorio. Se prepara después de estabilizar
 código y resultados, como acordó el equipo, y debe poder ejecutar las conclusiones.

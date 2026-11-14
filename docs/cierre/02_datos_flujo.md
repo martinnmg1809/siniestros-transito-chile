@@ -2,10 +2,17 @@
 
 Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
 
-Versión: base `a65a02d` (rama `cierre/vicente-flujo`) · 14 de noviembre de 2026 · Autor: Vicente (con asistencia de Claude) ·
-Revisor: Cristóbal (pendiente) · Población: 14.420 eventos / 255 tramos de 5 km.
-Estado: borrador para revisión; nada de esta ficha se ha firmado por el revisor.
-Integración técnica por Diego con asistencia de Codex el 14/11/2026: cobertura reproducida y precisiones documentales en §5. La revisión de Cristóbal continúa pendiente.
+Base original: `a65a02d` (rama `cierre/vicente-flujo`) · 14 de noviembre de 2026.
+Autor del aporte: Vicente (con asistencia de Claude).
+Población: 14.420 eventos / 255 tramos de 5 km.
+
+**Estado: ficha completada y revisión técnica realizada** por encargo de Diego,
+con asistencia de Codex, sobre `72b2c98`. Se conserva la autoría de Vicente.
+La revisión prevista para Cristóbal se completó en esta sesión a petición de Diego;
+no se registra como revisión personal ni firma de Cristóbal. Véase el
+[registro de comprobación](../../resultados/cierre/revision_vicente.md) y la
+[ficha de interpretación](04_interpretacion.md). El cierre documental no acredita
+exposición vehicular ni disponibilidad histórica de los anexos.
 
 ## 1. Resumen en cinco líneas
 
@@ -120,7 +127,7 @@ El TMDA del MOP (PNCV) no se usa. Motivos: ningún registro con año de medició
 **No se puede decir**
 - "El modelo controla por tráfico" ni "por flujo vehicular".
 - "El riesgo por vehículo es mayor en…", ni nada en vehículo-km o por conductor.
-- "El flujo no importa" (solo que este proxy no mejora).
+- "El flujo no importa" (solo que este proxy no mejora de forma consistente).
 - "Probamos con información disponible en su momento" (no está acreditada).
 
 ## 7. Discrepancias registradas
@@ -130,18 +137,25 @@ El TMDA del MOP (PNCV) no se usa. Motivos: ningún registro con año de medició
 3. **`SUR` en `flujo_concesiones.py`** lista siete contratos; solo seis tienen límites. Santiago–Talca se excluye por agregar Acceso Sur a Santiago.
 4. **Grupos sin contrato:** 43/39/20 aquí frente a 45/40/17 en el plan (§3).
 
-## 8. Pendientes y responsables
+## 8. Cierre de tareas y límites pendientes
 
-| Pendiente | Responsable |
+| Tema | Estado para la entrega |
 |---|---|
-| Revisar esta ficha y la cohorte 153/255 | Cristóbal |
-| Aporte de lluvia y estabilidad temporal (docs 03 y 04 no están en esta rama) | Cristóbal, Martín |
-| Fecha de publicación DGC con evidencia fechada | Vicente |
-| Validar TMDA como exposición | Vicente |
-| Sensibilidad urbana y umbrales de lluvia (requieren corrida nueva) | Equipo |
-| Párrafo para el README y decisión de integrar | Diego |
+| Revisión de esta ficha y cohorte 153/255 | Completada por encargo de Diego con asistencia de Codex; registro enlazado arriba |
+| Aporte de lluvia, flujo, estabilidad y calibración | Interpretación completada en la ficha 04 a partir del aporte de Cristóbal |
+| Resumen e integración | Incorporados al README y al estado de entrega |
+| Fecha de publicación DGC | No acreditada; limitación documentada. Requiere evidencia fechada antes de afirmar disponibilidad operativa histórica |
+| TMDA como exposición | No validado; limitación documentada. Su validación corresponde a una ampliación futura |
+| Sensibilidad urbana y umbrales de lluvia | Análisis del equipo no ejecutados; no se declaran resueltos |
+| Selección y artefactos finales | Ficha 03 a cargo de Martín |
 
-Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados: pauta del profesor, sección 10 del notebook de la Entrega 2 y diapositiva 14 de la Presentación 1. De esta última, "más rutas" se agregó como C11 sin verificar; el resto ya estaba cubierto.
+La parte técnica y documental de Vicente queda cerrada para el alcance
+retrospectivo acordado. La matriz mantiene separados los compromisos cumplidos,
+los análisis pendientes y las limitaciones científicas sin resolver.
+
+Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Sus atribuciones a la
+pauta, al notebook y a la presentación se conservan del aporte original; esta
+revisión no vuelve a certificar la transcripción de esos documentos.
 
 ## 9. Cómo reproducir
 
@@ -170,7 +184,7 @@ OK
 
 Entorno: Python 3.12.3 con `requirements.txt` (no el `requirements-reproduccion.txt` de Diego); `git diff --check` sin errores.
 
-## 11. Párrafo propuesto para el README (Diego decide si lo integra)
+## 11. Síntesis final para notebook y presentación
 
 > **Flujo vehicular.** El modelo con flujo usa un proxy trimestral de la DGC: pasadas por punto de cobro y día, por contrato, con rezago de dos trimestres. Cubre 153 de 255 tramos (50 % a 57 % de los siniestros por año). No es TMDA, vehículo-km ni exposición por conductor. Agregarlo no mejora de forma consistente la captura al 5 %: solo un intervalo de nueve excluye cero y el signo se invierte en 2024. La disponibilidad histórica de los anexos no está acreditada, por lo que el resultado es un backtest retrospectivo. El TMDA del MOP sigue sin validarse (`exposicion_validada.csv` vacía). Detalle en `docs/cierre/02_datos_flujo.md`.
 

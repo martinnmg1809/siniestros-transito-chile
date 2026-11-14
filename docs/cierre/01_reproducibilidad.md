@@ -7,6 +7,12 @@ Esta ficha registra trabajo ejecutado por Diego con asistencia de Codex.
 La revisión cruzada de Martín y la integración de las entregas de los demás
 integrantes siguen pendientes; no se firma todavía el cierre de todo el equipo.
 
+Estado posterior al cierre de fichas del 14/11/2026: los aportes de Vicente y
+Cristóbal están integrados y las fichas 02/04 completadas por encargo de Diego con
+asistencia de Codex. La revisión humana de Martín sigue pendiente. Los recuentos
+y pendientes del registro anterior describen sus respectivas etapas; consultar
+el [estado vigente](00_estado_entrega3.md) antes de preparar la entrega.
+
 ## Lo comprobado
 
 - Las 33 pruebas originales pasan en el entorno de trabajo.

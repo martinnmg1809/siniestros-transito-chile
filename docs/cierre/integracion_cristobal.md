@@ -93,3 +93,9 @@ la ficha narrativa 04 ni constancia de revisión de la ficha 02 de Vicente. Qued
 registrado el aporte técnico como recibido e integrado; queda incorporar esos
 documentos si se realizaron aparte. Esta nota aporta una lectura verificable para
 su defensa y para la preparación posterior del notebook y la presentación.
+
+
+Actualización posterior: a petición de Diego se completaron la
+[ficha 04](04_interpretacion.md) y la revisión técnica de la
+[ficha 02](02_datos_flujo.md), con asistencia de Codex. El párrafo anterior describe
+el estado al recibir los commits; esos dos documentos ya están incorporados.
