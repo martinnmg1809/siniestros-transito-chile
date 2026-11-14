@@ -71,11 +71,11 @@ Los puntos implícitos por contrato son constantes salvo Puerto Montt–Pargua (
 
 ## 5. Disponibilidad histórica
 
-Consulta del 14/11/2026, con límite de tiempo. La lectura de la página la hizo una herramienta de resumen de páginas web; conviene verificarla a mano antes de citarla.
+Consulta del 14/11/2026, con límite de tiempo. No se probaron los casos concretos de rezago (por ejemplo medición 2023T2 → objetivo 2023T4) porque no existe ninguna fecha de publicación contra la cual compararlos. La lectura de la página la hizo una herramienta de resumen de páginas web; conviene verificarla a mano antes de citarla.
 
 | Pregunta | Qué se buscó | Fuente | Hallazgo | ¿Acredita? | Qué falta |
 |---|---|---|---|---|---|
-| ¿Estaba el anexo de t−2 publicado antes de t? | Lista de anexos y ruta de subida | https://concesiones.mop.gob.cl/publicaciones/ | La página no muestra fechas de publicación. Los anexos de 2018 a 2023 y los tres primeros de 2024 tienen ruta `uploads/sites/4/2024/12/`; el 4T 2024 está en `2025/03`. Se subieron en bloque en diciembre de 2024. | **No** | Un documento con fecha o una copia archivada (por ejemplo Wayback Machine) de la página en 2020–2024. |
+| ¿Estaba el anexo de t−2 publicado antes de t? | Lista de anexos y ruta de subida | https://concesiones.mop.gob.cl/publicaciones/ | La página no muestra fechas de publicación. Los anexos de 2018 a 2023 y los tres primeros de 2024 tienen ruta `uploads/sites/4/2024/12/`; el 4T 2024 está en `2025/03`. Se subieron en bloque en diciembre de 2024. | **No** | Un documento con fecha. La Wayback Machine se consultó el 14/11/2026: la página de publicaciones tiene una captura de 2022-06-25 (respuesta 302, sin contenido útil) y la siguiente es de 2025-04; no hay anexos XLS archivados. Sin captura útil entre 2020 y 2024. |
 | ¿Cambian los valores entre versiones? | Comparación 2023_4t vs 2024_4t | `dgc_comparacion_versiones.csv` | 0 revisiones en 112 contrato-trimestres. | **Parcial** | Solo dos versiones; no descarta revisiones en otras. No se descargaron anexos adicionales. |
 | ¿Hay pronósticos archivados con hora de emisión para 2020–2024 en Chile? | Documentación de Open-Meteo | https://open-meteo.com/en/docs/previous-runs-api y https://open-meteo.com/en/docs/historical-forecast-api | "Previous runs" parte en enero de 2024 para la mayoría de modelos (GFS temperatura a 2 m desde marzo de 2021). La Historical Forecast API une las primeras horas de cada corrida y no expone la hora de emisión. | **No** para 2020–2023; **parcial** para 2024 | Una corrida nueva solo con 2024; no era parte de este trabajo. |
 
@@ -146,6 +146,28 @@ Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados
 ```
 
 `cierre_flujo.py` lee `ruta5_2020_2024.csv.gz` y `resultados/modelos/`, no descarga ni entrena, y termina con código distinto de 0 si no concilia. Salida esperada: `OK: 14420 eventos, 255 tramos`.
+
+## 10. Salidas de comprobación (14/11/2026, commit `ef1ae9d`)
+
+```text
+$ .venv/bin/python cierre_flujo.py
+antes_primer_contrato       43
+con_contrato               153
+despues_ultimo_contrato     39
+frontera_bypass_margen      20
+2020 1149 / 2021 1669 / 2022 1872 / 2023 1577 / 2024 1491 (siniestros con contrato)
+OK: 14420 eventos, 255 tramos; escrito resultados/cierre/cobertura_flujo_detalle.csv
+
+$ python -m unittest tests.test_modelado
+Ran 7 tests in 0.962s
+OK
+```
+
+Entorno: Python 3.12.3 con `requirements.txt` (no el `requirements-reproduccion.txt` de Diego); `git diff --check` sin errores.
+
+## 11. Párrafo propuesto para el README (Diego decide si lo integra)
+
+> **Flujo vehicular.** El modelo con flujo usa un proxy trimestral de la DGC: pasadas por punto de cobro y día, por contrato, con rezago de dos trimestres. Cubre 153 de 255 tramos (50 % a 57 % de los siniestros por año). No es TMDA, vehículo-km ni exposición por conductor. Agregarlo no mejora de forma consistente la captura al 5 %: solo un intervalo de nueve excluye cero y el signo se invierte en 2024. La disponibilidad histórica de los anexos no está acreditada, por lo que el resultado es un backtest retrospectivo. El TMDA del MOP sigue sin validarse (`exposicion_validada.csv` vacía). Detalle en `docs/cierre/02_datos_flujo.md`.
 
 ## Fuentes
 
