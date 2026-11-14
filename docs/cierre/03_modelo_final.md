@@ -116,6 +116,7 @@ Las cifras provienen de `recalibracion_candidato.csv`:
 
 - Un factor global positivo **cambia la magnitud, no el orden**: captura global, captura
   por turno y curva de captura quedan iguales.
+- El factor de 2024 (0,6687) es el O/E del modelo de **2023, ajustado con `l2 = 3,0`**, y se aplica al modelo de 2024 con `l2 = 0,3`. No filtra información de 2024, pero proviene de otra configuración. Dado que la escala la domina la tendencia anual (ver más abajo), el efecto de `l2` sobre el factor debería ser menor. No está medido.
 - El factor se toma **del año anterior**. Si se calculara con el año que se quiere
   predecir, se usaría el resultado para corregir la predicción.
 - En 2024, la recalibración baja el MAE, pero pasa de sobreestimar (O/E 0,77) a
