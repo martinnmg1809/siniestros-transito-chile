@@ -29,3 +29,7 @@ Para el ensayo de ubicación vial, instalar `requirements-espacial.txt` y usar
 geometría común. [Protocolo, comandos y resultado](../docs/validacion_ubicacion_vial.md).
 La aplicación a 2025 está condicionada a superar la comprobación; el ensayo actual
 no la supera y conserva los modelos existentes.
+
+`descargar_direcciones_conaset` obtiene el complemento textual y
+`examinar_ambiguedades` reproduce el diagnóstico adicional. No genera etiquetas
+aprobadas ni datos de entrenamiento: [cierre de la ampliación](../docs/cierre_ubicacion_2025.md).

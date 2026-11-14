@@ -1,5 +1,9 @@
 # Ensayo ejecutado de ubicación vial: resultado y decisión
 
+**Actualización posterior:** se investigaron redondeo y direcciones originales.
+La ampliación se [cerró para esta entrega conservando 2020–2024](cierre_ubicacion_2025.md).
+Los resultados congelados de este primer ensayo se mantienen como antecedente.
+
 Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
 Ejecución: 14/11/2026. Complementa el [procedimiento de ubicación vial](ubicacion_vial_2025.md)
 y el [EDA de CONASET 2025](eda_conaset_2025.md).

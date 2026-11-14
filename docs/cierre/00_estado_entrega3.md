@@ -67,6 +67,13 @@ envío académico desde esta integración.
 
 ## Alcance y criterios de cierre
 
+La ampliación a 2025 se investigó por geometría, direcciones y capas adicionales,
+y se cerró para esta entrega por falta de ubicación vial comparable acreditada.
+Se mantiene **2020–2024**; no hay que integrar una cohorte parcial de 2025 como si
+fuera el año completo ni repetir entrenamientos por este intento. La
+[decisión y evidencia](../cierre_ubicacion_2025.md) se incorporan a las limitaciones
+que explicará el equipo. Solo se reabre con información nueva que resuelva ese punto.
+
 Se mantiene Ruta 5 Sur como alcance principal. Extensión a otras rutas y actualización
 del prototipo quedan para después de resolver este caso. Se estudian conteos y
 priorización retrospectiva; no se acredita un servicio operativo ni riesgo por

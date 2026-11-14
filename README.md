@@ -28,6 +28,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
 - [Ubicación vial: ensayo ejecutado, resultados y decisión sobre 2025](docs/validacion_ubicacion_vial.md).
+- [Cierre de la ampliación 2025 y alcance final 2020–2024](docs/cierre_ubicacion_2025.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -92,6 +93,9 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
 
 ## Estado y límites
 
+- La ampliación 2025 se investigó y se cierra para esta entrega: redondeo y texto
+  recuperan información parcial, sin acreditar una cohorte vial comparable. Se
+  conserva 2020–2024 y se documenta la limitación; no es un pendiente de integración.
 - Se corrigieron captura con empates/presupuesto, cuarentena espacial, UTC/DST,
   selección temporal y tratamiento de faltantes. Hay modelos con y sin flujo.
 - 2024 ya fue explorado en entregas anteriores; se informa como evaluación histórica
@@ -104,6 +108,18 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026**, siguiendo la alternativa indicada por Diego, se cerró la
+[investigación adicional de 2025](docs/cierre_ubicacion_2025.md) y se conserva
+2020–2024 para la entrega. Los escenarios numéricos recuperan los 433 positivos
+de borde y llegan a 94,66 % de sensibilidad exploratoria en 2024, sin constituir
+otra validación. Se comprobaron direcciones de 2023–2025: hay 2.791 referencias
+numéricas concordantes en comuna en 2025, además de caleteras, intersecciones,
+unidades no acreditadas y nombres alternativos. La concordancia geográfica cambia;
+otras seis capas oficiales no resolvieron los atributos faltantes. No se integró
+2025 ni se modificaron modelos, cuarentena o particiones. Quedan código, tablas,
+figura y auditoría; pasan 67 pruebas y el cierre anterior. No repetir esta
+ampliación sin fuentes o metadatos nuevos que permitan resolver sus límites.
 
 El **14/11/2026** se implementó y ejecutó el [ensayo espacial](docs/validacion_ubicacion_vial.md)
 con reglas previas, geometría MOP con medidas M y vías competidoras. El servicio
