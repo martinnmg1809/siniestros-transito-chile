@@ -55,7 +55,11 @@ Poisson_clima obtuvo 19,09 % y Gradient Boosting, 19,11 %.
    caían en las horas-tramo priorizadas.
 5. **Los intervalos** (2.000 remuestreos semanales) dejan fijas las predicciones. No
    incluyen la incertidumbre del reentrenamiento ni corrigen comparaciones múltiples.
-6. **El flujo vehicular no se incluye.** El proxy DGC cubre 153 de 255 tramos y no mostró
+6. **Sobreestima el total por la tendencia anual.** 2020 (pandemia) deprime el inicio de
+   la serie y el modelo proyecta un aumento que no ocurrió. Una tendencia sola reproduce
+   el O/E de 2022–2024 (0,71/0,67/0,76 frente a 0,69/0,67/0,77). Esto afecta la escala,
+   no el orden de priorización (`tendencia_anual.py`).
+7. **El flujo vehicular no se incluye.** El proxy DGC cubre 153 de 255 tramos y no mostró
    una mejora clara.
 
 ## Interpretación

@@ -124,13 +124,43 @@ Las cifras provienen de `recalibracion_candidato.csv`:
   **no tiene prueba**.
 - No se reutiliza el multiplicador de lluvia del prototipo antiguo ni sus intervalos.
 
-**Hipótesis por verificar:** en los tres años de prueba, O/E < 1 en prueba y O/E ≈ 1 en
-entrenamiento. Esto es compatible con que el término numérico de tendencia anual
-extrapole un aumento mientras los siniestros bajaban: 3.370 en 2022, 2.863 en 2023 y
-2.605 en 2024. GB no extrapola tendencias fuera del rango de entrenamiento, lo que
-explicaría su mejor O/E. El script calcula la razón de tasas por año de ese término
-(`razon_tasa_por_anio_tendencia`) para confirmarlo o descartarlo. No debe afirmarse
-antes de tener esa cifra.
+### Por qué Poisson sobreestima: la tendencia anual aprende de 2020
+
+En los tres años de prueba, O/E ≈ 1 en entrenamiento y O/E < 1 en prueba. El modelo
+incluye una tendencia anual numérica, y 2020 (pandemia, 2.295 siniestros) deprime el
+inicio de la serie. El modelo aprende un "aumento" y lo proyecta hacia años en que los
+siniestros bajaron: 3.369 en 2022, 2.863 en 2023 y 2.605 en 2024.
+
+[`tendencia_anual.py`](../../tendencia_anual.py) lo comprueba solo con salidas versionadas.
+Para cada año de prueba ajusta un Poisson con **solo intercepto y tendencia** sobre los
+totales de entrenamiento y compara su O/E extrapolado con el registrado
+(`resultados/cierre/tendencia_anual.csv`):
+
+| Prueba | Entrenamiento | Factor anual ajustado | O/E solo tendencia | O/E Poisson_clima | O/E GB | O/E M1 |
+|---|---|---|---|---|---|---|
+| 2022 | 2020–2021 | × 1,44 | 0,71 | 0,69 | 1,02 | 1,21 |
+| 2023 | 2020–2022 | × 1,20 | 0,67 | 0,67 | 0,85 | 0,96 |
+| 2024 | 2020–2023 | × 1,06 | 0,76 | 0,77 | 0,87 | 0,88 |
+
+La extrapolación de la tendencia por sí sola reproduce casi exactamente la sobreestimación
+registrada en los tres años. Gradient Boosting no extrapola: sus árboles mantienen el
+último nivel aprendido, y por eso su O/E es mejor. M1 usa la tasa media de los años de
+entrenamiento, sin tendencia.
+
+Alcance de esta evidencia:
+- Es una reconstrucción aproximada, sin L2 ni el resto de los atributos. La cifra exacta
+  del modelo real (`razon_tasa_por_anio_tendencia`) la registra `contrastes_poisson.py`.
+- **No afecta la elección:** el término de tendencia multiplica por igual a todas las
+  filas de un mismo año, así que no cambia el orden de priorización ni la captura.
+  Afecta solo la escala de los conteos, que es lo que corrige la recalibración.
+- Explica por qué la recalibración con el año anterior **corrige de más** en los dos
+  años con prueba (O/E recalibrado 0,965 en 2023 y 1,154 en 2024). El factor hereda el
+  sesgo de un ajuste con una tendencia distinta. Por la misma razón, el factor 0,7720 del
+  reajustado 2020–2024 no debe tomarse como calibración validada.
+- **No se modifica el modelo ahora:** cambiar la tendencia sería una nueva
+  especificación elegida después de ver 2024. Queda como trabajo futuro, por ejemplo con
+  un año categórico de referencia o excluyendo 2020 de la tendencia, evaluado con un
+  año nuevo.
 
 ## 4. Interpretación: contrastes de predicción
 
@@ -222,6 +252,6 @@ ante recalibración y el presupuesto del turno.
 
 - [ ] Ejecutar `contrastes_poisson.py` (Diego o tras regenerar ERA5) e incorporar cifras
       a la sección 4.
-- [ ] Confirmar o descartar la hipótesis de tendencia con `razon_tasa_por_anio_tendencia`.
+- [x] Hipótesis de tendencia respaldada con `tendencia_anual.py`. Falta registrar la cifra exacta del modelo (`razon_tasa_por_anio_tendencia`).
 - [ ] Cristóbal: verificar las cifras de las secciones 1 y 3 contra su tabla maestra.
 - [ ] Día 2: firmar el acta (sección 5) y registrar el sha256 de los artefactos evaluados.
