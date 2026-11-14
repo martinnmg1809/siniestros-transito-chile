@@ -1,0 +1,49 @@
+cohorte,n_tramos,anio_prueba,modelo,siniestros,esperados,observado_esperado,desvianza_por_hora,mae_12h_calendario,sesgo_nivel,fuente
+con_contrato,153,2022,GradientBoosting_calendario,1872,1637.194434,1.143419,0.018097,1.478666,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,GradientBoosting_clima,1872,1700.729267,1.100704,0.017945,1.411770,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,GradientBoosting_clima_flujo,1872,1698.174388,1.102360,0.017942,1.412507,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,M0,1872,1407.072503,1.330422,0.018560,1.489392,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,M1,1872,1407.088037,1.330407,0.018093,1.489385,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,Poisson_calendario,1872,2426.526231,0.771473,0.017950,1.764387,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,Poisson_clima,1872,2564.299802,0.730024,0.017890,1.775250,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,Poisson_clima_flujo,1872,2985.598419,0.627010,0.018083,2.099151,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,RandomForest_calendario,1872,1602.039886,1.168510,0.018093,1.476592,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,RandomForest_clima,1872,1627.994520,1.149881,0.018052,1.426566,subestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2022,RandomForest_clima_flujo,1872,1836.270325,1.019458,0.018015,1.433394,cercano a 1,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,GradientBoosting_calendario,1577,1825.189920,0.864020,0.015540,1.364051,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,GradientBoosting_clima,1577,1827.966953,0.862707,0.015372,1.290257,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,GradientBoosting_clima_flujo,1577,1813.959701,0.869369,0.015365,1.285796,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,M0,1577,1561.906934,1.009663,0.015930,1.293947,cercano a 1,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,M1,1577,1561.909592,1.009662,0.015543,1.293948,cercano a 1,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,Poisson_calendario,1577,2451.191612,0.643361,0.015733,1.803213,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,Poisson_clima,1577,2467.037977,0.639228,0.015634,1.733282,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,Poisson_clima_flujo,1577,2459.116852,0.641287,0.015650,1.725814,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,RandomForest_calendario,1577,1791.247459,0.880392,0.015622,1.366569,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,RandomForest_clima,1577,1789.992919,0.881009,0.015549,1.306813,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2023,RandomForest_clima_flujo,1577,1599.766070,0.985769,0.015534,1.252449,cercano a 1,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,GradientBoosting_calendario,1491,1641.642212,0.908237,0.014722,1.274716,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,GradientBoosting_clima,1491,1633.750982,0.912624,0.014614,1.246765,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,GradientBoosting_clima_flujo,1491,1635.000144,0.911927,0.014615,1.247469,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,M0,1491,1569.967146,0.949701,0.015168,1.274040,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,M1,1491,1569.964834,0.949703,0.014804,1.274039,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,Poisson_calendario,1491,1983.192508,0.751818,0.014796,1.436171,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,Poisson_clima,1491,1937.893256,0.769392,0.014721,1.389907,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,Poisson_clima_flujo,1491,1758.673884,0.847798,0.014671,1.306087,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,RandomForest_calendario,1491,1746.060611,0.853922,0.014905,1.332749,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,RandomForest_clima,1491,1721.290063,0.866211,0.014826,1.301561,sobreestima,resultados/cierre/comparacion_final.csv
+con_contrato,153,2024,RandomForest_clima_flujo,1491,1659.736235,0.898336,0.014805,1.282477,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2022,GradientBoosting_clima,3369,3293.108679,1.023045,0.018936,2.022614,cercano a 1,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2022,M0,3369,2787.681259,1.208531,0.019732,2.148444,subestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2022,M1,3369,2787.659024,1.208541,0.019064,2.148450,subestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2022,Poisson_clima,3369,4860.087226,0.693197,0.019014,2.922381,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2022,RandomForest_clima,3369,3158.044034,1.066800,0.019194,2.040993,subestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2023,GradientBoosting_clima,2863,3352.774082,0.853920,0.016473,1.874503,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2023,M0,2863,2981.277372,0.960327,0.017141,1.889221,cercano a 1,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2023,M1,2863,2981.241267,0.960338,0.016614,1.889206,cercano a 1,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2023,Poisson_clima,2863,4281.165933,0.668743,0.016656,2.536035,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2023,RandomForest_clima,2863,3251.282488,0.880576,0.016755,1.884322,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2024,GradientBoosting_clima,2605,2980.079672,0.874138,0.015066,1.751778,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2024,M0,2605,2959.815195,0.880123,0.015794,1.861303,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2024,M1,2605,2959.816632,0.880122,0.015258,1.861304,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2024,Poisson_clima,2605,3374.250126,0.772023,0.015163,1.970328,sobreestima,resultados/cierre/comparacion_final.csv
+ruta_completa,255,2024,RandomForest_clima,2605,3141.172208,0.829308,0.015367,1.861509,sobreestima,resultados/cierre/comparacion_final.csv

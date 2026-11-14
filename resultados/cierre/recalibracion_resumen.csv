@@ -1,0 +1,3 @@
+anio_prueba,factor,anio_factor,oe_original,oe_recalibrado,mae_original,mae_recalibrado,mae_M1_sin_recalibrar,desvianza_original,desvianza_recalibrada,captura5_original,captura5_recalibrada,captura5_cambia,fuente
+2023,0.693197,2022.000000,0.668743,0.964722,2.536035,1.783995,1.889206,0.016656,0.016419,0.186168,0.186168,False,resultados/modelos/recalibracion_candidato.csv
+2024,0.668743,2023.000000,0.772023,1.154439,1.970328,1.683913,1.861304,0.015163,0.015101,0.190019,0.190019,False,resultados/modelos/recalibracion_candidato.csv
