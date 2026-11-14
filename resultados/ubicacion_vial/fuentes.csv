@@ -1,0 +1,3 @@
+fuente,url,entidades_ruta5,orientacion_SUR,km_i_y_f_cero,muestra_objectid,vertices_muestra,vertices_con_m_numerica,m_inicial_muestra,m_final_muestra,hasM_capa
+enlace_descargas,https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3,71,10,0,150586,1324,1324,681155.9244,715216.1867,True
+alternativa_indexada,https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3,79,26,7,5078,4113,4113,449278,564650,True

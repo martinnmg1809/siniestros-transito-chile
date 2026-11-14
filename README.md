@@ -27,6 +27,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
+- [Ubicación vial: fuentes MOP y procedimiento de validación pendiente](docs/ubicacion_vial_2025.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -103,6 +104,16 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se investigó cómo recuperar la ubicación vial de 2025. Se
+comprobaron dos servicios MOP distintos: el enlazado desde Descargas devuelve
+71 entidades de Ruta 5 y la alternativa indexada, 79. Sus muestras geométricas
+incluyen medidas M por vértice. Se conservaron atributos completos, consultas y
+hashes; no se asumió vigencia, unidad o pertenencia vial por cercanía. El
+[procedimiento propuesto](docs/ubicacion_vial_2025.md) separa identificación de
+carretera y kilometraje, exige controles con etiquetas conocidas y mantiene los
+ambiguos fuera de una asignación automática. Quedan pendientes geometría completa,
+versión, unidades y validación espacial; no se asignaron eventos ni cambiaron modelos.
 
 El **14/11/2026** se descargaron instantáneas nacionales comprobadas de CONASET
 2024 (72.043 filas) y 2025 (68.994), conservando originales fuera de Git. El
