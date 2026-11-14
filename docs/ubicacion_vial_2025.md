@@ -3,6 +3,11 @@
 Proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
 Consulta de fuentes: 14/11/2026. Investigación posterior al [EDA nacional](eda_conaset_2025.md).
 
+**Actualización:** el procedimiento ya se implementó y se probó con la alternativa
+REST oficial, sin mezclar fuentes. El [informe de ejecución](validacion_ubicacion_vial.md)
+documenta el 78,04 % de sensibilidad, las ambigüedades y la decisión de no asignar
+2025. Lo siguiente conserva la investigación y el procedimiento iniciales.
+
 **Hay una vía técnica para investigarlo:** relacionar cada coordenada con una
 carretera oficial que tenga medidas de recorrido. Primero hay que validar tanto
 la pertenencia a Ruta 5 Sur como el kilometraje. No se han asignado eventos de

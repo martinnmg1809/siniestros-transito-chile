@@ -1,0 +1,14 @@
+etiqueta,estado,eventos
+desconocida,borde_tramo,8
+desconocida,candidato_asignable,512
+desconocida,fuera_distancia,56615
+desconocida,via_ambigua,140
+otra_via,borde_tramo,6
+otra_via,candidato_asignable,64
+otra_via,fuera_distancia,12061
+otra_via,via_ambigua,32
+ruta5sur,borde_tramo,433
+ruta5sur,candidato_asignable,2033
+ruta5sur,fuera_distancia,31
+ruta5sur,medida_ambigua,2
+ruta5sur,via_ambigua,106

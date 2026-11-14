@@ -27,7 +27,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
-- [Ubicación vial: fuentes MOP y procedimiento de validación pendiente](docs/ubicacion_vial_2025.md).
+- [Ubicación vial: ensayo ejecutado, resultados y decisión sobre 2025](docs/validacion_ubicacion_vial.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -104,6 +104,19 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se implementó y ejecutó el [ensayo espacial](docs/validacion_ubicacion_vial.md)
+con reglas previas, geometría MOP con medidas M y vías competidoras. El servicio
+preferido falló; se usó una instantánea separada de la alternativa oficial: 79
+entidades de Ruta 5 y 1.218 de otras vías. Sobre 2024 se recuperan 2.033/2.605
+positivos conocidos (78,04 %) y la precisión en etiquetados es 96,95 %, con 64
+falsos positivos y 512 propuestas sin etiqueta verificable. Predominan los 433
+casos ambiguos por borde de tramo. La concordancia casi exacta de km no acredita
+precisión física ni independencia de geocodificación. **No se admite la asignación
+de 2025**: falla la sensibilidad fijada y faltan vigencia/cobertura urbana. Se
+conservan fuentes, cuarentena y modelos. Hay código reproducible, nueve pruebas
+espaciales nuevas, tablas, figura y auditoría; pasan 60 pruebas con el complemento
+espacial y la verificación de cierre, sin reentrenar.
 
 El **14/11/2026** se investigó cómo recuperar la ubicación vial de 2025. Se
 comprobaron dos servicios MOP distintos: el enlazado desde Descargas devuelve

@@ -1,0 +1,558 @@
+{
+  "protocolo": {
+    "version": "1.0-alternativa-rest",
+    "fuente_mop": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3",
+    "crs_calculo": "EPSG:32719",
+    "buffer_competidoras_m": 2000,
+    "distancia_max_m": 75,
+    "margen_competidora_m": 30,
+    "tolerancia_alternativas_ruta5_m": 200,
+    "distancia_borde_tramo_m": 50,
+    "sensibilidad_distancias_m": [
+      25,
+      50,
+      75,
+      100,
+      200
+    ],
+    "tramo_km": 5,
+    "km_min": 0,
+    "km_max_exclusivo": 1275,
+    "anio_comprobacion": 2024,
+    "anios_control_medidas": [
+      2020,
+      2021
+    ],
+    "criterios_propuestos_no_rubrica": {
+      "limite_inferior_wilson95_precision": 0.95,
+      "limite_inferior_wilson95_sensibilidad": 0.9,
+      "limite_inferior_wilson95_tramo_correcto": 0.9,
+      "vigencia_cartografica_acreditada": false,
+      "cobertura_competidoras_urbanas_acreditada": false
+    },
+    "alcance": "Ensayo separado; no cambia particiones, cuarentena ni modelos. No aplicar a 2025 si falla la comprobación. No escoger umbrales con 2024.",
+    "motivo_fuente": "Ensayo independiente de la alternativa oficial ya inventariada; servicio preferido con errores 500 y timeouts. No se mezclan geometrías. Criterios numéricos sin cambios y sin resultados aún."
+  },
+  "protocolo_sha256": "1a7f0176c198c44f30604a91592cd6de350c6a77dd9c79b092f46095f0c73e32",
+  "fuente_cartografia": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3",
+  "consulta_cartografia_utc": "2026-11-14T19:54:12.714143+00:00",
+  "manifiesto_cartografia_sha256": "f42990395db1bf0c11300f5cc6173e08b59b5bd0b2cf2218b0d4e0a0b1614fe7",
+  "fuente_conaset": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0",
+  "manifiesto_conaset_sha256": "af1f0198c7280870c5737e3f5b7427c4d565f854e1114c99000edbd5d8f42069",
+  "historico_sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+  "cuarentena_sha256": "56fde14896827678822a1ed6df8d45dafcc21645f4a2d1a6f2ee719082260d66",
+  "versiones": {
+    "python": "3.13.3",
+    "numpy": "2.2.3",
+    "pandas": "2.2.3",
+    "shapely": "2.1.2",
+    "pyproj": "3.7.2"
+  },
+  "codigo_sha256": {
+    "codigo/datos/ubicacion_vial.py": "01cf7339fd9bad6b99c48be8d813d567109a5af17d24015cdc6b0c59418cf17f",
+    "codigo/datos/descargar_eje_mop.py": "f65edc3a45812b1efd80775638c1b31961b906128ad46614cae7769bc59ba682",
+    "codigo/evaluacion/evaluar_asignacion_vial.py": "48635fc571220fdf6e8d70f7318bd5459dcfc3e1f85e26b5f151090fa4ef6113"
+  },
+  "criterios_superados": {
+    "precision_etiquetados": true,
+    "sensibilidad_etiquetados": false,
+    "tramo_correcto": true,
+    "vigencia_cartografica": false,
+    "competidoras_urbanas": false
+  },
+  "admisible_para_asignacion_2025": false,
+  "integrado_al_modelo": false,
+  "segmentos_sur": 92384,
+  "segmentos_competidores": 685688,
+  "segmentos_sur_medida_invalida": 0,
+  "eventos_2024": 72043,
+  "asignaciones_2025": 0,
+  "decision": "No se asigna 2025; revisar cartografía/etiquetas y cobertura antes de otra iteración.",
+  "limite_intervalos": "Wilson marginal por registro, sin independencia espacial/temporal acreditada; no garantiza calidad en desconocidos.",
+  "originales_cartografia": [
+    {
+      "archivo": "metadatos_antes.json.gz",
+      "sha256_respuesta": "c1971d87231bc6751abb7fb437a485bab8a136fee0d75fe3782cfb0a42129acb",
+      "registros": 0
+    },
+    {
+      "archivo": "ruta5_conteo.json.gz",
+      "sha256_respuesta": "1f533741d5872cf64778866e339e39551bca410b6645703390b78619f78bb1e1",
+      "registros": 0
+    },
+    {
+      "archivo": "ruta5_ids.json.gz",
+      "sha256_respuesta": "f6c9ec7f9e6cfb34d13c3ae0d9722ba76baf9700b0ecd14bb9a62b59247c7620",
+      "registros": 0
+    },
+    {
+      "archivo": "ruta5_geometria_0000.json.gz",
+      "sha256_respuesta": "8249ade820e2cb48678ad7aabe8cac0b377a7dd72dce71ae9bddd156e5d58a16",
+      "registros": 15
+    },
+    {
+      "archivo": "ruta5_geometria_0001.json.gz",
+      "sha256_respuesta": "9c8a40a092dcc2f70d2a7e8b933f89d30dc247fd1464848aa8166f041489d1bc",
+      "registros": 15
+    },
+    {
+      "archivo": "ruta5_geometria_0002.json.gz",
+      "sha256_respuesta": "b90b156f57617badabf86f1260736769cc672a81d71b4534e78d65e63c474d56",
+      "registros": 15
+    },
+    {
+      "archivo": "ruta5_geometria_0003.json.gz",
+      "sha256_respuesta": "badf634d88db7266dfefd9886848f496fa1e29e281626e49b74fce43d07e6491",
+      "registros": 15
+    },
+    {
+      "archivo": "ruta5_geometria_0004.json.gz",
+      "sha256_respuesta": "641fbeb5af34b0f5e48081480a72b9a16668aa5414566252814eca08cb63e382",
+      "registros": 15
+    },
+    {
+      "archivo": "ruta5_geometria_0005.json.gz",
+      "sha256_respuesta": "0c03e8655635820af2d92997c008793174f527220d2e60780c9cedf1feb73228",
+      "registros": 4
+    },
+    {
+      "archivo": "ruta5_ids_finales.json.gz",
+      "sha256_respuesta": "f6c9ec7f9e6cfb34d13c3ae0d9722ba76baf9700b0ecd14bb9a62b59247c7620",
+      "registros": 0
+    },
+    {
+      "archivo": "competidoras_conteo.json.gz",
+      "sha256_respuesta": "c3a5fdee2912a4384c9f73017e1931bd9f9dd05691c7be584294e7c9fded7bc2",
+      "registros": 0
+    },
+    {
+      "archivo": "competidoras_ids.json.gz",
+      "sha256_respuesta": "5f7c5606a53bdb720350acb79775eb7ea7a07f9a09fc66228551efe991376540",
+      "registros": 0
+    },
+    {
+      "archivo": "competidoras_geometria_0000.json.gz",
+      "sha256_respuesta": "cf02349ce9d82158185b8b5e71bb522139068396c49b6def23de7cd58515cb37",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0001.json.gz",
+      "sha256_respuesta": "648c3622353bc0bf3eb77ef1cb2507b3c6ffb964a67f92c797a8e2f637e3c89f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0002.json.gz",
+      "sha256_respuesta": "68dcf955e0a8fa805319e196ee231c689ba9b16da8a3b73afa8c336a6b19f62f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0003.json.gz",
+      "sha256_respuesta": "b834878b65a36639cc0309c742c5b76d9232f4dee58a54e4462615f93fd5da9c",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0004.json.gz",
+      "sha256_respuesta": "9a82ec44b228d06a193dde580d1f01393a28742d088995cf029a52b92a7ba07e",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0005.json.gz",
+      "sha256_respuesta": "32813cfe0694eaf979cc01d9a6253e9b71d1344448256886221e4289069dc14f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0006.json.gz",
+      "sha256_respuesta": "b60ba7f0df9cb9a6a7bd03b3f458e6981c5976c1d7ec44384ab17e637b663e1e",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0007.json.gz",
+      "sha256_respuesta": "80bb7adf457298f65eea78d0ce84e4d961b2f5454eb758f65e8c6decc282284f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0008.json.gz",
+      "sha256_respuesta": "6208f57139d6555c352a5c27a6c8c91e39b4b5ae3ecd7e3daa6e3842fa2720c0",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0009.json.gz",
+      "sha256_respuesta": "f07ad66bba895e56a538294e96940f18823eb52b2908a04770488511108904fa",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0010.json.gz",
+      "sha256_respuesta": "9e410bf9a0bd9de7089fbece1e78e48df61547b68a9d0360b93ba31f711a9c2a",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0011.json.gz",
+      "sha256_respuesta": "d74caef1d438c3ff60ced06f4a2d0133c8943dbbf33b6b0c1b99370c1392bf26",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0012.json.gz",
+      "sha256_respuesta": "49efa8f4119cd4992182848963db83c125cfca2d971d628cded1c17d8faa9f1c",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0013.json.gz",
+      "sha256_respuesta": "f471c1871f1bc4f99cf5e1cf18c9c583faf353e3acb259e65335f40c2d96f9fc",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0014.json.gz",
+      "sha256_respuesta": "ac43bb58f547934233027d7ff569c087e17752386ed0198913a463c2ad8716b4",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0015.json.gz",
+      "sha256_respuesta": "55c433cd1f23c0049f443b9d91d864214d14540b22c7fb66d921db0a930c7f4b",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0016.json.gz",
+      "sha256_respuesta": "8841cab7ac95f39f2be01468534448eb62639c91f6c0fca5fdd27bba49a57d87",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0017.json.gz",
+      "sha256_respuesta": "d0e18d4b7302e2957fcc5173a35c714f8b38c5fe49a273a6529a6415f289f214",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0018.json.gz",
+      "sha256_respuesta": "ab19bf3158f988fa1be1bc82bf5e9d4439460ee748d4f3b736462dab92e690da",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0019.json.gz",
+      "sha256_respuesta": "62eb36e0d6dbf9386eb83c8018826b796f576a9c80bec90d910472a97369073d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0020.json.gz",
+      "sha256_respuesta": "a1a32146a4d351e8c1b8f60cb3105372c013cbe64bdcf73abe9e9936a596d6cb",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0021.json.gz",
+      "sha256_respuesta": "2362a759bef31d9f3bf5eb371f6226d8c890bea641d8962398155c8848ed48c1",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0022.json.gz",
+      "sha256_respuesta": "9afe869b950236a92ddb7e4b4a21a1aff1cf1c4b4ac2d5ef76a2aa9a9161d2bf",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0023.json.gz",
+      "sha256_respuesta": "94f1a851352aa0cb843a80fcbe734700e83c8baf6e94d50b959c1d526c1cb716",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0024.json.gz",
+      "sha256_respuesta": "f22b077fadad5db81718b4fa26f79ba30282d2b40616e1a0525ddf36a2878fc1",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0025.json.gz",
+      "sha256_respuesta": "45aee3ca6662411b958b9b1b4c26ac82bef701a2d0b81991cce042d29ba7e938",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0026.json.gz",
+      "sha256_respuesta": "56be5e8e8b2f93a91d3951c4270901f5aa26cd7c49556fb40beaed2daa2a702a",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0027.json.gz",
+      "sha256_respuesta": "753f74c821e1597162ca0e29a4820ea68a9fc163273f83bc64150ab3a372c9cd",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0028.json.gz",
+      "sha256_respuesta": "6cfdb4159b43ad0879866db89074e2d875b38ffb2d60d2537fda3d7149ada791",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0029.json.gz",
+      "sha256_respuesta": "45812fed747bc5f5e7d23fd9cf79686dd0d15e5882db11a6ae762d84e456608a",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0030.json.gz",
+      "sha256_respuesta": "7bee5421805230d7780dbd73d76f511e0e5c70885af4316397997a5d219dfab5",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0031.json.gz",
+      "sha256_respuesta": "f734134f228aa231a382947d7140b23f334834e0ea4c1a9910f3d91601322254",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0032.json.gz",
+      "sha256_respuesta": "88d1c0018cbc57bddf01bb4d79da7e9df7b02824c7e1ef9218a23e326f7a22c6",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0033.json.gz",
+      "sha256_respuesta": "293317fe05338856010255dbcd356b4d27e8e0fa79550beaf58dc24ad4ba8e59",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0034.json.gz",
+      "sha256_respuesta": "d47c546df01ee4cd05475aa16ac03ccd6ccc51ffda74f0f8e9e9edb9a08f71ba",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0035.json.gz",
+      "sha256_respuesta": "a6cdc0008421ef5a73e32f4ba689ce1952b55db19fc6729b9f5bf661a140c471",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0036.json.gz",
+      "sha256_respuesta": "b589acc0f9a6654dc82d2a680685d2dc09319eccb9ac32bdd1e7d3854c8a400e",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0037.json.gz",
+      "sha256_respuesta": "b65df5dd521997c13f187bfbdd5d4b87b839d605a992e9e7f9d475762dd4febd",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0038.json.gz",
+      "sha256_respuesta": "47d09e60f9763b44e21789d145dd400c136f5743749a100b11496d9f6f307ea8",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0039.json.gz",
+      "sha256_respuesta": "0f1a55fa9d82cf13e6fdccd1aea05c8dbf0d47f049f8f377f5ebbfe19df170cb",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0040.json.gz",
+      "sha256_respuesta": "7cf6d8c7266a309aaf6d1c3d72853acf365c0329c92ceb7f50ea094e62951980",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0041.json.gz",
+      "sha256_respuesta": "af2f6b7485dd9aab59f4d2ddf1c271eb7ae26d125cdf9d34a856eaf2bf517ec4",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0042.json.gz",
+      "sha256_respuesta": "b51679d047045b4988aa3eff9b62f38db8f078476cf4e839d58e41508ab80b2d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0043.json.gz",
+      "sha256_respuesta": "6b88831cf0be5a99b798586e918f77a307044b446d724eaf63a117e118cdf6a4",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0044.json.gz",
+      "sha256_respuesta": "ed3c459e50035c5b0e45a93b6ec3773ceacd42dc35dde898961f1c56832cfbb6",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0045.json.gz",
+      "sha256_respuesta": "0fac867ba15b9db9e16376ad9c4a8eccc867000bd968e3e7a1b1be1c5f5947f7",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0046.json.gz",
+      "sha256_respuesta": "77101de95457d5c357f3fcabab6ce206d9bd896775e0c01232272052ce94fde4",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0047.json.gz",
+      "sha256_respuesta": "2edea0b4967aec599ed8d0c85bb0d9820784bdc273e569ee0ecc87a3902a1098",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0048.json.gz",
+      "sha256_respuesta": "a2aced5076562bfd6bf961cae85f4c8201e72f910dacb0b136ca123a2c187b44",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0049.json.gz",
+      "sha256_respuesta": "5e0eb554660d0dcf2293208abb8c3dafc2fd12cd173f207dd10872f68aa131a9",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0050.json.gz",
+      "sha256_respuesta": "d4aa9e22f8ab987fff8785d2e0ba029b9b2edad4ae635395be37dcb2d84bc798",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0051.json.gz",
+      "sha256_respuesta": "fbd4af716a06051637c8eed2160c6828074f2a5a1a6dc5ae6e10d2f814280190",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0052.json.gz",
+      "sha256_respuesta": "7e8ec0ec1038a0e55f71b38c196a7f4cfb0993a00edc50d482fe69f5ced1398f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0053.json.gz",
+      "sha256_respuesta": "d2ee015ac43dc868fbf6763abbedbcb1430810cc8d252f709eb7955511f7c945",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0054.json.gz",
+      "sha256_respuesta": "01be68ba0b180c028dc9d878ea22bad450b71bfc608a968993663489748de9f0",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0055.json.gz",
+      "sha256_respuesta": "cd9072db5ef97a4934533e7d9e0f193fa74797e02a2d8c338994fe7048d437f2",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0056.json.gz",
+      "sha256_respuesta": "8361eb07736f3458933430299a457468cc576bb08b4356f5d8b4ab61dd5492ef",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0057.json.gz",
+      "sha256_respuesta": "072b92d9e606090853a23182028f27476880c9573b57e9f7ffc633a63d20cf8c",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0058.json.gz",
+      "sha256_respuesta": "d88351dbe2c9822fb827cad263829509b3dbc2be5fedd579f31ee47ea4ea785d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0059.json.gz",
+      "sha256_respuesta": "71a06795a53963063ce61e88969e1beb93c1ae7e21cea71b031b4378eeddf94c",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0060.json.gz",
+      "sha256_respuesta": "adb54d29b99f38a07392272a3f9e8f4b8330d7820165a0c671e46cecd8a0e84d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0061.json.gz",
+      "sha256_respuesta": "88813d7db3d18cff0827aad034fd5b4ee15713ebca4904ed4f3e2b1be32043c7",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0062.json.gz",
+      "sha256_respuesta": "4d52b6954ff48ad1c886610bad5826cdaf0b56f207a294dfd9ab51770b1d6516",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0063.json.gz",
+      "sha256_respuesta": "de285b356f7b3c1fee145d2858b74db012e739324725ade7667ded7d84df721f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0064.json.gz",
+      "sha256_respuesta": "f491801724730aede213164efac327c1f8e9e10f392d9fb63df81fd026258267",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0065.json.gz",
+      "sha256_respuesta": "e35ce038b561375471d7e097b9fc3685702c4e17fde34223120c02b8337a3cef",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0066.json.gz",
+      "sha256_respuesta": "f26472ba37febac3032f2d2e7cd711e31d05764fccb7b7cbe41f64d14cf6bd6e",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0067.json.gz",
+      "sha256_respuesta": "2b1a853c623454e33e7954f28288ef48415011637e510a2d515043ab0b533eca",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0068.json.gz",
+      "sha256_respuesta": "a1aaaa073bf45013f492d89faceece8ec094f734f83c0d25b55871fd78d1e9a9",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0069.json.gz",
+      "sha256_respuesta": "7879b599bf117d9db0cd71ba5b3be15472508d78da904ae37e11c4b3ee4754f1",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0070.json.gz",
+      "sha256_respuesta": "cff4bb7c11d701c7d51ceea33b3ea52ffe0c67cdf8e7bfa6655457186138c2c9",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0071.json.gz",
+      "sha256_respuesta": "844f0a5ab96455f2649f3912359cc37dcc6818e7a506188e0639300d4edcbeed",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0072.json.gz",
+      "sha256_respuesta": "83927fe1a81623e4a2ae0c4b6143e1b96883618d9afc2f14e507e7cb85bda6d1",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0073.json.gz",
+      "sha256_respuesta": "0b4a3424efcdb6e667b913cbae53fbc23b083b4a927aa3155228b6173a40d63a",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0074.json.gz",
+      "sha256_respuesta": "dfcf302382d1cec529576fa0977148e87d9c0807dcef49374d9dd09e3800987d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0075.json.gz",
+      "sha256_respuesta": "a1cab21b9eca26a52bf69792bf253829c550bfc4d6b1cbe2ae4dbbace38a850a",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0076.json.gz",
+      "sha256_respuesta": "3b6d71d92b3b3b82b2c8b611af8139b6361df4f64441273109cf71af84ae5833",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0077.json.gz",
+      "sha256_respuesta": "01dfe45d2a7bf017fd5fd01a347f5f6bb3cf95b28b19412911ee2020b1d86f78",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0078.json.gz",
+      "sha256_respuesta": "93cbf9e23cf90be4a15a0cd751e7ac70bb50aa864a6ee43ecbef8d47c7486a7d",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0079.json.gz",
+      "sha256_respuesta": "1cf73ff48e2193414a14cba53c0c84a1245a344b35aa763ed966c8ba0c7cf18e",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0080.json.gz",
+      "sha256_respuesta": "e409904a764850e2235b1fb72db77effebbcdbcc90c22b099af6234fd086c82f",
+      "registros": 15
+    },
+    {
+      "archivo": "competidoras_geometria_0081.json.gz",
+      "sha256_respuesta": "c83531008b6a08bcb36c015d1d4622f2b4f2de036e60c19727f623bbfee3572c",
+      "registros": 3
+    },
+    {
+      "archivo": "competidoras_ids_finales.json.gz",
+      "sha256_respuesta": "5f7c5606a53bdb720350acb79775eb7ea7a07f9a09fc66228551efe991376540",
+      "registros": 0
+    },
+    {
+      "archivo": "metadatos_despues.json.gz",
+      "sha256_respuesta": "c1971d87231bc6751abb7fb437a485bab8a136fee0d75fe3782cfb0a42129acb",
+      "registros": 0
+    }
+  ],
+  "derivados_locales_sha256": {
+    "candidatos_2024.csv.gz": "f51b66e0a5386a90fffe6a458b960c719a37fe686f174ec2025bbe999e383ce9",
+    "control_medidas_2020_2021.csv.gz": "72c11b676f092c19639c5fa46d6405bd82623d60b67365c53bafe3372088653f"
+  }
+}

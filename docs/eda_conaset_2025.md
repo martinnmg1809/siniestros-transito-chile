@@ -149,9 +149,9 @@ Resultados: [resumen](../resultados/eda_2025/resumen.csv),
 
 ## Condiciones para avanzar al modelo y al piloto
 
-La investigación posterior identificó fuentes MOP con medidas de recorrido. Se
-documentan sus diferencias y la [validación espacial que falta ejecutar](ubicacion_vial_2025.md).
-El hallazgo no modifica la decisión de admisibilidad de este EDA.
+La investigación posterior identificó fuentes MOP con medidas de recorrido. La
+[validación espacial ejecutada](validacion_ubicacion_vial.md) no superó las
+condiciones de incorporación y mantiene la decisión de admisibilidad de este EDA.
 
 1. Recuperar ruta y kilómetro de 2025 de una fuente acreditada, o validar una
    asignación espacial con eje y referencias kilométricas oficiales. La polilínea

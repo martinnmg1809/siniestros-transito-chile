@@ -1,0 +1,1299 @@
+OBJECTID,ROL,ROL_LABEL,NOMBRE_CAMINO,ORIENTACION,CALZADA,KM_I,KM_F,REGION,ruta5sur_candidata,partes,vertices,vertices_m_faltante,m_inicial,m_final
+5077,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,51,0,715216.1867,719206.902
+5078,Ruta 5,5,"Longitudinal Sur, Sector: Río Itata - Río Renaico",SUR,I,449278,564650,Región del Biobío,True,1,4113,0,449278.0,564650.0
+5088,Ruta 5,5,"Longitudinal Sur, Sector: Río Itata - Río Renaico",SUR,D,449278,564650,Región del Biobío,True,1,4492,0,449278.0,564650.0
+5107,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,1931,0,719206.902,768690.0
+5108,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,3267,0,564650.0,662374.3342
+5109,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,1686,0,719206.902,768690.0
+5110,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,3460,0,564650.0,662485.4206
+5111,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,1240,0,681211.1335,715216.187
+5112,Ruta 5,5,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,True,1,1324,0,681155.9244,715216.1867
+5147,Ruta 5,5,"Longitudinal Sur, Sector: Perquilauquén - Río Itata",SUR,D,353298,449555,Región de Ñuble,True,1,3423,0,353298.0,449555.0
+5148,Ruta 5,5,"Longitudinal Sur, Sector: Perquilauquén - Río Itata",SUR,I,353298,449555,Región de Ñuble,True,1,3302,0,353298.0,449555.0
+5697,Ruta 5,5,"Longitudinal Sur, Sector: Av. Bernardo O'Higgins - Túnel Angostura",SUR,D,0,55610,Región Metropolitana de Santiago,True,1,2041,0,0.0,55610.0
+5698,Ruta 5,5,"Longitudinal Sur, Sector: Av. Bernardo O'Higgins - Túnel Angostura",SUR,I,0,55610,Región Metropolitana de Santiago,True,1,1973,0,0.0,55610.0
+5699,Ruta 5,5,"Longitudinal Norte, Sector: Av. Bernardo O'Higgins - Límite Regional Norte (Montenegro)",NORTE,D,0,65873,Región Metropolitana de Santiago,False,1,2579,0,0.0,65873.0
+5700,Ruta 5,5,"Longitudinal Norte, Sector: Av. Bernardo O'Higgins - Límite Regional Norte (Montenegro)",NORTE,I,0,65897,Región Metropolitana de Santiago,False,1,2349,0,0.0,65897.0
+5821,Ruta 5,5,"Longitudinal Sur, Sector: Peor Es Nada - Perquilauquén",SUR,D,162697,353298,Región del Maule,True,1,6090,0,162697.0,353298.0
+5822,Ruta 5,5,"Longitudinal Sur, Sector: Peor Es Nada - Perquilauquén",SUR,I,162697,353298,Región del Maule,True,1,6360,0,162697.0,353298.0
+6872,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,U,1955060,1978751,Región de Arica y Parinacota,False,1,766,0,1955060.0,1978751.0
+6873,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,U,1978751,1979377,Región de Arica y Parinacota,False,1,11,0,1978751.0,1979377.0
+6874,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,U,1979377,2056344,Región de Arica y Parinacota,False,1,2006,0,1979377.0,2056344.0
+6875,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,D,2056344,2067294,Región de Arica y Parinacota,False,1,1017,0,2056344.0,2067294.0
+6876,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,D,2067294,2074815,Región de Arica y Parinacota,False,1,238,0,2067294.0,2074815.0
+6877,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,I,2056344,2074815,Región de Arica y Parinacota,False,1,1435,0,2056344.0,2074815.0
+6878,Ruta 5,5,"Longitudinal Norte, Sector: Cuya - Límite Nacional",NORTE,U,2074815,2080535,Región de Arica y Parinacota,False,1,150,0,2074815.0,2080535.0
+7108,Ruta 5,5,"Longitudinal Norte, Sector: Quillagua - Cuya",NORTE,U,1631729,1955060,Región de Tarapacá,False,1,12561,0,1631729.0,1955060.0
+7469,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,D,55610,68779,Región del Libertador General Bernardo O'Higgins,True,1,1470,0,55610.0,68779.0
+7470,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,D,68779,94358,Región del Libertador General Bernardo O'Higgins,True,1,1746,0,68779.0,94358.0
+7471,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,D,94358,161814,Región del Libertador General Bernardo O'Higgins,True,1,4678,0,94358.0,161814.0
+7472,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,I,55610,68779,Región del Libertador General Bernardo O'Higgins,True,1,821,0,55610.0,68779.0
+7473,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,I,68779,94358,Región del Libertador General Bernardo O'Higgins,True,1,1650,0,68779.0,94358.0
+7474,Ruta 5,5,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",SUR,I,94358,161814,Región del Libertador General Bernardo O'Higgins,True,1,4416,0,94358.0,161814.0
+7475,Ruta 5,5,"Longitudinal Sur, Sector: Lanco (Límite Regional) - Pichirropulli (Límite Regional)",SUR,D,768690,895450,Región de Los Ríos,True,1,4507,0,768690.0,895450.0
+7476,Ruta 5,5,"Longitudinal Sur, Sector: Lanco (Límite Regional) - Pichirropulli (Límite Regional)",SUR,I,768690,895450,Región de Los Ríos,True,1,4331,0,768690.0,895450.0
+8182,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,D,895450,1074757,Región de Los Lagos,True,1,6496,0,895450.0,1074757.0
+8183,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,I,1074118,1074757,Región de Los Lagos,True,1,17,0,1074118.0,1074757.0
+8184,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,ÚNICA,1074757,1075213,Región de Los Lagos,True,1,27,0,1074757.0,1075213.0
+8185,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,ÚNICA,1075213,1079027,Región de Los Lagos,True,1,186,0,1075213.0,1079027.0
+8186,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,I,895450,1074118,Región de Los Lagos,True,1,6245,0,895450.0,1074118.0
+8187,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,ÚNICA,1079027,1184308,Región de Los Lagos,True,1,5672,0,1079027.0,1184308.0
+8188,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,ÚNICA,1270720,1271458,Región de Los Lagos,True,1,9,0,1270720.0,1271458.0
+8189,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,I,1184308,1185673,Región de Los Lagos,True,1,91,0,1184308.0,1185673.0
+8190,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,ÚNICA,1185673,1270720,Región de Los Lagos,True,1,5159,0,1185673.0,1270720.0
+8191,Ruta 5,5,"Longitudinal Sur, Sector: Pichirropulli (Límite Regional) - Quellón",SUR,D,1184308,1185673,Región de Los Lagos,True,1,143,0,1184308.0,1185673.0
+10073,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,U,1031192,1341910,Región de Antofagasta,False,1,14117,0,1031192.0,1341910.0
+10074,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,D,1341910,1344226,Región de Antofagasta,False,1,152,0,1341910.0,1344226.0
+10075,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,D,1344226,1418284,Región de Antofagasta,False,1,3249,0,1344226.0,1418284.0
+10076,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,D,1418284,1422524,Región de Antofagasta,False,1,31,0,1418284.0,1422524.0
+10077,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,D,1422524,1447569,Región de Antofagasta,False,1,2063,0,1422524.0,1447569.0
+10078,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,U,1459000,1631729,Región de Antofagasta,False,1,7541,0,1459000.0,1631729.0
+10089,Ruta 5,5,"Longitudinal Norte, Sector: Portezuelo Las Bombas - Quillagua",NORTE,D,1447569,1459000,Región de Antofagasta,False,1,581,0,1447569.0,1459000.0
+10094,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,556063,781274,Región de Atacama,False,1,10817,0,556063.0,781274.0
+10095,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,I,812116,812304,Región de Atacama,False,1,10,0,812116.0,812304.0
+10096,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,I,812304,870546,Región de Atacama,False,1,2157,0,812304.0,870546.0
+10097,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,781274,781784,Región de Atacama,False,1,18,0,781274.0,781784.0
+10098,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,782379,811280,Región de Atacama,False,1,1602,0,782378.956,811280.0
+10099,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,811280,812116,Región de Atacama,False,1,65,0,811280.0,812116.3292
+10100,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,812462,874319,Región de Atacama,False,1,2315,0,812462.0,874319.493
+10101,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,879411,985040,Región de Atacama,False,1,5668,0,879410.7188,985040.0
+10102,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,I,556063,567896,Región de Atacama,False,1,593,0,556063.0,567896.0
+10103,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,I,571005,780555,Región de Atacama,False,1,10464,0,571005.0,780555.0
+10104,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,I,780555,782379,Región de Atacama,False,1,70,0,780555.0,782379.0
+10105,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,781784,782379,Región de Atacama,False,1,35,0,781784.0,782378.956
+10106,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,812116,812462,Región de Atacama,False,1,19,0,812116.3292,812462.0
+10107,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,874319,875773,Región de Atacama,False,1,60,0,874319.493,875772.7868
+10108,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,875773,876462,Región de Atacama,False,1,31,0,875772.7868,876462.0
+10109,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,876462,876494,Región de Atacama,False,1,3,0,876462.0,876493.8859
+10110,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,876494,878379,Región de Atacama,False,1,78,0,876493.8859,878379.3953
+10111,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,D,878379,879411,Región de Atacama,False,1,40,0,878379.3953,879410.7188
+10557,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,986120,1031192,Región de Atacama,False,1,2639,0,986120.0,1031192.0
+10558,Ruta 5,5,"Longitudinal Norte, Sector: Punta Colorada - Portezuelo Las Bombas",NORTE,U,985040,986120,Región de Atacama,False,1,71,0,985040.0,986120.0
+10573,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,D,189536,470424,Región de Coquimbo,False,1,12018,0,189536.0,470424.0
+10574,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,U,470424,471229,Región de Coquimbo,False,1,89,0,470424.0,471229.0
+10575,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,U,471229,471823,Región de Coquimbo,False,1,56,0,471229.0,471823.0
+10576,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,D,471823,556063,Región de Coquimbo,False,1,3947,0,471823.0,556063.0
+10577,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,I,189536,470424,Región de Coquimbo,False,1,10881,0,189536.0,470424.0
+10578,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,I,471823,472338,Región de Coquimbo,False,1,16,0,471823.0,472338.0
+10579,Ruta 5,5,"Longitudinal Norte, Sector: Los Ermitaños - Punta Colorada",NORTE,I,472338,556063,Región de Coquimbo,False,1,4028,0,472338.0,556063.0
+11331,Ruta 5,5,"Longitudinal Norte, Sector: Montenegro - Los Ermitaños",NORTE,D,65873,189536,Región de Valparaíso,False,1,4699,0,65873.0,189536.0
+11334,Ruta 5,5,"Longitudinal Norte, Sector: Montenegro - Los Ermitaños",NORTE,I,65873,189536,Región de Valparaíso,False,1,4523,0,65873.0,189536.0
+76,R-321,R-321,Cruce Longitudinal - Huapitrio Por Niza,-,-,0,0,Región de La Araucanía,False,1,84,0,726.0494000000035,2022.4698000000062
+77,S-373,S-373,Metrenco - Coyahue,-,-,0,0,Región de La Araucanía,False,1,183,0,4449.861600000004,7488.953699999998
+109,S-373,S-373,Metrenco - Coyahue,-,-,0,0,Región de La Araucanía,False,1,214,0,0.0,3956.9015999999974
+141,R-310,R-310,Collipulli - Mininco Por La Mortandad,-,-,0,0,Región de La Araucanía,False,1,872,0,0.0,18271.544899999994
+152,S-117,S-117,Cruce S-101-r - Cruce S-105-r,-,-,0,0,Región de La Araucanía,False,1,82,0,0.00010000000474974513,2288.0001000000047
+154,S-443,S-443,Cruce Longitudinal (quepe) - Huichahue,-,-,0,0,Región de La Araucanía,False,1,451,0,0.0,10099.210699999996
+159,R-571,R-571,Pailahueque - Fundo Callin,-,-,0,0,Región de La Araucanía,False,1,1272,0,1549.0921999999991,34306.9026
+160,R-382,R-382,Acceso Sur A Pidima,-,-,0,0,Región de La Araucanía,False,1,89,0,0.0,2241.4119999999966
+161,S-605,S-605,Quinta Faja,-,-,0,0,Región de La Araucanía,False,1,1098,0,1999.9998999999953,31795.99979999999
+163,S/R,,Dalpín Hacia El Sur,-,-,0,0,Región de La Araucanía,False,1,197,0,0.00010000000474974513,2877.0899000000063
+164,R-231,R-231,Cruce R-23 - Reducción Quilquihuenco,-,-,0,0,Región de La Araucanía,False,1,161,0,0.0,2354.7621999999974
+166,R-527,R-527,Faja Padilla,-,-,0,0,Región de La Araucanía,False,1,92,0,0.00010000000474974513,2670.000199999995
+167,S-237,S-237,Cruce S-225 - Miraflores,-,-,0,0,Región de La Araucanía,False,1,39,0,0.00010000000474974513,1066.0004999999946
+196,S/R,,Acceso A Victoria Por La Genetica,-,-,0,0,Región de La Araucanía,False,1,98,0,0.0,1747.154800000004
+234,R-575,R-575,Victoria - Inspector Fernández Por Cerro Antiguo,-,-,0,0,Región de La Araucanía,False,1,36,0,0.00010000000474974513,512.4297999999981
+236,R-321,R-321,Cruce Longitudinal - Huapitrio Por Niza,-,-,0,0,Región de La Araucanía,False,1,128,0,2022.4698000000062,5155.716199999995
+278,S/R,,Acceso Central A Lautaro,-,-,0,0,Región de La Araucanía,False,1,38,0,0.0,1498.9998999999953
+279,S-213,S-213,Cruce Longitudinal - Lautaro,-,-,0,0,Región de La Araucanía,False,1,43,0,0.0,1690.4560000000056
+280,S-710,S-710,Gorbea - Los Galpones,-,-,0,0,Región de La Araucanía,False,1,617,0,1773.6328000000067,15881.999500000005
+286,R-810,R-810,Victoria - Quino,-,-,0,0,Región de La Araucanía,False,1,630,1,0.00010000000474974513,17006.9997
+298,S/R,,Longitudinal Antiguo Hacia El Poniente,-,-,0,0,Región de La Araucanía,False,1,142,0,0.00010000000474974513,4394.999899999995
+302,S/R,,Cruce Longitudinal - Niza,-,-,0,0,Región de La Araucanía,False,1,88,0,0.0,1447.2446999999956
+304,S-270,S-270,Cruce Longitudinal - Colonia Lautaro,-,-,0,0,Región de La Araucanía,False,1,399,0,17.08770000000368,11725.675700000007
+306,S-773,S-773,Loncoche - Lumaco,-,-,0,0,Región de La Araucanía,False,1,302,0,0.0,8260.0
+309,S-920,S-920,Cruce Longitudinal (la Paz) - Mahuida,-,-,0,0,Región de La Araucanía,False,1,523,0,0.10050000000046566,14199.999599999996
+312,S-728,S-728,Faja Ricci,-,-,0,0,Región de La Araucanía,False,1,355,0,0.0,12726.794800000003
+325,S-215,S-215,Temuco - Pillánlelbun - Lautaro,-,-,0,0,Región de La Araucanía,False,1,204,0,2071.1946999999927,8008.289000000004
+327,S-125-R,S-125-R,Cruce Longitudinal (puente Quillén) - Límite Provincial,-,-,0,0,Región de La Araucanía,False,1,425,0,464.9539999999979,11158.769499999995
+335,S-91,S-91,Cruce Longitudinal (loncoche) - Villarrica,-,-,0,0,Región de La Araucanía,False,1,331,6,,34543.61619999999
+336,S-103,S-103,Cruce Longitudinal - Perquenco,-,-,0,0,Región de La Araucanía,False,1,68,0,0.0,3866.438699999999
+366,S-227,,Pillánlelbun - La Esmeralda - San Pablo,-,-,0,0,Región de La Araucanía,False,1,133,0,0.0,1908.9364999999962
+369,S/R,,Padre Las Casas - Pulmahue,-,-,0,0,Región de La Araucanía,False,1,11,0,1422.8752999999997,1600.0022000000026
+426,S/R,,Ercilla - Cumaco,-,-,0,0,Región de La Araucanía,False,1,163,0,0.00010000000474974513,4684.999800000005
+442,S-716,S-716,Segunda Faja - Galpones,-,-,0,0,Región de La Araucanía,False,1,332,0,0.0,9714.081300000005
+447,S/R,,Cruce Ruta 5 - Pillánlelbun - Ruta 5,-,-,0,0,Región de La Araucanía,False,1,37,0,562.8926999999967,1426.1637999999948
+448,S/R,,Cruce Longitudinal - Mision Araucana,-,-,0,0,Región de La Araucanía,False,1,325,0,0.0,8014.000100000005
+457,S/R,,Acceso Cunco Chico,-,-,0,0,Región de La Araucanía,False,1,74,0,801.6650999999983,2060.0002999999997
+474,S/R,,Quepe - Mahuidanche,-,-,0,0,Región de La Araucanía,False,1,308,0,0.0,7100.006899999993
+475,S/R,,Metrenco - Huichocón,-,-,0,0,Región de La Araucanía,False,1,159,0,0.0,2791.845199999996
+494,R-322,R-322,Cruce Longitudinal - Collipulli,-,-,0,0,Región de La Araucanía,False,1,191,0,0.00010000000474974513,4650.000499999995
+541,S/R,,Padre Las Casas - Pulmahue,-,-,0,0,Región de La Araucanía,False,1,70,0,1600.0022000000026,2955.0763000000006
+562,S-292,S-292,Cruce Longitudinal - Rinconada,-,-,0,0,Región de La Araucanía,False,1,128,0,0.0,2944.9032000000007
+567,S/R,,Acceso A Central Perquenco,-,-,0,0,Región de La Araucanía,False,1,135,0,0.0,2702.9030000000057
+605,S/R,,Acceso A Chesquechan,-,-,0,0,Región de La Araucanía,False,1,116,0,0.0,2358.0
+609,S-215,S-215,Temuco - Pillánlelbun - Lautaro,-,-,0,0,Región de La Araucanía,False,1,232,0,5786.842000000004,13017.672699999996
+617,R-381,R-381,Ercilla - Chocombe Grande,-,-,0,0,Región de La Araucanía,False,1,217,0,0.0,5505.234500000006
+623,R-376,R-376,Collipulli - Loncomahuida,-,-,0,0,Región de La Araucanía,False,1,473,0,0.0,8174.278300000005
+643,S-463,S-463,Pitrufquén - Manzanar,-,-,0,0,Región de La Araucanía,False,1,157,0,0.0,4066.6444000000047
+644,S/R,,Loncoche - Afquintué - Lastarria,-,-,0,0,Región de La Araucanía,False,1,838,0,0.00010000000474974513,22122.999899999995
+645,S/R,,Ruta 5 (el Vado) - Quitratué,-,-,0,0,Región de La Araucanía,False,1,113,0,0.00010000000474974513,2599.9995999999956
+647,S/R,,Cruce Longitudinal - Tercera Faja,-,-,0,0,Región de La Araucanía,False,1,98,0,0.0,2122.514500000005
+654,S-758,S-758,El Diuco Hacia El Norponiente,-,-,0,0,Región de La Araucanía,False,1,58,0,0.00010000000474974513,1299.9998999999953
+656,S/R,,Cruce Longitudinal - Rincón Del Rinco,-,-,0,0,Región de La Araucanía,False,1,316,0,0.0,6793.818100000004
+657,R-812,R-812,Cruce Ruta 5 - Reducciónes Queipul Y Chavel,-,-,0,0,Región de La Araucanía,False,1,313,4,0.00010000000474974513,
+665,S/R,,Quepe - Zanja,-,-,0,0,Región de La Araucanía,False,1,242,0,0.0,5511.817999999999
+668,S/R,,Cruce S-10 - Acceso Oriente A Parlamento,-,-,0,0,Región de La Araucanía,False,1,207,0,0.0,6122.912700000001
+685,R-715,R-715,Victoria - San Diego,-,-,0,0,Región de La Araucanía,False,1,327,0,0.00010000000474974513,7333.9997
+687,S/R,,San Juan - La Herradura,-,-,0,0,Región de La Araucanía,False,1,169,0,-0.0004000000044470653,3725.9997000000003
+688,S/R,,Cruce Ruta 5 - Las Violetas,-,-,0,0,Región de La Araucanía,False,1,75,0,0.00010000000474974513,1466.9741000000067
+692,R-525,R-525,Ercilla - La Montaña,-,-,0,0,Región de La Araucanía,False,1,706,0,0.00010000000474974513,24000.999599999996
+695,S/R,,Maquehue - Licanco,-,-,0,0,Región de La Araucanía,False,1,98,0,2000.0,3999.9995999999956
+703,S/R,,Loncoche - Elocoyán,-,-,0,0,Región de La Araucanía,False,1,215,0,0.0,4445.302800000005
+716,S/R,,Cruce S-92 -  Cerro Maulén,-,-,0,0,Región de La Araucanía,False,1,75,0,0.0,1682.6543999999994
+727,S/R,,El Diuco - Lastarrias,-,-,0,0,Región de La Araucanía,False,1,223,0,0.0004000000044470653,4427.205600000001
+728,S/R,,Gorbea - Río Donguil,-,-,0,0,Región de La Araucanía,False,1,234,0,0.0,6200.606799999994
+732,S-900,S-900,Colonia Loncoche - Las Parcelas,-,-,0,0,Región de La Araucanía,False,1,63,0,1400.0,2840.0
+734,S/R,,Variante Pichiquepe - Huichicón,-,-,0,0,Región de La Araucanía,False,1,92,0,0.0,1749.9995999999956
+755,S/R,,Cruce Ruta 5 - Ercilla (acceso Norte),-,-,0,0,Región de La Araucanía,False,1,72,0,0.0,1254.6907999999967
+760,S/R,,Variante Inoco,-,-,0,0,Región de La Araucanía,False,1,211,0,0.0,4249.346099999995
+767,S/R,,Cruce Longitudinal - El Prado,-,-,0,0,Región de La Araucanía,False,1,89,0,0.0,2145.0
+768,R-560,R-560,Ercilla - Victoria Por Fundo El Cielo,-,-,0,0,Región de La Araucanía,False,1,833,0,0.0,22974.804300000003
+779,S/R,,Acceso Oriente A  Loncoche,-,-,0,0,Región de La Araucanía,False,1,77,0,0.00010000000474974513,1424.9995000000054
+780,S/R,,El Donguil - Afquintué,-,-,0,0,Región de La Araucanía,False,1,280,0,1839.3258999999962,7410.0
+784,S/R,,Cuesta Antigua De Malleco,-,-,0,0,Región de La Araucanía,False,1,86,0,870.8372999999992,1968.9340999999986
+795,S/R,,Cruce Ruta R-560 - Reducción Temucuicui,-,-,0,0,Región de La Araucanía,False,1,330,0,-0.00010000000474974513,8988.000199999995
+796,R-561,R-561,Acceso A Victoria Por El Ejercito,-,-,0,0,Región de La Araucanía,False,1,60,0,0.00010000000474974513,847.9744999999966
+817,R-575,R-575,Victoria - Inspector Fernández Por Cerro Antiguo,-,-,0,0,Región de La Araucanía,False,1,145,0,604.4245999999985,3637.9997000000003
+827,S/R,,Variante El Diuco,-,-,0,0,Región de La Araucanía,False,1,58,0,0.0,1170.0
+840,S-735,S-735,Cruce S-85 - Octava Faja,-,-,0,0,Región de La Araucanía,False,1,483,0,0.0,10544.143599999996
+853,S/R,,Cruce Ruta 5 - Victoria  Por Aviación,-,-,0,0,Región de La Araucanía,False,1,100,0,0.0,2103.1266999999934
+867,S/R,,Acceso Norte A Freire,-,-,0,0,Región de La Araucanía,False,1,154,0,16400.409700000004,3480.910999999993
+881,S-924,S-924,Lolo Ruca - Colonia Curihue,-,-,0,0,Región de La Araucanía,False,1,350,0,0.10050000000046566,7235.999899999995
+886,S-599,S-599,Chada Loica - Cementerio,-,-,0,0,Región de La Araucanía,False,1,238,0,0.0,5593.955700000006
+892,R-829,R-829,Púa - Selva Oscura Por San Andrés,-,-,0,0,Región de La Araucanía,False,1,707,0,0.00010000000474974513,17577.6587
+893,R-815,R-815,Victoria - Estero Quino - Púa,-,-,0,0,Región de La Araucanía,False,1,504,0,0.0,12782.819000000003
+908,R-817,R-817,Cruce Ruta R-815 (trongol) - Cruce Ruta R-825,-,-,0,0,Región de La Araucanía,False,1,231,0,0.0,5017.000100000005
+909,R-572,R-572,La Estrella - Bajo Puente Colo,-,-,0,0,Región de La Araucanía,False,1,41,0,0.0,1064.0580000000045
+920,S/R,,Variante Loncomahuida,-,-,0,0,Región de La Araucanía,False,1,23,0,0.00010000000474974513,388.11149999999907
+929,S-354,S-354,Cruce Longitudinal - Pumalal,-,-,0,0,Región de La Araucanía,False,1,66,0,0.0,1412.3439999999973
+957,S/R,,Cruce Longitudinal - Villa Esperanza,-,-,0,0,Región de La Araucanía,False,1,54,0,0.0,727.0332999999955
+963,S/R,,Cruce R-71 - Pailahueque,-,-,0,0,Región de La Araucanía,False,1,510,0,0.00010000000474974513,12072.574099999998
+973,S-92,S-92,Gorbea - Cuesta Lastarria - Loncoche,-,-,0,0,Región de La Araucanía,False,1,223,0,0.00010000000474974513,18005.596300000005
+974,S-10,S-10,Cruce Ruta 5 - Galvarino,-,-,0,0,Región de La Araucanía,False,1,428,7,0.0,
+986,S/R,,Cruce Ruta 5 - Quitratué,-,-,0,0,Región de La Araucanía,False,1,170,0,0.0,4669.375400000004
+1002,Ruta 182,182,Collipulli - Angol,-,-,0,0,Región de La Araucanía,False,1,250,0,0.00010000000474974513,28062.416500000007
+1005,S-85,S-85,Quitratue - Cruce Ruta S-91,-,-,0,0,Región de La Araucanía,False,1,565,0,0.0,15774.800600000002
+1009,S-379,S-379,Pichiquepe - Cunco Chico,-,-,0,0,Región de La Araucanía,False,1,415,0,0.0,8644.007599999997
+1011,S/R,,Púa - Pichoy,-,-,0,0,Región de La Araucanía,False,1,433,0,-531.9519,8120.183099999995
+1014,S/R,,Acceso Sur A Pidima,-,-,0,0,Región de La Araucanía,False,1,201,0,0.00010000000474974513,6421.9997
+1017,S/R,,Quitratue - Rinconada Del Donguil,-,-,0,0,Región de La Araucanía,False,1,120,0,0.00010000000474974513,2880.7866000000067
+1018,S/R,,Ruta 5 - La America,-,-,0,0,Región de La Araucanía,False,1,112,0,0.0,2619.0
+1024,R-336,R-336,Colonia Lolenco - Collipulli Por Chiguaihue,-,-,0,0,Región de La Araucanía,False,1,447,0,0.0,10498.043000000005
+1030,R-86,R-86,Victoria - Traiguén - Los Sauces - Huequén,-,-,0,0,Región de La Araucanía,False,1,1302,0,0.0,93075.6549
+1032,Ruta 199 CH,199,Camino Internacional Monseñor Francisco Valdés Subercaseaux,-,-,0,0,Región de La Araucanía,False,1,2178,0,0.0,116209.67430000001
+1033,S-60,S-60,Freire - Gualpín - Queule,-,-,0,0,Región de La Araucanía,False,1,1561,0,0.0,63520.71830000001
+1052,R-22,R-22,Cruce Longitudinal (alto Esperanza) - Mininco - Tijeral,-,-,0,0,Región de La Araucanía,False,1,1177,9,0.0,
+1056,S/R,,Acceso A Cementerio Nihue,-,-,0,0,Región de La Araucanía,False,1,180,0,0.00010000000474974513,2508.999800000005
+1063,S/R,,Acceso Sur A Freire,-,-,0,0,Región de La Araucanía,False,1,45,0,3480.910999999993,4979.999899999995
+1064,S-761,S-761,Collico Bajo - Paraíso Perdido - Loncoche,-,-,0,0,Región de La Araucanía,False,1,548,0,0.0,12660.0
+1078,R-570,R-570,Pailahueque - Victoria Por La Estrella,-,-,0,0,Región de La Araucanía,False,1,603,0,0.0,11933.099600000001
+1090,S-375,S-375,Metrenco - Huillinco,-,-,0,0,Región de La Araucanía,False,1,295,0,0.0,6136.627200000003
+1091,S/R,,Cantera - Repolcura,-,-,0,0,Región de La Araucanía,False,1,97,0,0.0,1978.1371000000072
+1109,S/R,,Repocura - Pichi Quepe,-,-,0,0,Región de La Araucanía,False,1,197,0,0.0,3736.7090000000026
+1111,S/R,,Freire - Campamento,-,-,0,0,Región de La Araucanía,False,1,236,0,0.0,4845.0813999999955
+1122,S-330,S-330,Puente Quillén - El Salto,-,-,0,0,Región de La Araucanía,False,1,583,4,0.0,
+1134,R-321,R-321,Cruce Longitudinal - Huapitrio Por Niza,-,-,0,0,Región de La Araucanía,False,1,37,0,0.00010000000474974513,726.0494000000035
+1164,R-575,R-575,Victoria - Inspector Fernández Por Cerro Antiguo,-,-,0,0,Región de La Araucanía,False,1,9,0,512.4297999999981,604.4245999999985
+1165,S/R,,Variante La Estrella,-,-,0,0,Región de La Araucanía,False,1,2,0,0.0,1117.6058000000048
+1170,S-348,S-348,Pumalal - Los Laureles,-,-,0,0,Región de La Araucanía,False,1,358,0,6910.156300000002,16244.166700000002
+1174,S/R,,Cruce Ruta 5 - Púa (acceso Norte),-,-,0,0,Región de La Araucanía,False,1,31,0,0.0,442.8776000000071
+1175,R-821,R-821,Cruce Ruta 5 - Púa (acceso Sur),-,-,0,0,Región de La Araucanía,False,1,29,0,0.0,484.38679999999295
+1193,S/R,,Freire - Martínez De Rozas,-,-,0,0,Región de La Araucanía,False,1,101,0,0.0,4771.9168999999965
+1205,S-101-R,S-101-R,Pua - Cruce Ruta S-109,-,-,0,0,Región de La Araucanía,False,1,253,0,0.0,4192.630300000004
+1206,S-109,S-109,Cruce Longitudinal (pua) - Perquenco,-,-,0,0,Región de La Araucanía,False,1,177,0,0.0,5641.213099999994
+1210,S-604,S-604,Freire - Semillero Por San Juan,-,-,0,0,Región de La Araucanía,False,1,273,0,0.0,5158.214000000007
+1213,S/R,,Cruce  R-23 - Río Renaico,-,-,0,0,Región de La Araucanía,False,1,140,0,0.0,2413.312300000005
+1269,R-35,R-35,Cruce Longitudinal (collipulli) - Reserva Forestal,-,-,0,0,Región de La Araucanía,False,1,327,0,0.0,8200.0
+1273,S-13,S-13,Acceso Norte A Lautaro,-,-,0,0,Región de La Araucanía,False,1,36,0,0.00010000000474974513,1534.7504000000044
+1277,S-689,S-689,Sexta Faja,-,-,0,0,Región de La Araucanía,False,1,1031,0,0.0,25375.168900000004
+1331,R-400,R-400,Cruce Ruta 5 (pidima) - Los Sauces Por Saboya,-,-,0,0,Región de La Araucanía,False,1,1593,0,1600.0,1600.0
+1333,S/R,,Casa Teja - Huitrimalal,-,-,0,0,Región de La Araucanía,False,1,202,0,0.0,4313.0206000000035
+1334,S/R,,Cruce S-361 - Cruce S-379,-,-,0,0,Región de La Araucanía,False,1,30,0,0.0,513.6866000000009
+1354,S/R,,Cruce Longitudinal - Tercera Faja,-,-,0,0,Región de La Araucanía,False,1,14,0,2122.514500000005,2298.0004000000044
+1361,R-23,R-23,Cruce Ruta 5 (esperanza) - Huapitrío - La Suerte,-,-,0,0,Región de La Araucanía,False,1,542,0,0.00010000000474974513,10734.837899999999
+1386,S/R,,El Donguil - Afquintué,-,-,0,0,Región de La Araucanía,False,1,82,0,0.0,1839.3258999999962
+1388,S-70,S-70,Pitrufquen - Peule,-,-,0,0,Región de La Araucanía,False,1,282,0,0.0,18300.0
+1391,S-92,S-92,Gorbea - Cuesta Lastarria - Loncoche,-,-,0,0,Región de La Araucanía,False,1,210,0,18005.596300000005,32268.21239999999
+1393,S-270,S-270,Cruce Longitudinal - Colonia Lautaro,-,-,0,0,Región de La Araucanía,False,1,3,0,0.0,17.08770000000368
+1402,S/R,,Acceso Cunco Chico,-,-,0,0,Región de La Araucanía,False,1,36,0,0.0,801.6650999999983
+1403,S/R,,Cruce Ruta 5 - Pillánlelbun - Ruta 5,-,-,0,0,Región de La Araucanía,False,1,33,0,0.0,562.8926999999967
+1404,S/R,,Cruce Ruta 5 - Pillánlelbun - Ruta 5,-,-,0,0,Región de La Araucanía,False,1,24,0,1426.1637999999948,1942.8138999999937
+1412,S/R,,Cruce Ruta 5 - Las Violetas,-,-,0,0,Región de La Araucanía,False,1,56,0,1466.9741000000067,2679.9995999999956
+1413,S/R,,La Paz - Collico Alto,-,-,0,0,Región de La Araucanía,False,1,76,0,0.0,2043.227899999998
+1423,S/R,,-,-,-,0,0,Región de La Araucanía,False,1,17,0,4313.020999999993,4602.468999999997
+1466,R-49,R-49,Cruce Longitudinal (collipulli) - Termas De Pemehue,-,-,0,0,Región de La Araucanía,False,1,135,0,0.0,9533.4948
+1482,S-65,S-65,Pitrufquén - Ñancul,-,-,0,0,Región de La Araucanía,False,1,461,0,0.0,15143.251799999998
+1485,S-710,S-710,Gorbea - Los Galpones,-,-,0,0,Región de La Araucanía,False,1,22,0,1027.720199999996,1773.6328000000067
+1499,Ruta 181 CH,181,Cruce Longitudinal (Victoria) - Curacautín - Túnel Las Raíces - Paso Pino Hachado,-,-,0,0,Región de La Araucanía,False,1,15,0,0.0,2263.3041999999987
+1510,S-464,S-464,Cruce Longitudinal (quepe) - Boroa - Almagro,-,-,0,0,Región de La Araucanía,False,1,382,0,0.0,10200.0
+1515,S/R,,Calle Bustos,-,-,0,0,Región de La Araucanía,False,1,2,2,,
+1516,S/R,,Calle Ohiggins,-,-,0,0,Región de La Araucanía,False,1,2,0,0.0,477.0541999999987
+1535,S-722,S-722,Gorbea - Botacura,-,-,0,0,Región de La Araucanía,False,1,58,0,0.0,1234.9386999999988
+1553,S-81,S-81,Cuarta Faja,-,-,0,0,Región de La Araucanía,False,1,295,0,0.0,5366.023499999996
+1554,S/R,,Gorbea - Cerro Maulén,-,-,0,0,Región de La Araucanía,False,1,28,0,0.0,583.1086000000068
+1587,S-15,S-15,Lautaro - San Patricio,-,-,0,0,Región de La Araucanía,False,1,39,0,441.42669999999634,2247.454700000002
+1590,R-570,R-570,Pailahueque - Victoria Por La Estrella,-,-,0,0,Región de La Araucanía,False,1,141,0,11933.099600000001,15061.599400000006
+1592,S-107,S-107,Cruce Longitudinal - Perquenco,-,-,0,0,Región de La Araucanía,False,1,117,0,3.903099999995902,2297.3543999999965
+1601,S-92,S-92,Gorbea - Cuesta Lastarria - Loncoche,-,-,0,0,Región de La Araucanía,False,1,30,0,32268.21239999999,33701.01569999999
+1604,S-225,S-225,Cruce Ruta S-15 - Río Muco - Quintrilte,-,-,0,0,Región de La Araucanía,False,1,95,0,0.0,2800.7562000000034
+1613,R-820,R-820,Púa - Quino - Traiguén,-,-,0,0,Región de La Araucanía,False,1,420,18,0.0,11462.937000000005
+1627,S/R,,Padre Las Casas - Pulmahue,-,-,0,0,Región de La Araucanía,False,1,87,0,0.0,1422.8752999999997
+1629,S/R,,Cuesta Antigua De Malleco,-,-,0,0,Región de La Araucanía,False,1,61,0,0.0,870.8372999999992
+1630,S-785-T,S-785-T,Loncoche - Calafquén Por Pancoé Sector: Loncoche - Límite Regional,-,-,0,0,Región de La Araucanía,False,1,453,0,0.0,8450.035300000003
+1633,S-215,S-215,Temuco - Pillánlelbun - Lautaro,-,-,0,0,Región de La Araucanía,False,1,61,0,0.0,2071.1946999999927
+1634,S-215,S-215,Temuco - Pillánlelbun - Lautaro,-,-,0,0,Región de La Araucanía,False,1,35,0,8008.289000000004,8759.081999999995
+1660,R-571,R-571,Pailahueque - Fundo Callin,-,-,0,0,Región de La Araucanía,False,1,42,0,0.0,808.9565000000002
+1661,R-571,R-571,Pailahueque - Fundo Callin,-,-,0,0,Región de La Araucanía,False,1,30,0,1000.0,1549.0921999999991
+1662,S/R,,Cruce R-71 - Pailahueque,-,-,0,0,Región de La Araucanía,False,1,16,0,12072.574099999998,12364.999800000005
+1671,S-348,S-348,Pumalal - Los Laureles,-,-,0,0,Región de La Araucanía,False,1,135,0,0.0,4000.0
+1672,S-348,S-348,Pumalal - Los Laureles,-,-,0,0,Región de La Araucanía,False,1,97,0,4230.4986999999965,6910.156300000002
+1677,S-125-R,S-125-R,Cruce Longitudinal (puente Quillén) - Límite Provincial,-,-,0,0,Región de La Araucanía,False,1,9,0,0.0,464.95359999999346
+1696,S-227,S-227,Pillánlelbun - La Esmeralda - San Pablo,-,-,0,0,Región de La Araucanía,False,1,277,0,1908.9364999999962,7900.0
+1697,R-71,R-71,Inspector Fernandez - Termas De Tolhuaca,-,-,0,0,Región de La Araucanía,False,1,472,0,0.00010000000474974513,13977.617599999998
+1710,R-400,R-400,Cruce Ruta 5 (pidima) - Los Sauces Por Saboya,-,-,0,0,Región de La Araucanía,False,1,112,0,0.0,1600.0
+1714,R-50,R-50,Ercilla - Traiguén Por Quecheregüas,-,-,0,0,Región de La Araucanía,False,1,420,0,0.0,20000.0
+1716,R-571,R-571,Pailahueque - Fundo Callin,-,-,0,0,Región de La Araucanía,False,1,18,0,808.9565000000002,1000.0
+1726,R-825,R-825,Las Cardas - Selva Oscura,-,-,0,0,Región de La Araucanía,False,1,153,2,,3750.0
+1739,S-324,S-324,Cruce Ruta 5 - Rehuecoyán - Quino,-,-,0,0,Región de La Araucanía,False,1,117,0,0.0,3900.0
+1740,S-328,S-328,Cruce Longitudinal -  Rehuecoyan,-,-,0,0,Región de La Araucanía,False,1,155,0,0.00010000000474974513,4241.600600000005
+1745,S-348,S-348,Pumalal - Los Laureles,-,-,0,0,Región de La Araucanía,False,1,10,0,4000.0,4230.4986999999965
+1755,S-605,S-605,Quinta Faja,-,-,0,0,Región de La Araucanía,False,1,78,0,0.0,1999.9998999999953
+1783,S-900,S-900,Colonia Loncoche - Las Parcelas,-,-,0,0,Región de La Araucanía,False,1,62,0,0.00010000000474974513,1400.0
+1791,S/R,,Maquehue - Licanco,-,-,0,0,Región de La Araucanía,False,1,116,0,0.0,2000.0
+1797,S/R,,Maquehue - Licanco,-,-,0,0,Región de La Araucanía,False,1,8,0,3999.9995999999956,4149.999599999996
+1829,S-15,S-15,Lautaro - San Patricio,-,-,0,0,Región de La Araucanía,False,1,246,1,2247.454700000002,
+1834,S/R,,By Pass Temuco,-,-,0,0,Región de La Araucanía,False,1,760,0,0.0,20206.281000000003
+1835,S/R,,By Pass Temuco,-,-,0,0,Región de La Araucanía,False,1,671,0,0.0,20206.281000000003
+1836,S/R,,By Pass Gorbea,-,-,0,0,Región de La Araucanía,False,1,152,0,0.0,4168.349000000002
+1837,S/R,,By Pass Gorbea,-,-,0,0,Región de La Araucanía,False,1,142,0,0.0,4168.349000000002
+1887,S/R-Q-803,,Cruce Ruta 5 – Mulchén – Cruce Q-805,ÚNICA,U,438,4788,Región del Biobío,False,1,384,0,438.0,4788.0
+1888,S/R-Q-803,,Cruce Ruta 5 – Mulchén – Cruce Q-805,ÚNICA,U,0,438,Región del Biobío,False,1,47,0,0.0,438.0
+1894,S/R-N-237,,Cruce Ruta 5 (Virhuín) - Los Maitenes - Cruce N-151 (Las Rosas),ÚNICA,U,0,4192,Región de Ñuble,False,1,484,0,0.0,4192.0
+1896,S/R-N-242,,Cruce Ruta 5 (Virhuín Abajo) - El Espinal - Cruce N-240-M (Estación Ñiquén),ÚNICA,U,0,7880,Región de Ñuble,False,1,888,0,0.0,7880.0
+1898,S/R-N-253,,Cruce N-269 (Enlace Tiuquilemu) - San Gregorio (Calle Estado),ÚNICA,U,0,1370,Región de Ñuble,False,1,132,0,0.0,1370.0
+1899,S/R-N-253,,Cruce N-269 (Enlace Tiuquilemu) - San Gregorio (Calle Estado),ÚNICA,U,1370,3464,Región de Ñuble,False,1,228,0,1370.0,3464.0
+1900,S/R-N-253,,Cruce N-269 (Enlace Tiuquilemu) - San Gregorio (Calle Estado),ÚNICA,U,3464,11045,Región de Ñuble,False,1,843,0,3464.0,11045.0
+1903,S/R-N-423,,Cruce Av. Bernardo O'Higgins - Cruce N-425 (Variante Cato),ÚNICA,U,0,2417,Región de Ñuble,False,1,259,0,0.0,2417.0
+1926,S/R-N-206,,"Cruce Ruta 5 (San Gregorio, Paso Superior) - Pinancheo",ÚNICA,U,590,3015,Región de Ñuble,False,1,271,0,590.0,3015.0
+1942,S/R-N-248,,Virhuín Abajo - Las Miras - El Espinal,ÚNICA,U,0,6977,Región de Ñuble,False,1,879,0,0.0,6977.0
+1944,S/R-N-257,,Santa Josefina - Cruce N-269 (Tiuquilemu),ÚNICA,U,0,4300,Región de Ñuble,False,1,620,0,0.0,4300.0
+1949,S/R-N-276,,Cruce Ruta 5 (Virhuín) - San Pedro,ÚNICA,U,0,1844,Región de Ñuble,False,1,319,0,0.0,1844.0
+1954,S/R-N-287,,Cruce Ruta 5 (Buli Oriente) - Cruce N-223 (Paso Salas),ÚNICA,U,0,2419,Región de Ñuble,False,1,81,0,0.0,2419.0
+1957,S/R-N-297,,Cruce N-151 (Las Rosas) - Los Maitenes,ÚNICA,U,0,3280,Región de Ñuble,False,1,432,0,0.0,3280.0
+1972,S/R-N-348,,Tres Ochenta - Santa Filomena,ÚNICA,U,0,5486,Región de Ñuble,False,1,713,0,0.0,5486.0
+1978,S/R-N-359,,Cruce Enlace Ninquihue - Santa Isabel - Cruce N-349 (Menelhue),ÚNICA,U,0,2121,Región de Ñuble,False,1,398,0,0.0,2121.0
+1979,S/R-N-359,,Cruce Enlace Ninquihue - Santa Isabel - Cruce N-349 (Menelhue),ÚNICA,U,2121,2416,Región de Ñuble,False,1,9,0,2121.0,2416.0
+1980,S/R-N-364,,Santa Rosa - Las Higueras - Cruce N-366 (El Torreón),ÚNICA,U,0,3789,Región de Ñuble,False,1,643,0,0.0,3789.0
+1981,S/R-N-367,,Cruce Ruta 5 (Iansa) - Pichoco - Cruce N-349 (Carrizal),ÚNICA,U,300,4609,Región de Ñuble,False,1,801,0,300.0,4609.0
+1982,S/R-N-368,,Cruce Ruta 5 (Ninquihue) - Santa Rosa,ÚNICA,U,0,4567,Región de Ñuble,False,1,456,0,0.0,4567.0
+2037,S/R-N-562,,Ruta 5 (Paso Superior) - Las Rosas - Cruce N-560 (Parque Lantaño),ÚNICA,U,0,4395,Región de Ñuble,False,1,670,0,0.0,4395.0
+2038,S/R-N-563,,Cruce Ruta 5 (Bulnes Sur) - La Ballica - El Carolino,ÚNICA,U,0,6249,Región de Ñuble,False,1,652,0,0.0,6249.0
+2058,S/R-N-629,,Cruce N-69 (El Rosal) - El Nogal,ÚNICA,U,0,3397,Región de Ñuble,False,1,425,0,0.0,3397.0
+2061,S/R-N-666,,Cruce Ruta 5 (Paso Superior Larqui) - San Marcelo - Cruce N-682 (Maule),ÚNICA,U,0,5759,Región de Ñuble,False,1,723,0,0.0,5759.0
+2062,S/R-N-668,,Cruce N-676 (Rucapequén) - San Marcelo,ÚNICA,U,0,3636,Región de Ñuble,False,1,816,0,0.0,3636.0
+2067,S/R-N-687,,Cruce Ruta 5 (Enlace Santa Clara) - Las Rosas - Cruce N-599 (El Caracol),ÚNICA,U,0,12098,Región de Ñuble,False,1,1680,0,0.0,12098.0
+2086,S/R-N-771,,Santa Clara - Cruce N-773 (El Carmen),ÚNICA,U,320,2541,Región de Ñuble,False,1,325,0,320.0,2541.0
+2107,S/R-N-886,,Cruce N-884 (Santa Clara) - Laguna Santa Elena,ÚNICA,U,0,4050,Región de Ñuble,False,1,470,0,0.0,4050.0
+2121,S/R-N-206,,"Cruce Ruta 5 (San Gregorio, Paso Superior) - Pinancheo",ÚNICA,U,0,590,Región de Ñuble,False,1,77,0,0.0,590.0
+2123,S/R-N-367,,Cruce Ruta 5 (Iansa) - Pichoco - Cruce N-349 (Carrizal),ÚNICA,U,0,300,Región de Ñuble,False,1,69,0,0.0,300.0
+2134,S/R-N-771,,Santa Clara - Cruce N-773 (El Carmen),ÚNICA,U,0,320,Región de Ñuble,False,1,10,0,0.0,320.0
+2149,S/R-(L-453),,-,ÚNICA,ÚNICA,781,1770,Región del Maule,False,1,11,0,781.4128999999957,1770.365300000005
+2150,S/R-L-131,,Cruce L-157 - Pangal,ÚNICA,ÚNICA,0,1748,Región del Maule,False,1,57,0,-0.00019999999494757503,1748.115300000005
+2153,S/R-(L-453),,-,ÚNICA,ÚNICA,0,781,Región del Maule,False,1,2,0,0.0,781.4128999999957
+2157,S/R-L-253,,Circunvalación Norte a Linares,ÚNICA,ÚNICA,0,6500,Región del Maule,False,1,54,0,0.0,6500.0
+2164,S/R-(L-60),,Enlace a Ruta 5,ÚNICA,ÚNICA,0,129,Región del Maule,False,1,7,0,-0.00019999999494757503,129.12080000000424
+2170,URB_07001,,Camino Urbano De Longavi,ÚNICA,ÚNICA,0,981,Región del Maule,False,1,40,0,-0.00019999999494757503,981.0
+2183,S/R-(L-202),,Enlace L-202 - Ruta 5,ÚNICA,ÚNICA,0,303,Región del Maule,False,1,17,0,-0.00019999999494757503,303.0679999999993
+2184,S/R-L-250,,Cruce Ruta 5 (Hornillas) - Cruce L-220 (Emboque),ÚNICA,ÚNICA,0,1010,Región del Maule,False,1,28,0,0.0,1010.0
+2190,S/R-(K-607),,Cruce Ruta 5 (Caiván) - Cruce K-635 (Pirque),ÚNICA,ÚNICA,0,80,Región del Maule,False,1,2,0,0.0,80.0
+2192,S/R-L-117,,Variante Aeródromo San Javier,ÚNICA,ÚNICA,0,9490,Región del Maule,False,1,229,0,-0.00019999999494757503,9490.000199999995
+2210,S/R-K-215,,Porvenir - Los Robles,ÚNICA,ÚNICA,0,2972,Región del Maule,False,1,80,0,-0.00019999999494757503,2972.0001000000047
+2220,S/R-L-235,,Cruce L-25 (Puente Alto) - Cruce Ruta 5 (Guadantún),ÚNICA,ÚNICA,4940,7560,Región del Maule,False,1,113,0,4940.0,7559.999899999995
+2237,S/R-L-243,,Paine - Longaví,ÚNICA,ÚNICA,0,3339,Región del Maule,False,1,21,0,0.0,3339.0
+2239,S/R-L-135,,Cruce L-191 (Estación Villa Alegre) - Cruce Santa Lucía - Las Quintas,ÚNICA,ÚNICA,1780,5690,Región del Maule,False,1,95,0,1780.0,5690.0
+2241,S/R-(L-240),,"Enlace desde L-32 a Ruta 5. Antigua L-240, probablemente.",ÚNICA,ÚNICA,6468,6822,Región del Maule,False,1,18,0,6468.144499999995,6821.999899999995
+2265,S/R-L-217,,Cruce L-215 - Las Rosas,ÚNICA,ÚNICA,2700,3664,Región del Maule,False,1,42,0,2700.0,3663.6829
+2290,S/R-L-256,,La Higuera - Los Tiuques,ÚNICA,ÚNICA,0,7652,Región del Maule,False,1,207,0,-0.00019999999494757503,7652.000100000005
+2294,S/R-L-227,,Cruce L-225 - (Coironal) - La Puntilla,ÚNICA,ÚNICA,1800,3550,Región del Maule,False,1,20,0,1800.0,3550.0
+2296,S/R-L-142,,Cruce L-160 - Chanquico,ÚNICA,ÚNICA,0,1896,Región del Maule,False,1,111,0,-0.00019999999494757503,1895.999800000005
+2297,S/R-K-407,,Acceso a Panguilemito,ÚNICA,ÚNICA,0,2303,Región del Maule,False,1,60,0,-0.00019999999494757503,2302.9998999999953
+2322,S/R-L-655,,Cruce L-751 - La Lloica,ÚNICA,ÚNICA,1200,2877,Región del Maule,False,1,44,0,1200.0,2877.0
+2331,S/R-L-662,,Retiro -  San Ramón,ÚNICA,ÚNICA,0,6725,Región del Maule,False,1,153,0,-0.00019999999494757503,6725.0
+2338,S/R-L-619,,Retiro - Santa Delfina,ÚNICA,ÚNICA,0,12965,Región del Maule,False,1,325,0,-0.00019999999494757503,12965.0
+2343,S/R-L-617,,Huaso Chileno - El Progreso,ÚNICA,ÚNICA,0,7433,Región del Maule,False,1,214,0,-0.00019999999494757503,7433.0003
+2358,S/R-L-621,,Cruce Longitudinal - Los Robles,ÚNICA,ÚNICA,0,9424,Región del Maule,False,1,273,0,-0.00019999999494757503,9423.999800000005
+2372,S/R-Ruta 5,,Longitudinal Sur - Peor Es Nada - Perqui,ÚNICA,ÚNICA,150831,151312,Región del Maule,False,1,16,0,150831.0,151311.9999
+2376,S/R-L-514,,El Lucero - Paso Cuñao (Acceso Sur),ÚNICA,ÚNICA,0,8988,Región del Maule,False,1,276,0,-0.00019999999494757503,8988.455199999997
+2386,S/R-L-457,,Linares - Las Cuellar - Paso Jordán - Cruce Ruta 5 (La Isla),ÚNICA,ÚNICA,2220,3374,Región del Maule,False,1,39,0,2220.0,3373.9182
+2611,T-714,,Cruce Ruta 208 (Auquinco) - La Poza,ÚNICA,ÚNICA,804,1361,Región de Los Ríos,False,1,30,0,804.0,1361.0
+2625,S/R-T-414,,Cruce Ruta T-678 (Pichiquema Sur) - Kimel,ÚNICA,ÚNICA,0,3728,Región de Los Ríos,False,1,115,0,0.0,3728.0
+2628,S/R-T-711,,Cruce T-71 (Pampa Negrón) - Cruce T-851 (Puente Río Bueno),ÚNICA,ÚNICA,0,1442,Región de Los Ríos,False,1,13,0,0.0,1442.0
+2633,S/R-T-234,,Cruce T-210 - Variante Ciruelos - Cruce T-230,ÚNICA,ÚNICA,0,692,Región de Los Ríos,False,1,27,0,0.0,692.0
+2651,S/R-T-631,,Cruce Ruta 5 (El Trébol) - Cruce T-579 (Bellavista),ÚNICA,ÚNICA,0,8436,Región de Los Ríos,False,1,501,0,0.0,8436.0
+2663,S/R-Ruta 5,,Variante Pargua,SUR,D,0,97,Región de Los Lagos,False,1,6,0,0.0,97.0
+2664,S/R-Ruta 5,,Variante Pargua,SUR,D,97,6806,Región de Los Lagos,False,1,112,0,97.0,6806.0
+2665,S/R-Ruta 5,,Variante Pargua,SUR,I,0,6806,Región de Los Lagos,False,1,191,0,0.0,6806.0
+3307,G-360,,El Romeral,ÚNICA,U,1862,7390,Región Metropolitana de Santiago,False,1,927,0,1862.0,7390.0
+3367,S/R-G-524,,Fátima - Viluco,ÚNICA,U,0,1463,Región Metropolitana de Santiago,False,1,75,0,0.0,1463.0
+3369,S/R-G-564,,Las Bodegas Norte,ÚNICA,U,0,180,Región Metropolitana de Santiago,False,1,4,0,0.0,180.0
+3372,S/R-G-549,,Las Vertientes,ÚNICA,U,0,2032,Región Metropolitana de Santiago,False,1,24,0,0.0,2032.0
+3384,S/R-G-567,,Juan Pablo II - Colonias de Paine,ÚNICA,U,0,998,Región Metropolitana de Santiago,False,1,90,0,0.0,998.0
+3398,S/R-G-563,,Los Acacios,ÚNICA,U,0,1012,Región Metropolitana de Santiago,False,1,25,0,0.0,1012.0
+3407,S/R-G-509,,Callejón 6 Oriente,ÚNICA,U,0,567,Región Metropolitana de Santiago,False,1,10,0,0.0,567.0
+3415,S/R-G-569,,Uno Norte,ÚNICA,U,0,1262,Región Metropolitana de Santiago,False,1,17,0,0.0,1262.0
+3424,S/R-G-358,,Camino Ribereño Sur de Río Maipo,ÚNICA,U,0,7320,Región Metropolitana de Santiago,False,1,202,0,0.0,7320.0
+3447,S/R-G-354,,El Milagro de Nos,ÚNICA,U,0,464,Región Metropolitana de Santiago,False,1,12,0,0.0,464.0
+3488,S/R-G-552,,Costanera Poniente Estero Angostura,ÚNICA,U,0,2731,Región Metropolitana de Santiago,False,1,221,0,0.0,2731.0
+3494,S/R-G-554,,Las Bodegas Sur,ÚNICA,U,0,580,Región Metropolitana de Santiago,False,1,13,0,0.0,580.0
+3511,S/R-G-503,,Vizcaya,ÚNICA,U,0,555,Región Metropolitana de Santiago,False,1,26,0,0.0,555.0
+3512,S/R-G-507,,Bascuñán,ÚNICA,U,0,576,Región Metropolitana de Santiago,False,1,21,0,0.0,576.0
+3518,S/R-G-566,,Champa - Collipeumo,ÚNICA,U,0,1000,Región Metropolitana de Santiago,False,1,73,0,0.0,1000.0
+3519,S/R-G-566,,Champa - Collipeumo,ÚNICA,U,1000,1800,Región Metropolitana de Santiago,False,1,53,0,1000.0,1800.0
+3520,S/R-G-566,,Champa - Collipeumo,ÚNICA,U,1800,2600,Región Metropolitana de Santiago,False,1,42,0,1800.0,2600.0
+3554,Bypass Ruta 5,,Bypass Ruta 5 (Rancagua),ÚNICA,D,0,26512,Región del Libertador General Bernardo O'Higgins,False,1,1918,0,0.0,26512.0
+3555,Bypass Ruta 5,,Bypass Ruta 5 (Rancagua),ÚNICA,I,0,26551,Región del Libertador General Bernardo O'Higgins,False,1,1711,0,0.0,26551.0
+3556,S/R-H-551,,Cruce Ruta 5 - Túnel Angostura ,ÚNICA,U,0,1117,Región del Libertador General Bernardo O'Higgins,False,1,36,0,0.0,1117.0
+3558,S/R-H-147,,Cruce H-145 - El Arrayán,ÚNICA,U,0,728,Región del Libertador General Bernardo O'Higgins,False,1,109,0,0.0,728.0
+3559,S/R-H-147,,Cruce H-145 - El Arrayán,ÚNICA,U,728,2623,Región del Libertador General Bernardo O'Higgins,False,1,260,0,728.0,2623.0
+3565,S/R-H-410,,Cruce H-40 (Gultro) - Los Lirios,ÚNICA,U,0,787,Región del Libertador General Bernardo O'Higgins,False,1,11,0,0.0,787.0
+3566,S/R-H-451,,Cruce H-409 - Cruce H-455 (Lo Hermógenes),ÚNICA,U,0,1862,Región del Libertador General Bernardo O'Higgins,False,1,279,0,0.0,1862.0
+3567,S/R-H-451,,Cruce H-409 - Cruce H-455 (Lo Hermógenes),ÚNICA,U,1862,4349,Región del Libertador General Bernardo O'Higgins,False,1,309,0,1862.0,4349.0
+3596,S/R-I-922,,Cruce I-890 - Santa Teresa,ÚNICA,U,0,1808,Región del Libertador General Bernardo O'Higgins,False,1,292,0,0.0,1808.0
+3598,S/R-I-926,,Cruce I-890 -  Anibal Pinto,ÚNICA,U,0,1799,Región del Libertador General Bernardo O'Higgins,False,1,316,0,0.0,1799.0
+3599,S/R-I-930,,Cruce I-890 - Lo Molina,ÚNICA,U,0,1928,Región del Libertador General Bernardo O'Higgins,False,1,373,0,0.0,1928.0001000000047
+3615,S/R-H-172,,Cruce H-10 - Cárcel de Menores,ÚNICA,U,0,871,Región del Libertador General Bernardo O'Higgins,False,1,180,0,0.0,871.0
+3635,S/R-H-414,,Cruce Ruta 5 (Caletera) - Cruce H-40,ÚNICA,U,0,630,Región del Libertador General Bernardo O'Higgins,False,1,112,0,0.0,630.0
+3636,S/R-H-414,,Cruce Ruta 5 (Caletera) - Cruce H-40,ÚNICA,U,630,3587,Región del Libertador General Bernardo O'Higgins,False,1,576,0,630.0,3587.0
+3637,S/R-H-421,,Cruce H-409 - El Vaticano,ÚNICA,U,0,1321,Región del Libertador General Bernardo O'Higgins,False,1,193,0,0.0,1321.0
+3638,S/R-H-421,,Cruce H-409 - El Vaticano,ÚNICA,U,1321,3441,Región del Libertador General Bernardo O'Higgins,False,1,339,0,1321.0,3441.0
+3639,S/R-H-432,,Cruce Ruta 5 - Cruce H-418,ÚNICA,U,0,5507,Región del Libertador General Bernardo O'Higgins,False,1,647,0,0.0,5507.0
+3640,S/R-H-433,,Cruce H-409 - Las Cabras,ÚNICA,U,0,4506,Región del Libertador General Bernardo O'Higgins,False,1,727,0,0.0,4506.0
+3641,S/R-H-444,,Cruce Ruta 5 (Requinoa) - Santa Lucila,ÚNICA,U,940,4780,Región del Libertador General Bernardo O'Higgins,False,1,667,0,940.0,4780.0
+3642,S/R-H-446,,El Polo - Portones sur,ÚNICA,U,0,667,Región del Libertador General Bernardo O'Higgins,False,1,158,0,0.0,667.0
+3650,S/R-H-464,,Cruce Ruta 5 (Caletera) - Los Choapinos,ÚNICA,U,0,188,Región del Libertador General Bernardo O'Higgins,False,1,35,0,0.0,188.0
+3651,S/R-H-496,,Los Choapinos,ÚNICA,U,0,1673,Región del Libertador General Bernardo O'Higgins,False,1,237,0,0.0,1673.0
+3654,S/R-H-534,,Cruce H-530 - Acceso a Pueblo Hundido,ÚNICA,U,0,896,Región del Libertador General Bernardo O'Higgins,False,1,167,0,0.0,896.0
+3657,S/R-H-702,,Cruce Ruta 66 - Limahue,ÚNICA,U,1939,2853,Región del Libertador General Bernardo O'Higgins,False,1,180,0,1939.0,2853.0
+3697,S/R-I-411,,Cruce I-45 (Pedehue) - Cruce I-45 (Paradero 22),ÚNICA,U,0,898,Región del Libertador General Bernardo O'Higgins,False,1,140,0,0.0,898.0
+3698,S/R-I-411,,Cruce I-45 (Pedehue) - Cruce I-45 (Paradero 22),ÚNICA,U,898,2504,Región del Libertador General Bernardo O'Higgins,False,1,353,0,898.0,2504.0
+3713,S/R-I-757,,Cruce I-725 - Fundo,ÚNICA,U,0,1145,Región del Libertador General Bernardo O'Higgins,False,1,134,0,0.0,1145.0
+3714,S/R-I-757,,Cruce I-725 - Fundo,ÚNICA,U,1145,3999,Región del Libertador General Bernardo O'Higgins,False,1,461,0,1145.0,3999.0
+3720,S/R-H-444,,Cruce Ruta 5 (Requinoa) - Santa Lucila,ÚNICA,U,0,940,Región del Libertador General Bernardo O'Higgins,False,1,195,0,0.0,940.0
+3725,S/R-H-702,,Cruce Ruta 66 - Limahue,ÚNICA,U,1213,1939,Región del Libertador General Bernardo O'Higgins,False,1,89,0,1213.0,1939.0
+3737,S/R-H-225,,La Palma chica (Cancha) ,ÚNICA,U,0,83,Región del Libertador General Bernardo O'Higgins,False,1,2,0,0.0,83.0
+3746,S/R-H-123,,Cruce Ruta 5 - San Pedro,ÚNICA,U,0,2446,Región del Libertador General Bernardo O'Higgins,False,1,480,0,0.0,2446.0
+3747,S/R-H-116,,Cruce H-10 - Chitakelindo,ÚNICA,U,0,1493,Región del Libertador General Bernardo O'Higgins,False,1,160,0,0.0,1493.0
+3752,S/R-H-436,,Cruce Ruta 5 - El Polo,ÚNICA,U,0,1593,Región del Libertador General Bernardo O'Higgins,False,1,332,0,0.0,1593.0
+3766,S/R-H-473,,Cruce H-475 - Las Hormigas,ÚNICA,U,0,640,Región del Libertador General Bernardo O'Higgins,False,1,12,0,0.0,640.0
+3767,S/R-H-413,,Cruce H-35 (Siete Puentes) - Santa Luisa,ÚNICA,U,0,1539,Región del Libertador General Bernardo O'Higgins,False,1,350,0,0.0,1539.0
+3769,S/R-H-223,,Cruce Ruta 5 - La Palma chica,ÚNICA,U,0,975,Región del Libertador General Bernardo O'Higgins,False,1,206,0,0.0,975.0
+3771,S/R-H-184,,Cruce H-10 - Las Mercedes,ÚNICA,U,0,5299,Región del Libertador General Bernardo O'Higgins,False,1,892,0,0.0,5299.0
+3782,S/R-H-229,,Cruce Ruta 5 - El Porvenir,ÚNICA,U,0,1519,Región del Libertador General Bernardo O'Higgins,False,1,242,0,0.0,1519.0
+3783,S/R-H-175,,Cruce H-11 - Nogales,ÚNICA,U,0,1858,Región del Libertador General Bernardo O'Higgins,False,1,263,0,0.0,1858.0
+3786,S/R-H-477,,Cruce H-475 - Fundo,ÚNICA,U,0,911,Región del Libertador General Bernardo O'Higgins,False,1,7,0,0.0,911.0
+3789,S/R-H-1546,,Cruce H-546 - Villa Las Hojas,ÚNICA,U,0,358,Región del Libertador General Bernardo O'Higgins,False,1,9,0,0.0,358.0
+3795,S/R-Ruta 5,,"Longitudinal Sur, Sector: Túnel Angostura - Peor es Nada",ÚNICA,U,0,801,Región del Libertador General Bernardo O'Higgins,False,1,49,0,0.0,801.0
+3800,S/R-H-466,,Cruce Ruta 5 (Caletera) - Cruce Ruta 5 (Caletera El Retiro),ÚNICA,U,0,938,Región del Libertador General Bernardo O'Higgins,False,1,161,0,0.0,938.0
+3803,S/R-H-351,,Cruce Ruta 5 - Cruce H-35 (Siete Puentes),ÚNICA,U,0,2316,Región del Libertador General Bernardo O'Higgins,False,1,344,0,0.0,2316.0
+3806,S/R-H-532,,Cruce Ruta 5 (Caletera Poniente) - Cruce H-530,ÚNICA,U,0,1477,Región del Libertador General Bernardo O'Higgins,False,1,286,0,0.0,1477.0
+3812,S/R-H-1405,,Cruce Ruta 5 - Cruce H-405 (El Maitén),ÚNICA,U,0,145,Región del Libertador General Bernardo O'Higgins,False,1,12,0,0.0,145.0
+3826,S/R-I-1230,,Cruce I-90-H - Las Parcelas,ÚNICA,U,0,2141,Región del Libertador General Bernardo O'Higgins,False,1,422,0,0.0,2141.0
+3842,S/R-I-211,,Cruce I-181 - Fundo del Medio - Cruce I-151,ÚNICA,U,0,4890,Región del Libertador General Bernardo O'Higgins,False,1,556,0,0.0,4890.0
+3942,S/R-H-513,,Cruce H-409 (Rosario) - Estadio,ÚNICA,U,0,1622,Región del Libertador General Bernardo O'Higgins,False,1,347,0,0.0,1622.0
+3969,S/R-H-10,,Cruce Ruta 5 (Paso superior Peuco) - Av.Salvador Allende,ÚNICA,U,153,994,Región del Libertador General Bernardo O'Higgins,False,1,102,0,153.0,994.0
+3970,S/R-H-10,,Cruce Ruta 5 (Paso superior Peuco) - Av.Salvador Allende,ÚNICA,U,994,1390,Región del Libertador General Bernardo O'Higgins,False,1,31,0,994.0,1390.0
+3971,S/R-H-10,,Cruce Ruta 5 (Paso superior Peuco) - Av.Salvador Allende,ÚNICA,U,0,153,Región del Libertador General Bernardo O'Higgins,False,1,6,0,0.0,153.0
+3973,S/R-H-177,,Cruce Ruta 5 - Cerro  La Compañia,ÚNICA,U,39,1515,Región del Libertador General Bernardo O'Higgins,False,1,206,0,39.0,1515.0
+3977,S/R-H-110,,Cruce H-10 - Cancha Carrera ,ÚNICA,U,0,862,Región del Libertador General Bernardo O'Higgins,False,1,181,0,0.0,862.0
+3980,S/R-H-1186,,Cruce H-10 - Cuarta Hijuela,ÚNICA,U,0,1177,Región del Libertador General Bernardo O'Higgins,False,1,209,0,0.0,1177.0
+3984,S/R-H-177,,Cruce Ruta 5 - Cerro  La Compañia,ÚNICA,U,0,39,Región del Libertador General Bernardo O'Higgins,False,1,12,0,0.0,39.0
+3987,S/R-H-227,,Cruce Ruta 5 - La Palma grande,ÚNICA,U,0,1065,Región del Libertador General Bernardo O'Higgins,False,1,204,0,0.0,1065.0
+3990,S/R-H-221,,Cruce H-15 - Nuevos campos,ÚNICA,U,1784,2120,Región del Libertador General Bernardo O'Higgins,False,1,3,0,1784.0,2120.0
+3995,S/R-H-221,,Cruce H-15 - Nuevos campos,ÚNICA,U,1507,1784,Región del Libertador General Bernardo O'Higgins,False,1,60,0,1507.0,1784.0
+3996,S/R-H-227,,Cruce Ruta 5 - La Palma grande,ÚNICA,U,1065,1356,Región del Libertador General Bernardo O'Higgins,False,1,76,0,1065.0,1356.0
+4001,S/R-H-411,,Cruce H-405 - Candíl,ÚNICA,U,1765,5760,Región del Libertador General Bernardo O'Higgins,False,1,637,0,1765.0,5760.0
+4006,S/R-H-407,,Cruce H-405 - El Maitén,ÚNICA,U,10,1892,Región del Libertador General Bernardo O'Higgins,False,1,378,0,10.0,1892.0
+4019,S/R-H-407,,Cruce H-405 - El Maitén,ÚNICA,U,0,10,Región del Libertador General Bernardo O'Higgins,False,1,8,0,0.0,10.0
+4020,S/R-H-411,,Cruce H-405 - Candíl,ÚNICA,U,0,1517,Región del Libertador General Bernardo O'Higgins,False,1,222,0,0.0,1517.0
+4021,S/R-H-411,,Cruce H-405 - Candíl,ÚNICA,U,1517,1765,Región del Libertador General Bernardo O'Higgins,False,1,48,0,1517.0,1765.0
+4023,S/R-H-462,,Cruce H-450 - Las Rosas,ÚNICA,U,0,2200,Región del Libertador General Bernardo O'Higgins,False,1,289,0,0.0,2200.0
+4024,S/R-H-441,,Cruce H-409 - Chumaquito,ÚNICA,U,0,6634,Región del Libertador General Bernardo O'Higgins,False,1,717,0,0.0,6634.0
+4025,S/R-H-523,,Cruce H-511 - Callejón lo Mendoza,ÚNICA,U,0,993,Región del Libertador General Bernardo O'Higgins,False,1,164,0,0.0,993.0
+4027,S/R-H-492,,Cruce Ruta 5 (Caletera Cancha) - Los Choapinos,ÚNICA,U,588,1542,Región del Libertador General Bernardo O'Higgins,False,1,154,0,588.0,1542.0
+4028,S/R-H-431,,Los Quillayes,ÚNICA,U,0,5631,Región del Libertador General Bernardo O'Higgins,False,1,743,0,0.0,5631.0
+4033,S/R-H-492,,Cruce Ruta 5 (Caletera Cancha) - Los Choapinos,ÚNICA,U,0,588,Región del Libertador General Bernardo O'Higgins,False,1,108,0,0.0,588.0
+4042,S/R-H-671,,Cruce H-611 - San Luís,ÚNICA,U,900,2532,Región del Libertador General Bernardo O'Higgins,False,1,257,0,900.0,2532.0
+4049,S/R-H-671,,Cruce H-611 - San Luís,ÚNICA,U,0,542,Región del Libertador General Bernardo O'Higgins,False,1,93,0,0.0,542.0
+4050,S/R-H-671,,Cruce H-611 - San Luís,ÚNICA,U,542,900,Región del Libertador General Bernardo O'Higgins,False,1,45,0,542.0,900.0
+4135,S/R-I-529,,Cruce Ruta 5 - Las Mariposas,ÚNICA,U,506,2301,Región del Libertador General Bernardo O'Higgins,False,1,351,0,506.0,2301.0
+4147,S/R-I-529,,Cruce Ruta 5 - Las Mariposas,ÚNICA,U,0,506,Región del Libertador General Bernardo O'Higgins,False,1,92,0,0.0,506.0
+4167,S/R-I-932,,Cruce I-890 - Porvenir,ÚNICA,U,15,1371,Región del Libertador General Bernardo O'Higgins,False,1,358,0,15.0,1371.0
+4184,S/R-I-932,,Cruce I-890 - Porvenir,ÚNICA,U,0,15,Región del Libertador General Bernardo O'Higgins,False,1,11,0,0.0,15.0
+4194,S/R-L-633,,Cruce L-31 (Puente Cárcamo) - El Progreso,ÚNICA,U,0,2521,Región del Maule,False,1,64,0,-0.00019999999494757503,2520.820000000007
+4213,S/R-N-345,,Cruce Ruta 5 (Iansa) - Chorrillos - Cruce N-349 (Menelhue),ÚNICA,U,0,600,Región de Ñuble,False,1,21,0,0.0,600.0
+4214,S/R-N-345,,Cruce Ruta 5 (Iansa) - Chorrillos - Cruce N-349 (Menelhue),ÚNICA,U,600,2013,Región de Ñuble,False,1,44,0,600.0,2013.0
+4654,Ruta 177,177,Cruce Ruta 5 (Rarinco) - Los Ángeles (Av. Las Industrias) - Cruce Ruta 5 (Duqueco),ÚNICA,U,0,17151,Región del Biobío,False,1,398,0,0.0,17151.0
+4670,Q-953,Q-953,Cruce Q-955 - Cruce Q-805 (Mulchén),ÚNICA,U,0,2148,Región del Biobío,False,1,99,0,0.0,2148.0
+4680,Q-520,Q-520,Cruce Ruta 5 (Paso Superior Paillihue) - Pata de Gallina - Cruce Q-530 (El Morro),ÚNICA,U,1045,5740,Región del Biobío,False,1,443,0,1045.0,5740.0
+4684,Q-805,Q-805,Cruce Q-953 (Mulchén) - Caledonia,ÚNICA,U,0,2094,Región del Biobío,False,1,80,0,0.0,2094.0
+4691,Q-90,Q-90,Cruce Ruta 5 - Cruce Q-34 (Laja),ÚNICA,U,0,35599,Región del Biobío,False,1,869,0,0.0,35599.0
+4696,Q-119,Q-119,Cruce Ruta 5 (Sector Chillancito) - Salto del Laja - Cruce Ruta 5 (Lima),ÚNICA,U,0,1387,Región del Biobío,False,1,39,0,0.0,1387.0
+4727,Q-821,Q-821,Cruce Ruta 5 (Chumulco) - Cruce Q-955 (Salto El Rehuén),ÚNICA,U,0,2446,Región del Biobío,False,1,57,0,0.0,2446.0
+4742,Q-901-N,Q-901-N,Cruce Enlace Cabrero - Colicheo - Ranchillo - Cruce Calle Esmeralda (Yungay),ÚNICA,U,0,5798,Región del Biobío,False,1,120,0,0.0,5798.0
+4743,Q-119,Q-119,Cruce Ruta 5 (Sector Chillancito) - Salto del Laja - Cruce Ruta 5 (Lima),ÚNICA,U,1387,5858,Región del Biobío,False,1,424,0,1387.0,5858.0
+4764,Q-110,Q-110,Cruce Ruta 5 (Paso Superior) - El Pino - Cruce Q-300 (Los Troncos),ÚNICA,U,0,510,Región del Biobío,False,1,13,0,0.0,510.0
+4781,Q-606,Q-606,Cruce Ruta 5 - Cruce Q-60-O (Monte Águila),ÚNICA,U,0,5919,Región del Biobío,False,1,100,0,0.0,5919.0
+4790,Ruta 180,180,"Cruce Ruta 5 (By Pass Los Ángeles) - Renaico - Huequén, Sector: Los Ángeles - Renaico",ÚNICA,U,0,34114,Región del Biobío,False,1,2547,0,0.0,34114.0
+4824,Q-531,Q-531,Cruce Ruta 177 (Poco a Poco) - Canal Coreo,ÚNICA,U,0,3601,Región del Biobío,False,1,402,0,0.0,3601.0
+4825,Q-770,Q-770,Cruce Ruta 5 - Estero Batuco,ÚNICA,U,0,530,Región del Biobío,False,1,30,0,0.0,530.0
+4830,Q-274,Q-274,Cruce Ruta 180 - Cruce Q-270 (Estación Arrayán),ÚNICA,U,0,1091,Región del Biobío,False,1,210,0,0.0,1091.0
+4835,Q-80,Q-80,Cruce Ruta 5 (Mulchén) - Negrete - Coihue,ÚNICA,U,0,10429,Región del Biobío,False,1,321,0,0.0,10429.0
+4837,Q-105,Q-105,Cruce Ruta 177 (Los Ángeles) - Santa Clara - Cruce Q-119 (Salto del Laja),ÚNICA,U,47158,49758,Región del Biobío,False,1,55,0,47158.0,49758.0
+4838,Q-521,Q-521,Cruce Ruta 5 (Paso Superior Paillihue) - Cruce Ruta 178 (El Resbalón),ÚNICA,U,0,1435,Región del Biobío,False,1,127,0,0.0,1435.0
+4858,Q-955,Q-955,Mulchén (Calle Barros Arana) - Reservas Forestales,ÚNICA,U,0,13077,Región del Biobío,False,1,1000,0,0.0,13077.0
+4860,Q-602,Q-602,Cruce Ruta 5 (La Colonia) - Cruce Q-60-O (Monte Águila),ÚNICA,U,0,4744,Región del Biobío,False,1,77,0,0.0,4744.0
+4863,Q-541,Q-541,Cruce Ruta 5 - La Colonia - Cruce Q-555 (Charrúa),ÚNICA,U,0,5193,Región del Biobío,False,1,89,0,0.0,5193.0
+4870,Q-125,Q-125,Cruce Ruta 5 (La Mona) - Higuerilla,ÚNICA,U,0,3844,Región del Biobío,False,1,540,0,0.0,3844.0
+4883,Q-896,Q-896,Cruce Ruta 5 (Los Pinos) - Cruce Q-860 (Manzanaché),ÚNICA,U,0,17418,Región del Biobío,False,1,483,0,0.0,17418.0
+4885,Q-110,Q-110,Cruce Ruta 5 (Paso Superior) - El Pino - Cruce Q-300 (Los Troncos),ÚNICA,U,1775,1957,Región del Biobío,False,1,5,0,1775.0,1957.0
+4887,Ruta 178,178,Cruce Ruta 5 (By Pass Los Ángeles) - Los Ángeles (Sector Iansa),ÚNICA,U,0,3728,Región del Biobío,False,1,266,0,0.0,3728.0
+4888,Q-262,Q-262,Cruce Ruta 5 (Los Ángeles) - Cruce Q-34 (Millantú),ÚNICA,U,0,9500,Región del Biobío,False,1,1199,0,0.0,9500.0
+4906,Q-599,Q-599,Cruce Ruta 5 - Cruce Q-555 (Charrúa),ÚNICA,U,0,5128,Región del Biobío,False,1,76,0,0.0,5128.0
+4915,Q-300,Q-300,Cruce Ruta 5 (La Mona) - Cruce Q-200 (Álamo Huacho),ÚNICA,U,0,7835,Región del Biobío,False,1,166,0,0.0,7835.0
+4920,Q-825,Q-825,Cruce Ruta 5 (Chumulco) - Maica,ÚNICA,U,0,13180,Región del Biobío,False,1,1100,0,0.0,13180.0
+4928,Q-611,Q-611,Cruce Ruta 5 (Enlace La Isla) - Cruce Q-619 (Acceso Norte a San Carlos de Purén),ÚNICA,U,0,4543,Región del Biobío,False,1,436,0,0.0,4543.0
+4932,Q-520,Q-520,Cruce Ruta 5 (Paso Superior Paillihue) - Pata de Gallina - Cruce Q-530 (El Morro),ÚNICA,U,0,1045,Región del Biobío,False,1,99,0,0.0,1045.0
+4941,Q-129,Q-129,Cruce Ruta 5 (Paso Superior) - Cruce Q-119 (El Pinar),ÚNICA,U,0,1494,Región del Biobío,False,1,50,0,0.0,1494.0
+4942,Q-569,Q-569,Cruce Ruta 5 (Las Tejas) - Pillancó,ÚNICA,U,0,2800,Región del Biobío,False,1,347,0,0.0,2800.0
+4943,Q-650,Q-650,Cruce Ruta 5 (Licura) - Munilque - Cruce Q-80 (Negrete),ÚNICA,U,0,4400,Región del Biobío,False,1,154,0,0.0,4400.0
+4947,Q-270,Q-270,Cruce Ruta 180 (Arrayán) - Las Violetas,ÚNICA,U,0,6850,Región del Biobío,False,1,168,0,0.0,6850.0
+4951,Q-110,Q-110,Cruce Ruta 5 (Paso Superior) - El Pino - Cruce Q-300 (Los Troncos),ÚNICA,U,510,1775,Región del Biobío,False,1,24,0,510.0,1775.0
+4959,Q-200,Q-200,Cruce Ruta 5 (Los Ángeles) - María Dolores - Cruce Q-90 (Puente Perales),ÚNICA,U,0,8422,Región del Biobío,False,1,216,0,0.0,8422.0
+4960,Q-555,Q-555,Cruce Ruta 5 (La Mata Norte) - Cruce Q-97-N (Charrúa),ÚNICA,U,0,3535,Región del Biobío,False,1,85,0,0.0,3535.0
+4971,Q-550,Q-550,Cruce Ruta 5 (Duqueco) - La Isla,ÚNICA,U,0,6047,Región del Biobío,False,1,605,0,0.0,6047.0
+4976,Q-631,Q-631,Cruce Ruta 5 (San Carlos de Purén) - Cruce Q-61 (Mañil),ÚNICA,U,0,6263,Región del Biobío,False,1,153,0,0.0,6263.0
+4977,Q-766,Q-766,Cruce Q-90 - Estero Batuco,ÚNICA,U,0,3653,Región del Biobío,False,1,63,0,0.0,3653.0
+5019,Q-115,Q-115,Cruce Q-105 (Puente Curanadú) - Cruce Q-105 (Salto del Laja),ÚNICA,U,11259,19785,Región del Biobío,False,1,116,0,11259.0,19785.0
+5028,Q-97-N,Q-97-N,Cruce Ruta 5 (Cabrero) - Cholguán - Cruce N-59-Q (Yungay),ÚNICA,U,313,12606,Región del Biobío,False,1,823,0,313.0,12605.699999999997
+5033,Q-524,Q-524,Cruce Q-520 (Campamento Canalistas) - La Isla,ÚNICA,U,0,6244,Región del Biobío,False,1,698,0,0.0,6244.0
+5037,Q-97-N,Q-97-N,Cruce Ruta 5 (Cabrero) - Cholguán - Cruce N-59-Q (Yungay),ÚNICA,U,0,313,Región del Biobío,False,1,12,0,0.0,313.0
+5067,Q-619,Q-619,Cruce Ruta 5 - San Carlos de Purén - Cruce Ruta 5,ÚNICA,U,0,3725,Región del Biobío,False,1,11,0,0.0,3725.0
+5070,Q-573-N,Q-573-N,Cruce Q-97-N (Cholguán) - Pangal del Laja - Cruce Q-119 (Escuela Saltos del Laja),ÚNICA,U,24014,29249,Región del Biobío,False,1,477,0,24013.876600000003,29249.0
+5087,Ruta 146,146,Cruce Ruta 5 (Cabrero) - Cruce Ruta 150 (Concepción),ÚNICA,U,0,72854,Región del Biobío,False,1,10468,0,0.0,72854.0
+5113,Ruta 5,,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,False,1,293,0,662485.4206,681155.9244
+5114,Ruta 5,,Longitudinal Sur Sector: Río Renaico - Límite Regional,-,-,0,0,Región de La Araucanía,False,1,306,0,662374.3342,681211.1335
+5117,N-48-O,N-48-O,"Cruce Ruta 5 (Bulnes) - Cruce Ruta 146, Sector: Bulnes - Límite Regional (Puente Queime)",ÚNICA,U,0,917,Región de Ñuble,False,1,133,0,0.0,917.0
+5118,N-48-O,N-48-O,"Cruce Ruta 5 (Bulnes) - Cruce Ruta 146, Sector: Bulnes - Límite Regional (Puente Queime)",ÚNICA,U,917,1419,Región de Ñuble,False,1,11,0,917.0,1419.0
+5119,N-48-O,N-48-O,"Cruce Ruta 5 (Bulnes) - Cruce Ruta 146, Sector: Bulnes - Límite Regional (Puente Queime)",ÚNICA,D,1419,1979,Región de Ñuble,False,1,17,0,1419.0,1979.0
+5120,N-48-O,N-48-O,"Cruce Ruta 5 (Bulnes) - Cruce Ruta 146, Sector: Bulnes - Límite Regional (Puente Queime)",ÚNICA,U,1979,28269,Región de Ñuble,False,1,3917,0,1979.0,28269.0
+5136,N-48-O,N-48-O,"Cruce Ruta 5 (Bulnes) - Cruce Ruta 146, Sector: Bulnes - Límite Regional (Puente Queime)",ÚNICA,I,1419,1979,Región de Ñuble,False,1,17,0,1419.0,1979.0
+5145,Ruta 152,152,"Acceso Norte a Concepción, Sector: Ruta 5 (Paso Superior) - Límite Regional (El Milagro)",ÚNICA,D,0,36790,Región de Ñuble,False,1,1388,0,0.0,36790.0
+5146,Ruta 152,152,"Acceso Norte a Concepción, Sector: Ruta 5 (Paso Superior) - Límite Regional (El Milagro)",ÚNICA,I,0,36790,Región de Ñuble,False,1,3630,0,0.0,36790.0
+5180,N-245,N-245,Cruce Ruta 5 (San Gregorio) - Colvindo - Cruce N-151 (Chacay),ÚNICA,U,0,490,Región de Ñuble,False,1,58,0,0.0,490.0
+5182,N-245,N-245,Cruce Ruta 5 (San Gregorio) - Colvindo - Cruce N-151 (Chacay),ÚNICA,U,490,8000,Región de Ñuble,False,1,819,0,490.0,8000.0
+5186,N-266,N-266,Cruce N-250 (Enlace Tiuquilemu) - Gaona - San Carlos (Cruce Calle Itihue),ÚNICA,U,0,1500,Región de Ñuble,False,1,151,0,0.0,1500.0
+5187,N-266,N-266,Cruce N-250 (Enlace Tiuquilemu) - Gaona - San Carlos (Cruce Calle Itihue),ÚNICA,U,5474,9080,Región de Ñuble,False,1,357,0,5474.0,9080.0
+5188,N-266,N-266,Cruce N-250 (Enlace Tiuquilemu) - Gaona - San Carlos (Cruce Calle Itihue),ÚNICA,U,3100,5474,Región de Ñuble,False,1,279,0,3100.0,5474.0
+5189,N-266,N-266,Cruce N-250 (Enlace Tiuquilemu) - Gaona - San Carlos (Cruce Calle Itihue),ÚNICA,U,1500,3100,Región de Ñuble,False,1,192,0,1500.0,3100.0
+5190,N-31,N-31,Cruce Ruta 5 (San Carlos) - San Fabián de Alico - La Punilla - El Inglés,ÚNICA,U,0,42420,Región de Ñuble,False,1,4628,0,0.0,42420.0
+5192,N-335,N-335,"Cruce Ruta 5 (Vía de Servicio, San Carlos) - Moticura - Cruce N-447 (Tres Esquinas)",ÚNICA,U,0,11600,Región de Ñuble,False,1,1151,0,0.0,11600.0
+5196,N-425,N-425,Cruce Av. Bernardo O'Higgins - Cruce N-45 (Las Coles),ÚNICA,U,0,4155,Región de Ñuble,False,1,471,0,0.0,4155.0
+5201,N-50,N-50,Cruce Ruta 5 (Cocharcas) - San Nicolás - Ninhue - Cruce Ruta 126 S (Quirihue),ÚNICA,U,0,55413,Región de Ñuble,False,1,1147,0,0.0,55413.0
+5223,N-85,N-85,Cruce Ruta 5 (General Cruz) - San Pedro - Cruce N-59-Q (Pemuco),ÚNICA,U,0,432,Región de Ñuble,False,1,13,0,0.0,432.0
+5224,N-85,N-85,Cruce Ruta 5 (General Cruz) - San Pedro - Cruce N-59-Q (Pemuco),ÚNICA,U,432,24490,Región de Ñuble,False,1,2435,0,432.0,24490.0
+5225,N-855,N-855,Cruce Ruta 5 (Paso Superior General Cruz) - Cruce N-85,ÚNICA,U,0,893,Región de Ñuble,False,1,82,0,0.0,893.0
+5228,N-884,N-884,Cruce Ruta 5 (Santa Clara) - Puente Palpal - Balsa Cerro Negro - Cruce N-888 (Cerro Negro),ÚNICA,U,0,2479,Región de Ñuble,False,1,321,0,0.0,2479.0
+5234,N-266,N-266,Cruce N-250 (Enlace Tiuquilemu) - Gaona - San Carlos (Cruce Calle Itihue),ÚNICA,U,9080,9250,Región de Ñuble,False,1,27,0,9080.0,9250.0
+5242,N-151,N-151,Cruce Ruta 5 (Las Rosas) - Chacay - Zemita - Cruce N-305 (El Palo),ÚNICA,U,0,19150,Región de Ñuble,False,1,1975,0,0.0,19150.0
+5250,N-240-M,N-240-M,"Cruce Ruta 5 (San Gregorio, Paso Superior Ñiquén) - Ñiquén - Cruce M-750 (San Pedro), Sector: San Gregorio - Límite Regional (Río Ñiquén)",ÚNICA,U,0,7420,Región de Ñuble,False,1,937,0,0.0,7420.0
+5257,N-269,N-269,Cruce Ruta 5 (Paso Superior Tiuquilemu) - Tiuquilemu - Cruce N-265 (San Jorge),ÚNICA,U,0,400,Región de Ñuble,False,1,61,0,0.0,400.0
+5258,N-269,N-269,Cruce Ruta 5 (Paso Superior Tiuquilemu) - Tiuquilemu - Cruce N-265 (San Jorge),ÚNICA,U,400,1560,Región de Ñuble,False,1,151,0,400.0,1560.0
+5260,N-291,N-291,Cruce Ruta 5 (Paso Superior La Virgen) - Agua Buena - Cruce N-265 (El Peñón),ÚNICA,U,0,7892,Región de Ñuble,False,1,921,0,0.0,7892.0
+5281,N-339,N-339,"Cruce Ruta 5 (Vía de Servicio, San Carlos) - San Camilo - Cruce N-357 (Monteverde)",ÚNICA,U,0,1000,Región de Ñuble,False,1,109,0,0.0,1000.0
+5282,N-339,N-339,"Cruce Ruta 5 (Vía de Servicio, San Carlos) - San Camilo - Cruce N-357 (Monteverde)",ÚNICA,U,1000,5309,Región de Ñuble,False,1,476,0,1000.0,5309.0
+5305,N-546,N-546,Cruce Ruta 5 (Puente Ñuble) - Cruce N-50 (Monte León),ÚNICA,U,0,3000,Región de Ñuble,False,1,437,0,0.0,3000.0
+5306,N-546,N-546,Cruce Ruta 5 (Puente Ñuble) - Cruce N-50 (Monte León),ÚNICA,U,3000,3497,Región de Ñuble,False,1,76,0,3000.0,3497.0
+5318,N-631,N-631,Cruce Ruta 5 (Peaje Norte Bulnes) - Larqui Oriente - Cruce N-601 (Coltón),ÚNICA,U,0,1200,Región de Ñuble,False,1,137,0,0.0,1200.0
+5319,N-631,N-631,Cruce Ruta 5 (Peaje Norte Bulnes) - Larqui Oriente - Cruce N-601 (Coltón),ÚNICA,U,1200,8170,Región de Ñuble,False,1,811,0,1200.0,8170.0
+5325,N-684,N-684,Cruce Ruta 5 (Los Colihues) - Pelehuito,ÚNICA,U,0,3000,Región de Ñuble,False,1,297,0,0.0,3000.0
+5326,N-684,N-684,Cruce Ruta 5 (Los Colihues) - Pelehuito,ÚNICA,U,3000,7412,Región de Ñuble,False,1,532,0,3000.0,7412.0
+5337,N-745,N-745,Cruce Ruta 5 (San Miguel) - Relbún - Cruce N-85 (Agua de La Gloria),ÚNICA,U,0,2500,Región de Ñuble,False,1,241,0,0.0,2500.0
+5354,N-86,N-86,Cruce Ruta 5 (Paso Superior General Cruz) - Puente Liucura - Cruce N-48-O (Puente Quillón),ÚNICA,U,0,5200,Región de Ñuble,False,1,571,0,0.0,5200.0
+5368,N-773,N-773,Cruce Ruta 5 (Santa Clara) - Los Tilos - Cruce N-59-Q (Pueblo Seco),ÚNICA,U,0,4000,Región de Ñuble,False,1,427,0,0.0,4000.0
+5377,N-269,N-269,Cruce Ruta 5 (Paso Superior Tiuquilemu) - Tiuquilemu - Cruce N-265 (San Jorge),ÚNICA,U,1560,4000,Región de Ñuble,False,1,267,0,1560.0,4000.0
+5388,N-70-M,N-70-M,"Cauquenes - Torrecillas - San Carlos, Sector: Límite Regional (Puente El Guindo) - San Carlos (Calle Luis Acevedo)",ÚNICA,U,75725,83656,Región de Ñuble,False,1,856,0,75725.0,83656.0
+5418,N-244,N-244,Cruce Ruta 5 (El Socorro) - Huenutil del Peumo - Cruce N-240-M (Paque Abajo),ÚNICA,U,0,5439,Región de Ñuble,False,1,702,0,0.0,5439.0
+5419,N-247,N-247,Cruce Ruta 5 (El Socorro) - Huenutil de La Cabrería - Cruce N-245 (Colvindo),ÚNICA,U,0,7147,Región de Ñuble,False,1,1269,0,0.0,7147.0
+5420,N-250,N-250,Cruce Ruta 5 (Paso Superior Tiuquilemu) - Cruz Alta - Cruce N-240-M (La Coronta),ÚNICA,U,0,10943,Región de Ñuble,False,1,1209,0,0.0,10943.0
+5422,N-258,N-258,Cruce N-760-M (Las Garzas) - Quinquehua - Cruce N-760-M (Verquicó),ÚNICA,U,0,13508,Región de Ñuble,False,1,1772,0,0.0,13508.0
+5428,N-271,N-271,Cruce N-269 (La Gloria) - Cruce N-265 (El Peñón),ÚNICA,U,0,6950,Región de Ñuble,False,1,790,0,0.0,6950.0
+5434,N-285,N-285,Cruce Ruta 5 (Buli) - Cruce N-291 (El Cape),ÚNICA,U,0,2283,Región de Ñuble,False,1,277,0,0.0,2283.0
+5444,N-325,N-325,"Cruce Ruta 5 (Vía de Servicio, San Carlos La Copa) - San Agustín - Cruce N-31 (El Sauce)",ÚNICA,U,0,10045,Región de Ñuble,False,1,973,0,0.0,10045.0
+5449,N-342,N-342,Cruce N-50 (Cocharcas) - Huampangue - La Fortuna,ÚNICA,U,0,3244,Región de Ñuble,False,1,388,0,0.0,3244.0
+5452,N-349,N-349,Cruce Ruta 5 (Menelhue) - Quilelto - Cruce N-335 (Cuadrapangue),ÚNICA,U,0,13918,Región de Ñuble,False,1,2047,0,0.0,13918.0
+5454,N-356,N-356,Cruce Ruta 5 (Piedra Parada) - San Pedro de Lilahue - Cruce N-350 (Puente Lilahue),ÚNICA,U,0,11883,Región de Ñuble,False,1,1296,0,0.0,11883.0
+5455,N-357,N-357,Cruce Ruta 5 (Paso Superior Ninquihue) - Monteverde - Cruce N-349 (Cuadrapangue),ÚNICA,U,0,7737,Región de Ñuble,False,1,905,0,0.0,7737.0
+5456,N-366,N-366,Cruce Ruta 5 (Santa Isabel) - El Torreón - Cruce N-342 (Huampangue),ÚNICA,U,0,4321,Región de Ñuble,False,1,382,0,0.0,4321.0
+5489,N-544,N-544,Cruce N-546 (Monte León) - Cruce N-50 (Escuela La Loma) - San José,ÚNICA,U,0,4810,Región de Ñuble,False,1,747,0,0.0,4810.0
+5493,N-560,N-560,Cruce Ruta 5 (Paso Superior Parque Lantaño) - Ñuble Alto,ÚNICA,U,0,2941,Región de Ñuble,False,1,398,0,0.0,2941.0
+5497,N-585,N-585,Cruce Ruta 5 (Rabié) - Las Bellotas,ÚNICA,U,0,1801,Región de Ñuble,False,1,338,0,0.0,1801.0
+5498,N-595,N-595,Cruce Ruta 5 (Enlace Nebuco) - San Rafael  - Quilpón - Cruce N-59-Q (Lajuela),ÚNICA,U,1450,10058,Región de Ñuble,False,1,1003,0,1450.0,10058.0
+5508,N-62,N-62,Cruce Ruta 5 (Chillán) - Puente Confluencia - Membrillar - Cruce N-620 (Portezuelo),ÚNICA,U,0,27370,Región de Ñuble,False,1,3204,0,0.0,27370.0
+5533,N-676,N-676,Cruce Ruta 5 (Rucapequén) - San Pedro - Santa Cristina,ÚNICA,U,0,11450,Región de Ñuble,False,1,1452,0,0.0,11450.0
+5539,N-69,N-69,Cruce Ruta 5 (Bulnes) - Cantarrana - Cruce N-59-Q (Quiriquina),ÚNICA,U,0,19183,Región de Ñuble,False,1,1745,0,0.0,19183.0
+5554,N-760-M,N-760-M,"San Carlos - Trapiche - Cruce M-730-N (Pocillas), Sector: San Carlos (Cruce Calle Tomás Yávar) - Límite Regional",ÚNICA,U,0,30842,Región de Ñuble,False,1,3525,0,0.0,30842.0
+5567,N-840,N-840,"Cruce Ruta 5 (Vía de Servicio, Las Tres Marías) - La Palma - Cruce N-48-O (El Roble)",ÚNICA,U,0,10562,Región de Ñuble,False,1,1371,0,0.0,10562.0
+5624,N-595,N-595,Cruce Ruta 5 (Enlace Nebuco) - San Rafael  - Quilpón - Cruce N-59-Q (Lajuela),ÚNICA,U,0,1450,Región de Ñuble,False,1,156,0,0.0,1450.0
+5713,Ruta 70,70,Anillo Circunvalación Américo Vespucio,ÚNICA,I,28262,64061,Región Metropolitana de Santiago,False,1,856,0,28262.0,64061.0
+5714,Ruta 70,70,Anillo Circunvalación Américo Vespucio,ÚNICA,D,27221,64061,Región Metropolitana de Santiago,False,1,907,0,27221.0,64061.0
+5715,Ruta 70,70,Anillo Circunvalación Américo Vespucio,ÚNICA,I,0,15417,Región Metropolitana de Santiago,False,1,370,0,0.0,15417.0
+5718,Ruta 70,70,Anillo Circunvalación Américo Vespucio,ÚNICA,D,0,15435,Región Metropolitana de Santiago,False,1,399,0,0.0,15435.0
+5743,Ruta 78,78,"Santiago - San Antonio, Sector: Cruce Ruta 5 - Límite Regional (Paso Superior Sepultura)",ÚNICA,D,0,2232,Región Metropolitana de Santiago,False,1,110,0,0.0,2232.0
+5744,Ruta 78,78,"Santiago - San Antonio, Sector: Cruce Ruta 5 - Límite Regional (Paso Superior Sepultura)",ÚNICA,I,0,2231,Región Metropolitana de Santiago,False,1,61,0,0.0,2231.0
+5753,URBG011,,Costanera Norte,ÚNICA,D,0,34877,Región Metropolitana de Santiago,False,1,1309,0,0.0,34877.0
+5754,URBG011,,Costanera Norte,ÚNICA,I,0,35134,Región Metropolitana de Santiago,False,1,1375,0,0.0,35134.0
+5755,URBRU074,,Av. General Velásquez,ÚNICA,D,0,20598,Región Metropolitana de Santiago,False,1,643,0,0.0,20598.0
+5756,URBRU074,,Av. General Velásquez,ÚNICA,I,0,20670,Región Metropolitana de Santiago,False,1,736,0,0.0,20670.0
+5770,G-34,G-34,Nos - Malloco,ÚNICA,U,0,13398,Región Metropolitana de Santiago,False,1,835,0,0.0,13398.0
+5779,Ruta 79,79,Cruce Ruta 5 - Cruce Av. San Gregorio/Av. La Serena,ÚNICA,D,291,45525,Región Metropolitana de Santiago,False,1,843,0,291.0,45525.0
+5780,Ruta 79,79,Cruce Ruta 5 - Cruce Av. San Gregorio/Av. La Serena,ÚNICA,I,291,45525,Región Metropolitana de Santiago,False,1,873,0,291.0,45525.0
+5781,Ruta 79,79,Cruce Ruta 5 - Cruce Av. San Gregorio/Av. La Serena,ÚNICA,U,0,291,Región Metropolitana de Santiago,False,1,9,0,0.0,291.0
+5796,L-30-K,L-30-K,Cruce Ruta 5 (Huaipillo) - Nirivilo - Santa Olga - Cruce K-708 (Constitución),ÚNICA,U,0,4140,Región del Maule,False,1,381,0,0.0,4140.0
+5804,Ruta 115 CH,115,Cruce Ruta 5 (Talca) - Paso El Pehuenche,ÚNICA,D,0,14000,Región del Maule,False,1,275,0,-0.00019999999494757503,14000.0
+5806,Ruta 120,120,Cruce Ruta 5 (Enlace Unihue) - Puente El Cajón (Sector Culenar),ÚNICA,U,0,4730,Región del Maule,False,1,57,0,0.0,4730.0
+5810,Ruta 125,125,Cruce Ruta 5 - Linares,ÚNICA,D,0,2050,Región del Maule,False,1,22,0,0.0,2050.0
+5817,Ruta 128,128,Cruce Ruta 5 - Parral - Cruce M-50 (Cauquenes),ÚNICA,D,0,2129,Región del Maule,False,1,50,0,0.0,2129.0
+5823,Ruta 125,125,Cruce Ruta 5 - Linares,ÚNICA,I,0,2050,Región del Maule,False,1,31,0,0.0,2050.0
+5825,Ruta 128,128,Acceso Sur a Parral,ÚNICA,I,0,1680,Región del Maule,False,1,51,0,0.0,1680.0
+5826,Ruta 128,128,Parral - Quinchamávida,ÚNICA,I,1680,2240,Región del Maule,False,1,22,0,1680.0,2240.0
+5833,L-115,L-115,Cruce Ruta 5 (San Javier) - Cruce L-11 (El Aromo),ÚNICA,ÚNICA,0,900,Región del Maule,False,1,38,0,0.0,900.0
+5834,L-115,L-115,Cruce Ruta 5 (San Javier) - Cruce L-11 (El Aromo),ÚNICA,ÚNICA,900,4600,Región del Maule,False,1,114,0,900.0,4600.0
+5835,L-115,L-115,Cruce Ruta 5 (San Javier) - Cruce L-11 (El Aromo),ÚNICA,ÚNICA,4600,5460,Región del Maule,False,1,24,0,4600.0,5460.0
+5836,K-640,K-640,Cruce Ruta 5 (Maule) - Cruce K-636 (Santa Rosa),ÚNICA,ÚNICA,0,2090,Región del Maule,False,1,36,0,0.0,2090.0
+5837,K-640,K-640,Cruce Ruta 5 (Maule) - Cruce K-636 (Santa Rosa),ÚNICA,ÚNICA,2090,6940,Región del Maule,False,1,187,0,2090.0,6940.0
+5842,K-31,K-31,Cruce Ruta 5 (Camarico) - Cumpeo - Casas Viejas,ÚNICA,ÚNICA,0,16970,Región del Maule,False,1,517,0,0.0,16970.0
+5862,K-620,K-620,Cruce Ruta 5 (Puente Maule) - Cruce K-610 (Culenar),ÚNICA,ÚNICA,0,10990,Región del Maule,False,1,305,0,0.0,10990.0
+5865,L-202,L-202,Cruce Ruta 5 (Putagán) - Cunaco - Cruce L-160 (Villa Alegre),ÚNICA,ÚNICA,0,11340,Región del Maule,False,1,297,0,0.0,11340.0
+5871,L-32,L-32,Cruce Ruta 5 (Linares) - Melozal - Cruce Ruta 126 N (San Baldomero),ÚNICA,ÚNICA,0,10340,Región del Maule,False,1,207,0,0.0,10340.0
+5873,K-409,K-409,Cruce K-405 (San Rafael) - Santa Victoria,ÚNICA,ÚNICA,0,1920,Región del Maule,False,1,56,0,0.0,1920.0
+5875,K-45,K-45,Cruce Ruta 5 (Panguilemo) - Astillero,ÚNICA,ÚNICA,0,24440,Región del Maule,False,1,563,0,0.0,24440.0
+5879,K-635,K-635,Cruce Ruta 5 (Chacarillas) - Cruce Ruta 115 CH (San Diego),ÚNICA,ÚNICA,0,29380,Región del Maule,False,1,791,0,0.0,29380.0
+5880,L-162,L-162,Cruce L-160 (La Palma) - Río Maule,ÚNICA,ÚNICA,0,1490,Región del Maule,False,1,34,0,0.0,1490.0
+5881,L-162,L-162,Cruce L-160 (La Palma) - Río Maule,ÚNICA,ÚNICA,1490,2680,Región del Maule,False,1,32,0,1490.0,2680.0
+5884,L-160,L-160,Cruce Ruta 5 (La Palma) - San Javier - Cruce Ruta 5 (Estación Villa Alegre),ÚNICA,ÚNICA,0,19000,Región del Maule,False,1,816,0,0.0,19000.0
+5888,L-491,L-491,Cruce Ruta 5 (Miraflores) - Mesamávida - La Polcura,ÚNICA,ÚNICA,0,13870,Región del Maule,False,1,321,0,0.0,13870.0
+5891,L-751,L-751,Cruce Ruta 5 (Parral) - San Pablo,ÚNICA,ÚNICA,0,23370,Región del Maule,False,1,537,0,-0.00010000000474974513,23370.0
+5895,L-11,L-11,Cruce Ruta 5 (Bobadilla) - Variante Colbún - Cruce Ruta 125 (Avenida Presidente Ibáñez),ÚNICA,ÚNICA,0,64380,Región del Maule,False,1,1400,0,0.0,64380.0
+5896,L-551,L-551,Cruce Ruta 5 (Longaví) - El Tránsito,ÚNICA,ÚNICA,0,19080,Región del Maule,False,1,386,0,0.0,19080.0
+5898,L-851,L-851,Cruce Ruta 5 (Parral) - Termas de Catillo,ÚNICA,ÚNICA,0,12860,Región del Maule,False,1,1547,0,-0.00010000000474974513,12860.0
+5903,Ruta 118,118,Cruce Ruta 5 - Talca,ÚNICA,ÚNICA,0,891,Región del Maule,False,1,39,0,-0.00019999999494757503,890.6100000000006
+5904,L-640,L-640,"Cruce Ruta 5 (Caletera, Servicentros) - Cruce Av. Buenos Aires (La Virgen)",ÚNICA,ÚNICA,0,1040,Región del Maule,False,1,33,0,0.0,1040.0
+5906,L-191,L-191,Cruce Ruta 5 (Estación Villa Alegre) - Cruce L-25 (Esperanza),ÚNICA,ÚNICA,0,640,Región del Maule,False,1,24,0,0.0,640.0
+5907,L-191,L-191,Cruce Ruta 5 (Estación Villa Alegre) - Cruce L-25 (Esperanza),ÚNICA,ÚNICA,640,659,Región del Maule,False,1,4,0,640.0,659.0
+5908,L-191,L-191,Cruce Ruta 5 (Estación Villa Alegre) - Cruce L-25 (Esperanza),ÚNICA,ÚNICA,659,11000,Región del Maule,False,1,282,0,659.0,11000.0
+5913,J-55,J-55,Cruce Ruta 5 - Romeral - Portezuelo Vergara,ÚNICA,ÚNICA,0,24500,Región del Maule,False,1,1680,0,0.0,24500.0
+5916,J-40,J-40,Cruce Ruta 5 - Teno - Cruce J-60,ÚNICA,ÚNICA,0,20400,Región del Maule,False,1,1615,0,0.0,20400.0
+5918,J-65,J-65,Cruce Ruta 5 (Curicó Sur) - Los Niches - Quebrada Honda,ÚNICA,ÚNICA,0,12240,Región del Maule,False,1,941,0,0.0,12240.0
+5923,J-75-K,J-75-K,Cruce Ruta 5 (Lontué) - Molina - Punta Diamante - Cruce Ruta 115 CH (Corralones),ÚNICA,ÚNICA,0,76295,Región del Maule,False,1,7661,0,0.0,76295.0
+5924,J-85-I,J-85-I,"Cruce Ruta 5 (Chimbarongo) - Morza - Cruce Ruta 5 (Quinta), Sector: Límite Regional (Morza) - Quinta",ÚNICA,ÚNICA,21929,27960,Región del Maule,False,1,530,0,21929.0,27960.0
+5928,J-20,J-20,Cruce Ruta 5 (Acceso Norte Teno) - Cruce J-40 (Don Sebastián),ÚNICA,ÚNICA,0,5726,Región del Maule,False,1,398,0,0.0,5726.0
+5930,J-415,J-415,Cruce Ruta 5 (Teno) - Los Lagartos - Cruce J-25 (El Molino),ÚNICA,ÚNICA,0,4340,Región del Maule,False,1,397,0,0.0,4340.0
+5933,J-120,J-120,Cruce J-40 (Teno) - Quelmén - Embalse Convento Viejo,ÚNICA,ÚNICA,0,400,Región del Maule,False,1,85,0,0.0,400.0
+5934,J-120,J-120,Cruce J-40 (Teno) - Quelmén - Embalse Convento Viejo,ÚNICA,ÚNICA,400,4200,Región del Maule,False,1,826,0,400.0,4200.0
+5940,J-550,J-550,Cruce Av. General Freire (Curicó) - El Boldo - Sarmiento,ÚNICA,ÚNICA,0,4700,Región del Maule,False,1,749,0,0.0,4700.0
+5941,J-515,J-515,Cruce Ruta 5 - Quilvo Alto - Cruce J-55 (Romeral),ÚNICA,ÚNICA,0,550,Región del Maule,False,1,78,0,0.0,550.0
+5943,J-515,J-515,Cruce Ruta 5 - Quilvo Alto - Cruce J-55 (Romeral),ÚNICA,ÚNICA,550,2220,Región del Maule,False,1,171,0,550.0,2220.0
+5944,J-615,J-615,Cruce Ruta 5 - Zapallar - Cruce J-65 (La Florida),ÚNICA,ÚNICA,0,2750,Región del Maule,False,1,264,0,0.0,2750.0
+5946,J-617,J-617,Cruce J-615 (Puente Colorado) - Los Cristales - Cruce J-635 (El Cerrillo),ÚNICA,ÚNICA,0,3450,Región del Maule,False,1,486,0,0.0,3450.0
+5964,J-722,J-722,Cruce Ruta 5 (Los Canales) - Cruce J-68 (Lo Valdivia),ÚNICA,ÚNICA,0,7250,Región del Maule,False,1,561,0,0.0,7250.0
+5995,J-550,J-550,Cruce Av. General Freire (Curicó) - El Boldo - Sarmiento,ÚNICA,ÚNICA,6065,7314,Región del Maule,False,1,249,0,6065.0,7314.0
+5996,J-72,J-72,Cruce Ruta 5 - Cruce J-68 (Sagrada Familia),ÚNICA,ÚNICA,0,2700,Región del Maule,False,1,243,0,0.0,2700.0
+5999,J-79,J-79,Cruce Ruta 5 (Itahue) - Cruce J-75-K (Molina),ÚNICA,ÚNICA,0,6373,Región del Maule,False,1,579,0,0.0,6373.0
+6010,J-410,J-410,Cruce J-40 (Cruce Ferrocarril por Piedra Blanca) - Cruce J-40 (Arboleda),ÚNICA,ÚNICA,0,5085,Región del Maule,False,1,803,0,0.0,5085.0
+6011,J-115,J-115,Cruce Ruta 5 - El Cisne - Cruce J-85-I (Morza),ÚNICA,ÚNICA,0,6100,Región del Maule,False,1,853,0,0.0,6100.0
+6013,J-555,J-555,Cruce Ruta 5 (Vía de Servicio) - Cruce J-55 (Camino Romeral),ÚNICA,ÚNICA,0,977,Región del Maule,False,1,168,0,0.0,977.0
+6026,J-525,J-525,Cruce J-55 (Las Catreras) - Cruce J-55 (Lombardía),ÚNICA,ÚNICA,0,3536,Región del Maule,False,1,760,0,0.0,3536.0
+6077,J-731,J-731,Cruce Ruta 5 - Cruce J-75-K (Quechereguas),ÚNICA,ÚNICA,0,3876,Región del Maule,False,1,617,0,0.0,3876.0
+6162,K-405,K-405,Cruce Ruta 5 (San Rafael) - Cruce K-45 (Plaza Pelarco),ÚNICA,ÚNICA,0,14600,Región del Maule,False,1,609,0,0.0,14600.0
+6170,K-645,K-645,Cruce K-635 (Quiñipeumo) - Cruce K-639 (Hacienda Maule),ÚNICA,ÚNICA,0,8440,Región del Maule,False,1,196,0,0.0,8440.0
+6171,K-625,K-625,Cruce Ruta 5 (Puente Piduco) - Cruce K-635 (Pirque),ÚNICA,ÚNICA,0,710,Región del Maule,False,1,26,0,0.0,710.0
+6172,L-463,L-463,Cruce Ruta 5 (Río Liguay) - Río Achibueno,ÚNICA,ÚNICA,2820,4170,Región del Maule,False,1,37,0,2820.0,4170.0
+6173,L-463,L-463,Cruce Ruta 5 (Río Liguay) - Río Achibueno,ÚNICA,ÚNICA,4170,8930,Región del Maule,False,1,138,0,4170.0,8930.0
+6178,L-225,L-225,Cruce L-25 (Coironal) - Cruce Avenida Santiago Bueras (Putagán),ÚNICA,ÚNICA,0,7990,Región del Maule,False,1,265,0,0.0,7990.0
+6193,L-480,L-480,Cruce Ruta 5 (Miraflores) - Cruce L-404 (Bodega),ÚNICA,ÚNICA,2000,8580,Región del Maule,False,1,211,0,2000.0,8580.0
+6196,K-630,K-630,Cruce Ruta 120 (Av. Circunvalación) - Cruce K-620 (Unihue),ÚNICA,ÚNICA,0,800,Región del Maule,False,1,31,0,0.0,800.0001000000047
+6197,K-630,K-630,Cruce Ruta 120 (Av. Circunvalación) - Cruce K-620 (Unihue),ÚNICA,ÚNICA,800,2970,Región del Maule,False,1,53,0,800.0001000000047,2970.0
+6199,L-151,L-151,Cruce Ruta 5 (Pangal) - Cruce L-25 (Peñuelas),ÚNICA,ÚNICA,0,12260,Región del Maule,False,1,315,0,0.0,12260.0
+6209,L-195,L-195,Cruce L-191 (Esperanza) - Coibungo,ÚNICA,ÚNICA,0,3450,Región del Maule,False,1,123,0,0.0,3450.0
+6213,L-131,L-131,Cruce L-115 (Estación San Javier) - Cruce L-165 (El Durazno),ÚNICA,ÚNICA,0,320,Región del Maule,False,1,8,0,0.0,320.0
+6214,L-131,L-131,Cruce L-115 (Estación San Javier) - Cruce L-165 (El Durazno),ÚNICA,ÚNICA,320,8000,Región del Maule,False,1,181,0,320.0,8000.0
+6239,L-400,L-400,Cruce Ruta 5 (Real Canoa) - Cruce L-404 (San Gabriel),ÚNICA,ÚNICA,0,5270,Región del Maule,False,1,183,0,-0.00019999999494757503,5270.0
+6240,L-400,L-400,Cruce Ruta 5 (Real Canoa) - Cruce L-404 (San Gabriel),ÚNICA,ÚNICA,6074,8267,Región del Maule,False,1,69,0,6074.0,8266.939199999993
+6264,K-440,K-440,Cruce Ruta 5 (Alto Pangue) - Cruce K-60 (Puente Río Claro),ÚNICA,ÚNICA,0,8000,Región del Maule,False,1,223,0,0.0,8000.0
+6275,L-510,L-510,"Cruce Ruta 5 (Caletera, Longaví) - Río Longaví (Paso Cuñao)",ÚNICA,ÚNICA,0,3500,Región del Maule,False,1,121,0,0.0,3500.0
+6281,L-240,L-240,Cruce Ruta 5 (Porvenir) - Cruce L-32 (Linares),ÚNICA,ÚNICA,0,6470,Región del Maule,False,1,171,0,0.0,6470.0
+6282,L-250,L-250,Cruce L-240 (Hornillas) - Cruce L-220 (El Emboque),ÚNICA,ÚNICA,0,5500,Región del Maule,False,1,135,0,0.0,5500.0
+6285,L-404,L-404,Cruce Ruta 5 (La Aguada) - Bodega,ÚNICA,ÚNICA,0,15920,Región del Maule,False,1,515,0,0.0,15920.0
+6287,L-215,L-215,Cruce Avenida Santiago Bueras (Putagán) - Yerbas Buenas por Faja de F.FC.C. - Cruce L-291 (Abránquil),ÚNICA,ÚNICA,0,700,Región del Maule,False,1,25,0,0.0,700.0
+6288,L-215,L-215,Cruce Avenida Santiago Bueras (Putagán) - Yerbas Buenas por Faja de F.FC.C. - Cruce L-291 (Abránquil),ÚNICA,ÚNICA,700,7700,Región del Maule,False,1,188,0,700.0,7700.0
+6296,L-831,L-831,Cruce Ruta 5 (Talquita) - Las Juntas - Cruce L-881 (Huenutil),ÚNICA,ÚNICA,0,700,Región del Maule,False,1,21,0,0.0,700.0
+6297,L-831,L-831,Cruce Ruta 5 (Talquita) - Las Juntas - Cruce L-881 (Huenutil),ÚNICA,ÚNICA,700,7500,Región del Maule,False,1,188,0,700.0,7500.0
+6298,L-292,L-292,Cruce L-32 (Maitenes) - Cruce L-32 (Palmilla),ÚNICA,ÚNICA,0,5200,Región del Maule,False,1,126,0,0.0,5200.0
+6304,K-511,K-511,Cruce Ruta 5 (Puente Lircay) - Cruce K-55 (San Antonio),ÚNICA,ÚNICA,0,4850,Región del Maule,False,1,138,0,0.0,4850.0
+6313,L-150,L-150,Cruce Ruta 5 (Pangal) - Cruce L-160 (Lucero),ÚNICA,ÚNICA,0,2980,Región del Maule,False,1,139,0,0.0,2980.0
+6320,K-625,K-625,Cruce Ruta 5 (Puente Piduco) - Cruce K-635 (Pirque),ÚNICA,ÚNICA,710,2690,Región del Maule,False,1,44,0,710.0,2690.0
+6321,K-625,K-625,Cruce Ruta 5 (Puente Piduco) - Cruce K-635 (Pirque),ÚNICA,ÚNICA,2690,9350,Región del Maule,False,1,172,0,2690.0,9350.0
+6326,L-600,L-600,Cruce Ruta 5 (Retiro) - Villaseca - Cruce L-688,ÚNICA,ÚNICA,330,22900,Región del Maule,False,1,552,0,330.0,22900.0
+6329,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,5800,6130,Región del Maule,False,1,3,0,5800.0,6130.0
+6330,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,1700,5800,Región del Maule,False,1,132,0,1700.0,5800.0
+6331,L-636,L-636,Cruce L-630 (Acceso Cementerio) - La Gloria,ÚNICA,ÚNICA,0,530,Región del Maule,False,1,24,0,0.0,530.0
+6332,L-636,L-636,Cruce L-630 (Acceso Cementerio) - La Gloria,ÚNICA,ÚNICA,530,3400,Región del Maule,False,1,75,0,530.0,3400.0
+6333,L-642,L-642,Cruce L-630 (Copihue) - Cruce L-600 (Villaseca),ÚNICA,ÚNICA,0,26130,Región del Maule,False,1,647,0,-0.00019999999494757503,26130.0
+6335,L-515,L-515,Cruce Ruta 5 (Escuela Granja) - Cruce L-491 (El Canario),ÚNICA,ÚNICA,0,4690,Región del Maule,False,1,130,0,0.00010000000474974513,4690.000100000005
+6343,L-457,L-457,Cruce Calle Rengo (Linares) - Las Cuellar - Paso Jordán - La Isla,ÚNICA,ÚNICA,0,2220,Región del Maule,False,1,95,0,0.0,2220.0
+6346,L-830,L-830,Cruce Ruta 5 (Talquita) - Cruce L-836 (Tinajas),ÚNICA,ÚNICA,0,11360,Región del Maule,False,1,323,0,0.0,11360.0
+6347,L-836,L-836,Cruce L-632 (Longitudinal Antiguo) -  El Palacio,ÚNICA,ÚNICA,0,15850,Región del Maule,False,1,397,0,0.0,15850.0
+6351,L-645,L-645,Cruce Ruta 5 (Copihue) - Cruce L-751 (Ajial),ÚNICA,ÚNICA,0,500,Región del Maule,False,1,16,0,0.00010000000474974513,500.0
+6352,L-645,L-645,Cruce Ruta 5 (Copihue) - Cruce L-751 (Ajial),ÚNICA,ÚNICA,500,7250,Región del Maule,False,1,135,0,500.0,7250.000100000005
+6356,L-461,L-461,Linares (Puente Agua Fría) - Río Achibueno,ÚNICA,ÚNICA,2000,4160,Región del Maule,False,1,105,0,2000.0,4160.0
+6357,L-463,L-463,Cruce Ruta 5 (Río Liguay) - Río Achibueno,ÚNICA,ÚNICA,0,2820,Región del Maule,False,1,29,0,0.0,2820.0
+6370,L-646,L-646,Cruce Ruta 5 (Copihue) - Cruce L-630 (Copihue),ÚNICA,ÚNICA,0,600,Región del Maule,False,1,38,0,0.0,600.0
+6371,L-646,L-646,Cruce Ruta 5 (Copihue) - Cruce L-630 (Copihue),ÚNICA,ÚNICA,600,1060,Región del Maule,False,1,25,0,600.0,1060.0
+6372,L-611,L-611,Cruce Ruta 5 (Acceso Norte a Retiro) - Cruce L-631 (Retiro),ÚNICA,ÚNICA,0,850,Región del Maule,False,1,30,0,0.0,850.0
+6373,L-600,L-600,Cruce Ruta 5 (Retiro) - Villaseca - Cruce L-688,ÚNICA,ÚNICA,0,330,Región del Maule,False,1,22,0,0.0,330.0
+6380,L-480,L-480,Cruce Ruta 5 (Miraflores) - Cruce L-404 (Bodega),ÚNICA,ÚNICA,0,2000,Región del Maule,False,1,106,0,0.0,2000.0
+6403,L-400,L-400,Cruce Ruta 5 (Real Canoa) - Cruce L-404 (San Gabriel),ÚNICA,ÚNICA,5270,6074,Región del Maule,False,1,34,0,5270.0,6074.0
+6418,L-217,L-217,Cruce L-215 - Las Rosas,ÚNICA,ÚNICA,0,2700,Región del Maule,False,1,95,0,0.0,2700.0
+6421,L-505,L-505,"Cruce L-491 (Puente Lo Campo) - Cruce L-463 (Liguay)
+",ÚNICA,ÚNICA,0,5970,Región del Maule,False,1,193,0,0.0,5970.0
+6423,L-825,L-825,Cruce Ruta 5 - Talquita - Planta Carozzi,ÚNICA,ÚNICA,0,1900,Región del Maule,False,1,89,0,0.0,1900.0
+6429,L-168,L-168,Cruce Ruta 5 (El Durazno) - Cruce L-170 (Huaraculén),ÚNICA,ÚNICA,0,1100,Región del Maule,False,1,86,0,0.0,1100.0
+6430,URBRU118,,Cruce Ruta 118 - Circunvalación Río Claro - Puente El Cajón,ÚNICA,ÚNICA,0,9518,Región del Maule,False,1,284,0,0.0,9518.0
+6443,K-510,K-510,Cruce Av. Lircay - Cruce Av. Circunvalación (23 Norte),ÚNICA,ÚNICA,0,3230,Región del Maule,False,1,105,0,0.0,3230.0
+6450,L-100,L-100,Cruce L-160 (Reyes) - Cruce L-150 (Loma del Maqui),ÚNICA,ÚNICA,2040,3700,Región del Maule,False,1,127,0,2040.0,3700.0
+6453,L-133,L-133,Cruce L-165 (El Durazno) - Cruce L-191 (Estación Villa Alegre),ÚNICA,ÚNICA,0,2420,Región del Maule,False,1,80,0,0.0,2420.0
+6463,L-129,L-129,Cruce L-115 (El Paso) - Pulluquén Sur,ÚNICA,ÚNICA,0,1030,Región del Maule,False,1,47,0,0.0,1030.0
+6464,K-515,K-515,Cruce Ruta 115 CH - Cruce K-55 (Monte Baeza),ÚNICA,ÚNICA,0,3020,Región del Maule,False,1,58,0,0.0,3020.0
+6468,L-105,L-105,Cruce Ruta 5 (Las Vertientes) - Las Alfalfas,ÚNICA,ÚNICA,0,1850,Región del Maule,False,1,21,0,0.0,1850.0
+6480,L-135,L-135,Cruce L-191 (Estación Villa Alegre) - Cruce Santa Lucía,ÚNICA,ÚNICA,0,1780,Región del Maule,False,1,51,0,0.0,1780.0
+6481,K-639,K-639,Cruce Ruta 5 (Maule) - Cruce K-635 (Esquina Mocha),ÚNICA,ÚNICA,0,2740,Región del Maule,False,1,56,0,0.0,2740.0
+6486,K-356,K-356,Cruce Ruta 5 (San Rafael) - Culenar,ÚNICA,ÚNICA,0,4830,Región del Maule,False,1,135,0,-0.00019999999494757503,4829.999899999995
+6487,K-605,K-605,Cruce K-625 (Laguna El Toro) - Esperanza,ÚNICA,ÚNICA,0,3769,Región del Maule,False,1,119,0,-0.00019999999494757503,3769.0002999999997
+6491,L-227,L-227,Cruce L-225 - (Coironal) - La Puntilla,ÚNICA,ÚNICA,0,1800,Región del Maule,False,1,19,0,0.0,1800.0
+6492,L-140,L-140,Cruce Avenida Balmaceda (San Javier) - Chanquicó - Cruce L-150 (Loma del Maqui),ÚNICA,ÚNICA,0,2370,Región del Maule,False,1,108,0,0.0,2370.0
+6494,L-475,L-475,Cruce Ruta 5 (Las Motas) - Cruce L-491 (San Esteban),ÚNICA,ÚNICA,0,5570,Región del Maule,False,1,182,0,0.0,5570.0
+6500,L-655,L-655,Cruce L-751 - La Lloica,ÚNICA,ÚNICA,0,1200,Región del Maule,False,1,41,0,0.00010000000474974513,1200.0001000000047
+6501,L-165,L-165,Cruce Ruta 5 (El Durazno) - Cruce L-151 (Lagunillas),ÚNICA,ÚNICA,0,7140,Región del Maule,False,1,171,0,0.0,7140.0
+6502,L-820,L-820,Cruce Ruta 5 (Campamento 4) - Cruce L-830 (Estación Perquilauquén),ÚNICA,ÚNICA,0,8579,Región del Maule,False,1,1170,0,-0.00019999999494757503,8579.000100000005
+6504,L-494,L-494,Cruce L-400 (Real Canoa) - Cruce L-480 (Paso Cuñao),ÚNICA,ÚNICA,0,4800,Región del Maule,False,1,199,0,0.0,4800.0
+6505,L-170,L-170,Cruce Ruta 5 (Huaraculén) - Cruce L-160 (La Alameda),ÚNICA,ÚNICA,0,5130,Región del Maule,False,1,261,0,0.0,5130.0
+6521,L-631,L-631,Cruce Ruta 5 (Forestal El Álamo) - Longitudinal Antiguo por Retiro - Río Longaví,ÚNICA,ÚNICA,7190,10760,Región del Maule,False,1,86,0,7190.0,10760.000100000005
+6537,L-615,L-615,Cruce Ruta 5 - Retiro,ÚNICA,ÚNICA,0,1410,Región del Maule,False,1,36,0,0.0,1410.0
+6540,L-498,L-498,Cruce L-400 (Real Canoa) - Calicheras Río Liguay,ÚNICA,ÚNICA,0,300,Región del Maule,False,1,3,0,0.0,300.0
+6547,L-230,L-230,Cruce L-202 (Viznaga) - Río Putagán,ÚNICA,ÚNICA,0,2970,Región del Maule,False,1,100,0,0.0,2970.0
+6554,L-173,L-173,Cruce L-131 - El Durazno,ÚNICA,ÚNICA,0,350,Región del Maule,False,1,3,0,0.0,350.0
+6566,L-871,L-871,Puente Perquilauquén - Isla Pencahue,ÚNICA,ÚNICA,0,3450,Región del Maule,False,1,67,0,0.0,3450.0
+6572,L-632,L-632,Cruce Ruta 5 (Campamento 4) - Parral (Canal Digua),ÚNICA,ÚNICA,0,4960,Región del Maule,False,1,166,0,0.0,4960.0
+6575,L-412,L-412,Cruce L-404 (San Gabriel) - Rincón Achibueno,ÚNICA,ÚNICA,0,6900,Región del Maule,False,1,223,0,0.0,6900.0
+6579,L-631,L-631,Cruce Ruta 5 (Forestal El Álamo) - Longitudinal Antiguo por Retiro - Río Longaví,ÚNICA,ÚNICA,0,7190,Región del Maule,False,1,227,0,0.00010000000474974513,7190.0
+6580,K-40-J,K-40-J,Cruce Ruta 5 (San Rafael) - El Taco - Cruce J-60 (La Huerta),ÚNICA,ÚNICA,0,31659,Región del Maule,False,1,3192,0,0.0,31659.0
+6581,J-77,J-77,Cruce Ruta 5 (San Pedro) - Cruce J-75-K (Av. Poniente),ÚNICA,ÚNICA,0,3862,Región del Maule,False,1,599,0,0.0,3862.0
+6583,J-25,J-25,Cruce Ruta 5 - La Montaña - Cruce J-55 (Puente Hernán Briones),ÚNICA,ÚNICA,0,20151,Región del Maule,False,1,1795,0,0.0,20151.0
+6584,J-68,J-68,Cruce Ruta 5 (Lontué) - Villa Prat - Cruce K-40-J (El Taco),ÚNICA,ÚNICA,0,41309,Región del Maule,False,1,5883,0,0.0,41309.0
+6587,J-113,J-113,Cruce J-115 - La Esmeralda Interior,ÚNICA,ÚNICA,0,1939,Región del Maule,False,1,409,0,0.0,1939.0
+6591,J-250,J-250,Cruce J-20 - Cruce J-120 (La Aurora),ÚNICA,ÚNICA,188,1443,Región del Maule,False,1,166,0,188.0,1443.0
+6596,J-118,J-118,Cruce Ruta 5 (Vía de Servicio) - Quelmén - Cruce J-120 (Las Ranas),ÚNICA,ÚNICA,1610,3872,Región del Maule,False,1,289,0,1610.0,3872.0
+6599,J-210,J-210,Cruce Ruta 5 (Vía de Servicio) - San Rafael - Canal Endesa,ÚNICA,ÚNICA,0,1495,Región del Maule,False,1,759,0,0.0,1495.0
+6600,J-422,J-422,Cruce Ruta 5 (Vía de Servicio Vista Hermosa) - Cruce J-560 (Rincón de Sarmiento),ÚNICA,ÚNICA,0,4071,Región del Maule,False,1,927,0,0.0,4071.0
+6613,J-519,J-519,Cruce J-55 (Acceso a Romeral) - Vía de Servicio (Romeral Norte),ÚNICA,ÚNICA,0,1320,Región del Maule,False,1,119,0,0.0,1320.0
+6614,J-523,J-523,Cruce J-55 (Callejón Angosto) - Cruce J-519 (Vía de Servicio Romeral Norte),ÚNICA,ÚNICA,0,986,Región del Maule,False,1,219,0,0.0,986.0
+6618,J-554,J-554,Cruce J-20 (Enlace) - Cruce J-120,ÚNICA,ÚNICA,0,311,Región del Maule,False,1,50,0,0.0,311.0
+6621,J-517,J-517,Cruce Ruta 5 (Vía de Servicio) - Ampurdan Interior,ÚNICA,ÚNICA,0,1527,Región del Maule,False,1,315,0,0.0,1527.0
+6631,J-613,J-613,Cruce J-617 (Escuela Los Cristales) - Casas Viejas,ÚNICA,ÚNICA,0,3300,Región del Maule,False,1,703,0,0.0,3300.0
+6648,J-723,J-723,Cruce Ruta 5 (Los Canales) - Cruce J-75-K (San Pedro),ÚNICA,ÚNICA,0,4100,Región del Maule,False,1,2099,0,0.0,4100.0
+6650,J-756,J-756,Cruce Ruta 5 (Itahue) - Pulmodón - Camino Real,ÚNICA,ÚNICA,1210,4644,Región del Maule,False,1,415,0,1210.0,4644.0
+6678,J-775,J-775,Vía de Servicio (Cruce FF.CC. Itahue) - Interior,ÚNICA,ÚNICA,0,663,Región del Maule,False,1,94,0,0.0,663.0
+6681,J-777,J-777,Cruce J-775 (Itahue) - Puente San Camilo,ÚNICA,ÚNICA,0,373,Región del Maule,False,1,92,0,0.0,373.0
+6709,J-727,J-727,Cruce J-77 (Estación Molina) - Lontué - Los Canales,ÚNICA,ÚNICA,0,2731,Región del Maule,False,1,511,0,0.0,2731.0
+6713,J-729,J-729,Cruce J-723 (Pirihuín) - Cruce J-725 (Entre Ríos),ÚNICA,ÚNICA,0,1415,Región del Maule,False,1,716,0,0.0,1415.0
+6802,J-240,J-240,Cruce J-120 (Cementerio) - Las Ranas,ÚNICA,ÚNICA,0,567,Región del Maule,False,1,119,0,0.0,567.0
+6804,J-250,J-250,Cruce J-20 - Cruce J-120 (La Aurora),ÚNICA,ÚNICA,0,188,Región del Maule,False,1,40,0,0.0,188.0
+6810,J-727,J-727,Cruce J-77 (Estación Molina) - Lontué - Los Canales,ÚNICA,ÚNICA,5052,8536,Región del Maule,False,1,685,0,5052.0,8536.0
+6811,J-727,J-727,Cruce J-77 (Estación Molina) - Lontué - Los Canales,ÚNICA,ÚNICA,3650,5052,Región del Maule,False,1,262,0,3650.0,5052.0
+6812,J-727,J-727,Cruce J-77 (Estación Molina) - Lontué - Los Canales,ÚNICA,ÚNICA,3331,3650,Región del Maule,False,1,66,0,3331.0,3650.0
+6813,J-727,J-727,Cruce J-77 (Estación Molina) - Lontué - Los Canales,ÚNICA,ÚNICA,2731,3331,Región del Maule,False,1,117,0,2731.0,3331.0
+6825,J-118,J-118,Cruce Ruta 5 (Vía de Servicio) - Quelmén - Cruce J-120 (Las Ranas),ÚNICA,ÚNICA,0,1610,Región del Maule,False,1,254,0,0.0,1610.0
+6833,J-723,J-723,Cruce Ruta 5 (Los Canales) - Cruce J-75-K (San Pedro),ÚNICA,ÚNICA,4100,4680,Región del Maule,False,1,312,0,4100.0,4680.0
+6838,J-756,J-756,Cruce Ruta 5 (Itahue) - Pulmodón - Camino Real,ÚNICA,ÚNICA,0,1210,Región del Maule,False,1,110,0,0.0,1210.0
+7477,Ruta 202,202,Cruce Ruta 5 (Mariquina) - Cruce Ruta 206 (Valdivia),ÚNICA,ÚNICA,0,44550,Región de Los Ríos,False,1,875,0,0.0,44550.0
+7480,Ruta 203 CH,203,Lanco - Panguipulli - Paso Huahum,ÚNICA,ÚNICA,0,110120,Región de Los Ríos,False,1,4163,0,0.0,110120.0
+7483,Ruta 206,206,Cruce Ruta 5 (Paillaco) - Cruce Ruta 202 (Valdivia),ÚNICA,ÚNICA,0,47713,Región de Los Ríos,False,1,1322,0,0.0,47713.0
+7484,Ruta 208,208,Cruce Ruta 5 - Rapaco - Quilaco - Cruce Ruta 210 (La Unión),ÚNICA,ÚNICA,0,5870,Región de Los Ríos,False,1,368,0,0.0,5870.0
+7498,T-20,T-20,"Cruce Ruta 202 - San José de La Mariquina, Acceso Norte - Cruce T-270-S (Mehuín)",ÚNICA,ÚNICA,0,1440,Región de Los Ríos,False,1,105,0,0.0,1440.0
+7517,T-732,T-732,Cruce T-668 (Pichirropulli)  - Pan de Azúcar,ÚNICA,ÚNICA,0,770,Región de Los Ríos,False,1,66,0,0.0,770.0
+7518,T-732,T-732,Cruce T-668 (Pichirropulli)  - Pan de Azúcar,ÚNICA,ÚNICA,770,7117,Región de Los Ríos,False,1,454,0,770.0,7117.0
+7547,T-613,T-613,Cruce Ruta 5 (Paillaco) - Cruce T-551 (Dollinco),ÚNICA,ÚNICA,0,10370,Región de Los Ríos,False,1,599,0,0.0,10370.0
+7549,T-625,T-625,Cruce Ruta 5 (Reumén) - Cruce T-551 (Nontuelá),ÚNICA,ÚNICA,0,24371,Región de Los Ríos,False,1,893,0,0.0,24371.0
+7550,T-628,T-628,"Cruce Ruta 5 - Cruce T-656 (Paillaco, Acceso Norte)",ÚNICA,ÚNICA,0,980,Región de Los Ríos,False,1,72,0,0.0,980.0
+7551,T-628,T-628,"Cruce Ruta 5 - Cruce T-656 (Paillaco, Acceso Norte)",ÚNICA,ÚNICA,4690,5880,Región de Los Ríos,False,1,87,0,4690.0,5880.0
+7552,T-628,T-628,"Cruce Ruta 5 - Cruce T-656 (Paillaco, Acceso Norte)",ÚNICA,ÚNICA,980,4550,Región de Los Ríos,False,1,264,0,980.0,4550.0
+7553,T-71,T-71,Cruce Ruta 5 (Los Tambores) - Cruce T-851 (Río Bueno),ÚNICA,ÚNICA,0,3215,Región de Los Ríos,False,1,184,0,0.0,3215.0
+7554,T-739,T-739,Cruce Ruta 5 - Choroico,ÚNICA,ÚNICA,0,110,Región de Los Ríos,False,1,6,0,0.0,110.0
+7555,T-739,T-739,Cruce Ruta 5 - Choroico,ÚNICA,ÚNICA,110,4012,Región de Los Ríos,False,1,87,0,110.0,4012.0
+7556,T-759,T-759,Ruta 5 (Paso Superior) - Puerto Nuevo - Cruce T-551 (Coique),ÚNICA,ÚNICA,0,57446,Región de Los Ríos,False,1,3395,0,0.0,57446.0
+7557,T-87,T-87,Cruce Ruta 5 (Ralicura) - Río Bueno - Cruce T-981-U (Champulli),ÚNICA,ÚNICA,0,3750,Región de Los Ríos,False,1,254,0,0.0,3750.0
+7560,Ruta 210,210,Cruce Ruta 5 (Los Tambores) - Cruce Ruta 208 (La Unión),ÚNICA,ÚNICA,0,9272,Región de Los Ríos,False,1,592,0,0.0,9272.0
+7561,T-200,T-200,Cruce Ruta 5 (Estación Mariquina) - Cruce Ruta 202,ÚNICA,ÚNICA,0,357,Región de Los Ríos,False,1,10,0,0.0,357.0
+7562,T-230,T-230,Cruce Ruta 5 (Ciruelos) - Cruce T-20 (San José de la Mariquina),ÚNICA,ÚNICA,0,7000,Región de Los Ríos,False,1,391,0,0.0,7000.0
+7564,T-34,T-34,Cruce Ruta 5 (Máfil) - Cruce Ruta 202 (Cayumapu),ÚNICA,ÚNICA,0,17102,Región de Los Ríos,False,1,1002,0,0.0,17102.0
+7565,T-345,T-345,Cruce Ruta 5 (Máfil) - Cruce T-39 (Malihue),ÚNICA,ÚNICA,0,9150,Región de Los Ríos,False,1,530,0,0.0,9150.0
+7569,T-39,T-39,Ruta 5 (Paso Inferior Los Lagos) - Cruce Ruta 203 CH (Panguipulli),ÚNICA,ÚNICA,0,56293,Región de Los Ríos,False,1,2059,0,0.0,56293.0
+7571,T-628,T-628,"Cruce Ruta 5 - Cruce T-656 (Paillaco, Acceso Norte)",ÚNICA,ÚNICA,4550,4690,Región de Los Ríos,False,1,13,0,4550.0,4690.0
+7582,T-656,T-656,Cruce Ruta 206 - Paillaco,ÚNICA,ÚNICA,0,1009,Región de Los Ríos,False,1,85,0,0.0,1009.0
+7583,T-109,T-109,Cruce Ruta 203 CH (Nicalhuín) - Variante Lanco,ÚNICA,ÚNICA,0,1153,Región de Los Ríos,False,1,20,0,0.0,1153.0
+7594,T-583,T-583,Cruce Ruta 5 - Tomen,ÚNICA,ÚNICA,0,220,Región de Los Ríos,False,1,18,0,0.0,220.0
+7595,T-583,T-583,Cruce Ruta 5 - Tomen,ÚNICA,ÚNICA,220,3129,Región de Los Ríos,False,1,197,0,220.0,3129.0
+7604,T-650,T-650,Cruce Ruta 206 (Paillaco) - Yerbas Buenas - Cruce  T-732 (Pichirropulli),ÚNICA,U,0,6000,Región de Los Ríos,False,1,431,0,0.0,6000.0
+7631,T-111-S,T-111-S,"Cruce Ruta 203 CH (Lanco) - Huipil - Collico, Sector: Lanco - Límite Regional",ÚNICA,ÚNICA,0,7530,Región de Los Ríos,False,1,522,0,0.0,7530.0
+7636,T-121,T-121,Cruce Ruta 203 CH (Lanco) - Trana - Cruce T-217 (Meliquina),ÚNICA,ÚNICA,6000,12102,Región de Los Ríos,False,1,427,0,6000.0,12102.0
+7667,T-180,T-180,Cruce T-210 - Ciruelos - Dollinco,ÚNICA,ÚNICA,0,1981,Región de Los Ríos,False,1,154,0,0.0,1981.0
+7676,T-218,T-218,Cruce T-210 (Puile) - Cruce T-230 (Ciruelos),ÚNICA,ÚNICA,0,1820,Región de Los Ríos,False,1,116,0,0.0,1820.0
+7725,T-678,T-678,Cruce T-676 (Pichirropulli) - Cruce T-656 (Paillaco),ÚNICA,ÚNICA,0,2700,Región de Los Ríos,False,1,192,0,0.0,2700.0
+7726,T-678,T-678,Cruce T-676 (Pichirropulli) - Cruce T-656 (Paillaco),ÚNICA,ÚNICA,2700,9093,Región de Los Ríos,False,1,417,0,2700.0,9093.0
+7734,T-737,T-737,Cruce T-671 (Tronlico)  - Cruce T-739 (Choroico),ÚNICA,ÚNICA,0,3084,Región de Los Ríos,False,1,225,0,0.0,3084.0
+7777,T-324,T-324,Cruce T-346 (Paso Sobrenivel Máfil) - Huiyon - Cruce T-334 (Iñaque),ÚNICA,ÚNICA,0,4272,Región de Los Ríos,False,1,311,0,0.0,4272.0
+7782,T-575,T-575,Cruce Ruta 5 (Lipingüe) - Cruce T-551 (Huite),ÚNICA,ÚNICA,0,10000,Región de Los Ríos,False,1,660,0,0.0,10000.0
+7784,T-581,T-581,Cruce Ruta 5 (Caletera Puente San Pedro) - Cullincahuin,ÚNICA,ÚNICA,0,2600,Región de Los Ríos,False,1,199,0,0.0,2600.0
+7786,T-632,T-632,Cruce Ruta 5 - Reumén,ÚNICA,ÚNICA,0,2007,Región de Los Ríos,False,1,141,0,0.0,2007.0
+7787,T-632,T-632,Cruce Ruta 5 - Reumén,ÚNICA,ÚNICA,2007,2361,Región de Los Ríos,False,1,15,0,2007.0,2361.0
+7788,T-671,T-671,Cruce Ruta 5 - Tronlico - Cruce T-687 (Regina),ÚNICA,ÚNICA,0,6887,Región de Los Ríos,False,1,201,0,0.0,6887.0
+7789,T-705,T-705,Cruce Ruta 5 - Los Esteros,ÚNICA,ÚNICA,0,4300,Región de Los Ríos,False,1,281,0,0.0,4300.0
+7794,T-746,T-746,Ruta 5 (Paso Superior) - Cruce Ruta 210 (San Javier),ÚNICA,ÚNICA,0,2889,Región de Los Ríos,False,1,91,0,0.0,2889.0
+7796,T-120-S,T-120-S,Cruce Ruta 5 (Lanco) - Tripayante,ÚNICA,ÚNICA,0,3700,Región de Los Ríos,False,1,283,0,0.0,3700.0
+7797,T-120-S,T-120-S,Cruce Ruta 5 (Lanco) - Tripayante,ÚNICA,ÚNICA,3700,10806,Región de Los Ríos,False,1,490,0,3700.0,10806.0
+7798,T-808,T-808,Cruce Ruta 5 (Puente Pilmaiquén) - Cocule,ÚNICA,ÚNICA,0,2620,Región de Los Ríos,False,1,187,0,0.0,2620.0001000000047
+7800,T-237,T-237,Cruce Ruta 5 (Estación Mariquina) - Cruce T-221 (Rucaco),ÚNICA,ÚNICA,0,532,Región de Los Ríos,False,1,36,0,0.0,532.0
+7801,T-237,T-237,Cruce Ruta 5 (Estación Mariquina) - Cruce T-221 (Rucaco),ÚNICA,ÚNICA,840,1900,Región de Los Ríos,False,1,76,0,840.0,1900.0
+7802,T-237,T-237,Cruce Ruta 5 (Estación Mariquina) - Cruce T-221 (Rucaco),ÚNICA,ÚNICA,1900,3831,Región de Los Ríos,False,1,153,0,1900.0,3831.0
+7803,T-231,T-231,"Cruce Ruta 5 - Cruce T-217 (Ciruelos, Acceso Sur)",ÚNICA,ÚNICA,0,806,Región de Los Ríos,False,1,38,0,0.0,806.0
+7804,T-326,T-326,Cruce Ruta 5 - Paso Inferior Rucapichío - Cruce T-34 (Máfil Acceso Norte),ÚNICA,ÚNICA,0,3620,Región de Los Ríos,False,1,266,0,0.0,3620.0
+7805,T-335,T-335,Cruce Ruta 5 (Máfil) - Las Alturas - Cruce  T-217 (Pumillahue),ÚNICA,ÚNICA,0,1300,Región de Los Ríos,False,1,96,0,0.0,1300.0
+7806,T-335,T-335,Cruce Ruta 5 (Máfil) - Las Alturas - Cruce  T-217 (Pumillahue),ÚNICA,ÚNICA,1650,5200,Región de Los Ríos,False,1,285,0,1650.0,5200.0
+7807,T-335,T-335,Cruce Ruta 5 (Máfil) - Las Alturas - Cruce  T-217 (Pumillahue),ÚNICA,ÚNICA,1300,1650,Región de Los Ríos,False,1,29,0,1300.0,1650.0
+7814,T-121,T-121,Cruce Ruta 203 CH (Lanco) - Trana - Cruce T-217 (Meliquina),ÚNICA,ÚNICA,0,6000,Región de Los Ríos,False,1,417,0,0.0,6000.0
+7828,T-237,T-237,Cruce Ruta 5 (Estación Mariquina) - Cruce T-221 (Rucaco),ÚNICA,ÚNICA,532,840,Región de Los Ríos,False,1,19,0,532.0,840.0
+7829,T-284,T-284,Cruce Ruta 5 - Llastuco - Cruce T-326 (Máfil),ÚNICA,ÚNICA,6013,8163,Región de Los Ríos,False,1,156,0,6013.0,8163.0
+7845,T-106,T-106,Cruce T-110 (San Bernardo) - Cruce T-110 (Calquinco Bajo),ÚNICA,ÚNICA,0,9733,Región de Los Ríos,False,1,698,0,0.0,9733.0
+7850,T-169,T-169,Cruce T-111-S (Huipel) - Centinela,ÚNICA,ÚNICA,0,2689,Región de Los Ríos,False,1,197,0,0.0,2689.0
+7851,T-346,T-346,"Cruce Ruta 5 - Cruce T-34 (Máfil, Acceso Sur)",ÚNICA,ÚNICA,2828,3577,Región de Los Ríos,False,1,61,0,2828.0,3577.0
+7854,T-290,T-290,Cruce T-280 (Pupunahue) - Cruce T-390 (San Javier),ÚNICA,ÚNICA,0,7033,Región de Los Ríos,False,1,531,0,0.0,7033.0
+7858,T-346,T-346,"Cruce Ruta 5 - Cruce T-34 (Máfil, Acceso Sur)",ÚNICA,ÚNICA,2633,2828,Región de Los Ríos,False,1,16,0,2633.0,2828.0
+7869,T-284,T-284,Cruce Ruta 5 - Llastuco - Cruce T-326 (Máfil),ÚNICA,ÚNICA,0,6013,Región de Los Ríos,False,1,428,0,0.0,6013.0
+7871,T-341,T-341,Cruce Ruta 5 - Rivadavia,ÚNICA,ÚNICA,0,4618,Región de Los Ríos,False,1,352,0,0.0,4618.0
+7872,T-227,T-227,Cruce T-221 (Rucaco) - Huifco,ÚNICA,ÚNICA,0,4153,Región de Los Ríos,False,1,305,0,0.0,4153.0
+7877,T-390,T-390,Cruce T-346 (Máfil) - Mulpún - Cruce T-328 (San Javier),ÚNICA,ÚNICA,0,14687,Región de Los Ríos,False,1,1037,0,0.0,14687.0
+7881,T-280,T-280,Cruce Ruta 5 (Pupunahue) - Cruce T-390 (Mulpún),ÚNICA,ÚNICA,0,6100,Región de Los Ríos,False,1,453,0,0.0,6100.0
+7882,T-336,T-336,Cruce Ruta 204 - Balseadero Purey,ÚNICA,ÚNICA,0,850,Región de Los Ríos,False,1,63,0,0.0,850.0
+7884,T-223,T-223,Cruce T-221 (Calel) - Cruce T-335 (Las Alturas),ÚNICA,ÚNICA,0,10921,Región de Los Ríos,False,1,799,0,0.0,10921.0
+7886,T-334,T-334,Cruce T-34 (Máfil) - Cruce T-390 (Colonia Iñaque),ÚNICA,ÚNICA,0,4718,Región de Los Ríos,False,1,351,0,0.0,4718.0
+7890,T-115,T-115,Cruce Ruta 203 CH (Lanco) - Cruce T-119 (Troltrohue),ÚNICA,ÚNICA,0,11952,Región de Los Ríos,False,1,840,0,0.0,11952.0
+7897,T-215,T-215,Cruce Ruta 5 (Lanco Antiguo) - Cruce T-217 (Ciruelos),ÚNICA,ÚNICA,0,4360,Región de Los Ríos,False,1,98,0,0.0,4360.0
+7907,T-123,T-123,Cruce Ruta 5 (Lanco) - Cruce Ruta 203 CH (Lanco),ÚNICA,ÚNICA,0,620,Región de Los Ríos,False,1,49,0,0.0,620.0
+7910,T-119,T-119,Cruce T-121 (Trana) - Pilfitrana - El Tayo - Troltrohue,ÚNICA,ÚNICA,0,8856,Región de Los Ríos,False,1,617,0,0.0,8856.0
+7914,T-110,T-110,Cruce T-120-S (San Bernardo) - Cruce T-140 (Calquinco),ÚNICA,ÚNICA,0,8556,Región de Los Ríos,False,1,640,0,0.0,8556.0
+7918,T-221,T-221,Cruce Ruta 5 (Rucaco) - Calel - Puente Raluya - Cruce T-217,ÚNICA,ÚNICA,0,6495,Región de Los Ríos,False,1,472,0,0.0,6495.0
+7923,T-346,T-346,"Cruce Ruta 5 - Cruce T-34 (Máfil, Acceso Sur)",ÚNICA,ÚNICA,0,2633,Región de Los Ríos,False,1,191,0,0.0,2633.0
+7925,T-113,T-113,Cruce T-111-S (Lanco) - Huipel,ÚNICA,ÚNICA,0,3549,Región de Los Ríos,False,1,79,0,0.0,3549.0
+7926,T-228,T-228,Cruce Ruta 5 - Cruce Ruta 202 (San José de la Mariquina),ÚNICA,ÚNICA,0,2091,Región de Los Ríos,False,1,161,0,0.0,2091.0
+7929,T-108,T-108,Cruce T-120-S (Lanco) - Calquinco - Cruce T-140 (Lahuán),ÚNICA,ÚNICA,0,7846,Región de Los Ríos,False,1,570,0,0.0,7846.0
+7939,T-526,T-526,Cruce Ruta 5 - Balsadero Anwandter,ÚNICA,ÚNICA,0,2600,Región de Los Ríos,False,1,168,0,0.0,2600.0
+7945,T-676,T-676,Cruce T-678 - Pichirropulli,ÚNICA,ÚNICA,0,1838,Región de Los Ríos,False,1,122,0,0.0,1838.0
+7969,T-516,T-516,Cruce Ruta 5 - Estación Lipingue,ÚNICA,ÚNICA,0,582,Región de Los Ríos,False,1,40,0,0.0,582.0
+7970,T-585,T-585,Cruce Ruta 5 (Purey) - Llascahue,ÚNICA,ÚNICA,0,3954,Región de Los Ríos,False,1,260,0,0.0,3954.0
+7973,T-524,T-524,Cruce Ruta 5 (Acceso Sur Los Lagos) - Cruce Ruta 204 (Los Lagos),ÚNICA,ÚNICA,0,2004,Región de Los Ríos,False,1,98,0,0.0,2004.0
+7974,T-626,T-626,Cruce Ruta 5 - Reumén - Cruce Ruta 5,ÚNICA,ÚNICA,0,6432,Región de Los Ríos,False,1,471,0,0.0,6432.0
+7978,T-714,T-714,Cruce Ruta 208 (Auquinco) - La Poza,ÚNICA,ÚNICA,0,804,Región de Los Ríos,False,1,56,0,0.0,804.0
+7986,T-670,T-670,Cruce Ruta 5 - Cruce T-676 (Pichirropulli),ÚNICA,ÚNICA,0,858,Región de Los Ríos,False,1,66,0,0.0,858.0
+7993,T-679,T-679,Cruce Ruta 5 (Pichirropulli) - Regina,ÚNICA,ÚNICA,0,4098,Región de Los Ríos,False,1,189,0,0.0,4098.0
+7997,T-627,T-627,Cruce T-633 - Demaihue,ÚNICA,ÚNICA,0,3410,Región de Los Ríos,False,1,92,0,0.0,3410.0
+7998,T-715,T-715,Cruce T-71 (Río Bueno) - Pampa Negrón - Cruce T-759 (Río Bueno),ÚNICA,ÚNICA,0,2528,Región de Los Ríos,False,1,178,0,0.0,2528.0
+8000,T-790,T-790,Cruce Ruta 5 (La Poza) - Cruce Ruta 208,ÚNICA,ÚNICA,0,8130,Región de Los Ríos,False,1,375,0,0.0,8130.0
+8011,T-727,T-727,Cruce T-729 (Rofuco) - Paisil,ÚNICA,ÚNICA,0,2916,Región de Los Ríos,False,1,80,0,0.0,2916.0
+8012,T-704,T-704,Cruce Ruta 5 (Rofuco) - Cruce T-706 (Auquinco),ÚNICA,ÚNICA,0,1201,Región de Los Ríos,False,1,89,0,0.0,1201.0
+8014,T-633,T-633,Cruce Ruta 5 - Cayumán,ÚNICA,ÚNICA,0,4317,Región de Los Ríos,False,1,337,0,0.0,4317.0
+8017,T-641,T-641,Cruce T-625 (Reumén) - Cruce T-659 (Colonia Liucura),ÚNICA,ÚNICA,0,6656,Región de Los Ríos,False,1,456,0,0.0,6656.0
+8023,T-617,T-617,Cruce Ruta 5 (Paillaco) - Pichipaillaco,ÚNICA,ÚNICA,0,5160,Región de Los Ríos,False,1,348,0,0.0,5160.0
+8024,T-571,T-571,Cruce T-581 (Cullincahuin) - Pancul,ÚNICA,ÚNICA,0,3830,Región de Los Ríos,False,1,270,0,0.0,3830.0
+8035,T-734,T-734,Cruce T-650 (La Luma) - El Casino - Cruce T-668 (Pichirropulli),ÚNICA,ÚNICA,0,8433,Región de Los Ríos,False,1,334,0,0.0,8433.0
+8040,T-706,T-706,Cruce Ruta 5 (Auquinco) - Cruce Ruta 208 (Rapaco),ÚNICA,ÚNICA,0,5999,Región de Los Ríos,False,1,442,0,0.0,5999.0
+8043,T-524,T-524,Cruce Ruta 5 (Acceso Sur Los Lagos) - Cruce Ruta 204 (Los Lagos),ÚNICA,ÚNICA,2004,2464,Región de Los Ríos,False,1,7,0,2004.0,2464.0
+8046,T-668,T-668,Cruce T-678 (Pichirropulli) - Pichiquema,ÚNICA,ÚNICA,0,4613,Región de Los Ríos,False,1,348,0,0.0,4613.0
+8051,T-677,T-677,Cruce Ruta 5 (Pichirropulli) - Itropulli,ÚNICA,ÚNICA,0,3582,Región de Los Ríos,False,1,267,0,0.0,3582.0
+8061,T-522,T-522,Cruce Ruta 5 - Cruce T-516 (Lipingue),ÚNICA,ÚNICA,0,1128,Región de Los Ríos,False,1,76,0,0.0,1128.0
+8069,T-516,T-516,Cruce Ruta 5 - Estación Lipingue,ÚNICA,ÚNICA,582,1531,Región de Los Ríos,False,1,71,0,582.0,1531.0
+8073,T-636,T-636,Cruce T-628 (Paillaco) - Demaihue,ÚNICA,ÚNICA,0,4284,Región de Los Ríos,False,1,303,0,0.0,4284.0
+8079,T-801,T-801,Cruce Ruta 5 (Puente Pilmaiquén) - Cruce T-87 (Río Bueno),ÚNICA,ÚNICA,0,237,Región de Los Ríos,False,1,21,0,0.0,237.0
+8103,T-801,T-801,Cruce Ruta 5 (Puente Pilmaiquén) - Cruce T-87 (Río Bueno),ÚNICA,ÚNICA,237,5409,Región de Los Ríos,False,1,365,0,237.0,5409.0
+8108,T-920,T-920,Cruce T-746 (San Javier) - Cruce T-940 (La Poza),ÚNICA,ÚNICA,0,3733,Región de Los Ríos,False,1,223,0,0.0,3733.0
+8125,T-804,T-804,Cruce Ruta 5 (Ralicura) - Cocule - Río Bueno,ÚNICA,ÚNICA,299,9927,Región de Los Ríos,False,1,700,0,299.0,9927.0
+8128,T-807,T-807,Cruce T-801 - Río Pilmaiquén,ÚNICA,ÚNICA,0,505,Región de Los Ríos,False,1,34,0,0.0,505.0
+8130,T-806,T-806,Cruce T-804 (Ralicura) - Cruce T-808 (La Isla),ÚNICA,ÚNICA,0,3278,Región de Los Ríos,False,1,128,0,0.0,3278.0
+8135,T-804,T-804,Cruce Ruta 5 (Ralicura) - Cocule - Río Bueno,ÚNICA,ÚNICA,0,299,Región de Los Ríos,False,1,25,0,0.0,299.0
+8193,Ruta 215 CH,215,Osorno - Entre Lagos - Paso Cardenal Samoré,ÚNICA,D,0,4200,Región de Los Lagos,False,1,293,0,0.0,4200.0
+8195,URBV2,,Av. Presidente Salvador Allende,ÚNICA,I,0,2498,Región de Los Lagos,False,1,119,0,0.0,2498.0
+8196,URBV2,,Av. Presidente Salvador Allende,ÚNICA,D,0,2498,Región de Los Lagos,False,1,89,0,0.0,2498.0
+8197,URBV3,,Av. Parque Industrial,ÚNICA,I,318,1454,Región de Los Lagos,False,1,39,0,318.0,1454.0
+8198,URBV3,,Av. Parque Industrial,ÚNICA,D,318,1454,Región de Los Lagos,False,1,33,0,318.0,1454.0
+8199,URBV3,,Av. Parque Industrial,ÚNICA,ÚNICA,0,318,Región de Los Lagos,False,1,14,0,0.0,318.0
+8201,URBV16,,Enlace Hospital - Av. Cuarta Terraza,ÚNICA,D,0,3352,Región de Los Lagos,False,1,142,0,0.0,3352.0
+8202,W-115,W-115,Cruce Ruta 5 - By Pass Chacao,ÚNICA,D,0,2360,Región de Los Lagos,False,1,167,0,0.0,2360.0
+8204,U-55-V,U-55-V,Cruce Ruta 5 (Osorno) - Nochaco - Ensenada,ÚNICA,ÚNICA,0,92383,Región de Los Lagos,False,1,8682,0,0.0,92383.0
+8205,Ruta 226,226,Cruce Ruta 5 (Puerto Montt) - El Tepual,ÚNICA,ÚNICA,0,10958,Región de Los Lagos,False,1,773,0,0.0,10958.0
+8207,V-85,V-85,Cruce Ruta 5 - Calbuco,ÚNICA,ÚNICA,0,20938,Región de Los Lagos,False,1,1385,0,0.0,20938.0
+8208,V-53,V-53,Cruce Ruta 5 Acceso Norte a Puerto Varas,ÚNICA,ÚNICA,0,2240,Región de Los Lagos,False,1,139,0,0.0,2240.0
+8209,V-57,V-57,Acceso Sur a Puerto Varas,ÚNICA,ÚNICA,0,1228,Región de Los Lagos,False,1,101,0,0.0,1228.0
+8210,V-30,V-30,Cruce Ruta 5 (Totoral) - Colegual - Fresia,ÚNICA,ÚNICA,0,33484,Región de Los Lagos,False,1,3061,0,0.0,33484.0
+8215,V-90,V-90,Cruce Ruta 5 - Maullín,ÚNICA,ÚNICA,0,24249,Región de Los Lagos,False,1,2183,0,0.0,24249.0
+8227,U-551-V,U-551-V,Nochaco - Puerto Octay - Frutillar Alto,ÚNICA,ÚNICA,0,32582,Región de Los Lagos,False,1,2560,0,0.0,32582.0
+8231,URBU37,,Cruce Ruta 5 (Pilauco) - Francke,ÚNICA,ÚNICA,0,397,Región de Los Lagos,False,1,23,0,0.0,397.0
+8232,URBU37,,Cruce Ruta 5 (Pilauco) - Francke,ÚNICA,ÚNICA,397,3676,Región de Los Lagos,False,1,334,0,397.0,3676.0
+8233,W-45,W-45,Cruce Ruta 5 (Mocopulli) - Dalcahue,ÚNICA,ÚNICA,0,7743,Región de Los Lagos,False,1,806,0,0.0,7743.0
+8237,W-55,W-55,Cruce Ruta 5 (Llau Llao) - Putemún - Dalcahue,ÚNICA,ÚNICA,0,12426,Región de Los Lagos,False,1,925,0,0.0,12426.0
+8238,W-75,W-75,Cruce Ruta 5 (Notuco) - Chonchi,ÚNICA,ÚNICA,0,3270,Región de Los Lagos,False,1,327,0,0.0,3270.0
+8243,W-21,W-21,Cruce Ruta 5 (Rampa Chacao) - Quemchi - Dalcahue,ÚNICA,ÚNICA,0,97784,Región de Los Lagos,False,1,8516,0,0.0,97784.0
+8244,W-800,W-800,Cruce Ruta 5 (Notuco) - Huillinco - Cucao - Chanquín,ÚNICA,ÚNICA,0,12150,Región de Los Lagos,False,1,907,0,0.0,12150.0
+8248,U-900,U-900,Cruce Ruta 5 (Enlace Purranque) - Hueyusca - San Pedro,ÚNICA,ÚNICA,0,31220,Región de Los Lagos,False,1,3606,0,0.0,31220.0
+8260,URBW21,,Cruce Ruta 5 (Av. Pedro Montt) - Eusebio Lillo,ÚNICA,ÚNICA,0,1834,Región de Los Lagos,False,1,283,0,0.0,1834.0
+8261,W-35,W-35,Cruce Ruta 5 (Degán) - Quemchi,ÚNICA,ÚNICA,0,20367,Región de Los Lagos,False,1,1321,0,0.0,20367.0
+8265,W-151,W-151,Cruce Ruta 5 (San Juan) - a Linao,ÚNICA,ÚNICA,0,2030,Región de Los Lagos,False,1,160,0,0.0,2030.0
+8266,W-151,W-151,Cruce Ruta 5 (San Juan) - a Linao,ÚNICA,ÚNICA,2030,9380,Región de Los Lagos,False,1,518,0,2030.0,9380.0
+8268,W-540,W-540,Cruce Ruta 5 (Gamboa) - La Montaña,ÚNICA,ÚNICA,0,850,Región de Los Lagos,False,1,134,0,0.0,850.0
+8269,W-540,W-540,Cruce Ruta 5 (Gamboa) - La Montaña,ÚNICA,ÚNICA,2220,5836,Región de Los Lagos,False,1,427,0,2220.0,5836.0
+8274,W-853,W-853,Cruce Ruta 5 (Chonchi) - Queilén,ÚNICA,ÚNICA,0,45441,Región de Los Lagos,False,1,3356,0,0.0,45441.0
+8279,W-881,W-881,Cruce Ruta 5 (Quellón) - Oqueldán - Chaiguao - Chincol,ÚNICA,ÚNICA,0,11070,Región de Los Lagos,False,1,877,0,0.0,11070.0
+8281,W-883,W-883,Cruce Ruta 5 - Díaz Lira,ÚNICA,ÚNICA,0,8078,Región de Los Lagos,False,1,767,0,0.0,8078.0
+8284,U-101,U-101,Cruce Ruta 5 (San Pablo) - San Antonio,ÚNICA,ÚNICA,0,345,Región de Los Lagos,False,1,23,0,0.0,345.0
+8285,U-101,U-101,Cruce Ruta 5 (San Pablo) - San Antonio,ÚNICA,ÚNICA,345,2506,Región de Los Lagos,False,1,126,0,345.0,2506.0
+8292,U-951,U-951,Cruce Ruta 5 (Cuatro Vientos) - Puerto Octay,ÚNICA,ÚNICA,0,13000,Región de Los Lagos,False,1,586,0,0.0,12999.999899999995
+8299,U-100,U-100,San Pablo - Trumao - Quilacahuín,ÚNICA,ÚNICA,0,700,Región de Los Lagos,False,1,30,0,0.0,700.0
+8300,U-100,U-100,San Pablo - Trumao - Quilacahuín,ÚNICA,ÚNICA,700,16722,Región de Los Lagos,False,1,664,0,700.0,16722.0
+8302,URBV11,,Av. Colón - Av. San Francisco,ÚNICA,ÚNICA,0,2682,Región de Los Lagos,False,1,333,0,0.0,2682.0
+8303,URBV805,,Conexión Urbana Ruta 5 (Trapén) - Ruta 7,ÚNICA,ÚNICA,926,18145,Región de Los Lagos,False,1,1797,0,926.0,18145.0
+8304,URBV805,,Conexión Urbana Ruta 5 (Trapén) - Ruta 7,ÚNICA,ÚNICA,0,926,Región de Los Lagos,False,1,49,0,0.0,926.0
+8306,V-123,V-123,Cruce Ruta 5 (Casma) - Río Pescado,ÚNICA,ÚNICA,0,110,Región de Los Lagos,False,1,10,0,0.0,110.0
+8307,V-123,V-123,Cruce Ruta 5 (Casma) - Río Pescado,ÚNICA,ÚNICA,1054,4110,Región de Los Lagos,False,1,425,0,1054.0,4110.0
+8309,V-351,V-351,Cruce Ruta 5 - Totoral,ÚNICA,ÚNICA,0,130,Región de Los Lagos,False,1,23,0,0.0,130.0
+8310,V-351,V-351,Cruce Ruta 5 - Totoral,ÚNICA,ÚNICA,130,1812,Región de Los Lagos,False,1,269,0,130.0,1812.0
+8311,V-401,V-401,Cruce Ruta 5 - Río Maullín,ÚNICA,ÚNICA,0,879,Región de Los Lagos,False,1,42,0,0.0,879.0
+8312,V-501,V-501,Cruce Ruta 5 - Estación Alerce,ÚNICA,ÚNICA,0,145,Región de Los Lagos,False,1,9,0,0.0,145.0
+8313,V-501,V-501,Cruce Ruta 5 - Estación Alerce,ÚNICA,ÚNICA,145,150,Región de Los Lagos,False,1,2,0,145.0,150.0
+8314,V-501,V-501,Cruce Ruta 5 - Estación Alerce,ÚNICA,ÚNICA,150,1120,Región de Los Lagos,False,1,39,0,150.0,1120.0
+8315,V-501,V-501,Cruce Ruta 5 - Estación Alerce,ÚNICA,ÚNICA,1120,2458,Región de Los Lagos,False,1,53,0,1120.0,2458.0
+8324,U-891,U-891,Cruce Ruta 5 (Enlace Purranque) - Coihueco,ÚNICA,ÚNICA,0,5150,Región de Los Lagos,False,1,573,0,0.0,5150.0
+8326,U-964-V,U-964-V,Cruce Ruta 5 (Corte Alto) - Paraguay,ÚNICA,ÚNICA,0,23460,Región de Los Lagos,False,1,1013,0,0.0,23460.0
+8327,U-966,U-966,Cuatro Vientos - Purranque,ÚNICA,ÚNICA,0,365,Región de Los Lagos,False,1,49,0,0.0,365.0
+8328,U-966,U-966,Cuatro Vientos - Purranque,ÚNICA,ÚNICA,365,3299,Región de Los Lagos,False,1,140,0,365.0,3299.0
+8329,U-970,U-970,Purranque - Corte Alto,ÚNICA,ÚNICA,0,620,Región de Los Lagos,False,1,31,0,0.0,620.0
+8330,U-970,U-970,Purranque - Corte Alto,ÚNICA,ÚNICA,620,3610,Región de Los Lagos,False,1,155,0,620.0,3610.0
+8331,V-400,V-400,Cruce Ruta 5 (Llanquihue) - Loncotoro - Línea Solar,ÚNICA,ÚNICA,0,18041,Región de Los Lagos,False,1,2195,0,0.0,18041.0
+8339,U-500,U-500,Osorno - Río Negro - Purranque,ÚNICA,ÚNICA,32000,42118,Región de Los Lagos,False,1,675,0,32000.0,42118.0
+8343,V-108,V-108,Cruce Ruta 5 - Cruce Longitudinal Antiguo,ÚNICA,ÚNICA,0,210,Región de Los Lagos,False,1,33,0,0.0,210.0
+8344,V-108,V-108,Cruce Ruta 5 - Cruce Longitudinal Antiguo,ÚNICA,ÚNICA,210,871,Región de Los Lagos,False,1,78,0,210.0,871.0
+8345,V-500,V-500,Cruce Ruta 5 (Puerto Varas) - Nueva Braunau - Las Cañitas,ÚNICA,ÚNICA,0,40977,Región de Los Lagos,False,1,3958,0,0.0,40977.0
+8346,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,0,2749,Región de Los Lagos,False,1,108,0,0.0,2749.0
+8347,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,5760,7960,Región de Los Lagos,False,1,76,0,5760.0,7960.0
+8348,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,7960,9679,Región de Los Lagos,False,1,65,0,7960.0,9679.0
+8349,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,2749,4170,Región de Los Lagos,False,1,55,0,2749.0,4170.0
+8350,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,4170,4520,Región de Los Lagos,False,1,14,0,4170.0,4520.0
+8351,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,4520,5440,Región de Los Lagos,False,1,37,0,4520.0,5440.0
+8352,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,9679,9963,Región de Los Lagos,False,1,22,0,9679.0,9963.0
+8353,V-508,V-508,Longitudinal Antiguo: Llanquihue - Puerto Varas,ÚNICA,ÚNICA,0,280,Región de Los Lagos,False,1,30,0,0.0,280.0
+8354,V-508,V-508,Longitudinal Antiguo: Llanquihue - Puerto Varas,ÚNICA,ÚNICA,280,5003,Región de Los Lagos,False,1,856,0,280.0,5003.0
+8356,V-200,V-200,Cruce Ruta 5 (Frutillar) - Tegualda,ÚNICA,ÚNICA,0,32709,Región de Los Lagos,False,1,3259,0,0.0,32709.0
+8357,U-598,U-598,Cruce Ruta 5 - Río Negro,ÚNICA,ÚNICA,0,4766,Región de Los Lagos,False,1,232,0,0.0,4766.0
+8358,V-990,V-990,Cruce Ruta 5 (Pargua) - Punta Coronel,ÚNICA,ÚNICA,0,1839,Región de Los Lagos,False,1,209,0,0.0,1839.0
+8365,W-520,W-520,La Chacra - La Montaña,ÚNICA,ÚNICA,0,990,Región de Los Lagos,False,1,132,0,0.0,990.0
+8372,U-965-T,U-965-T,"Cruce Ruta 5 (Chifca) - Maile - Cruce T-931 (Trafún), Sector: Chifca - Límite Regional",ÚNICA,ÚNICA,0,12432,Región de Los Lagos,False,1,550,0,0.0,12432.0
+8376,W-540,W-540,Cruce Ruta 5 (Gamboa) - La Montaña,ÚNICA,ÚNICA,850,2220,Región de Los Lagos,False,1,174,0,850.0,2220.0
+8380,V-123,V-123,Cruce Ruta 5 (Casma) - Río Pescado,ÚNICA,ÚNICA,110,1054,Región de Los Lagos,False,1,51,0,110.0,1054.0
+8383,U-500,U-500,Osorno - Río Negro - Purranque,ÚNICA,ÚNICA,42118,43083,Región de Los Lagos,False,1,98,0,42118.0,43083.0
+8385,V-506,V-506,Longitudinal Antiguo: Pellines - Llanquihue,ÚNICA,ÚNICA,5440,5760,Región de Los Lagos,False,1,25,0,5440.0,5760.0
+8386,W-520,W-520,La Chacra - La Montaña,ÚNICA,ÚNICA,990,2154,Región de Los Lagos,False,1,184,0,990.0,2154.0
+8387,U-511,U-511,Cruce Ruta 5 (Casa de Lata) - Rupanquito,ÚNICA,ÚNICA,0,13200,Región de Los Lagos,False,1,1811,0,0.0,13200.0
+8403,W-242,W-242,Lajas Blancas - Tehuaco,ÚNICA,ÚNICA,0,350,Región de Los Lagos,False,1,44,0,0.0,350.0
+8404,W-242,W-242,Lajas Blancas - Tehuaco,ÚNICA,ÚNICA,350,9812,Región de Los Lagos,False,1,1065,0,350.0,9812.0
+8405,W-145,W-145,Cruce Ruta 5 (El Quilar) - Doca,ÚNICA,ÚNICA,0,4000,Región de Los Lagos,False,1,273,0,0.0,4000.0
+8407,W-251,W-251,Cruce Ruta 5 (San Antonio) - Palomar,ÚNICA,ÚNICA,0,3315,Región de Los Lagos,False,1,261,0,0.0,3315.0
+8408,W-251,W-251,Cruce Ruta 5 (San Antonio) - Palomar,ÚNICA,ÚNICA,3315,13427,Región de Los Lagos,False,1,652,0,3315.0,13427.0
+8416,W-625,W-625,Cruce Ruta 5 (Vilupulli) - Quinched,ÚNICA,ÚNICA,0,4408,Región de Los Lagos,False,1,524,0,0.0,4408.0
+8417,W-460,W-460,Cruce Ruta 5 (Piruquina) - San Pedro,ÚNICA,ÚNICA,0,10500,Región de Los Lagos,False,1,1229,0,0.0,10500.0
+8419,W-485,W-485,Cruce Ruta 5 (Pid Pid) - Alto Muro,ÚNICA,ÚNICA,0,5950,Región de Los Lagos,False,1,546,0,0.0,5950.0
+8423,W-129,W-129,Chacao - Tres Cruces,ÚNICA,ÚNICA,0,2719,Región de Los Lagos,False,1,236,0,0.0,2719.0
+8431,U-155,U-155,Cruce Ruta 5 - Chapilcahuín - Mulpulmo,ÚNICA,ÚNICA,0,6000,Región de Los Lagos,False,1,276,0,0.0,6000.0
+8435,U-165,U-165,Cruce Ruta 5 (Remehue) - Mulpulmo,ÚNICA,ÚNICA,0,15373,Región de Los Lagos,False,1,899,0,0.0,15373.0
+8436,U-175,U-175,Barro Blanco - Polloico,ÚNICA,ÚNICA,900,5800,Región de Los Lagos,False,1,229,0,900.0,5800.0
+8441,W-902,W-902,Quellón - Yaldad,ÚNICA,ÚNICA,0,7491,Región de Los Lagos,False,1,626,0,0.0,7491.0
+8450,W-860,W-860,Cruce Ruta 5 (Chadmo) - Transversal Pacífico,ÚNICA,ÚNICA,0,1000,Región de Los Lagos,False,1,105,0,0.0,1000.0
+8451,W-860,W-860,Cruce Ruta 5 (Chadmo) - Transversal Pacífico,ÚNICA,ÚNICA,1000,6687,Región de Los Lagos,False,1,564,0,1000.0,6687.0
+8457,U-415,U-415,Osorno - Cañal Bajo,ÚNICA,ÚNICA,0,4796,Región de Los Lagos,False,1,174,0,0.0,4796.0
+8459,W-771,W-771,Cruce 5 (Llicaldad) - Rauco por la Costa,ÚNICA,ÚNICA,0,6554,Región de Los Lagos,False,1,946,0,0.0,6554.0
+8463,W-941,W-941,Cruce Ruta 5 - San Juan de Chadmo,ÚNICA,ÚNICA,0,3452,Región de Los Lagos,False,1,397,0,0.0,3452.0
+8470,W-875,W-875,Cruce Ruta 5 (Coinco) - Candelaria - Oqueldán,ÚNICA,ÚNICA,0,11923,Región de Los Lagos,False,1,1123,0,0.0,11923.0
+8473,W-877,W-877,Cruce Ruta 5 (Huildad) - Auchac,ÚNICA,ÚNICA,0,10555,Región de Los Lagos,False,1,874,0,0.0,10555.0
+8478,U-11,U-11,Cruce Ruta 5 (San Pablo) - Trafún,ÚNICA,ÚNICA,0,8000,Región de Los Lagos,False,1,384,0,0.0,8000.0
+8510,V-155,V-155,LLanquihue - Frutillar - Quilanto,ÚNICA,ÚNICA,0,15100,Región de Los Lagos,False,1,2017,0,0.0,15100.0
+8514,V-891,V-891,Cruce Ruta 5 - Colaco - Cruce Cárdenas,ÚNICA,ÚNICA,0,9882,Región de Los Lagos,False,1,1285,0,0.0,9882.0
+8521,U-531,U-531,Casa de Lata - Buenaventura Norte,ÚNICA,ÚNICA,0,640,Región de Los Lagos,False,1,141,0,0.0,640.0
+8522,U-533,U-533,Casa de Lata - Buenaventura Sur,ÚNICA,ÚNICA,0,2388,Región de Los Lagos,False,1,433,0,0.0,2388.0
+8523,U-605,U-605,Cruce Ruta 5 - Chifín - Cancura,ÚNICA,ÚNICA,0,5000,Región de Los Lagos,False,1,271,0,0.0,5000.0
+8539,U-705,U-705,Cruce Ruta 5 - Oromo,ÚNICA,ÚNICA,0,518,Región de Los Lagos,False,1,31,0,0.0,518.0
+8540,U-705,U-705,Cruce Ruta 5 - Oromo,ÚNICA,ÚNICA,518,6380,Región de Los Lagos,False,1,860,0,518.0,6380.0
+8562,V-720,V-720,Cruce Ruta 5 - San Antonio - El Tepual,ÚNICA,ÚNICA,0,11421,Región de Los Lagos,False,1,705,0,0.0,11421.0
+8574,U-510,U-510,Cruce Ruta 5 - Casa de Lata,ÚNICA,ÚNICA,0,4594,Región de Los Lagos,False,1,374,0,0.0,4594.0
+8575,V-104,V-104,Cruce Ruta 5 (El Burro) - Límite Provincial,ÚNICA,ÚNICA,0,6450,Región de Los Lagos,False,1,862,0,0.0,6450.0
+8576,V-104,V-104,Cruce Ruta 5 (El Burro) - Límite Provincial,ÚNICA,ÚNICA,8535,10712,Región de Los Lagos,False,1,284,0,8535.0,10712.0
+8581,V-120,V-120,Casma - Cancha Rayada - Centinela,ÚNICA,ÚNICA,0,7000,Región de Los Lagos,False,1,859,0,0.0,7000.0
+8585,U-58,U-58,Cruce Ruta 5 (Las Quemas) - Osorno,ÚNICA,ÚNICA,0,4000,Región de Los Lagos,False,1,261,0,0.0,4000.0
+8586,U-58,U-58,Cruce Ruta 5 (Las Quemas) - Osorno,ÚNICA,ÚNICA,4000,7492,Región de Los Lagos,False,1,227,0,4000.0,7492.0
+8589,U-596,U-596,Cruce Ruta 5 - Chifín - Río Negro,ÚNICA,ÚNICA,254,2707,Región de Los Lagos,False,1,484,0,254.0,2707.0
+8595,U-596,U-596,Cruce Ruta 5 - Chifín - Río Negro,ÚNICA,ÚNICA,0,254,Región de Los Lagos,False,1,20,0,0.0,254.0
+8596,V-590,V-590,El Tepual - Las Lomas,ÚNICA,ÚNICA,0,13476,Región de Los Lagos,False,1,2032,0,0.0,13476.0
+8627,V-850,V-850,Cruce Ruta 5 - Salto Grande,ÚNICA,ÚNICA,0,2800,Región de Los Lagos,False,1,181,0,0.0,2800.0
+8629,W-305,W-305,Cruce Ruta 5 - Pupelde,ÚNICA,ÚNICA,0,3340,Región de Los Lagos,False,1,289,0,0.0,3340.0
+8630,V-854,V-854,El Empalme Calbuco - El Jardín,ÚNICA,ÚNICA,0,13560,Región de Los Lagos,False,1,833,0,0.0,13560.0
+8647,W-377,W-377,Mocopulli - Niucho,ÚNICA,ÚNICA,0,1560,Región de Los Lagos,False,1,158,0,0.0,1560.0
+8648,W-377,W-377,Mocopulli - Niucho,ÚNICA,ÚNICA,1560,3339,Región de Los Lagos,False,1,210,0,1560.0,3339.0
+8649,V-970,V-970,Cruce Ruta 5 (Pargua) - Astillero - Carelmapu,ÚNICA,ÚNICA,0,21955,Región de Los Lagos,False,1,2102,0,0.0,21955.0
+8654,W-300,W-300,Cruce Ruta 5 - Chepu,ÚNICA,ÚNICA,0,6250,Región de Los Lagos,False,1,570,0,0.0,6250.0
+8657,U-175,U-175,Barro Blanco - Polloico,ÚNICA,ÚNICA,0,395,Región de Los Lagos,False,1,21,0,0.0,395.0
+8658,U-175,U-175,Barro Blanco - Polloico,ÚNICA,ÚNICA,395,900,Región de Los Lagos,False,1,24,0,395.0,900.0
+8678,V-104,V-104,Cruce Ruta 5 (El Burro) - Límite Provincial,ÚNICA,ÚNICA,6450,8535,Región de Los Lagos,False,1,341,0,6450.0,8535.0
+8698,U-609,U-609,Cruce Ruta 5 - El Moro,ÚNICA,ÚNICA,210,5543,Región de Los Lagos,False,1,252,0,210.0,5543.0
+8700,U-555,U-555,Cruce Ruta 5 (Los Laureles) - El Cobre,ÚNICA,ÚNICA,0,392,Región de Los Lagos,False,1,25,0,0.0,392.0
+8706,U-534,U-534,Cruce Ruta 5 - Salka,ÚNICA,ÚNICA,0,143,Región de Los Lagos,False,1,11,0,0.0,143.0
+8708,U-504,U-504,Cruce Ruta 5 (Caletera) - Acceso Norte a Purranque,ÚNICA,ÚNICA,619,1251,Región de Los Lagos,False,1,121,0,619.0,1251.0
+8714,U-515,U-515,Cruce Ruta 5 (Las Quemas) - Las Quemas Bajas,ÚNICA,ÚNICA,467,8308,Región de Los Lagos,False,1,562,0,467.0,8308.0
+8749,U-609,U-609,Cruce Ruta 5 - El Moro,ÚNICA,ÚNICA,0,210,Región de Los Lagos,False,1,23,0,0.0,210.0
+8754,U-534,U-534,Cruce Ruta 5 - Salka,ÚNICA,ÚNICA,143,2403,Región de Los Lagos,False,1,127,0,143.0,2403.0
+8759,U-555,U-555,Cruce Ruta 5 (Los Laureles) - El Cobre,ÚNICA,ÚNICA,392,5520,Región de Los Lagos,False,1,342,0,392.0,5520.0
+8763,U-530,U-530,Rio Negro - Estero Largo,ÚNICA,ÚNICA,0,1841,Región de Los Lagos,False,1,96,0,0.0,1841.0
+8789,U-127,U-127,Cementerio - Pufayo,ÚNICA,ÚNICA,0,1484,Región de Los Lagos,False,1,263,0,0.0,1484.0
+8790,U-517,U-517,Tacamó - Surber,ÚNICA,ÚNICA,0,4805,Región de Los Lagos,False,1,1043,0,0.0,4805.0
+8795,U-532,U-532,Purranque - Estero Largo,ÚNICA,ÚNICA,0,5952,Región de Los Lagos,False,1,309,0,0.0,5952.0
+8817,U-554,U-554,Cruce Ruta 5 - Chahuilco,ÚNICA,ÚNICA,0,2559,Región de Los Lagos,False,1,135,0,0.0,2559.0
+8825,U-504,U-504,Cruce Ruta 5 (Caletera) - Acceso Norte a Purranque,ÚNICA,ÚNICA,0,619,Región de Los Lagos,False,1,84,0,0.0,619.0
+8829,U-152,U-152,Cruce Ruta 5 (Enlace Putabla) - Chifca,ÚNICA,ÚNICA,0,3145,Región de Los Lagos,False,1,570,0,0.0,3145.0
+8832,U-515,U-515,Cruce Ruta 5 (Las Quemas) - Las Quemas Bajas,ÚNICA,ÚNICA,0,467,Región de Los Lagos,False,1,28,0,0.0,467.0
+8842,U-508,U-508,Cruce Ruta 5 - Las Quemas,ÚNICA,ÚNICA,0,1656,Región de Los Lagos,False,1,369,0,0.0,1656.0
+8873,V-115-U,V-115-U,Cruce Ruta 5 - Colonia Copío,ÚNICA,ÚNICA,211,3146,Región de Los Lagos,False,1,108,0,211.0,3146.0
+8904,V-132,V-132,Cruce Ruta 5 - Colonia La Huacha,ÚNICA,ÚNICA,0,1500,Región de Los Lagos,False,1,237,0,0.0,1500.0
+8911,V-110,V-110,Casma - Trailén,ÚNICA,ÚNICA,0,5007,Región de Los Lagos,False,1,742,0,0.0,5007.0
+8920,V-190,V-190,Cruce Ruta 5 - Colonia La Radio,ÚNICA,ÚNICA,0,3450,Región de Los Lagos,False,1,627,0,0.0,3450.0
+8959,V-125,V-125,Cruce Ruta 5 - Colonia San Martín,ÚNICA,ÚNICA,0,5394,Región de Los Lagos,False,1,606,0,0.0,5394.0
+8989,U-997,U-997,Cruce Ruta 5 (Colonia Ponce) - Quilanto,ÚNICA,ÚNICA,0,17692,Región de Los Lagos,False,1,942,0,0.0,17692.0
+9003,V-130,V-130,Loma La Piedra - Teihuén,ÚNICA,ÚNICA,0,461,Región de Los Lagos,False,1,73,0,0.0,460.76179999999295
+9050,V-115-U,V-115-U,Cruce Ruta 5 - Colonia Copío,ÚNICA,ÚNICA,0,211,Región de Los Lagos,False,1,11,0,0.0,211.0
+9063,V-280,V-280,Cruce Ruta 5 (Pellines) - Río Colegual,ÚNICA,ÚNICA,0,4517,Región de Los Lagos,False,1,674,0,0.0,4517.0
+9068,W-149,W-149,San Juan - Caipulli,ÚNICA,ÚNICA,0,2875,Región de Los Lagos,False,1,274,0,0.0,2875.0
+9069,W-103,W-103,Cruce Ruta 5 (San Antonio) - Huelden,ÚNICA,ÚNICA,0,5100,Región de Los Lagos,False,1,382,0,0.0,5100.0
+9080,V-819,V-819,Cruce Ruta 5 (Barra) - Los Pinis,ÚNICA,ÚNICA,0,8716,Región de Los Lagos,False,1,1063,0,0.0,8716.0
+9098,V-728,V-728,Cruce Ruta 5 - Las Cahuellas,ÚNICA,ÚNICA,0,2605,Región de Los Lagos,False,1,80,0,0.0,2605.0
+9106,V-906,V-906,Cruce Ruta 5 (Galpones) - Cumbre La Bola,ÚNICA,ÚNICA,180,12855,Región de Los Lagos,False,1,2077,0,180.0,12855.0
+9115,W-250,W-250,Cruce Ruta 5 (Mechaico) - Coipomó,ÚNICA,ÚNICA,0,12576,Región de Los Lagos,False,1,1234,0,0.0,12576.0
+9129,W-110,W-110,Cruce Ruta 5 - Caulín Bajo,ÚNICA,ÚNICA,0,4730,Región de Los Lagos,False,1,543,0,0.0,4730.0
+9139,V-893,V-893,Cruce Ruta 5 (Avellanal) - Ensenada Codihue (Abtao),ÚNICA,ÚNICA,0,1073,Región de Los Lagos,False,1,219,0,0.0,1073.0
+9140,W-104,W-104,Las Vegas - Puerto Elvira,ÚNICA,ÚNICA,0,3418,Región de Los Lagos,False,1,236,0,0.0,3418.0
+9144,W-160,W-160,Cruce Ruta 5 (Huicha) - Caulín Bajo,ÚNICA,ÚNICA,0,13160,Región de Los Lagos,False,1,1126,0,0.0,13160.0
+9147,W-106,W-106,Cruce Ruta 5 - Puerto Elvira,ÚNICA,ÚNICA,0,1990,Región de Los Lagos,False,1,205,0,0.0,1990.0
+9149,V-852,V-852,El Llolle - El Jardín,ÚNICA,ÚNICA,0,11019,Región de Los Lagos,False,1,1355,0,0.0,11019.0
+9158,W-118,W-118,Cruce Ruta 5 - Huicha La Cumbre,ÚNICA,ÚNICA,0,8325,Región de Los Lagos,False,1,724,0,0.0,8325.0
+9169,V-809,V-809,Cruce Ruta 5 (Abtao Bajo) - La Playa,ÚNICA,ÚNICA,0,1671,Región de Los Lagos,False,1,334,0,0.0,1671.0
+9170,W-240,W-240,Cruce Ruta 5 (Caracoles) - Caicumeo,ÚNICA,ÚNICA,0,6602,Región de Los Lagos,False,1,765,0,0.0,6602.0
+9179,W-116,W-116,Chacao - San Gayán,ÚNICA,ÚNICA,0,2817,Región de Los Lagos,False,1,340,0,0.0,2817.0
+9189,W-111,W-111,Cruce Ruta 5 (Río Huenque) - Butamanga,ÚNICA,ÚNICA,0,5986,Región de Los Lagos,False,1,542,0,0.0,5986.0
+9190,V-840,V-840,Cruce Ruta 5 (La Goleta) - Salto Chico,ÚNICA,ÚNICA,0,13236,Región de Los Lagos,False,1,810,0,0.0,13236.0
+9193,V-895,V-895,Cruce Ruta 5 - Chayahué,ÚNICA,ÚNICA,0,236,Región de Los Lagos,False,1,21,0,0.0,236.0
+9196,V-876,V-876,Cruce Ruta 5 (Huayún) - Los Lingues,ÚNICA,ÚNICA,0,9465,Región de Los Lagos,False,1,1047,0,0.0,9465.0
+9199,W-107,W-107,Cruce Ruta 5 - El Tepual,ÚNICA,ÚNICA,0,2876,Región de Los Lagos,False,1,207,0,0.0,2876.0
+9201,V-906,V-906,Cruce Ruta 5 (Galpones) - Cumbre La Bola,ÚNICA,ÚNICA,0,180,Región de Los Lagos,False,1,18,0,0.0,180.0
+9204,V-886,V-886,Cruce Ruta 5 (Cumbre del Barro) - Don Justo - Quebrada La Junta,ÚNICA,ÚNICA,0,5725,Región de Los Lagos,False,1,731,0,0.0,5725.0
+9212,W-120,W-120,Cruce Ruta 5 (Chacao) - Caulín Alto,ÚNICA,ÚNICA,0,9075,Región de Los Lagos,False,1,1098,0,0.0,9075.0
+9226,V-895,V-895,Cruce Ruta 5 - Chayahué,ÚNICA,ÚNICA,236,6864,Región de Los Lagos,False,1,851,0,236.0,6864.0
+9250,W-141,W-141,San Juan - Senda del Medio,ÚNICA,ÚNICA,0,1324,Región de Los Lagos,False,1,179,0,0.0,1324.0
+9252,V-830,V-830,Cruce Ruta 5 (Monte Verde) - Colonia El Gato,ÚNICA,ÚNICA,0,14718,Región de Los Lagos,False,1,2387,0,0.0,14718.0
+9259,W-135,W-135,Cruce Ruta 5 (Butamanga) - Manao,ÚNICA,ÚNICA,0,4721,Región de Los Lagos,False,1,437,0,0.0,4721.0
+9263,V-897,V-897,Cruce Ruta 5 (Pargua Alta) - Los Tiques (Alonso de Ercilla),ÚNICA,ÚNICA,0,2945,Región de Los Lagos,False,1,523,0,0.0,2945.0
+9266,W-261,W-261,Cruce Ruta 5 (Antigua) - Puente Mechaico,ÚNICA,ÚNICA,0,2471,Región de Los Lagos,False,1,240,0,0.0,2471.0
+9267,V-856,V-856,Cruce Ruta 5 - Avellanal,ÚNICA,ÚNICA,0,2029,Región de Los Lagos,False,1,458,0,0.0,2029.0
+9270,W-102,W-102,Pajal - Punta San Gayán,ÚNICA,ÚNICA,0,3326,Región de Los Lagos,False,1,395,0,0.0,3326.0
+9271,W-248,W-248,Cruce Ruta 5 - San Antonio,ÚNICA,ÚNICA,0,556,Región de Los Lagos,False,1,80,0,0.0,556.0
+9275,W-113,W-113,Cruce Ruta 5 (Mutrico) - Caipulli,ÚNICA,ÚNICA,0,4476,Región de Los Lagos,False,1,441,0,0.0,4476.0
+9277,V-807,V-807,Abtao Bajo - Estero Los Cuervos,ÚNICA,ÚNICA,0,1234,Región de Los Lagos,False,1,275,0,0.0,1234.0
+9285,W-644,W-644,Canán - Vilupulli,ÚNICA,ÚNICA,0,3237,Región de Los Lagos,False,1,310,0,0.0,3237.0
+9288,W-526,W-526,Nercón - Los Aromos,ÚNICA,ÚNICA,214,1856,Región de Los Lagos,False,1,513,0,214.0,1856.0
+9293,W-330,W-330,Cruce Ruta 5 - Estación Palomar,ÚNICA,ÚNICA,0,5872,Región de Los Lagos,False,1,624,0,0.0,5872.0
+9296,W-773,W-773,Chonchi - Laguna Mayol,ÚNICA,ÚNICA,0,2814,Región de Los Lagos,False,1,367,0,0.0,2814.0
+9297,W-332,W-332,Cruce Ruta 5 (Tantauco) - Camino Viejo,ÚNICA,ÚNICA,0,2753,Región de Los Lagos,False,1,310,0,0.0,2753.0
+9298,W-542,W-542,Nercón - La Montaña,ÚNICA,ÚNICA,1143,4750,Región de Los Lagos,False,1,501,0,1143.0,4750.0
+9315,W-461,W-461,Cruce Ruta 5 (Mocopulli) - Puente Puacura,ÚNICA,ÚNICA,0,6951,Región de Los Lagos,False,1,583,0,0.0,6951.0
+9318,W-437,W-437,Puente Hueñocoihue - Punahuel,ÚNICA,ÚNICA,0,4686,Región de Los Lagos,False,1,477,0,0.0,4686.0
+9319,W-526,W-526,Nercón - Los Aromos,ÚNICA,ÚNICA,0,214,Región de Los Lagos,False,1,55,0,0.0,214.0
+9321,W-427,W-427,Cruce Ruta 5 (Nalhuitad) - Playa Rauco 2,ÚNICA,ÚNICA,0,2304,Región de Los Lagos,False,1,506,0,0.0,2304.0
+9322,W-502,W-502,Nercón Alto - Agua Potable,ÚNICA,ÚNICA,0,860,Región de Los Lagos,False,1,125,0,0.0,860.0
+9331,W-546,W-546,Gamboa - Las Antenas,ÚNICA,ÚNICA,0,307,Región de Los Lagos,False,1,38,0,0.0,307.0
+9332,W-648,W-648,Cruce Ruta 5 (Vilupulli) - Melleico,ÚNICA,ÚNICA,0,10984,Región de Los Lagos,False,1,1378,0,0.0,10984.0
+9335,W-816,W-816,Cruce Ruta 5 (Tara) - Quilipulli,ÚNICA,ÚNICA,0,3163,Región de Los Lagos,False,1,465,0,0.0,3163.0
+9339,W-522,W-522,La Chacra - Coihuinco,ÚNICA,ÚNICA,2123,7828,Región de Los Lagos,False,1,737,0,2123.0,7828.0
+9343,W-580,W-580,Cruce Ruta 5 (Llicaldad) - La Montaña,ÚNICA,ÚNICA,251,548,Región de Los Lagos,False,1,47,0,251.0,548.0
+9349,W-624,W-624,Cruce Ruta 5 (Nalhuitad) - Río Toro,ÚNICA,ÚNICA,0,3762,Región de Los Lagos,False,1,726,0,0.0,3762.0
+9350,W-435,W-435,Butalcura Alto - Pindapulli,ÚNICA,ÚNICA,0,914,Región de Los Lagos,False,1,99,0,0.0,914.0
+9352,W-345,W-345,Cruce Ruta 5 (Tantauco) - Loncomilla,ÚNICA,ÚNICA,0,17445,Región de Los Lagos,False,1,1190,0,0.0,17445.0
+9353,W-580,W-580,Cruce Ruta 5 (Llicaldad) - La Montaña,ÚNICA,ÚNICA,0,251,Región de Los Lagos,False,1,50,0,0.0,251.0
+9354,W-371,W-371,Cruce Ruta 5 (Butalcura) - Pindapulli,ÚNICA,ÚNICA,0,7040,Región de Los Lagos,False,1,639,0,0.0,7040.0
+9360,W-483,W-483,Putemún - Pid Pid,ÚNICA,ÚNICA,0,3017,Región de Los Lagos,False,1,304,0,0.0,3017.0
+9362,W-610,W-610,Cruce Ruta 5 (Canán) - Alcaldeo de Rauco,ÚNICA,ÚNICA,0,4912,Región de Los Lagos,False,1,478,0,0.0,4912.0
+9364,W-590,W-590,Cruce Ruta 5 (Nalhuitad 1) - La Montaña,ÚNICA,ÚNICA,0,3936,Región de Los Lagos,False,1,540,0,0.0,3936.0
+9369,W-524,W-524,La Chacra - La Capilla,ÚNICA,ÚNICA,0,1469,Región de Los Lagos,False,1,252,0,0.0,1469.0
+9370,W-612,W-612,Nalhuitad - Alcaldeo de Rauco,ÚNICA,ÚNICA,0,4847,Región de Los Lagos,False,1,530,0,0.0,4847.0
+9375,W-350,W-350,Cruce Ruta 5 (Puntra) - Río Cajunco - Kilómetro 60,ÚNICA,ÚNICA,0,30814,Región de Los Lagos,False,1,2986,0,0.0,30814.0
+9376,W-546,W-546,Gamboa - Las Antenas,ÚNICA,ÚNICA,307,1770,Región de Los Lagos,False,1,218,0,307.0,1770.0
+9377,W-791,W-791,Cruce Ruta 5 (Tara) - Huicha,ÚNICA,ÚNICA,0,7542,Región de Los Lagos,False,1,969,0,0.0,7542.0
+9380,W-656,W-656,Notuco - Dicham,ÚNICA,ÚNICA,0,3340,Región de Los Lagos,False,1,352,0,0.0,3340.0
+9384,W-560,W-560,Gamboa - Nercón,ÚNICA,ÚNICA,0,1551,Región de Los Lagos,False,1,192,0,0.0,1551.0
+9394,W-488,W-488,Cruce Ruta 5 (LLau Llao) - La Montaña - Piruquina,ÚNICA,ÚNICA,0,7065,Región de Los Lagos,False,1,932,0,0.0,7065.0
+9395,W-580,W-580,Cruce Ruta 5 (Llicaldad) - La Montaña,ÚNICA,ÚNICA,548,7866,Región de Los Lagos,False,1,884,0,548.0,7866.0
+9403,W-652,W-652,Curaco - Río Tablín,ÚNICA,ÚNICA,0,6356,Región de Los Lagos,False,1,661,0,0.0,6356.0
+9404,W-297,W-297,Mocopulli Bajo - Histórico,ÚNICA,ÚNICA,0,6658,Región de Los Lagos,False,1,578,0,0.0,6658.0
+9426,W-341,W-341,Cruce Ruta 5 (Puntra) - El Prado,ÚNICA,ÚNICA,0,4943,Región de Los Lagos,False,1,422,0,0.0,4943.0
+9428,W-319,W-319,Cruce Ruta 5 (Coquiao) - Cogomó,ÚNICA,ÚNICA,0,3700,Región de Los Lagos,False,1,249,0,0.0,3700.0
+9429,W-513,W-513,Yutuy - Punta Peuque,ÚNICA,ÚNICA,0,3691,Región de Los Lagos,False,1,478,0,0.0,3691.0
+9437,W-522,W-522,La Chacra - Coihuinco,ÚNICA,ÚNICA,0,2123,Región de Los Lagos,False,1,283,0,0.0,2123.0
+9440,W-542,W-542,Nercón - La Montaña,ÚNICA,ÚNICA,0,1143,Región de Los Lagos,False,1,133,0,0.0,1143.0
+9446,W-640,W-640,Cruce Ruta 5 - Alcaldeo de Rauco - San Bruno,ÚNICA,ÚNICA,0,10651,Región de Los Lagos,False,1,983,0,0.0,10651.0
+9447,W-458,W-458,Cruce Ruta 5 (Pid Pid) - Antigua Variante,ÚNICA,ÚNICA,0,1239,Región de Los Lagos,False,1,142,0,0.0,1239.0
+9448,W-595,W-595,Rauco - Quinched,ÚNICA,ÚNICA,0,4813,Región de Los Lagos,False,1,497,0,0.0,4813.0
+9450,W-385,W-385,Cruce Ruta 5 (Loncomilla) - Culdeo,ÚNICA,ÚNICA,0,7992,Región de Los Lagos,False,1,594,0,0.0,7992.0
+9451,W-527,W-527,Cruce Ruta 5 (Vilupulli) - La Playa,ÚNICA,ÚNICA,0,1496,Región de Los Lagos,False,1,228,0,0.0,1496.0
+9454,W-493,W-493,Putemún - Humedal Putemún,ÚNICA,ÚNICA,0,644,Región de Los Lagos,False,1,62,0,0.0,644.0
+9455,W-618,W-618,Nalhuitad - Río Toro 1,ÚNICA,ÚNICA,0,1287,Región de Los Lagos,False,1,395,0,0.0,1287.0
+9460,W-400,W-400,Cruce Ruta 5 (Pid Pid) - Piruquina,ÚNICA,ÚNICA,0,1257,Región de Los Lagos,False,1,156,0,0.0,1257.0
+9462,W-650,W-650,Cruce Ruta 5 (Vilupulli) - Notué - Quiao,ÚNICA,ÚNICA,0,15011,Región de Los Lagos,False,1,1268,0,0.0,15011.0
+9466,W-614,W-614,Cruce Ruta 5 (Nalhuitad 2) - La Montaña,ÚNICA,ÚNICA,0,2017,Región de Los Lagos,False,1,246,0,0.0,2017.0
+9467,W-456,W-456,Cruce Ruta 5 - Acceso Piruquina,ÚNICA,ÚNICA,0,965,Región de Los Lagos,False,1,131,0,0.0,965.0
+9468,W-387,W-387,Cruce Ruta 5 (Butalcura) - Chaquihual,ÚNICA,ÚNICA,0,9252,Región de Los Lagos,False,1,912,0,0.0,9252.0
+9473,W-433,W-433,Cruce Ruta 5 (Llau Llao) - La Playa,ÚNICA,ÚNICA,0,2186,Región de Los Lagos,False,1,344,0,0.0,2186.0
+9474,W-582,W-582,Llicaldad - Chandeo,ÚNICA,ÚNICA,0,1015,Región de Los Lagos,False,1,177,0,0.0,1015.0
+9477,W-335,W-335,Cruce Ruta 5 (Palomar) - Belbén,ÚNICA,ÚNICA,0,11583,Región de Los Lagos,False,1,851,0,0.0,11583.0
+9480,W-454,W-454,Cruce Ruta 5 (Las Compuertas) - Carihueico,ÚNICA,ÚNICA,0,13106,Región de Los Lagos,False,1,1769,0,0.0,13106.0
+9487,W-851,W-851,Cruce Ruta 5 - Quila Quemada,ÚNICA,ÚNICA,0,1808,Región de Los Lagos,False,1,178,0,0.0,1808.0
+9491,W-911,W-911,Cruce Ruta 5 (San Juan) - Curanué,ÚNICA,ÚNICA,0,17756,Región de Los Lagos,False,1,1941,0,0.0,17756.0
+9499,W-905,W-905,Cruce Ruta 5 (Compu) - Chaildad,ÚNICA,ÚNICA,0,4992,Región de Los Lagos,False,1,589,0,0.0,4992.0
+9500,W-866,W-866,Cruce Ruta 5 (Coinco) - Los Runiahues,ÚNICA,ÚNICA,0,5747,Región de Los Lagos,False,1,521,0,0.0,5747.0
+9502,W-858,W-858,Cruce Ruta 5 (Colonia Yungay) - Lago San Antonio,ÚNICA,ÚNICA,0,8622,Región de Los Lagos,False,1,1055,0,0.0,8622.0
+9505,W-852,W-852,Cruce Ruta 5 (Compu) - Los Antipani,ÚNICA,ÚNICA,0,3140,Región de Los Lagos,False,1,415,0,0.0,3140.0
+9510,W-832,W-832,Cruce Ruta 5 (Tara) - Romezal - Quilipulli,ÚNICA,ÚNICA,0,8400,Región de Los Lagos,False,1,923,0,0.0,8400.0
+9513,W-886,W-886,Cruce Ruta 5 (Natri) - Miraflores - Lago Tepuhueico,ÚNICA,ÚNICA,0,13929,Región de Los Lagos,False,1,1113,0,0.0,13929.0
+9514,W-845,W-845,Cruce Ruta 5 (Chadmo) - Yatehue,ÚNICA,ÚNICA,0,6808,Región de Los Lagos,False,1,769,0,0.0,6808.0
+9520,W-888,W-888,Cruce Ruta 5 (Molulco) - Yerba Loza,ÚNICA,ÚNICA,0,16127,Región de Los Lagos,False,1,1717,0,0.0,16127.0
+9527,W-892,W-892,Cruce Ruta 5 (Molulco) - Laguna Chiulla,ÚNICA,ÚNICA,0,3619,Región de Los Lagos,False,1,563,0,0.0,3619.0
+9531,W-890,W-890,Cruce Ruta 5 (Molulco) - Las Tejas,ÚNICA,ÚNICA,0,1212,Región de Los Lagos,False,1,191,0,0.0,1212.0
+9535,W-909,W-909,Cruce Ruta 5 (Huildad) - Coi Coi,ÚNICA,ÚNICA,0,2029,Región de Los Lagos,False,1,265,0,0.0,2029.0
+9536,W-865,W-865,Chadmo - Cacique Millalonco,ÚNICA,ÚNICA,0,2680,Región de Los Lagos,False,1,264,0,0.0,2680.0
+9538,W-825,W-825,Cruce Ruta 5 (Tara) - Pindaco,ÚNICA,ÚNICA,0,6250,Región de Los Lagos,False,1,999,0,0.0,6250.0
+9542,W-837,W-837,Cruce Ruta 5 (Compu Alto) - Chaildad - Yatehue,ÚNICA,ÚNICA,0,8179,Región de Los Lagos,False,1,994,0,0.0,8179.0
+9553,W-843,W-843,Santa Rosa - Quila Quemada,ÚNICA,ÚNICA,0,1643,Región de Los Lagos,False,1,197,0,0.0,1643.0
+9555,U-102,U-102,Cruce Ruta 5 (Pincoy) - San Pablo,ÚNICA,ÚNICA,0,12609,Región de Los Lagos,False,1,1934,0,0.0,12609.0
+9556,U-102,U-102,Cruce Ruta 5 (Pincoy) - San Pablo,ÚNICA,ÚNICA,12609,13263,Región de Los Lagos,False,1,31,0,12609.0,13263.0
+9557,U-108,U-108,Cruce Ruta 5 (Pufayo) - San Pablo,ÚNICA,ÚNICA,0,1398,Región de Los Lagos,False,1,240,0,0.0,1398.0
+9558,U-108,U-108,Cruce Ruta 5 (Pufayo) - San Pablo,ÚNICA,ÚNICA,1398,2296,Región de Los Lagos,False,1,38,0,1398.0,2296.0
+9559,U-125,U-125,Hueleco - Pufayo - Trecaimo,ÚNICA,ÚNICA,583,5778,Región de Los Lagos,False,1,790,0,583.0,5778.0
+9560,U-125,U-125,Hueleco - Pufayo - Trecaimo,ÚNICA,ÚNICA,0,583,Región de Los Lagos,False,1,8,0,0.0,583.0
+9570,W-480,W-480,Cruce Ruta 5 (Pid Pid) - Al Pacífico,ÚNICA,ÚNICA,0,12617,Región de Los Lagos,False,1,1741,0,0.0,12617.0
+9598,U-524,U-524,Cruce Ruta 5 - Cruce U-500,ÚNICA,ÚNICA,0,337,Región de Los Lagos,False,1,25,0,0.0,337.0
+9611,W-126,W-126,Cruce Ruta 5 (Los Cipreses) - San Gallán,ÚNICA,ÚNICA,0,4564,Región de Los Lagos,False,1,336,0,0.0,4564.0
+9615,W-375,W-375,Cruce Ruta 5 (Butalcura) - Pasarela El Pozuelo,ÚNICA,ÚNICA,0,5436,Región de Los Lagos,False,1,603,0,0.0,5436.0
+10027,W-451,W-451,Puacura Alto - Punahuel,ÚNICA,ÚNICA,0,1681,Región de Los Lagos,False,1,284,0,0.0,1681.0
+10028,W-544,W-544,Castro - Gamboa Alto,ÚNICA,ÚNICA,0,457,Región de Los Lagos,False,1,154,0,0.0,457.0
+10036,T-203,T-203,Cruce Ruta 5 - Cruce T-237 (Estación Mariquina),ÚNICA,U,0,377,Región de Los Ríos,False,1,394,0,0.0,377.0
+10037,T-203,T-203,Cruce Ruta 5 - Cruce T-237 (Estación Mariquina),ÚNICA,U,377,834,Región de Los Ríos,False,1,486,0,377.0,834.0
+12449,G-53,G-53,Paine - Linderos - Buin,ÚNICA,U,2300,9179,Región Metropolitana de Santiago,False,1,874,0,2300.0,9179.0
+12450,G-53,G-53,Paine - Linderos - Buin,ÚNICA,D,9179,9228,Región Metropolitana de Santiago,False,1,5,0,9179.0,9228.0
+12451,G-53,G-53,Paine - Linderos - Buin,ÚNICA,U,10469,12769,Región Metropolitana de Santiago,False,1,247,0,10469.0,12769.0
+12452,G-53,G-53,Paine - Linderos - Buin,ÚNICA,I,9179,9228,Región Metropolitana de Santiago,False,1,27,0,9179.0,9228.0
+12453,G-53,G-53,Paine - Linderos - Buin,ÚNICA,U,0,2300,Región Metropolitana de Santiago,False,1,324,0,0.0,2300.0
+12454,G-53,G-53,Paine - Linderos - Buin,ÚNICA,U,9228,10469,Región Metropolitana de Santiago,False,1,187,0,9228.0,10469.0
+12455,G-48,G-48,Buin - Maipo - Viluco,ÚNICA,U,260,1530,Región Metropolitana de Santiago,False,1,127,0,260.0,1530.0
+12456,G-48,G-48,Buin - Maipo - Viluco,ÚNICA,U,1530,10466,Región Metropolitana de Santiago,False,1,1194,0,1530.0,10466.0
+12457,G-48,G-48,Buin - Maipo - Viluco,ÚNICA,U,0,260,Región Metropolitana de Santiago,False,1,41,0,0.0,260.0
+12471,G-517,G-517,El Cerrillo,ÚNICA,U,0,4212,Región Metropolitana de Santiago,False,1,360,0,0.0,4212.0
+12474,G-46,G-46,Paine - Lonquén - Carampangue,ÚNICA,U,0,24746,Región Metropolitana de Santiago,False,1,3644,0,0.0,24746.0
+12477,G-556,G-556,Águila Sur - Águila Norte - Hospital,ÚNICA,U,0,6760,Región Metropolitana de Santiago,False,1,373,0,0.0,6760.0
+12489,G-501,G-501,El Cuadro,ÚNICA,U,0,488,Región Metropolitana de Santiago,False,1,23,0,0.0,488.0
+12495,G-525,G-525,El Recurso,ÚNICA,U,0,5687,Región Metropolitana de Santiago,False,1,860,0,0.0,5687.0
+12498,G-494,G-494,La Cervera,ÚNICA,U,0,5938,Región Metropolitana de Santiago,False,1,1170,0,0.0,5938.0
+12502,G-550,G-550,Acceso a Hospital,ÚNICA,U,1000,2300,Región Metropolitana de Santiago,False,1,61,0,1000.0,2300.0
+12503,G-348,G-348,San José de Nos,ÚNICA,U,0,1492,Región Metropolitana de Santiago,False,1,44,0,0.0,1492.0
+12504,G-526,G-526,Santa Victoria,ÚNICA,U,0,1424,Región Metropolitana de Santiago,False,1,45,0,0.0,1424.0
+12508,G-545,G-545,Lo Donoso,ÚNICA,U,0,800,Región Metropolitana de Santiago,False,1,13,0,0.0,800.0
+12514,G-571,G-571,El Romero,ÚNICA,U,0,2415,Región Metropolitana de Santiago,False,1,238,0,0.0,2415.0
+12517,G-360,G-360,El Romeral,ÚNICA,U,0,1862,Región Metropolitana de Santiago,False,1,246,0,0.0,1862.0
+12520,G-530,G-530,Presidente Pedro Aguirre Cerda,ÚNICA,U,0,1661,Región Metropolitana de Santiago,False,1,75,0,0.0,1661.0
+12522,G-534,G-534,Colonias de Paine,ÚNICA,U,0,976,Región Metropolitana de Santiago,False,1,44,0,0.0,976.0
+12536,G-541,G-541,Gilda Díaz Girón,ÚNICA,U,0,987,Región Metropolitana de Santiago,False,1,25,0,0.0,987.0
+12537,G-489,G-489,Los Guindos,ÚNICA,U,0,4403,Región Metropolitana de Santiago,False,1,573,0,0.0,4403.0
+12558,G-340,G-340,Lo Herrera - Barrancón,ÚNICA,U,840,9060,Región Metropolitana de Santiago,False,1,449,0,840.0,9060.0
+12566,G-350,G-350,La Capilla - El Barrancón,ÚNICA,U,0,1783,Región Metropolitana de Santiago,False,1,47,0,0.0,1783.0
+12578,G-344,G-344,Santa Teresa,ÚNICA,U,0,3964,Región Metropolitana de Santiago,False,1,373,0,0.0,3964.0
+12580,G-538,G-538,Presidente Juan Antonio Ríos,ÚNICA,U,0,1796,Región Metropolitana de Santiago,False,1,113,0,0.0,1796.0
+12587,G-540,G-540,Presidente Gabriel González Videla,ÚNICA,U,0,1945,Región Metropolitana de Santiago,False,1,128,0,0.0,1945.0
+12591,G-539,G-539,Gilda Díaz Norte,ÚNICA,U,0,650,Región Metropolitana de Santiago,False,1,11,0,0.0,650.0
+12606,G-560,G-560,Las Mulas - Estero Angostura,ÚNICA,U,0,1198,Región Metropolitana de Santiago,False,1,83,0,0.0,1198.0
+12616,G-571,G-571,El Romero,ÚNICA,U,2415,5447,Región Metropolitana de Santiago,False,1,295,0,2415.0,5447.0
+12620,G-346,G-346,Catemito,ÚNICA,U,0,5276,Región Metropolitana de Santiago,False,1,463,0,0.0,5276.0
+12623,G-51,G-51,Buin - Alto Jahuel,ÚNICA,U,0,4706,Región Metropolitana de Santiago,False,1,730,0,0.0,4706.0
+12625,G-558,G-558,Las Mulas,ÚNICA,U,0,1235,Región Metropolitana de Santiago,False,1,43,0,0.0,1235.0
+12636,G-555,G-555,Hospital - Chada,ÚNICA,U,0,9704,Región Metropolitana de Santiago,False,1,1605,0,0.0,9704.0
+12637,G-356,G-356,Eleodoro Yáñez,ÚNICA,U,0,2216,Región Metropolitana de Santiago,False,1,164,0,0.0,2216.0
+12719,G-513,G-513,Alto Jahuel - Linderos,ÚNICA,U,0,5587,Región Metropolitana de Santiago,False,1,807,0,0.0,5587.0
+12720,G-521,G-521,San Eugenio,ÚNICA,U,0,2001,Región Metropolitana de Santiago,False,1,294,0,0.0,2001.0
+12721,G-531,G-531,Paine - Huelquén,ÚNICA,U,0,8609,Región Metropolitana de Santiago,False,1,1202,0,0.0,8609.0
+12735,G-54,G-54,Champa - Melipilla (Puente Ingeniero Marambio Antiguo),ÚNICA,U,0,17310,Región Metropolitana de Santiago,False,1,1270,0,0.0,17310.0
+12769,G-340,G-340,Lo Herrera - Barrancón,ÚNICA,U,0,840,Región Metropolitana de Santiago,False,1,52,0,0.0,840.0
+12770,G-340,G-340,Lo Herrera - Barrancón,ÚNICA,U,9060,9874,Región Metropolitana de Santiago,False,1,52,0,9060.0,9874.0
+12772,G-550,G-550,Acceso a Hospital,ÚNICA,U,0,1000,Región Metropolitana de Santiago,False,1,33,0,0.0,1000.0
+12791,H-10,H-10,Cruce Ruta 5 (Paso Superior Peuco) - Av. Salvador Allende,ÚNICA,U,3820,21623,Región del Libertador General Bernardo O'Higgins,False,1,1645,0,3820.0,21623.0
+12792,H-10,H-10,Cruce Ruta 5 (Paso Superior Peuco) - Av. Salvador Allende,ÚNICA,U,1390,2470,Región del Libertador General Bernardo O'Higgins,False,1,116,0,1390.0,2470.0
+12793,H-10,H-10,Cruce Ruta 5 (Paso Superior Peuco) - Av. Salvador Allende,ÚNICA,D,2470,3820,Región del Libertador General Bernardo O'Higgins,False,1,149,0,2470.0,3820.0
+12794,H-15,H-15,Rancagua (Rotonda Alameda) - Cruce H-111,ÚNICA,U,150,26647,Región del Libertador General Bernardo O'Higgins,False,1,2712,0,150.0,26647.0
+12795,H-15,H-15,Rancagua (Rotonda Alameda) - Cruce H-111,ÚNICA,D,0,150,Región del Libertador General Bernardo O'Higgins,False,1,26,0,0.0,150.0
+12796,H-30,H-30,Cruce Ruta 5 (Enlace Rancagua) - Doñihue - Cruce Ruta 66 (Peumo),ÚNICA,U,400,53025,Región del Libertador General Bernardo O'Higgins,False,1,4482,0,400.0,53025.0
+12797,H-30,H-30,Cruce Ruta 5 (Enlace Rancagua) - Doñihue - Cruce Ruta 66 (Peumo),ÚNICA,D,0,400,Región del Libertador General Bernardo O'Higgins,False,1,70,0,0.0,400.0
+12799,Ruta 90,90,Cruce Ruta 5 (Acceso Sur a San Fernando) - Pichilemu,ÚNICA,U,0,522,Región del Libertador General Bernardo O'Higgins,False,1,93,0,0.0,522.0
+12800,Ruta 90,90,Cruce Ruta 5 (Acceso Sur a San Fernando) - Pichilemu,ÚNICA,U,522,730,Región del Libertador General Bernardo O'Higgins,False,1,20,0,522.0,730.0
+12802,Ruta 90,90,Cruce Ruta 5 (Acceso Sur a San Fernando) - Pichilemu,ÚNICA,U,730,800,Región del Libertador General Bernardo O'Higgins,False,1,8,0,730.0,800.0
+12803,Ruta 90,90,Cruce Ruta 5 (Acceso Sur a San Fernando) - Pichilemu,ÚNICA,D,800,8475,Región del Libertador General Bernardo O'Higgins,False,1,610,0,800.0,8475.0
+12804,H-1000,H-1000,Cruce Ruta 5 (Paso superior Los Lagartos) - Cruce H-10,ÚNICA,U,0,380,Región del Libertador General Bernardo O'Higgins,False,1,6,0,0.0,380.0
+12805,H-11,H-11,Cruce Ruta 5 (Callejones) - Cruce H-15 (Codegua),ÚNICA,U,0,3533,Región del Libertador General Bernardo O'Higgins,False,1,297,0,0.0,3533.0
+12806,H-111,H-111,Cruce Ruta 5 (Paso superior Los Lagartos) - Cruce H-15 (PicarquÍn),ÚNICA,U,0,5996,Región del Libertador General Bernardo O'Higgins,False,1,546,0,0.0,5996.0
+12807,H-145,H-145,Cruce Ruta 5 (Paso Superior Mostazal) - Cruce H-15 (Bifurcación La Punta),ÚNICA,U,0,3565,Región del Libertador General Bernardo O'Higgins,False,1,380,0,0.0,3565.0
+12814,H-201,H-201,Cruce Ruta 5 (Graneros) - H-15 (La CompañÍa),ÚNICA,U,0,3115,Región del Libertador General Bernardo O'Higgins,False,1,363,0,0.0,3115.0
+12823,H-27,H-27,Carretera Presidente Eduardo Frei Montalva (Carretera El Cobre),ÚNICA,U,0,6654,Región del Libertador General Bernardo O'Higgins,False,1,206,0,0.0,6654.0
+12836,H-35,H-35,Cruce Ruta 5 (Gultro) - Cruce H-263 (Coya),ÚNICA,U,0,30263,Región del Libertador General Bernardo O'Higgins,False,1,2731,0,0.0,30263.0
+12841,H-40,H-40,Cruce Ruta 5 (Paso Inferior Gultro) - Olivar - Cruce H-38 (Coinco),ÚNICA,U,0,19037,Región del Libertador General Bernardo O'Higgins,False,1,1691,0,0.0,19037.0
+12842,H-400,H-400,Cruce Ruta 5 (Paso Inferior) - Cruce H-40,ÚNICA,U,0,5950,Región del Libertador General Bernardo O'Higgins,False,1,885,0,0.0,5950.0
+12845,H-404,H-404,Cruce Bypass Ruta 5 (Rancagua) - Cruce H-40,ÚNICA,U,0,1010,Región del Libertador General Bernardo O'Higgins,False,1,115,0,0.0,1010.0
+12846,H-404,H-404,Cruce Bypass Ruta 5 (Rancagua) - Cruce H-40,ÚNICA,U,1010,2177,Región del Libertador General Bernardo O'Higgins,False,1,167,0,1010.0,2177.0
+12848,H-450,H-450,Cruce Ruta 5 (Requínoa) - Cruce H-50 (Esperalda Por El Abra),ÚNICA,U,0,10247,Región del Libertador General Bernardo O'Higgins,False,1,773,0,0.0,10247.0
+12849,H-455,H-455,Cruce H-409 (Santa Amalia) - Pimpinela,ÚNICA,U,0,11855,Región del Libertador General Bernardo O'Higgins,False,1,1085,0,0.0,11855.0
+12850,H-50,H-50,Cruce Ruta 5 (Rosario) - Esmeralda - Cruce H-38 (Quinta de Tilcoco),ÚNICA,U,0,13587,Región del Libertador General Bernardo O'Higgins,False,1,1503,0,0.0,13587.0
+12851,H-521,H-521,Cruce Ruta 5 (Lo de Lobos) - Cruce H-665 (Fundo El Rincón),ÚNICA,U,0,11987,Región del Libertador General Bernardo O'Higgins,False,1,1842,0,0.0,11987.0
+12860,H-60,H-60,Cruce Ruta 5 (Paso Superior Rengo) - Cruce H-38 (Quinta de Tilcoco),ÚNICA,U,0,15214,Región del Libertador General Bernardo O'Higgins,False,1,1682,0,0.0,15214.0
+12861,H-605,H-605,Cruce Ruta 5 (Caletera) - Rengo,ÚNICA,U,0,2889,Región del Libertador General Bernardo O'Higgins,False,1,417,0,0.0,2889.0
+12862,H-605,H-605,Cruce Ruta 5 (Caletera) - Rengo,ÚNICA,U,2889,4199,Región del Libertador General Bernardo O'Higgins,False,1,194,0,2889.0,4199.0
+12863,H-611,H-611,Cruce Ruta 5 (Pelequén) - Cruce H-605 (Pelequén Viejo),ÚNICA,U,0,146,Región del Libertador General Bernardo O'Higgins,False,1,16,0,0.0,146.0
+12864,H-611,H-611,Cruce Ruta 5 (Pelequén) - Cruce H-605 (Pelequén Viejo),ÚNICA,U,3300,4809,Región del Libertador General Bernardo O'Higgins,False,1,182,0,3300.0,4809.0
+12865,H-611,H-611,Cruce Ruta 5 (Pelequén) - Cruce H-605 (Pelequén Viejo),ÚNICA,U,146,1950,Región del Libertador General Bernardo O'Higgins,False,1,216,0,146.0,1950.0
+12866,H-611,H-611,Cruce Ruta 5 (Pelequén) - Cruce H-605 (Pelequén Viejo),ÚNICA,U,1950,3300,Región del Libertador General Bernardo O'Higgins,False,1,144,0,1950.0,3300.0
+12868,H-631,H-631,Cruce H-577 (Rinconada de Malambo) - Cementerio Católico,ÚNICA,U,2750,3650,Región del Libertador General Bernardo O'Higgins,False,1,168,0,2750.0,3650.0
+12870,H-665,H-665,Cruce H-511 (Rengo) - Las Nieves,ÚNICA,U,0,10330,Región del Libertador General Bernardo O'Higgins,False,1,1265,0,0.0,10330.0
+12893,I-151,I-151,Cruce Ruta 5 (Polonia) -  Cruce Ruta 5 (Paso Inferior Las Rosas),ÚNICA,U,0,13399,Región del Libertador General Bernardo O'Higgins,False,1,1630,0,0.0,13399.0
+12895,I-151,I-151,Cruce Ruta 5 (Polonia) -  Cruce Ruta 5 (Paso Inferior Las Rosas),ÚNICA,U,13736,17116,Región del Libertador General Bernardo O'Higgins,False,1,305,0,13736.0,17116.0
+12897,I-181,I-181,Cruce Ruta 5 (Enlace La Paloma) - La Paloma,ÚNICA,U,0,200,Región del Libertador General Bernardo O'Higgins,False,1,43,0,0.0,200.00010000000475
+12898,I-181,I-181,Cruce Ruta 5 (Enlace La Paloma) - La Paloma,ÚNICA,U,1600,2373,Región del Libertador General Bernardo O'Higgins,False,1,161,0,1600.0,2373.0
+12899,I-181,I-181,Cruce Ruta 5 (Enlace La Paloma) - La Paloma,ÚNICA,U,200,1600,Región del Libertador General Bernardo O'Higgins,False,1,194,0,200.00010000000475,1600.0
+12920,I-45,I-45,Cruce Ruta 5 (Paso Inferior San Fernando) - Termas del Flaco,ÚNICA,U,0,15860,Región del Libertador General Bernardo O'Higgins,False,1,1753,0,0.0,15859.999899999995
+12925,I-451,I-451,Cruce Ruta 5 (Paso Superior Tinguiririca) - Cruce I-45 (Puente Negro),ÚNICA,U,0,6400,Región del Libertador General Bernardo O'Higgins,False,1,705,0,0.0,6400.0
+12936,I-725,I-725,Cruce Ruta 5 (Caletera) - Cruce Ruta 5 (Paso Superior Peor es Nada),ÚNICA,U,0,3640,Región del Libertador General Bernardo O'Higgins,False,1,398,0,0.0,3639.9998999999953
+12937,I-725,I-725,Cruce Ruta 5 (Caletera) - Cruce Ruta 5 (Paso Superior Peor es Nada),ÚNICA,U,3640,3835,Región del Libertador General Bernardo O'Higgins,False,1,31,0,3639.9998999999953,3835.0
+12956,I-86,I-86,Cruce Ruta 5 (Enlace Chimbarongo) - Cruce I-72 (Santa Cruz),ÚNICA,U,0,47365,Región del Libertador General Bernardo O'Higgins,False,1,5338,0,0.0,47365.0
+12957,I-90-H,I-90-H,Cruce Ruta 5 (Paso Superior La Paloma) - Límite Provincial - San Vicente de Tagua Tagua,ÚNICA,U,0,19344,Región del Libertador General Bernardo O'Higgins,False,1,1871,0,0.0,19344.0
+12958,Ruta 66,66,"Pelequén - San Antonio, Sector: Pelequén - Límite Regional",ÚNICA,U,0,76072,Región del Libertador General Bernardo O'Higgins,False,1,7828,0,0.0,76072.0
+12959,I-85-J,I-85-J,"Cruce Ruta 5 (Chimbarongo) - Morza - Cruce Ruta 5 (Quinta), Sector: Codegua- Limite Regional (Morza)",ÚNICA,U,0,21929,Región del Libertador General Bernardo O'Higgins,False,1,2358,0,0.0,21929.0
+12965,H-409,H-409,Cruce Ruta 5 (Paso Inferior) - Cruce H-511,ÚNICA,U,0,14102,Región del Libertador General Bernardo O'Higgins,False,1,1138,0,0.0,14102.0
+12966,H-511,H-511,Cruce Ruta 5 (Enlace Rosario) - Cruce H-665 (Rengo),ÚNICA,U,0,7734,Región del Libertador General Bernardo O'Higgins,False,1,869,0,0.0,7734.0
+12967,H-174,H-174,Cruce H-10 (Callejones) - Cruce H-10 (Santa Julia),ÚNICA,U,5170,7826,Región del Libertador General Bernardo O'Higgins,False,1,351,0,5170.0,7826.0
+12968,H-174,H-174,Cruce H-10 (Callejones) - Cruce H-10 (Santa Julia),ÚNICA,U,0,2954,Región del Libertador General Bernardo O'Higgins,False,1,489,0,0.0,2954.0
+12978,H-105,H-105,Cruce Ruta 5 (Caletera) - Las Lomas,ÚNICA,U,0,797,Región del Libertador General Bernardo O'Higgins,False,1,123,0,0.0,797.0
+12979,H-105,H-105,Cruce Ruta 5 (Caletera) - Las Lomas,ÚNICA,U,797,1467,Región del Libertador General Bernardo O'Higgins,False,1,117,0,797.0,1467.0
+12980,H-1170,H-1170,Cruce H-170 - Línea Férrea,ÚNICA,U,0,265,Región del Libertador General Bernardo O'Higgins,False,1,50,0,0.0,265.0
+12983,H-150,H-150,Cruce Ruta 5 - Cruce H-10 (Patria Nueva),ÚNICA,U,0,1198,Región del Libertador General Bernardo O'Higgins,False,1,178,0,0.0,1198.0
+12985,H-160,H-160,Cruce Ruta 5 - Cruce H-10,ÚNICA,U,0,1446,Región del Libertador General Bernardo O'Higgins,False,1,355,0,0.0,1446.0
+12988,H-166,H-166,Cruce H-10 - Línea Férrea,ÚNICA,U,0,335,Región del Libertador General Bernardo O'Higgins,False,1,63,0,0.0,335.0
+12991,H-170,H-170,Cruce Ruta 5 (Codegua) - Cruce H-10 (Callejones),ÚNICA,U,0,1091,Región del Libertador General Bernardo O'Higgins,False,1,119,0,0.0,1091.0
+12992,H-170,H-170,Cruce Ruta 5 (Codegua) - Cruce H-10 (Callejones),ÚNICA,U,1091,1754,Región del Libertador General Bernardo O'Higgins,False,1,11,0,1091.0,1754.0
+13045,H-405,H-405,Cruce Ruta 5 (Gultro) - Cruce H-35 (Siete Puentes),ÚNICA,U,0,3483,Región del Libertador General Bernardo O'Higgins,False,1,604,0,0.0,3483.0
+13059,H-475,H-475,Cruce H-455 (Pimpinela) - Hacienda Totihue - Cruce Linea Férrea ,ÚNICA,U,3103,10842,Región del Libertador General Bernardo O'Higgins,False,1,738,0,3103.0,10842.0
+13062,H-515,H-515,Cruce H-511 (Rosario) - Cruce H-535 (Tipaume),ÚNICA,U,0,4299,Región del Libertador General Bernardo O'Higgins,False,1,697,0,0.0,4299.0
+13064,H-526,H-526,Cruce Ruta 5 (Caletera Las Rosas) - Cruce H-530 (Lo Cartagena),ÚNICA,U,0,942,Región del Libertador General Bernardo O'Higgins,False,1,325,0,0.0,942.0
+13066,H-530,H-530,Cruce Ruta 5 (Caletera Lo Cartagena) - Pueblo Hundido - Cruce H-50,ÚNICA,U,0,6358,Región del Libertador General Bernardo O'Higgins,False,1,869,0,0.0,6358.0
+13070,H-540,H-540,Cruce Ruta 5 (Caletera) - Villa Cóbil - Cruce H-60,ÚNICA,U,0,3826,Región del Libertador General Bernardo O'Higgins,False,1,624,0,0.0,3826.0
+13075,H-546,H-546,Cruce Ruta 5 (Caletera) - Cruce H-540,ÚNICA,U,0,962,Región del Libertador General Bernardo O'Higgins,False,1,130,0,0.0,962.0
+13076,H-546,H-546,Cruce Ruta 5 (Caletera) - Cruce H-540,ÚNICA,U,962,1186,Región del Libertador General Bernardo O'Higgins,False,1,31,0,962.0,1186.0
+13077,H-548,H-548,Cruce H-60 - Cruce H-540,ÚNICA,U,0,526,Región del Libertador General Bernardo O'Higgins,False,1,90,0,0.0,526.0
+13081,H-552,H-552,Cruce H-540 (Villa el Cóbil) - Cruce H-546 (Villa Las Hojas),ÚNICA,U,0,1500,Región del Libertador General Bernardo O'Higgins,False,1,295,0,0.0,1500.0
+13082,H-552,H-552,Cruce H-540 (Villa el Cóbil) - Cruce H-546 (Villa Las Hojas),ÚNICA,U,1500,1755,Región del Libertador General Bernardo O'Higgins,False,1,63,0,1500.0,1755.0
+13084,H-558,H-558,Cruce H-540 - Villa Cobi - Cruce H-548,ÚNICA,U,0,378,Región del Libertador General Bernardo O'Higgins,False,1,71,0,0.0,378.0
+13102,H-600,H-600,Malloa - Cruce Ruta 5 (Caletera Pelequén Viejo),ÚNICA,U,350,4940,Región del Libertador General Bernardo O'Higgins,False,1,623,0,350.0,4940.0
+13103,H-600,H-600,Malloa - Cruce Ruta 5 (Caletera Pelequén Viejo),ÚNICA,U,4940,5273,Región del Libertador General Bernardo O'Higgins,False,1,48,0,4940.0,5273.0
+13104,H-606,H-606,Cruce Ruta 5 - Pelequén Viejo - Cruce H-600,ÚNICA,U,0,2289,Región del Libertador General Bernardo O'Higgins,False,1,347,0,0.0,2289.0
+13105,H-608,H-608,Cruce H-600 - Fundo,ÚNICA,U,0,774,Región del Libertador General Bernardo O'Higgins,False,1,116,0,0.0,774.0
+13132,H-711,H-711,Cruce H-611 (Pelequén) - Los Maquis,ÚNICA,U,0,9887,Región del Libertador General Bernardo O'Higgins,False,1,1350,0,0.0,9887.0
+13133,I-721-H,I-721-H,Cruce I-111 (Hacienda Los Lingues) - Cruce H-711,ÚNICA,U,0,4960,Región del Libertador General Bernardo O'Higgins,False,1,719,0,0.0,4960.0
+13229,I-234,I-234,Cruce Ruta 5 (Caletera) - Cañadilla,ÚNICA,U,0,2478,Región del Libertador General Bernardo O'Higgins,False,1,440,0,0.0,2478.0
+13264,I-421,I-421,Cruce Ruta 5 (Caletera La Orilla) - Cruce I-451 (Tinguiririca),ÚNICA,U,0,1420,Región del Libertador General Bernardo O'Higgins,False,1,184,0,0.0,1420.0
+13265,I-421,I-421,Cruce Ruta 5 (Caletera La Orilla) - Cruce I-451 (Tinguiririca),ÚNICA,U,1420,3450,Región del Libertador General Bernardo O'Higgins,False,1,267,0,1420.0,3450.0001000000047
+13266,I-421,I-421,Cruce Ruta 5 (Caletera La Orilla) - Cruce I-451 (Tinguiririca),ÚNICA,U,3450,5443,Región del Libertador General Bernardo O'Higgins,False,1,256,0,3450.0001000000047,5443.0
+13267,I-425,I-425,Cruce Ruta 5 (Caletera Tinguiririca) - Cruce I-421 (La Orilla),ÚNICA,U,0,1398,Región del Libertador General Bernardo O'Higgins,False,1,248,0,0.0,1398.0
+13268,I-431,I-431,Cruce I-451 (Tinguiririca) - Montenegro,ÚNICA,U,0,1006,Región del Libertador General Bernardo O'Higgins,False,1,152,0,0.0,1006.0
+13269,I-431,I-431,Cruce I-451 (Tinguiririca) - Montenegro,ÚNICA,U,1006,1302,Región del Libertador General Bernardo O'Higgins,False,1,44,0,1006.0,1302.0
+13293,I-511,I-511,Cruce Ruta 5 (Paso Superior) - San Juan de la Sierra,ÚNICA,U,0,8657,Región del Libertador General Bernardo O'Higgins,False,1,702,0,0.0,8657.0
+13311,I-525,I-525,Cruce Ruta 5 (Santa Isabel) - Santa Valentina ,ÚNICA,U,0,8571,Región del Libertador General Bernardo O'Higgins,False,1,815,0,0.0,8571.0
+13362,I-625,I-625,Cruce I-85-J (Carrizal) - Cruce I-725 (Peor es Nada),ÚNICA,U,1200,6137,Región del Libertador General Bernardo O'Higgins,False,1,535,0,1200.0,6137.0
+13368,I-645,I-645,Cruce I-85-J (Perejil) - Cruce I-625 (La Huinchiguala),ÚNICA,U,0,7428,Región del Libertador General Bernardo O'Higgins,False,1,1050,0,0.0,7428.0
+13393,I-70,I-70,Cruce Ruta 5 (Caletera) - Cruce Ruta 90 (San Fernando),ÚNICA,U,0,2200,Región del Libertador General Bernardo O'Higgins,False,1,207,0,0.0,2200.0
+13394,I-70,I-70,Cruce Ruta 5 (Caletera) - Cruce Ruta 90 (San Fernando),ÚNICA,U,2200,2617,Región del Libertador General Bernardo O'Higgins,False,1,77,0,2200.0,2617.0
+13413,I-755,I-755,Cruce I-725 - Peor es Nada,ÚNICA,U,0,3835,Región del Libertador General Bernardo O'Higgins,False,1,417,0,0.0,3835.0
+13463,I-872,I-872,Cruce Ruta 5 (Paso Superior Tinguiririca) - Cruce I-890,ÚNICA,U,0,257,Región del Libertador General Bernardo O'Higgins,False,1,53,0,0.0,257.0
+13464,I-876,I-876,Cruce Ruta 5 (Caletera) - Cruce I-890,ÚNICA,U,0,540,Región del Libertador General Bernardo O'Higgins,False,1,93,0,0.0,540.0
+13465,I-884,I-884,Cruce Ruta 5 (Caletera El Martillo) - Cruce I-890,ÚNICA,U,0,562,Región del Libertador General Bernardo O'Higgins,False,1,107,0,0.0,562.0
+13466,I-890,I-890,Cruce Ruta 5 (Caletera Tinguiririca) - Cruce I-86 (Chimbarongo),ÚNICA,U,0,6660,Región del Libertador General Bernardo O'Higgins,False,1,697,0,0.0,6660.0
+13467,I-890,I-890,Cruce Ruta 5 (Caletera Tinguiririca) - Cruce I-86 (Chimbarongo),ÚNICA,U,6660,9206,Región del Libertador General Bernardo O'Higgins,False,1,328,0,6660.0,9206.0
+13468,I-892,I-892,Cruce I-86 (Chimbarongo) - Lo Orozco,ÚNICA,U,0,3233,Región del Libertador General Bernardo O'Higgins,False,1,633,0,0.0,3233.0
+13469,I-896,I-896,Cruce I-86 (Chimbarongo) - Las Cuadras,ÚNICA,U,0,3595,Región del Libertador General Bernardo O'Higgins,False,1,61,0,0.0,3595.0
+13470,I-900,I-900,Cruce Ruta 5 (Caletera) - Cruce  I-902 (Embalse Convento Viejo),ÚNICA,U,0,3618,Región del Libertador General Bernardo O'Higgins,False,1,553,0,0.0,3618.0
+13471,I-910,I-910,Cruce Ruta 5 (Quinta) - Convento Viejo,ÚNICA,U,0,41,Región del Libertador General Bernardo O'Higgins,False,1,4,0,0.0,41.0
+13472,I-910,I-910,Cruce Ruta 5 (Quinta) - Convento Viejo,ÚNICA,U,41,1775,Región del Libertador General Bernardo O'Higgins,False,1,258,0,41.0,1775.0
+13473,I-916,I-916,Cruce I-910 - Callejón La Copa,ÚNICA,U,0,1450,Región del Libertador General Bernardo O'Higgins,False,1,318,0,0.0,1450.0
+13474,I-916,I-916,Cruce I-910 - Callejón La Copa,ÚNICA,U,1450,1527,Región del Libertador General Bernardo O'Higgins,False,1,17,0,1450.0,1527.0
+13475,I-918,I-918,Cruce Ruta 5 (Caletera) - El Eucalipto,ÚNICA,U,0,1383,Región del Libertador General Bernardo O'Higgins,False,1,192,0,0.0,1383.0
+13476,I-918,I-918,Cruce Ruta 5 (Caletera) - El Eucalipto,ÚNICA,U,1468,1976,Región del Libertador General Bernardo O'Higgins,False,1,116,0,1468.0,1976.0
+13485,I-111,I-111,Cruce Ruta 5 (Los Lingues) - Cruce I-151 (San José Los Lingues),ÚNICA,U,0,4929,Región del Libertador General Bernardo O'Higgins,False,1,873,0,0.0,4929.0
+13532,I-918,I-918,Cruce Ruta 5 (Caletera) - El Eucalipto,ÚNICA,U,1383,1468,Región del Libertador General Bernardo O'Higgins,False,1,23,0,1383.0,1468.0
+13538,H-140,H-140,Cruce Ruta 5 - La Guillermina - Cruce H-10,ÚNICA,U,0,1266,Región del Libertador General Bernardo O'Higgins,False,1,123,0,0.0,1266.0
+13551,H-635,H-635,Cruce H-605 - Cruce H-631 (Rinconada de Malambo),ÚNICA,U,0,2555,Región del Libertador General Bernardo O'Higgins,False,1,314,0,0.0,2555.0
+13586,I-429,I-429,Cruce I-451 (Tinguiririca) - Tres Montes,ÚNICA,U,0,1285,Región del Libertador General Bernardo O'Higgins,False,1,218,0,0.0,1285.0
+13594,I-912,I-912,Cruce I-910 - Cruce I-914,ÚNICA,U,0,2767,Región del Libertador General Bernardo O'Higgins,False,1,378,0,0.0,2767.0
+13607,I-880,I-880,Cruce Ruta 5 (Paso Superior San Juan de la Sierra) - Cruce I-890,ÚNICA,U,0,581,Región del Libertador General Bernardo O'Higgins,False,1,80,0,0.0,581.0
+13630,I-1870,I-1870,Cruce I-70 - Antiguo Acceso ,ÚNICA,U,0,149,Región del Libertador General Bernardo O'Higgins,False,1,62,0,0.0,149.0
+13674,I-914,I-914,Cruce Ruta 5 - Convento Viejo,ÚNICA,U,0,414,Región del Libertador General Bernardo O'Higgins,False,1,20,0,0.0,414.0
+13675,I-888,I-888,Cruce I-890 - Cerro,ÚNICA,U,0,409,Región del Libertador General Bernardo O'Higgins,False,1,90,0,0.0,409.0
+13679,I-914,I-914,Cruce Ruta 5 - Convento Viejo,ÚNICA,U,414,2014,Región del Libertador General Bernardo O'Higgins,False,1,232,0,414.0,2014.0
+13682,I-888,I-888,Cruce I-890 - Cerro,ÚNICA,U,409,959,Región del Libertador General Bernardo O'Higgins,False,1,107,0,409.0,959.0
+13697,I-906,I-906,Cruce I-900 - Convento Viejo,ÚNICA,U,0,360,Región del Libertador General Bernardo O'Higgins,False,1,83,0,0.0,360.0
+13704,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,450,1700,Región del Maule,False,1,76,0,450.0,1700.0
+13705,L-650,L-650,Cruce L-630 (Puente Arcos) - Colliguay,ÚNICA,U,0,2550,Región del Maule,False,1,54,0,0.0,2550.0
+13719,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,0,350,Región del Maule,False,1,17,0,0.0,350.0
+13720,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,350,390,Región del Maule,False,1,4,0,350.0,390.0
+13721,L-630,L-630,Cruce Ruta 5 (Copihue) - Cruce L-636 (Parral),ÚNICA,U,390,450,Región del Maule,False,1,5,0,390.0,450.0
+13726,Ruta 204,204,Cruce Ruta 5 (Los Lagos) - Valdivia,ÚNICA,U,0,23497,Región de Los Ríos,False,1,912,0,0.0,23497.0
+13729,T-650,T-650,Cruce Ruta 206 (Paillaco) - Yerbas Buenas - Cruce  T-732 (Pichirropulli),ÚNICA,U,9600,17105,Región de Los Ríos,False,1,534,0,9600.0,17105.0
+13759,T-210,T-210,Cruce Ruta 5 (Ciruelos) - Pureo,ÚNICA,U,0,320,Región de Los Ríos,False,1,27,0,0.0,320.0
+13760,T-210,T-210,Cruce Ruta 5 (Ciruelos) - Pureo,ÚNICA,U,320,4480,Región de Los Ríos,False,1,262,0,320.0,4480.0
+13761,T-217,T-217,Cruce Ruta 5 - Ciruelos - Pumillahue,ÚNICA,U,0,230,Región de Los Ríos,False,1,17,0,0.0,230.0
+13762,T-217,T-217,Cruce Ruta 5 - Ciruelos - Pumillahue,ÚNICA,U,230,4539,Región de Los Ríos,False,1,320,0,230.0,4539.0
+13793,N-620,N-620,Cruce N-62 (Oro Verde) - Portezuelo - Orillas del Itata - Cruce N-62 (Membrillar),ÚNICA,U,0,28830,Región de Ñuble,False,1,2968,0,0.0,28830.0
+13798,N-72,N-72,"Cruce N-48-O (Bulnes, Acceso Sur) - Puente Las Raíces - Santa Cruz de Cuca - Paso Superior Confluencia - Cruce N-62 (Confluencia)",ÚNICA,U,0,38,Región de Ñuble,False,1,8,0,0.0,38.0
+13799,N-72,N-72,"Cruce N-48-O (Bulnes, Acceso Sur) - Puente Las Raíces - Santa Cruz de Cuca - Paso Superior Confluencia - Cruce N-62 (Confluencia)",ÚNICA,U,38,20945,Región de Ñuble,False,1,2370,0,38.0,20945.0
+13848,N-256,N-256,Cruce Ruta 5 (Pasarela Buli) - Buli Estación - Santa Amelia,ÚNICA,U,0,3100,Región de Ñuble,False,1,292,0,0.0,3100.0
+13850,URBV13,,Av. Parque Industrial,ÚNICA,U,0,717,Región de Los Lagos,False,1,29,0,0.0,717.0

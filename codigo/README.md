@@ -23,3 +23,9 @@ Para revisar CONASET 2025 antes de incorporarlo: `descargar_revision_conaset`
 conserva una instantánea nacional 2024/2025 comprobada y `explorar_conaset_2025`
 produce el EDA aislado. [Uso, evidencia y condiciones](../docs/eda_conaset_2025.md).
 Estos comandos no alimentan el entrenamiento ni asignan kilómetros a los eventos.
+
+Para el ensayo de ubicación vial, instalar `requirements-espacial.txt` y usar
+`descargar_eje_mop` y `evaluar_asignacion_vial`; `ubicacion_vial` contiene la
+geometría común. [Protocolo, comandos y resultado](../docs/validacion_ubicacion_vial.md).
+La aplicación a 2025 está condicionada a superar la comprobación; el ensayo actual
+no la supera y conserva los modelos existentes.

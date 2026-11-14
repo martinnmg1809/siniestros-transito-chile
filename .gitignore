@@ -1,6 +1,7 @@
 # Datos crudos regenerables con descargar_conaset.py
 *.json
 !package.json
+!config/protocolo_asignacion_vial*.json
 
 # Python
 __pycache__/

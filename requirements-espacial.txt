@@ -1,0 +1,5 @@
+# Complemento opcional para la validación espacial; instalar después del entorno base.
+# No modifica versiones de numpy, modelos ni las dependencias de reproducción.
+shapely==2.1.2
+pyproj==3.7.2
+certifi>=2024.2.2
