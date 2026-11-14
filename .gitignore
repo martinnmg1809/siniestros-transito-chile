@@ -2,6 +2,10 @@
 *.json
 !package.json
 !config/protocolo_asignacion_vial*.json
+!config/piloto_12h.json
+!config/calendario_piloto.csv
+!resultados/piloto/modelo_poisson.json
+resultados/piloto/20*/
 
 # Python
 __pycache__/

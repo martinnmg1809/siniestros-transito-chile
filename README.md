@@ -29,6 +29,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
 - [Ubicación vial: ensayo ejecutado, resultados y decisión sobre 2025](docs/validacion_ubicacion_vial.md).
 - [Cierre de la ampliación 2025 y alcance final 2020–2024](docs/cierre_ubicacion_2025.md).
+- [Piloto de 12 horas en modo sombra, primera emisión y límites](docs/piloto_12h.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -94,12 +95,13 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
 ## Estado y límites
 
 - La ampliación 2025 se investigó y se cierra para esta entrega: redondeo y texto
-  recuperan información parcial, sin acreditar una cohorte vial comparable. Se
-  conserva 2020–2024 y se documenta la limitación; no es un pendiente de integración.
+  recuperan información parcial, sin acreditar una cohorte vial comparable. No fue
+  una decisión por data leakage; se conserva 2020–2024 y no se reabre sin evidencia nueva.
 - Se corrigieron captura con empates/presupuesto, cuarentena espacial, UTC/DST,
   selección temporal y tratamiento de faltantes. Hay modelos con y sin flujo.
 - 2024 ya fue explorado en entregas anteriores; se informa como evaluación histórica
-  reutilizada. El clima es reanálisis; falta validar con pronósticos emitidos.
+  reutilizada. Se emitió un piloto de sombra 2026 con pronóstico meteorológico real,
+  pero aún falta contrastarlo con siniestros observados y evaluar su desempeño.
 - La exposición vehicular real y las fechas de publicación histórica DGC siguen
   sin acreditarse. Un proxy trimestral no permite estimar riesgo por conductor.
 - Las fichas de selección e interpretación de Martín y Cristóbal y las revisiones
@@ -108,6 +110,16 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se emitió una primera corrida experimental del [piloto de 12 horas](docs/piloto_12h.md)
+para la ventana local 14/11 19:00–15/11 07:00. Se usó la candidata Poisson_clima,
+sin reentrenar, con 2020–2024 y precipitación pronosticada. Priorizó 12 de 255
+tramos y estimó 2,615 siniestros esperados en la ruta. Se conservaron localmente
+captura, tablas, visualización y auditoría; la reproducción da tablas idénticas. Esto
+es una corrida en modo sombra, sin observaciones para medir aciertos, no un piloto
+operativo validado. La integración 2025 sigue cerrada por ubicación vial no
+comparable acreditada; no por fuga temporal. Cuatro pruebas nuevas cubren la ventana,
+atributos, predicción portable, presupuesto y desempates.
 
 El **14/11/2026**, siguiendo la alternativa indicada por Diego, se cerró la
 [investigación adicional de 2025](docs/cierre_ubicacion_2025.md) y se conserva

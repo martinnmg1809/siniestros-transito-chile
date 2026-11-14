@@ -76,9 +76,11 @@ que explicará el equipo. Solo se reabre con información nueva que resuelva ese
 
 Se mantiene Ruta 5 Sur como alcance principal. Extensión a otras rutas y actualización
 del prototipo quedan para después de resolver este caso. Se estudian conteos y
-priorización retrospectiva; no se acredita un servicio operativo ni riesgo por
-vehículo-km. Sensibilidad urbana, umbrales y evaluación con pronósticos emitidos
-siguen pendientes mientras no haya experimentos trazables.
+priorización retrospectiva; se implementó una emisión reproducible del piloto en
+modo sombra, pero no se acredita un servicio operativo ni riesgo por vehículo-km.
+Su evaluación con siniestros observados, sensibilidad urbana y umbrales sigue
+pendiente. La ampliación 2025 se cerró por falta de ubicación comparable, no por
+data leakage; la separación temporal de entrenamiento y evaluación se mantiene.
 
 Antes de enviar, Diego debe comprobar que cada cifra tiene tabla, población, año y
 unidad, que la candidata coincide con el artefacto citado y que las fichas aprobadas,
