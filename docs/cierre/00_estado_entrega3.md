@@ -14,7 +14,7 @@ que siguen son acuerdos del equipo, no nuevas exigencias atribuidas al profesor.
 | Requisito mínimo | Evidencia disponible | Trabajo necesario para la entrega final |
 |---|---|---|
 | Iteraciones y correcciones | README; matriz_compromisos.csv; cuarentena, captura con empates, UTC/DST y revisión de fuentes | Diego integra la matriz y las comprobaciones; Máximo utiliza sus conclusiones en la presentación |
-| Comparación de modelos | metricas.csv, busqueda_temporal.csv y bootstrap.csv en resultados/modelos; Poisson, GB y RF, con/sin flujo | Cristóbal prepara lectura por año/cohorte, lluvia frente a calendario y flujo frente a clima |
+| Comparación de modelos | metricas.csv, busqueda_temporal.csv y bootstrap.csv en resultados/modelos; Poisson, GB y RF, con/sin flujo | Tablas y figuras de Cristóbal recibidas y comprobadas; incorporar su lectura en la ficha narrativa 04 |
 | Selección del modelo final | auditoria.json: candidata Poisson_clima, elegida con 2022/2023 y regla de simplicidad; reajuste.json | Martín entrega la ficha 03 y justifica elección, variantes de calibración y artefacto; no elegir retrospectivamente con 2024 |
 | Validación y generalización | Ventanas expansivas; train/prueba; IC semanales; verificar_cierre.py; pruebas automatizadas | Cristóbal/Martín explican estabilidad, brechas y límites; 2024 se declara evaluación histórica reutilizada |
 | Interpretación | Ficha de Vicente, diferencias e IC; calibración, MAE y ejemplos por elaborar | Cristóbal cierra ficha 04; Martín aporta contrastes del modelo; evitar causalidad y confusión entre conteos y riesgo por vehículo |
@@ -46,17 +46,32 @@ en la ruta de una URL no acredita primera publicación. La búsqueda Wayback des
 por Vicente no adjunta un resultado archivístico verificable. Las limitaciones
 continúan abiertas y no se han sustituido datos ni repetido entrenamientos.
 
+## Integración recibida de Cristóbal
+
+Se sincronizaron los commits `07df973`, `dbe7ef7` y `3963bd3` de `origin/main`
+conservando autoría. Incluyen seis tablas, dos figuras y cuatro generadores de
+comparación, aporte de lluvia/flujo, generalización y calibración. Las seis tablas
+se reprodujeron exactamente en una carpeta temporal; los generadores pasan a
+`codigo/evaluacion` según la organización acordada. Se conserva el contenido de
+las tablas y figuras recibido. Consultar la [revisión de integración](integracion_cristobal.md).
+
+Diego informó que Cristóbal terminó su parte. En los commits recibidos todavía no
+aparecen la ficha narrativa 04 ni una constancia de revisión de la ficha 02. El
+aporte técnico queda recibido e integrado; esa ausencia documental no significa
+que Cristóbal no haya realizado la revisión fuera del repositorio.
+
 ## Pendientes reales y responsables
 
-- **Diego:** integración técnica de Vicente realizada; recibir e integrar las fichas
+- **Diego:** integraciones técnicas de Vicente y Cristóbal realizadas; recibir las fichas
   03 y 04, comprobar su coherencia y repetir las verificaciones tras esos cambios.
 - **Vicente:** trabajo recibido e integrado; la revisión de contenido de Cristóbal
   sigue pendiente. Exposición vehicular y publicación histórica quedan como límites,
   no como requisitos supuestamente cumplidos por incluir un proxy.
 - **Martín:** ficha de modelo final e interpretación de artefactos. Sigue pendiente
   su revisión cruzada humana de la reproducción de Diego.
-- **Cristóbal:** ficha de evaluación/interpretación, lluvia y generalización, además
-  de revisión de la ficha 02. Tener métricas calculadas no equivale a cerrar su defensa.
+- **Cristóbal:** tablas, figuras y generadores recibidos y comprobados. Queda por
+  incorporar al repositorio la ficha narrativa 04 y la constancia de revisión de
+  la ficha 02; la lectura técnica de integración ya está disponible como apoyo.
 - **Máximo:** presentación. Recibe tablas, figuras y conclusiones verificadas; esta
   integración no modifica la presentación.
 

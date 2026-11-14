@@ -1,6 +1,6 @@
 """Generalización train/prueba y estabilidad entre años (Cristóbal, tarea 3 del Día 1).
 Lee resultados/cierre/comparacion_final.csv. Cohortes híbridas no tienen partición train.
-Uso desde la raíz: python codigo/evaluacion/construir_generalizacion.py
+Uso: python proyecto.py construir_generalizacion
 """
 import pandas as pd
 import matplotlib

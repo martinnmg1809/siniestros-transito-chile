@@ -1,7 +1,7 @@
 """Calibración y recalibración (Cristóbal, tarea 4 del Día 1).
 Lee comparacion_final.csv, calibracion.csv y recalibracion_candidato.csv.
 MAE = error absoluto medio del TOTAL de la cohorte por turno de 12 h (no por tramo).
-Uso desde la raíz: python codigo/evaluacion/construir_calibracion.py
+Uso: python proyecto.py construir_calibracion
 """
 import pandas as pd
 import matplotlib

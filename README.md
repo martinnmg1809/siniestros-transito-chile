@@ -25,6 +25,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [EDA y decisiones de calidad de datos](docs/eda.md).
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
+- [Aporte de Cristóbal: integración, comprobaciones e interpretación](docs/cierre/integracion_cristobal.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
 - [EDA separado de CONASET 2025 y condiciones de incorporación](docs/eda_conaset_2025.md).
 - [Ubicación vial: ensayo ejecutado, resultados y decisión sobre 2025](docs/validacion_ubicacion_vial.md).
@@ -104,12 +105,23 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   pero aún falta contrastarlo con siniestros observados y evaluar su desempeño.
 - La exposición vehicular real y las fechas de publicación histórica DGC siguen
   sin acreditarse. Un proxy trimestral no permite estimar riesgo por conductor.
-- Las fichas de selección e interpretación de Martín y Cristóbal y las revisiones
-  humanas indicadas en el estado de entrega siguen pendientes.
+- El aporte de Cristóbal está integrado: comparación, lluvia/flujo, generalización
+  y calibración. Falta incorporar la ficha narrativa 04 y constancia de su revisión
+  de la ficha 02; los commits recibidos traen tablas, figuras y generadores. La ficha
+  de selección de Martín y las revisiones humanas indicadas siguen pendientes.
 - Notebook y presentación se preparan al estabilizar código y resultados; Máximo
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se incorporaron por fast-forward los tres commits de Cristóbal
+(`07df973`, `dbe7ef7`, `3963bd3`), conservando su autoría. Sus seis CSV se
+regeneraron en una carpeta temporal y coinciden byte por byte; la comparación
+maestra concilia con las métricas originales a seis decimales. Se revisaron las
+dos figuras y se ubicaron los cuatro generadores en `codigo/evaluacion`, accesibles
+con `proyecto.py`. Pasan las 71 pruebas y la verificación del cierre. La
+[nota de integración](docs/cierre/integracion_cristobal.md) explica los hallazgos,
+el alcance de los resúmenes y los documentos aún no recibidos. No se reentrenó.
 
 El **14/11/2026** se emitió una primera corrida experimental del [piloto de 12 horas](docs/piloto_12h.md)
 para la ventana local 14/11 19:00–15/11 07:00. Se usó la candidata Poisson_clima,

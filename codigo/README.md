@@ -33,3 +33,15 @@ no la supera y conserva los modelos existentes.
 `descargar_direcciones_conaset` obtiene el complemento textual y
 `examinar_ambiguedades` reproduce el diagnóstico adicional. No genera etiquetas
 aprobadas ni datos de entrenamiento: [cierre de la ampliación](../docs/cierre_ubicacion_2025.md).
+
+Para reproducir las tablas y figuras recibidas de Cristóbal, ejecutar en este orden:
+
+```bash
+.venv/bin/python proyecto.py construir_comparacion_final
+.venv/bin/python proyecto.py construir_aporte_lluvia_flujo
+MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py construir_generalizacion
+MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py construir_calibracion
+```
+
+Estas órdenes regeneran los resúmenes en `resultados/cierre` desde las tablas
+existentes; no entrenan modelos. [Revisión de integración](../docs/cierre/integracion_cristobal.md).

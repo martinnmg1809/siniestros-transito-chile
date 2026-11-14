@@ -1,8 +1,7 @@
 """Tabla maestra de comparación (Cristóbal, tarea 1 del Día 1).
 Lee resultados/modelos/metricas.csv sin recalcular nada y agrega columnas de contexto.
-Uso desde la raíz del repo: python construir_comparacion_final.py
+Uso: python proyecto.py construir_comparacion_final
 """
-import re
 import pandas as pd
 
 ENTRENA = {2022: "2020-2021", 2023: "2020-2022", 2024: "2020-2023"}
