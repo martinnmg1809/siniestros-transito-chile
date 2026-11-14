@@ -89,8 +89,40 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/siniestros-matplotlib
 ```
 
 Una copia de Git permite comprobar las tablas; la prueba del anexo DGC real se omite
-si no está descargado (39 aprobadas y una omitida). La comprobación de predicciones
+si no está descargado (tras integrar a Vicente: 42 aprobadas y una omitida). La comprobación de predicciones
 requiere fuentes originales y artefactos locales, como explica la ficha.
+
+## Integración de Vicente y anuncio de la Etapa III
+
+**14 de noviembre de 2026.** Se incorporó a `main` la rama
+`cierre/vicente-flujo` hasta `a7b8e01`, conservando los seis commits de Vicente.
+La [ficha de datos y flujo](docs/cierre/02_datos_flujo.md), las tablas de cobertura
+por contrato y la [matriz de compromisos](resultados/cierre/matriz_compromisos.csv)
+ya están integradas. Su revisión de contenido por Cristóbal sigue pendiente.
+
+Se reprodujo exactamente la cobertura recibida: **153/255 tramos con flujo** y
+102 sin contrato utilizable (43 antes del primero, 39 después del último y 20 en
+fronteras/baipases/márgenes). El proxy es trimestral, por contrato y punto de cobro,
+rezagado dos trimestres; no es exposición por vehículo-km. No muestra una mejora
+consistente de captura y su disponibilidad histórica permanece sin acreditar.
+
+Se añadió el modo de comprobación sin escritura de [cierre_flujo.py](cierre_flujo.py)
+y se precisaron afirmaciones de disponibilidad en la ficha 02 con documentación
+oficial: ni el directorio de una URL prueba primera publicación ni los distintos
+archivos meteorológicos tienen la misma cobertura. **43 pruebas pasan** con las
+fuentes locales; las tablas de modelos y sus hashes también concilian.
+
+El [estado de la Entrega III](docs/cierre/00_estado_entrega3.md) cruza el nuevo anuncio
+del profesor con evidencia, responsables y pendientes. Las fichas 03/04 y la revisión
+humana de Martín aún faltan; presentación y notebook se preparan al cerrar el código.
+La [evidencia de integración](resultados/cierre/integracion_vicente.md) registra las
+comprobaciones, sin presentar esta integración como cierre académico completo.
+
+```bash
+.venv/bin/python cierre_flujo.py --comprobar
+.venv/bin/python verificar_cierre.py
+OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python -m unittest discover -s tests -v
+```
 
 ## Desarrollo de la Entrega 3
 

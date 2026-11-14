@@ -3,6 +3,7 @@
 Solo lee archivos versionados (sin descargas ni entrenamiento) y falla si algo no
 concilia con resultados/modelos. Salida: resultados/cierre/cobertura_flujo_detalle.csv
 """
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -30,6 +31,11 @@ def grupo_sin_contrato(tramo, limites):
 
 
 def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--salida", type=Path, default=SALIDA)
+    p.add_argument("--comprobar", action="store_true",
+                   help="Comparar con la tabla guardada sin escribirla")
+    args = p.parse_args()
     limites = limites_documentados()
     guardada = pd.read_csv(MODELOS / "asignacion_contratos.csv").fillna({"contrato": ""})
     asignacion = asignar_contratos(guardada.tramo, limites)
@@ -65,11 +71,20 @@ def main():
     exigir(con.to_dict() == ref.siniestros_con_flujo.to_dict(), "siniestros con contrato != cobertura_flujo.csv")
     exigir(totales.to_dict() == ref.siniestros_total.to_dict(), "totales anuales != cobertura_flujo.csv")
 
-    SALIDA.parent.mkdir(parents=True, exist_ok=True)
-    detalle.to_csv(SALIDA, index=False, lineterminator="\n")
+    if args.comprobar:
+        exigir(args.salida.is_file(), f"no existe {args.salida}")
+        try:
+            pd.testing.assert_frame_equal(pd.read_csv(args.salida), detalle,
+                                          check_dtype=False, rtol=1e-10, atol=1e-10)
+        except AssertionError as exc:
+            sys.exit(f"NO CONCILIA: tabla de cobertura guardada distinta: {exc}")
+    else:
+        args.salida.parent.mkdir(parents=True, exist_ok=True)
+        detalle.to_csv(args.salida, index=False, lineterminator="\n")
     print(asignacion.groupby("grupo").size().to_string())
     print(con.to_string())
-    print(f"OK: {POBLACION} eventos, {TRAMOS} tramos; escrito {SALIDA.relative_to(RAIZ)}")
+    accion = "comprobado sin escritura" if args.comprobar else "escrito"
+    print(f"OK: {POBLACION} eventos, {TRAMOS} tramos; {accion} {args.salida}")
 
 
 if __name__ == "__main__":

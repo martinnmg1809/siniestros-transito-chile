@@ -3,6 +3,7 @@
 Versión: base `a65a02d` (rama `cierre/vicente-flujo`) · 14 de noviembre de 2026 · Autor: Vicente (con asistencia de Claude) ·
 Revisor: Cristóbal (pendiente) · Población: 14.420 eventos / 255 tramos de 5 km.
 Estado: borrador para revisión; nada de esta ficha se ha firmado por el revisor.
+Integración técnica por Diego con asistencia de Codex el 14/11/2026: cobertura reproducida y precisiones documentales en §5. La revisión de Cristóbal continúa pendiente.
 
 ## 1. Resumen en cinco líneas
 
@@ -71,13 +72,15 @@ Los puntos implícitos por contrato son constantes salvo Puerto Montt–Pargua (
 
 ## 5. Disponibilidad histórica
 
-Consulta del 14/11/2026, con límite de tiempo. No se probaron los casos concretos de rezago (por ejemplo medición 2023T2 → objetivo 2023T4) porque no existe ninguna fecha de publicación contra la cual compararlos. La lectura de la página la hizo una herramienta de resumen de páginas web; conviene verificarla a mano antes de citarla.
+Consulta del 14/11/2026, con límite de tiempo. No se probaron los casos concretos de rezago (por ejemplo medición 2023T2 → objetivo 2023T4) porque no se ha acreditado una fecha de publicación utilizable para cada anexo. La integración de Diego contrastó la página oficial y la documentación de Open-Meteo; esto no sustituye comprobar la disponibilidad de cada dato en cada fecha de decisión.
 
 | Pregunta | Qué se buscó | Fuente | Hallazgo | ¿Acredita? | Qué falta |
 |---|---|---|---|---|---|
-| ¿Estaba el anexo de t−2 publicado antes de t? | Lista de anexos y ruta de subida | https://concesiones.mop.gob.cl/publicaciones/ | La página no muestra fechas de publicación. Los anexos de 2018 a 2023 y los tres primeros de 2024 tienen ruta `uploads/sites/4/2024/12/`; el 4T 2024 está en `2025/03`. Se subieron en bloque en diciembre de 2024. | **No** | Un documento con fecha. La Wayback Machine se consultó el 14/11/2026: la página de publicaciones tiene una captura de 2022-06-25 (respuesta 302, sin contenido útil) y la siguiente es de 2025-04; no hay anexos XLS archivados. Sin captura útil entre 2020 y 2024. |
+| ¿Estaba el anexo de t−2 publicado antes de t? | Lista de anexos y ruta de subida | https://concesiones.mop.gob.cl/publicaciones/ | La página muestra mes y año de referencia de los documentos. Las URL revisadas contienen directorios como `2024/12` y `2025/03`; esos directorios no prueban la fecha de primera publicación ni una carga en bloque. | **No** | Evidencia de disponibilidad de cada versión antes de su uso. Vicente reportó una búsqueda en Wayback sin capturas útiles; no se adjuntó respuesta CDX ni lista de URL consultadas, por lo que esa búsqueda no prueba ausencia de archivos y no se usa como acreditación. |
 | ¿Cambian los valores entre versiones? | Comparación 2023_4t vs 2024_4t | `dgc_comparacion_versiones.csv` | 0 revisiones en 112 contrato-trimestres. | **Parcial** | Solo dos versiones; no descarta revisiones en otras. No se descargaron anexos adicionales. |
-| ¿Hay pronósticos archivados con hora de emisión para 2020–2024 en Chile? | Documentación de Open-Meteo | https://open-meteo.com/en/docs/previous-runs-api y https://open-meteo.com/en/docs/historical-forecast-api | "Previous runs" parte en enero de 2024 para la mayoría de modelos (GFS temperatura a 2 m desde marzo de 2021). La Historical Forecast API une las primeras horas de cada corrida y no expone la hora de emisión. | **No** para 2020–2023; **parcial** para 2024 | Una corrida nueva solo con 2024; no era parte de este trabajo. |
+| ¿Hay pronósticos archivados con hora de emisión para 2020–2024 en Chile? | Documentación de Open-Meteo | https://open-meteo.com/en/docs/previous-runs-api y https://open-meteo.com/en/docs/historical-forecast-api | "Previous runs" parte en enero de 2024 para la mayoría de modelos (GFS temperatura a 2 m desde marzo de 2021). La Historical Forecast API une horas iniciales y declara cobertura dependiente del modelo, incluyendo años anteriores a 2024. Single Runs permite pedir corridas por inicialización; su archivo tiene cobertura distinta. | **No acreditado** para un backtest completo 2020–2024 | Verificar modelo, precipitación, ubicación en Chile, inicialización y disponibilidad efectiva antes de decidir; luego diseñar una evaluación con el subconjunto viable. No se ejecutó. |
+
+**Precisión de integración:** [Historical Forecast](https://open-meteo.com/en/docs/historical-forecast-api), [Previous Runs](https://open-meteo.com/en/docs/previous-runs-api) y [Single Runs](https://open-meteo.com/en/docs/single-runs-api) son productos distintos. El inicio de Previous Runs no permite afirmar que todos los archivos de pronóstico empiecen en 2024. Se verificó documentación, no respuestas de pronóstico para las celdas del proyecto.
 
 **Conclusión:** la disponibilidad histórica **no está acreditada**. El rezago de dos trimestres es una regla de construcción, no una prueba de que el dato existiera en ese momento. Los resultados con flujo son un backtest retrospectivo.
 
@@ -141,11 +144,11 @@ Matriz completa: `resultados/cierre/matriz_compromisos.csv`. Orígenes revisados
 ## 9. Cómo reproducir
 
 ```bash
-.venv/bin/python cierre_flujo.py
-.venv/bin/python -m unittest tests.test_modelado -v
+.venv/bin/python cierre_flujo.py --comprobar
+.venv/bin/python -m unittest discover -s tests -p test_modelado.py -v
 ```
 
-`cierre_flujo.py` lee `ruta5_2020_2024.csv.gz` y `resultados/modelos/`, no descarga ni entrena, y termina con código distinto de 0 si no concilia. Salida esperada: `OK: 14420 eventos, 255 tramos`.
+`cierre_flujo.py` lee `ruta5_2020_2024.csv.gz` y `resultados/modelos/`, no descarga ni entrena, y termina con código distinto de 0 si no concilia. Con `--comprobar` compara la tabla guardada sin escribir; sin esa opción la regenera. `--salida` permite elegir una copia para comprobar o generar. Salida esperada: `OK: 14420 eventos, 255 tramos`.
 
 ## 10. Salidas de comprobación (14/11/2026, commit `ef1ae9d`)
 

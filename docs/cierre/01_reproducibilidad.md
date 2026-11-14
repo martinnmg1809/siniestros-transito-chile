@@ -56,7 +56,7 @@ un entorno temporal; no reemplazó la `.venv` anterior ni los paquetes de Ubuntu
 Una copia de Git contiene código, siniestros CSV y tablas publicadas. Permite
 verificar su coherencia sin clima, modelos ni conexión a las fuentes.
 La prueba del anexo real DGC se omite explícitamente si ese XLS no está descargado:
-en esa situación se esperan 40 pruebas descubiertas, 39 aprobadas y una omitida.
+tras la integración del 14/11 se esperan 43 pruebas descubiertas, 42 aprobadas y una omitida.
 
 ## Fuentes y modelos que Git no contiene
 
@@ -136,3 +136,11 @@ otro universo y no se ha sincronizado con estos artefactos.
 No presentar la interfaz antigua como resultado de la nueva comparación. Quedan
 abiertas la disponibilidad histórica DGC, la exposición vehicular real y la
 evaluación con pronósticos meteorológicos emitidos antes de decidir.
+
+## Integración posterior de Vicente (14/11/2026)
+
+La ficha 02 y sus tablas están incorporadas; ejecutar también
+`.venv/bin/python cierre_flujo.py --comprobar`. El total actual es 43 pruebas con
+fuentes locales. Las cifras de 40 anteriores conservan el registro del 13/11.
+La integración está descrita en [estado de entrega](00_estado_entrega3.md);
+faltan las fichas 03/04 y la revisión cruzada humana de Martín.
