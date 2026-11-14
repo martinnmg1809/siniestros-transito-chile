@@ -66,7 +66,7 @@ def main():
     exigir(totales.to_dict() == ref.siniestros_total.to_dict(), "totales anuales != cobertura_flujo.csv")
 
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
-    detalle.to_csv(SALIDA, index=False)
+    detalle.to_csv(SALIDA, index=False, lineterminator="\n")
     print(asignacion.groupby("grupo").size().to_string())
     print(con.to_string())
     print(f"OK: {POBLACION} eventos, {TRAMOS} tramos; escrito {SALIDA.relative_to(RAIZ)}")
