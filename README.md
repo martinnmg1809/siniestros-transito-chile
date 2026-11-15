@@ -20,6 +20,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 
 ## Empezar aquí
 
+- [Notebook final ejecutado](notebooks/EntregaFinal_Proyecto_DS.ipynb) · [versión HTML](notebooks/EntregaFinal_Proyecto_DS.html) · [cómo reproducirlo](notebooks/README.md).
 - [Estado de la entrega, responsables y pendientes](docs/cierre/00_estado_entrega3.md).
 - [Resultados, comparación de modelos y limitaciones](docs/resultados.md).
 - [EDA y decisiones de calidad de datos](docs/eda.md).
@@ -52,7 +53,7 @@ codigo/             Código organizado por función
 data/               Siniestros, fuentes originales, calendario y cachés
 resultados/         Tablas, figuras, auditorías y modelos locales
 docs/               Fichas del equipo, resultados, planificación y antecedentes
-notebooks/          Espacio para el notebook final documentado
+notebooks/          Notebook final ejecutado, versión HTML y guía de reproducción
 tests/              Pruebas de datos, modelos, métricas e integración
 config/             Trazabilidad de la reorganización
 proyecto.py         Punto de entrada para ejecutar el código
@@ -116,10 +117,21 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   están integradas y verificadas con los artefactos originales. Quedan la lectura
   y firma del acta por el equipo. Las sensibilidades urbana y de lluvia están ejecutadas; la
   etiqueta urbana aparece solo en 2020–2021 y limita la interpretación geográfica.
-- Notebook y presentación se preparan al estabilizar código y resultados; Máximo
-  tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
+- El notebook final está construido y ejecutado con originales y en modo público.
+  La presentación sigue a cargo de Máximo y falta su revisión conjunta con el
+  notebook. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se construyó el [notebook final](notebooks/EntregaFinal_Proyecto_DS.ipynb)
+con 19 secciones y 58 celdas (26 de código), tras comprobar las integraciones del
+equipo. Se ejecutó con kernel real y sin errores en dos niveles: originales locales
+(predicciones, métricas, bootstrap y reproducción del piloto) y copia pública
+(evidencia versionada, con faltantes locales explícitos). Se exportó HTML con
+resultados incorporados y se registraron auditorías de ambas ejecuciones. La lectura
+ordinaria no descarga ni reentrena; incluye código para repetir el entrenamiento en
+una carpeta nueva. No se modificaron los experimentos científicos. Quedan presentación,
+revisión conjunta del equipo y evaluación observada del piloto.
 
 El **14/11/2026** se integró por fast-forward la rama de Martín hasta `df3f6df`,
 conservando autoría e historial. Se recibieron las fichas 03/03b, contrastes,

@@ -74,8 +74,8 @@ se añade evidencia identificada de la reproducción con originales. Ver
 
 ## Pendientes reales y responsables
 
-- **Diego:** fichas 02, 03 y 04 integradas y revisadas. Coordinar el notebook
-  documentado y comprobar la coherencia con la presentación y el paquete final.
+- **Diego:** fichas 02, 03 y 04 integradas y revisadas. Notebook final construido
+  y ejecutado; comprobar con el equipo su coherencia con la presentación y el paquete final.
 - **Vicente:** aporte de datos y flujo completado y revisado técnicamente por
   encargo de Diego. Exposición vehicular y publicación histórica permanecen como
   limitaciones documentadas; no se exige resolverlas para afirmar este cierre.
@@ -93,8 +93,12 @@ separados, sin reseleccionar la candidata. La etiqueta urbana solo aparece en
 2020–2021; el ajuste rural exploratorio no acredita generalización urbana física.
 La evaluación observada del piloto sigue pendiente de una fuente completa.
 
-El notebook anotado sigue siendo obligatorio. Se prepara después de estabilizar
-código y resultados, como acordó el equipo, y debe poder ejecutar las conclusiones.
+El [notebook final](../../notebooks/EntregaFinal_Proyecto_DS.ipynb) ya está construido
+y ejecutado: 58 celdas, 26 de código, sin errores. Se comprobó con originales locales
+y en una copia pública sin esos insumos. Incluye código de reproducción completa y
+un registro explícito del nivel ejecutado. El [HTML](../../notebooks/EntregaFinal_Proyecto_DS.html)
+y la [guía](../../notebooks/README.md) acompañan el archivo. Queda revisar su coherencia
+con la presentación y la lectura del acta por el equipo.
 La carga final es grupal y la realiza una sola persona. No se ha realizado ningún
 envío académico desde esta integración.
 

@@ -61,3 +61,10 @@ artefactos disponibles, y reajusta si faltan. Para cotejar los originales sin
 sobrescribir la reproducción de Martín, proporcionar otra carpeta `--salida`.
 `tendencia_anual` genera el diagnóstico agregado desde tablas existentes.
 [Integración, evidencia y comandos](../docs/cierre/integracion_martin.md).
+
+
+`construir_notebook_final` genera el relato ejecutable de la Entrega III;
+`ejecutar_notebook_final` ejecuta un kernel, valida la terminación y exporta HTML
+con auditoría. Requieren `requirements-notebook.txt`. No alteran modelos ni activan
+entrenamientos salvo petición explícita en el notebook.
+[Notebook final y niveles de reproducción](../notebooks/README.md).
