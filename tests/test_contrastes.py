@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import proyecto  # noqa: F401  (rutas de codigo/)
 from contrastes_poisson import pares_contraste, contrastar, ejemplo_turno, huella, razon_tendencia
 from modelos_conteo import ModeloConteo
 from calibracion_modelos import ModeloCalibrado

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """¿Explica la tendencia anual la sobreestimación de Poisson_clima?
 
-python tendencia_anual.py
+python proyecto.py tendencia_anual
 
 Ajusta, para cada año de prueba, un Poisson con solo intercepto y tendencia
 lineal anual (offset de horas del año) sobre los totales de entrenamiento,

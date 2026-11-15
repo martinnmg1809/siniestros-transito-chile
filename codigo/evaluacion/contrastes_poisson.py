@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Contrastes de predicción e inventario de versiones del modelo Poisson_clima.
 
-python contrastes_poisson.py
+python proyecto.py contrastes_poisson
 
 Usa los artefactos de resultados/modelos/artefactos si existen. Si no, reajusta
 la configuración ya elegida antes de 2024, con el mismo código y los mismos
@@ -264,8 +264,11 @@ def main():
         inventario[version] = meta
     contrastes = pd.concat(tablas, ignore_index=True)
     contrastes.to_csv(args.salida / "contrastes_poisson.csv", index=False)
-    inventario["codigo_sha256"] = {n: hashlib.sha256(Path(n).read_bytes()).hexdigest()
-                                   for n in ["contrastes_poisson.py", "datos_modelado.py", "modelos_conteo.py"]}
+    import datos_modelado, modelos_conteo
+    raiz = Path.cwd().resolve()
+    inventario["codigo_sha256"] = {
+        str(Path(f).resolve().relative_to(raiz)): hashlib.sha256(Path(f).read_bytes()).hexdigest()
+        for f in [__file__, datos_modelado.__file__, modelos_conteo.__file__]}
     inventario["fuentes"] = {"clima_cache_sha256": datos["metadata"]["clima_cache_sha256"],
                              "clima_cache_registrado": auditoria["datos"]["clima_cache_sha256"],
                              "fuentes_flujo_sha256": datos["metadata"]["fuentes_flujo_sha256"]}

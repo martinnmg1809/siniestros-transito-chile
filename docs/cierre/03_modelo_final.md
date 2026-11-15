@@ -14,7 +14,7 @@ Este documento no cambia modelos, datos ni métricas. No vuelve a elegir modelo 
 
 ### Regla aplicada
 
-[`entrenar_comparacion.py`](../../entrenar_comparacion.py) aplica la regla registrada en
+[`entrenar_comparacion.py`](../../codigo/modelos/entrenar_comparacion.py) aplica la regla registrada en
 `auditoria.json`:
 
 1. Para cada solución de toda la ruta se promedia la captura global al 5 % de las pruebas
@@ -99,7 +99,7 @@ Los artefactos están en `resultados/modelos/artefactos/`, que Git excluye. Seg�
   posterior. No tiene evaluación propia y no reemplaza al prototipo operativo de la página.
 
 **Brecha detectada:** el repositorio no registra el sha256 de los artefactos evaluados
-(2022–2024). [`contrastes_poisson.py`](../../contrastes_poisson.py) agrega a
+(2022–2024). [`contrastes_poisson.py`](../../codigo/evaluacion/contrastes_poisson.py) agrega a
 `resultados/cierre/version_modelo.json` una huella de los coeficientes y del
 transformador. Esa huella no depende de la serialización de joblib.
 
@@ -131,7 +131,9 @@ archivos de Diego.
 
 ## 3. Recalibración: escala de conteos, separada del ranking
 
-Las cifras provienen de `recalibracion_candidato.csv`:
+Las cifras provienen de `recalibracion_candidato.csv` y coinciden con la sección 6 de
+[04_interpretacion.md](04_interpretacion.md) (Cristóbal). Esta ficha añade la causa de la
+sobreestimación y las consecuencias para el artefacto reajustado:
 
 | Año evaluado | Factor (año) | O/E original → recalibrado | MAE/turno original → recalibrado | Captura 5 % |
 |---|---|---|---|---|
@@ -158,7 +160,7 @@ incluye una tendencia anual numérica, y 2020 (pandemia, 2.295 siniestros) depri
 inicio de la serie. El modelo aprende un "aumento" y lo proyecta hacia años en que los
 siniestros bajaron: 3.369 en 2022, 2.863 en 2023 y 2.605 en 2024.
 
-[`tendencia_anual.py`](../../tendencia_anual.py) lo comprueba solo con salidas versionadas.
+[`tendencia_anual.py`](../../codigo/evaluacion/tendencia_anual.py) lo comprueba solo con salidas versionadas.
 Para cada año de prueba ajusta un Poisson con **solo intercepto y tendencia** sobre los
 totales de entrenamiento y compara su O/E extrapolado con el registrado
 (`resultados/cierre/tendencia_anual.csv`):
@@ -198,7 +200,7 @@ Alcance de esta evidencia:
 
 ## 4. Interpretación: contrastes de predicción
 
-[`contrastes_poisson.py`](../../contrastes_poisson.py) responde preguntas del tipo
+[`contrastes_poisson.py`](../../codigo/evaluacion/contrastes_poisson.py) responde preguntas del tipo
 "¿cuánto cambia la tasa esperada si cambia solo un atributo?". Sus resultados están en
 `resultados/cierre/contrastes_poisson.csv`.
 
@@ -277,12 +279,18 @@ registrado (1,97; 1,68 recalibrado) es el error del **total de la ruta** por tur
 ### Cómo se reprodujo
 
 ```
-python feriados.py                     # sha256 igual a resultados/eda/auditoria.json
-python flujo_concesiones.py --descargar  # anexos DGC con hashes de auditoria.json
-python clima_utc.py                    # ERA5; sha256 igual a auditoria.json
-python contrastes_poisson.py           # ~2 min; reajusta y verifica si no hay artefactos
-python tendencia_anual.py              # solo usa salidas versionadas
+python proyecto.py feriados                     # sha256 igual a resultados/eda/auditoria.json
+python proyecto.py flujo_concesiones --descargar  # anexos DGC con hashes de auditoria.json
+python proyecto.py clima_utc                    # ERA5; sha256 igual a auditoria.json
+python proyecto.py contrastes_poisson           # ~2 min; reajusta y verifica si no hay artefactos
+python proyecto.py tendencia_anual              # solo usa salidas versionadas
 ```
+
+Los cachés van en `data/cache/clima_ruta5.npz` y `data/calendario/feriados.json`, según
+`config/migracion_estructura.csv`; sus hashes coinciden con los que esa tabla espera.
+Tras integrar la reorganización de `main` (scripts en `codigo/`), se repitió la corrida
+el 15/11/2026: `contrastes_poisson.csv` y `ejemplo_turno_poisson.csv` resultaron idénticos
+byte a byte. `version_modelo.json` registra los hashes del código en sus rutas nuevas.
 
 Open‑Meteo limita las descargas: el 13/11 se agotó el cupo diario y la descarga se
 completó el 14/11 con reintentos espaciados. Pruebas: `tests/test_contrastes.py` y
@@ -311,6 +319,6 @@ completó el 14/11 con reintentos espaciados. Pruebas: `tests/test_contrastes.py
 - [x] Contrastes calculados y verificados (sección 4).
 - [x] Tendencia confirmada con el modelo real (×1,054/año evaluado; ×1,002/año reajustado).
 - [ ] Cristóbal: verificar las cifras de las secciones 1, 3 y 4 contra su tabla maestra.
-- [ ] Diego: si conserva los artefactos originales, ejecutar `contrastes_poisson.py` con
+- [ ] Diego: si conserva los artefactos originales, ejecutar `python proyecto.py contrastes_poisson` con
       ellos (verificación a 1e-10) y registrar su sha256.
 - [ ] Día 2: firmar el acta (sección 5).

@@ -62,9 +62,9 @@
     "razon_tasa_por_anio_tendencia": 1.0019067118519616
   },
   "codigo_sha256": {
-    "contrastes_poisson.py": "5fd08992421b5dfc4f8e3e9d5d8f5af6238123406666c99167f813146850ebc1",
-    "datos_modelado.py": "e31c91a7128f9dd9d48d9fd372ca2987c9f3ae4a54ba47f9fc9181c091147062",
-    "modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6"
+    "codigo/evaluacion/contrastes_poisson.py": "012db11d0a25d2a2d9c5d3cf33f88f45b175dab8ba9701c679665c608a471889",
+    "codigo/datos/datos_modelado.py": "bac2ed4ac520e3e4571cf01d0ad22fad756ed43d99823602046e1de542870df1",
+    "codigo/modelos/modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6"
   },
   "fuentes": {
     "clima_cache_sha256": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
