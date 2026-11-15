@@ -12,6 +12,16 @@ calibración, interpretación, sensibilidades, decisión sobre 2025 y piloto.
 Las ramas del equipo están integradas en la base científica `5d80f40`.
 La presentación y la lectura/firma del acta del equipo siguen fuera de este archivo.
 
+## Google Colab
+
+Usar la [copia preparada para Colab](EntregaFinal_Proyecto_DS_Colab.ipynb) y el
+ZIP local `resultados/entrega_final/colab/Siniestros_Colab_Completo.zip`. La copia
+agrega carga de archivos y preparación de dependencias antes del contenido original.
+[Instrucciones paso a paso y uso con un notebook de Drive existente](COLAB.md).
+El ZIP se entrega como archivo local, no está incluido en Git; contiene fuentes y
+joblib originales que el repositorio público excluye. El notebook final original
+y sus auditorías de ejecución se conservan.
+
 ## Abrir y ejecutar
 
 Conservar la estructura del repositorio completo. El notebook encuentra la raíz

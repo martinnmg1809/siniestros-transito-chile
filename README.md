@@ -21,6 +21,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 ## Empezar aquí
 
 - [Notebook final ejecutado](notebooks/EntregaFinal_Proyecto_DS.ipynb) · [versión HTML](notebooks/EntregaFinal_Proyecto_DS.html) · [cómo reproducirlo](notebooks/README.md).
+- [Ejecutarlo en Google Colab](notebooks/COLAB.md) · [notebook con preparación para Colab](notebooks/EntregaFinal_Proyecto_DS_Colab.ipynb).
 - [Estado de la entrega, responsables y pendientes](docs/cierre/00_estado_entrega3.md).
 - [Resultados, comparación de modelos y limitaciones](docs/resultados.md).
 - [EDA y decisiones de calidad de datos](docs/eda.md).
@@ -122,6 +123,17 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   notebook. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se preparó una [versión para Colab](notebooks/COLAB.md) para
+facilitar la carga del proyecto y sus originales en la sesión de Diego. Incluye dos
+celdas de preparación y un generador de ZIP local con repositorio, fuentes,
+modelos y la emisión histórica de ejemplo. La carga verifica un manifiesto y sitúa
+el trabajo en la raíz del proyecto. Las dependencias científicas se fijan sin
+reemplazar el kernel de Colab; los módulos cargados con versiones anteriores
+requieren reiniciar Python. El notebook científico original se conserva.
+El acceso remoto a esa sesión no estuvo disponible; se documenta la comprobación
+local aislada del paquete y de las celdas de preparación, sin afirmar ejecución en
+el Colab de Diego.
 
 El **14/11/2026** se construyó el [notebook final](notebooks/EntregaFinal_Proyecto_DS.ipynb)
 con 19 secciones y 58 celdas (26 de código), tras comprobar las integraciones del

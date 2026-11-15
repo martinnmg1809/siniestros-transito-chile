@@ -1,0 +1,29 @@
+{
+  "modo_solicitado": "local",
+  "estado": "CORRECTO",
+  "commit_entrada": "copia sin Git",
+  "python_ejecutor": "3.13.3",
+  "segundos": 10.58,
+  "celdas": 61,
+  "celdas_codigo": 28,
+  "celdas_con_error": 0,
+  "kernel": "python3",
+  "reproduccion_efectiva": {
+    "tablas": "comprobadas",
+    "artefactos": "predicciones 2023/2024 y persistencia final comprobadas",
+    "bootstrap_2024": "2000 réplicas; coincide con la tabla original",
+    "piloto": "tablas de emisión reproducidas sin red; sin evaluación observada"
+  },
+  "sha256_fuentes_celdas": "692aecdc1ee5d07417477460ef3656631e04ca74d58eeda3b7791b8ecf28a51a",
+  "librerias_notebook": {
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.2",
+    "ipykernel": "7.4.0"
+  },
+  "entradas_sha256": {},
+  "sha256_notebook_ejecutado": "674365ac06f1cf234edc5a075a6c2807c03aa9d9e7344bd1eedbbedfa7d7d4f4",
+  "sha256_html": "71ed81e5e67e97a786db75e6dd445fae57dc0f3a8248e3c2f0b4235fb271c70c",
+  "seleccion_cientifica_alterada": false,
+  "limite": "El modo público comprueba evidencia publicada; no equivale a reconstruir artefactos ausentes."
+}

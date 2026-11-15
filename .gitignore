@@ -46,3 +46,6 @@ resultados/prototipo/*
 
 # Panel local de emisiones fechadas; no es un servicio operativo.
 resultados/piloto/panel/
+
+# Paquete local de insumos originales para Colab.
+resultados/entrega_final/colab/*.zip

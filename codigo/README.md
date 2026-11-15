@@ -68,3 +68,9 @@ sobrescribir la reproducción de Martín, proporcionar otra carpeta `--salida`.
 con auditoría. Requieren `requirements-notebook.txt`. No alteran modelos ni activan
 entrenamientos salvo petición explícita en el notebook.
 [Notebook final y niveles de reproducción](../notebooks/README.md).
+
+
+`preparar_colab` genera la copia del notebook con carga e instalación iniciales
+y un ZIP local con rutas preservadas y hashes. Requiere los originales del equipo;
+el archivo comprimido se excluye de Git.
+[Uso en Google Colab](../notebooks/COLAB.md).
