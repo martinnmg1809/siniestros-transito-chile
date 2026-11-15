@@ -1,0 +1,29 @@
+{
+  "tipo": "Entrenamiento completo durante la ejecución del notebook",
+  "segundos": 2080.024270057678,
+  "protocolo": "Ventanas expansivas 2022/2023/2024; selección anterior a 2024; grilla original",
+  "binario_auxiliar": "Etiqueta y>0 por celda civil existente; score=conteo predicho; umbral p95 train, regla estricta >",
+  "seleccion_binaria": false,
+  "fuentes_codigo_sha256": {
+    "/tmp/siniestros_entrega_s9236q25/codigo/evaluacion/experimento_entrega.py": "f9fa0f05a3ef84dba2f4a34476315cd1b8a94073667ba08c7bde3f1578f60751",
+    "codigo/evaluacion/metricas_entrega.py": "86efe89322f5e26d2467b6036c4c4e253971fb6d1faa914a4df7cbfb569a98a3",
+    "/tmp/siniestros_entrega_s9236q25/codigo/modelos/entrenar_comparacion.py": "1bfbeff548756c13adf80a17775dcfd079d091b6d23edf4ba63dc6cd6efbf834"
+  },
+  "salidas_sha256": {
+    "recalibracion_candidato.csv": "9a28c3b69eaacbc2cc6f5eba85431c249b9263513dda83b374bf1d290bc9e262",
+    "calibracion.csv": "9414706ea384f49e38c1651b6977483adfb741e8081be6cfc4137f77ff016454",
+    "bootstrap.csv": "17a226442070f21d64e015aba4d730c8ba668c42356b340ab76f17c9b9727cb1",
+    "seleccion_temporal.csv": "9f6fe73915fc4e3b2d5d9d46ca3d6e8675a26766de9a7cf48a801135d5ce9676",
+    "metricas.csv": "e1797bb1762e10f096ab830cbae799c1f21a80917f5aaa8a814404c50eb0cf80",
+    "busqueda_temporal.csv": "2f7dbaade11fcbe0b503555b7d0f1538ee70806c7d6fa328efdeb7dfac57d00d",
+    "curvas_binarias.csv": "4279912732ea69bcdbc49316b5a35c67a7c8d63037d52312aab1dee46a71f854",
+    "metricas_binarias.csv": "5c829d061351a4d480ed8b2c305e5cbeb81493b53d5c8b3351f8fe06bd266106",
+    "metricas_conteo_adicionales.csv": "58e0087842331bfcd18bee101094c173eae3801aac563323bad4df0084799053",
+    "cobertura_flujo.csv": "00a0b5b68237ada59d4d6d56642d87746a58ba88ef7053c91a4635f3e5968b3e",
+    "flujo_rezagado.csv": "29d362156d8f2dcd28d0f3227f95aa4e765618dc5af1a6f8085e923009f12822",
+    "limites_documentados.csv": "966c599c57a84b484679b579bb009914294954098a31d99e13fb2f7a084deaba",
+    "asignacion_contratos.csv": "934f2d4d5c2e2e824f0c6c77c4edc5d7ba43da991c21473bf0c2900866160ec0",
+    "referencia_limpia.csv": "4983bdfd7571a7871ef966f8c5648d9c7b70391bc3c6d3ed70ba1eee75c864de",
+    "cuarentena_espacial.csv": "56fde14896827678822a1ed6df8d45dafcc21645f4a2d1a6f2ee719082260d66"
+  }
+}

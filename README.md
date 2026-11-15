@@ -21,7 +21,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 ## Empezar aquí
 
 - [Notebook final ejecutado](notebooks/EntregaFinal_Proyecto_DS.ipynb) · [versión HTML](notebooks/EntregaFinal_Proyecto_DS.html) · [cómo reproducirlo](notebooks/README.md).
-- [Ejecutarlo en Google Colab](notebooks/COLAB.md) · [notebook con preparación para Colab](notebooks/EntregaFinal_Proyecto_DS_Colab.ipynb).
+- [Ejecutarlo en Google Colab](notebooks/COLAB.md): el mismo notebook, con datos y código incorporados.
 - [Estado de la entrega, responsables y pendientes](docs/cierre/00_estado_entrega3.md).
 - [Resultados, comparación de modelos y limitaciones](docs/resultados.md).
 - [EDA y decisiones de calidad de datos](docs/eda.md).
@@ -118,13 +118,35 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   están integradas y verificadas con los artefactos originales. Quedan la lectura
   y firma del acta por el equipo. Las sensibilidades urbana y de lluvia están ejecutadas; la
   etiqueta urbana aparece solo en 2020–2021 y limita la interpretación geográfica.
-- El notebook final está construido y ejecutado con originales y en modo público.
-  La presentación sigue a cargo de Máximo y falta su revisión conjunta con el
-  notebook. El prototipo HTML anterior usa otra versión.
+- El repositorio conserva un único notebook de entrega, autocontenido y con
+  entrenamiento completo activo. Calcula comparación, selección y conclusiones
+  desde la corrida que ejecuta el profesor; añade diagnóstico binario auxiliar sin
+  cambiar el objetivo de conteos. La presentación sigue a cargo de Máximo.
 
 ## Bitácora y colaboración
 
-El **14/11/2026** se preparó una [versión para Colab](notebooks/COLAB.md) para
+El **15/11/2026**, para la versión que recibirá el profesor, se unificó la entrega
+en `notebooks/EntregaFinal_Proyecto_DS.ipynb` y se retiró la copia `_Colab`.
+El documento incorpora fuentes y código verificados, sin modelos preajustados ni
+ZIP externo, y entrena por defecto el protocolo completo. Sus conclusiones se
+calculan a partir de las métricas de esa ejecución. Se mantienen captura, IC,
+MAE, RMSE, O/E y desvianza como evaluación de conteos; accuracy, precision,
+recall, F1, matriz de confusión, ROC-AUC y average precision/PR se presentan
+como diagnóstico binario auxiliar con umbral fijado en entrenamiento. La pauta
+solicita métricas apropiadas al problema; la selección científica no cambia a F1.
+Las versiones y auditorías de preparación anteriores se conservan como historia,
+no como resultados de esta nueva corrida. Se ejecutaron las **24 celdas de código
+sin errores** en un kernel local real: 60 configuraciones, reajuste final y nueve
+ajustes de sensibilidad, en **37,3 minutos**. Las 114 filas de las nueve métricas
+originales se reproducen con tolerancia 1e-10; se añaden 48 diagnósticos binarios.
+Pasaron **88 pruebas** y una preparación adicional desde una carpeta vacía.
+La ejecución local usó Python 3.13.3 y Matplotlib 3.9.4 en un entorno temporal,
+sin modificar la `.venv` de trabajo. No se afirma ejecución en la cuenta remota
+de Colab. Ver [comprobaciones y límites](resultados/entrega_final/ejecucion_autocontenida/comprobaciones.md)
+y [guía de entrega](notebooks/README.md).
+
+Como antecedente, el **14/11/2026** se preparó una versión separada para Colab,
+sustituida el 15/11 por el único notebook autocontenido descrito arriba, para
 facilitar la carga del proyecto y sus originales en la sesión de Diego. Incluye dos
 celdas de preparación y un generador de ZIP local con repositorio, fuentes,
 modelos y la emisión histórica de ejemplo. La carga verifica un manifiesto y sitúa
@@ -135,7 +157,7 @@ El acceso remoto a esa sesión no estuvo disponible; se documenta la comprobaci�
 local aislada del paquete y de las celdas de preparación, sin afirmar ejecución en
 el Colab de Diego.
 
-El **14/11/2026** se construyó el [notebook final](notebooks/EntregaFinal_Proyecto_DS.ipynb)
+Como antecedente sustituido, el **14/11/2026** se construyó el notebook final inicial
 con 19 secciones y 58 celdas (26 de código), tras comprobar las integraciones del
 equipo. Se ejecutó con kernel real y sin errores en dos niveles: originales locales
 (predicciones, métricas, bootstrap y reproducción del piloto) y copia pública

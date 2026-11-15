@@ -1,56 +1,24 @@
-# Ejecutar la entrega en Google Colab
+# Google Colab: una sola entrega autocontenida
 
-Se necesita el código y las tablas además del `.ipynb`. Abrir un notebook de Drive
-no incorpora los archivos de la máquina donde se construyó. La sesión remota del
-enlace de Diego no estuvo accesible a la conexión de Drive ni al navegador del
-agente: no se afirmó haber ejecutado o modificado esa copia.
+Abrir `notebooks/EntregaFinal_Proyecto_DS.ipynb` o subir ese archivo a Colab.
+Es el único notebook vigente del repositorio. No se necesita el antiguo ZIP ni
+la antigua copia con sufijo `_Colab`.
 
-## Opción preparada: un notebook y un ZIP
+La primera celda extrae los datos y el código incorporados a una carpeta temporal,
+verifica sus hashes y prepara dependencias. Si detecta una biblioteca antigua ya
+cargada, solicita reiniciar Python después de instalarla. Reiniciar Python y volver
+a ejecutar desde arriba, sin eliminar la sesión. Después, **Ejecutar todas**.
 
-1. Descargar `EntregaFinal_Proyecto_DS_Colab.ipynb` y el archivo local
-   `resultados/entrega_final/colab/Siniestros_Colab_Completo.zip` que entrega Diego.
-2. Abrir o subir el notebook para Colab. Usar CPU: el proyecto no necesita GPU.
-3. Ejecutar la primera celda de código y subir únicamente el ZIP cuando lo solicite.
-4. Ejecutar la segunda celda, que instala las versiones científicas del proyecto.
-   Si detecta módulos antiguos ya cargados, pide reiniciar Python. Reiniciar la
-   sesión de Python, sin elegir «Desconectar y eliminar entorno», y volver a ejecutar
-   desde arriba. El ZIP se conserva en esa misma máquina mientras no se elimine.
-5. Continuar con todas las celdas. Deben aparecer las nueve métricas reproducidas,
-   bootstrap coincidente y `CIERRE_NOTEBOOK_CORRECTO` en la última celda.
+CPU es suficiente; el entrenamiento completo tarda decenas de minutos. Las celdas
+muestran los ajustes realizados. Al finalizar se calculan las tablas comparativas,
+las métricas de conteo y el diagnóstico binario auxiliar, las sensibilidades y las
+conclusiones. El marcador final es `CIERRE_NOTEBOOK_CORRECTO`.
 
-La celda valida el manifiesto y cambia el directorio a `/content/siniestros_colab`.
-Así la primera celda del notebook científico encuentra `proyecto.py` y sus módulos.
-No hace falta montar Google Drive ni subir CSV y joblib uno por uno. El paquete
-contiene los archivos de Git, ERA5, calendario, los dos anexos DGC, cuatro joblib
-originales y la emisión/capturas de ejemplo. El ZIP queda fuera de Git, igual que
-sus fuentes locales; puede regenerarse con `python proyecto.py preparar_colab`.
+Se necesita internet únicamente para instalar bibliotecas que falten. Los datos,
+clima y anexos DGC de esta entrega ya están dentro del notebook; no dependen de
+carpetas de Drive de los integrantes. No se cargan modelos preajustados.
 
-## Si se conserva el notebook de Drive ya abierto
-
-Copiar las dos celdas iniciales del notebook preparado **antes de la celda que
-empieza con `from pathlib import Path`** (`entrega-final-004`). Ejecutarlas y continuar
-desde esa celda. No se necesita sustituir el contenido científico del notebook.
-Guardar primero una copia si se ha añadido trabajo propio.
-
-## Alternativa con solo GitHub
-
-Clonar el repositorio en la máquina de Colab y situarse en su raíz permite ejecutar
-el modo público. Este modo funciona sin los joblib/fuentes locales, pero informa
-que no reconstruye esas predicciones. Para el modo completo se necesita el ZIP
-anterior o copias originales del equipo en las rutas documentadas.
-
-## Comprobaciones y límites
-
-La extracción y el notebook preparado se comprobaron en un directorio aislado local
-con los paquetes científicos acordados. Las celdas de carga e instalación se ejercitaron
-con una interfaz de subida simulada; no se usó una cuenta de Colab ni se simuló haber
-conectado con su kernel remoto. La versión de Python compatible es 3.11–3.13; se
-comprobó localmente Python 3.13.3. La disponibilidad de cada versión de entorno
-hospedado depende de Colab.
-
-La prueba no activa entrenamiento completo ni nuevos pronósticos. La emisión del
-piloto sigue siendo un ejemplo histórico congelado sin observaciones para medir
-aciertos. Conservar el ZIP descargado: los archivos de la máquina temporal de Colab
-no quedan incorporados por compartir o guardar solamente el notebook.
-
-Referencia: [FAQ oficial de Colab: archivos, bibliotecas y sesión de ejecución](https://research.google.com/colaboratory/faq.html).
+La comprobación del equipo incluye una ejecución completa con kernel local real
+y una prueba adicional de preparación desde una carpeta vacía y un kernel nuevo.
+No se accedió al kernel remoto de la cuenta de Diego. Los límites de validación
+operativa del piloto permanecen explícitos dentro del documento.

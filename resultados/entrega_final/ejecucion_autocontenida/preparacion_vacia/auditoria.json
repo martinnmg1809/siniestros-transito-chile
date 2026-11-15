@@ -1,0 +1,12 @@
+{
+  "estado": "CORRECTO",
+  "directorio_inicial_vacio": true,
+  "archivos_verificados": 26,
+  "sin_modelos_preajustados": true,
+  "eventos_limpios": 14420,
+  "tramos": 255,
+  "sha256_paquete": "e2b1b2c0feca41d00f8a641749586a772492b860b5a506bedf1a6136a0e6c203",
+  "segundos": 3.03,
+  "directorio_inicial": "/tmp/comprobacion_entrega_vacia_hf9yhe2j",
+  "alcance": "Extracción, hashes y preparación de población en kernel nuevo; el entrenamiento se verifica en la ejecución completa separada."
+}

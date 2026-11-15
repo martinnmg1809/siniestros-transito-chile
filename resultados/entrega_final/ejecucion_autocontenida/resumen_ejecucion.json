@@ -1,0 +1,26 @@
+{
+  "entrenamiento_completo": true,
+  "configuraciones_ajustadas": 60,
+  "familias": [
+    "Poisson",
+    "GradientBoosting",
+    "RandomForest"
+  ],
+  "metricas_calculadas": 114,
+  "modelo_seleccionado": "Poisson_clima",
+  "reajuste_final_sin_prueba_futura": true,
+  "datos_incorporados_verificados": true,
+  "minutos_entrenamiento": 34.68,
+  "directorio_resultados": "/tmp/siniestros_entrega_s9236q25/resultados/ejecucion_notebook",
+  "fecha_ejecucion_utc": "2026-11-15T03:50:29.934391+00:00",
+  "modelos_preajustados_incorporados": false,
+  "sha256_paquete": "e2b1b2c0feca41d00f8a641749586a772492b860b5a506bedf1a6136a0e6c203",
+  "versiones": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3+dfsg",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.9.4",
+    "joblib": "1.6.0"
+  }
+}

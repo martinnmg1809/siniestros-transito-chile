@@ -1,0 +1,10 @@
+metrica,filas,diferencia_absoluta_maxima,coincide_rtol_atol_1e_10
+siniestros,114,0.0,True
+esperados,114,4.547473508864641e-13,True
+observado_esperado,114,2.220446049250313e-16,True
+desvianza_por_hora,114,0.0,True
+captura5,114,0.0,True
+captura10,114,0.0,True
+captura20,114,0.0,True
+captura5_turno,114,0.0,True
+mae_12h_calendario,114,4.440892098500626e-16,True

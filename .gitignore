@@ -49,3 +49,7 @@ resultados/piloto/panel/
 
 # Paquete local de insumos originales para Colab.
 resultados/entrega_final/colab/*.zip
+
+# Evidencia de la ejecución autocontenida de la entrega.
+!resultados/entrega_final/ejecucion_autocontenida/reajuste.json
+!resultados/entrega_final/ejecucion_autocontenida/resumen_ejecucion.json

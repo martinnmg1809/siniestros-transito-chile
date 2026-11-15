@@ -1,0 +1,53 @@
+{
+  "estado": "CORRECTO",
+  "fecha_utc": "2026-11-15T03:51:04.513523+00:00",
+  "segundos": 2237.49,
+  "celdas": 54,
+  "celdas_codigo": 24,
+  "errores": 0,
+  "directorio_inicial": "/home/diego/DataScience/siniestros-transito-chile",
+  "reproduccion_efectiva": {
+    "configuraciones_ajustadas": 60,
+    "datos_incorporados_verificados": true,
+    "directorio_resultados": "/tmp/siniestros_entrega_s9236q25/resultados/ejecucion_notebook",
+    "entrenamiento_completo": true,
+    "familias": [
+      "Poisson",
+      "GradientBoosting",
+      "RandomForest"
+    ],
+    "fecha_ejecucion_utc": "2026-11-15T03:50:29.934391+00:00",
+    "metricas_calculadas": 114,
+    "minutos_entrenamiento": 34.68,
+    "modelo_seleccionado": "Poisson_clima",
+    "modelos_preajustados_incorporados": false,
+    "reajuste_final_sin_prueba_futura": true,
+    "sha256_paquete": "e2b1b2c0feca41d00f8a641749586a772492b860b5a506bedf1a6136a0e6c203",
+    "versiones": {
+      "joblib": "1.6.0",
+      "matplotlib": "3.9.4",
+      "numpy": "2.2.3",
+      "pandas": "2.2.3+dfsg",
+      "scikit-learn": "1.6.1",
+      "scipy": "1.14.1"
+    }
+  },
+  "sha256_fuentes_celdas": "2b413a8b5006ef7dd0e055cd8f43e2a6632bf2da3a2156ed5eeed3f85ceafcca",
+  "sha256_notebook": "4afb48662b7809b30fc1f6b58be22a061d5035e45ef7be68efeaa94456175589",
+  "sha256_html": "19df59a5da4fab1ad124de581a37fd70da4e34d1bae68ab86908e69d0cf0b0c5",
+  "salidas_sha256": {
+    "metricas.csv": "e1797bb1762e10f096ab830cbae799c1f21a80917f5aaa8a814404c50eb0cf80",
+    "cobertura_flujo.csv": "00a0b5b68237ada59d4d6d56642d87746a58ba88ef7053c91a4635f3e5968b3e",
+    "busqueda_temporal.csv": "2f7dbaade11fcbe0b503555b7d0f1538ee70806c7d6fa328efdeb7dfac57d00d",
+    "metricas_binarias.csv": "5c829d061351a4d480ed8b2c305e5cbeb81493b53d5c8b3351f8fe06bd266106",
+    "seleccion_temporal.csv": "9f6fe73915fc4e3b2d5d9d46ca3d6e8675a26766de9a7cf48a801135d5ce9676",
+    "bootstrap.csv": "17a226442070f21d64e015aba4d730c8ba668c42356b340ab76f17c9b9727cb1",
+    "curvas_binarias.csv": "4279912732ea69bcdbc49316b5a35c67a7c8d63037d52312aab1dee46a71f854",
+    "metricas_conteo_adicionales.csv": "58e0087842331bfcd18bee101094c173eae3801aac563323bad4df0084799053",
+    "calibracion.csv": "9414706ea384f49e38c1651b6977483adfb741e8081be6cfc4137f77ff016454",
+    "conciliacion_historica.csv": "6229ee3078e26204f8486859692043b0ee8e8b992897761c6002e616b93c448e",
+    "recalibracion_candidato.csv": "9a28c3b69eaacbc2cc6f5eba85431c249b9263513dda83b374bf1d290bc9e262",
+    "sensibilidad.csv": "81136ec28b544d5e4f2d30811b485d4f04d43a3a24f30e090f1706bab18eafd3"
+  },
+  "limite": "Comprobación local en kernel real; no se accedió a la cuenta remota de Colab."
+}

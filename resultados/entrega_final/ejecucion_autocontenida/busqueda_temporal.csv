@@ -1,0 +1,61 @@
+anio_prueba,cohorte,familia,variante,configuracion,captura5,parametros,segundos_ajuste
+2022,ruta_completa,Poisson,clima,0,0.19560700504600773,"{""l2"": 3.0}",12.62119940300181
+2022,ruta_completa,Poisson,clima,1,0.19590382902938558,"{""l2"": 0.3}",29.168181339999137
+2022,ruta_completa,GradientBoosting,clima,0,0.195013357079252,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",12.213289056999201
+2022,ruta_completa,GradientBoosting,clima,1,0.1736420302760463,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",21.934205444998952
+2022,ruta_completa,RandomForest,clima,0,0.15553576728999705,"{""max_depth"": 12, ""min_samples_leaf"": 100}",51.5199689100009
+2022,ruta_completa,RandomForest,clima,1,0.1537548233897299,"{""max_depth"": 18, ""min_samples_leaf"": 30}",88.43655518699961
+2022,con_contrato,Poisson,calendario,0,0.17254273504273504,"{""l2"": 3.0}",5.109927106001123
+2022,con_contrato,Poisson,calendario,1,0.17307692307692307,"{""l2"": 0.3}",10.552446342000621
+2022,con_contrato,Poisson,clima,0,0.18108974358974358,"{""l2"": 3.0}",5.391296609002893
+2022,con_contrato,Poisson,clima,1,0.18108974358974358,"{""l2"": 0.3}",8.46321203700063
+2022,con_contrato,Poisson,clima_flujo,0,0.1778846153846154,"{""l2"": 3.0}",7.502685447001568
+2022,con_contrato,Poisson,clima_flujo,1,0.1794871794871795,"{""l2"": 0.3}",15.97250889699717
+2022,con_contrato,GradientBoosting,calendario,0,0.1623931623931624,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",6.257485450998502
+2022,con_contrato,GradientBoosting,calendario,1,0.1388888888888889,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",11.107396431998495
+2022,con_contrato,GradientBoosting,clima,0,0.17681623931623933,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",7.083052417001454
+2022,con_contrato,GradientBoosting,clima,1,0.14102564102564102,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",12.57397617499737
+2022,con_contrato,GradientBoosting,clima_flujo,0,0.18055555555555555,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",8.208078489002219
+2022,con_contrato,GradientBoosting,clima_flujo,1,0.14903846153846154,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",14.567141174000426
+2022,con_contrato,RandomForest,calendario,0,0.14957264957264957,"{""max_depth"": 12, ""min_samples_leaf"": 100}",29.39697156799957
+2022,con_contrato,RandomForest,calendario,1,0.13141025641025642,"{""max_depth"": 18, ""min_samples_leaf"": 30}",49.46021548299905
+2022,con_contrato,RandomForest,clima,0,0.14797008547008547,"{""max_depth"": 12, ""min_samples_leaf"": 100}",36.44462624500011
+2022,con_contrato,RandomForest,clima,1,0.14636752136752137,"{""max_depth"": 18, ""min_samples_leaf"": 30}",56.995235905997106
+2022,con_contrato,RandomForest,clima_flujo,0,0.14903846153846154,"{""max_depth"": 12, ""min_samples_leaf"": 100}",40.44339233900246
+2022,con_contrato,RandomForest,clima_flujo,1,0.13835470085470086,"{""max_depth"": 18, ""min_samples_leaf"": 30}",59.7503190919997
+2023,ruta_completa,Poisson,clima,0,0.18616835487251135,"{""l2"": 3.0}",11.76727274699806
+2023,ruta_completa,Poisson,clima,1,0.18861334264757249,"{""l2"": 0.3}",15.288433458998043
+2023,ruta_completa,GradientBoosting,clima,0,0.18727078239608808,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",12.307853334998072
+2023,ruta_completa,GradientBoosting,clima,1,0.18581907090464547,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",22.904148139001336
+2023,ruta_completa,RandomForest,clima,0,0.15333566189311912,"{""max_depth"": 12, ""min_samples_leaf"": 100}",43.309972939001455
+2023,ruta_completa,RandomForest,clima,1,0.1673070206077541,"{""max_depth"": 18, ""min_samples_leaf"": 30}",75.63709543200093
+2023,con_contrato,Poisson,calendario,0,0.1553582752060875,"{""l2"": 3.0}",5.142917848999787
+2023,con_contrato,Poisson,calendario,1,0.1566265060240964,"{""l2"": 0.3}",9.927686400998937
+2023,con_contrato,Poisson,clima,0,0.17057704502219403,"{""l2"": 3.0}",5.882702942002652
+2023,con_contrato,Poisson,clima,1,0.17057704502219403,"{""l2"": 0.3}",7.112125134000962
+2023,con_contrato,Poisson,clima_flujo,0,0.17247939124920736,"{""l2"": 3.0}",7.720388488000026
+2023,con_contrato,Poisson,clima_flujo,1,0.16740646797717185,"{""l2"": 0.3}",14.098623680998571
+2023,con_contrato,GradientBoosting,calendario,0,0.1534559289790742,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",7.758967591998953
+2023,con_contrato,GradientBoosting,calendario,1,0.13633481293595434,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",13.75812759299879
+2023,con_contrato,GradientBoosting,clima,0,0.18706404565630944,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",8.868370893000247
+2023,con_contrato,GradientBoosting,clima,1,0.16804058338617628,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",14.472182936002355
+2023,con_contrato,GradientBoosting,clima_flujo,0,0.18833227647431833,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",9.162063689000206
+2023,con_contrato,GradientBoosting,clima_flujo,1,0.16550412175015852,"{""max_leaf_nodes"": 31, ""max_iter"": 240}",17.788532609996764
+2023,con_contrato,RandomForest,calendario,0,0.14648065948002537,"{""max_depth"": 12, ""min_samples_leaf"": 100}",26.50632089100327
+2023,con_contrato,RandomForest,calendario,1,0.13823715916296767,"{""max_depth"": 18, ""min_samples_leaf"": 30}",49.625612626001384
+2023,con_contrato,RandomForest,clima,0,0.15091946734305645,"{""max_depth"": 12, ""min_samples_leaf"": 100}",32.69937198700063
+2023,con_contrato,RandomForest,clima,1,0.16740646797717185,"{""max_depth"": 18, ""min_samples_leaf"": 30}",54.91109140199842
+2023,con_contrato,RandomForest,clima_flujo,0,0.15472415979708307,"{""max_depth"": 12, ""min_samples_leaf"": 100}",57.47123569699761
+2023,con_contrato,RandomForest,clima_flujo,1,0.1521876981610653,"{""max_depth"": 18, ""min_samples_leaf"": 30}",89.17136515299717
+2024,ruta_completa,Poisson,clima,1,0.19001919385796545,"{""l2"": 0.3}",23.888505211998563
+2024,ruta_completa,GradientBoosting,clima,0,0.2,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",18.64423510099732
+2024,ruta_completa,RandomForest,clima,1,0.16122840690978887,"{""max_depth"": 18, ""min_samples_leaf"": 30}",88.58369224699709
+2024,con_contrato,Poisson,calendario,0,0.1636485580147552,"{""l2"": 3.0}",6.495747199001926
+2024,con_contrato,Poisson,clima,0,0.1750503018108652,"{""l2"": 3.0}",7.543489462001162
+2024,con_contrato,Poisson,clima_flujo,0,0.17370892018779344,"{""l2"": 3.0}",10.392044756998075
+2024,con_contrato,GradientBoosting,calendario,0,0.16498993963782696,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",9.166775339999731
+2024,con_contrato,GradientBoosting,clima,0,0.18846411804158283,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",10.462017532001482
+2024,con_contrato,GradientBoosting,clima_flujo,0,0.18443997317236754,"{""max_leaf_nodes"": 7, ""max_iter"": 160}",11.885546476001764
+2024,con_contrato,RandomForest,calendario,0,0.1482226693494299,"{""max_depth"": 12, ""min_samples_leaf"": 100}",30.604621376998693
+2024,con_contrato,RandomForest,clima,1,0.15358819584171696,"{""max_depth"": 18, ""min_samples_leaf"": 30}",67.75858292599878
+2024,con_contrato,RandomForest,clima_flujo,0,0.15023474178403756,"{""max_depth"": 12, ""min_samples_leaf"": 100}",72.8055994919996

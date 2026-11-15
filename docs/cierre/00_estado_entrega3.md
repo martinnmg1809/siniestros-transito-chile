@@ -93,12 +93,16 @@ separados, sin reseleccionar la candidata. La etiqueta urbana solo aparece en
 2020–2021; el ajuste rural exploratorio no acredita generalización urbana física.
 La evaluación observada del piloto sigue pendiente de una fuente completa.
 
-El [notebook final](../../notebooks/EntregaFinal_Proyecto_DS.ipynb) ya está construido
-y ejecutado: 58 celdas, 26 de código, sin errores. Se comprobó con originales locales
-y en una copia pública sin esos insumos. Incluye código de reproducción completa y
-un registro explícito del nivel ejecutado. El [HTML](../../notebooks/EntregaFinal_Proyecto_DS.html)
-y la [guía](../../notebooks/README.md) acompañan el archivo. Queda revisar su coherencia
-con la presentación y la lectura del acta por el equipo.
+El [único notebook final](../../notebooks/EntregaFinal_Proyecto_DS.ipynb) incorpora
+sus datos y código, entrena el protocolo completo y calcula métricas y conclusiones
+durante la ejecución. Se retiró la copia separada de Colab. Incluye una evaluación
+binaria auxiliar (accuracy, precision, recall, F1, ROC y PR), identificada como tal,
+sin cambiar la selección por captura de conteos. El [HTML](../../notebooks/EntregaFinal_Proyecto_DS.html)
+y la [guía](../../notebooks/README.md) acompañan al archivo. Queda la revisión
+conjunta con la presentación y la lectura del acta por el equipo.
+La comprobación del 15/11 ejecutó 54 celdas (24 de código) sin errores y pasó
+88 pruebas. Las [evidencias de la ejecución autocontenida](../../resultados/entrega_final/ejecucion_autocontenida/comprobaciones.md)
+se guardan aparte de los experimentos originales.
 La carga final es grupal y la realiza una sola persona. No se ha realizado ningún
 envío académico desde esta integración.
 

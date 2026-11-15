@@ -65,12 +65,12 @@ sobrescribir la reproducción de Martín, proporcionar otra carpeta `--salida`.
 
 `construir_notebook_final` genera el relato ejecutable de la Entrega III;
 `ejecutar_notebook_final` ejecuta un kernel, valida la terminación y exporta HTML
-con auditoría. Requieren `requirements-notebook.txt`. No alteran modelos ni activan
-entrenamientos salvo petición explícita en el notebook.
-[Notebook final y niveles de reproducción](../notebooks/README.md).
+con auditoría. Requieren `requirements-notebook.txt`. El ejecutor entrena desde cero en una
+carpeta temporal y guarda evidencia nueva; conserva los modelos históricos del repositorio.
+[Notebook final y reproducción](../notebooks/README.md).
 
-
-`preparar_colab` genera la copia del notebook con carga e instalación iniciales
-y un ZIP local con rutas preservadas y hashes. Requiere los originales del equipo;
-el archivo comprimido se excluye de Git.
-[Uso en Google Colab](../notebooks/COLAB.md).
+`experimento_entrega` ejecuta el entrenador original y el reajuste en una carpeta
+nueva. Su observador calcula métricas adicionales en archivos separados, sin
+cambiar pérdidas, grillas, selección o métricas originales. `metricas_entrega`
+implementa MAE/RMSE y la lectura binaria auxiliar. El notebook autocontenido activa
+esta ejecución por defecto y genera sus conclusiones desde las nuevas tablas.
