@@ -63,8 +63,9 @@ La exportación verifica los dos artefactos locales, la referencia espacial y el
 cierre de tablas; compara 2.048 predicciones con ambos modelos originales y no
 reentrena. La emisión nueva necesita conexión a internet y nunca sobrescribe una
 corrida previa. La reproducción verifica hashes y tablas sin red ni escritura.
-La carpeta `data/fuentes/piloto/<emision_UTC>/` y su carpeta de salida deben
-permanecer juntas y sin alteraciones.
+La ruta exacta de insumos está en `carpeta_capturas` dentro de `auditoria.json`.
+Su identificador corresponde al inicio de la captura y es distinto del de emisión;
+conservar esa carpeta y la salida en las rutas registradas.
 
 La auditoría acredita que la respuesta meteorológica se capturó antes de emitir,
 pero no la inicialización del modelo numérico. No se infiere su hora a partir de
@@ -72,3 +73,46 @@ pero no la inicialización del modelo numérico. No se infiere su hora a partir 
 fecha, hora, ruta, ubicación y cobertura acreditadas para todo el horizonte. Se
 completa la plantilla de observaciones solo después de esa verificación, sin alterar
 las predicciones congeladas. Hasta entonces no se calculan métricas de acierto.
+
+
+## Panel local y controles de insumos
+
+```bash
+.venv/bin/python proyecto.py revisar_piloto
+```
+
+Esta orden reproduce las emisiones locales, valida sus hashes y crea
+`resultados/piloto/panel/index.html` y `registro.csv`. El panel es estático y muestra
+el instante de revisión; ejecutarlo de nuevo actualiza el estado temporal.
+Una ventana terminada no equivale a una emisión evaluada. Los enlaces llevan a
+reportes fechados, no a alertas vigentes. El panel y las capturas permanecen locales.
+No se inicia una programación automática ni se emite un pronóstico nuevo.
+
+Los controles ensayados rechazan capturas posteriores a la emisión o demasiado
+antiguas, lluvia nula/incompleta, fechas fuera de calendario y cercanía a feriados
+sin posición validada; una caída del proveedor se propaga como error. La cobertura
+manual actual es del 4 al 30/11/2026. Ampliar fechas exige revisar el calendario.
+Las variantes experimentales de sensibilidad no sustituyen el modelo del piloto.
+
+## Protocolo para una futura evaluación observada
+
+1. Conservar emisión, modelo, pronóstico y prioridades antes de conocer resultados.
+   Si se incorpora M1 como comparador operativo, congelar también su versión y
+   prioridades en la emisión; el panel actual no produce ese comparador.
+2. Acreditar una fuente de todos los siniestros, cobertura de los 255 tramos y
+   ventana completa, ruta, kilómetro y fecha/hora, junto con demora y revisión de
+   publicación. Una noticia aislada o un reporte de fallecidos no acredita el total.
+3. Validar IDs únicos, dominio vial y zona horaria; tratar horas ambiguas por DST
+   explícitamente. No completar observaciones faltantes con cero ni editar las
+   predicciones para coincidir con eventos conocidos.
+4. Cerrar la observación solo cuando la fuente permita acreditar completitud.
+   Evaluar conteo total, error absoluto por ventana, O/E agregado sobre varias
+   ventanas y captura con los 12 tramos realmente seleccionados (4,71 %).
+   La captura es indefinida si no hubo siniestros. Un MAE exige varias ventanas.
+5. Si hay emisiones solapadas, declarar el esquema de evaluación por anticipado;
+   no tratar ventanas correlacionadas como observaciones independientes para IC.
+   Comparar modelos solo con las mismas ventanas, población y presupuesto.
+
+Esta evaluación no se ejecutó: faltan observaciones completas y verificables del
+horizonte. La emisión y su reproducción acreditan funcionamiento técnico, no
+capacidad predictiva operativa ni validez de la extrapolación temporal a 2026.

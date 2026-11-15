@@ -1,0 +1,124 @@
+{
+  "fecha_revision": "2026-11-14",
+  "commit_rama_martin": "df3f6df29c93ef01144cdfc79d377cfe0a00375e",
+  "ejecutado_por": "Integración de Diego con asistencia de Codex; se conserva autoría del aporte de Martín",
+  "comandos": [
+    "proyecto.py contrastes_poisson --salida /tmp/siniestros-martin-originales",
+    "proyecto.py tendencia_anual --salida /tmp/siniestros-martin-originales",
+    "proyecto.py verificar_cierre --con-artefactos",
+    "python -m unittest discover -s tests -v"
+  ],
+  "pruebas": {
+    "descubiertas": 85,
+    "aprobadas": 85,
+    "omitidas": 0
+  },
+  "entrenamiento_realizado": false,
+  "versiones_originales": {
+    "evaluado2024": {
+      "origen": "artefacto",
+      "archivo": "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2024.joblib",
+      "sha256_archivo": "2d7fb99f790c7e29f5c7de90e63cf658a7fbb17694367e6d19c700b040dbca36",
+      "parametros": {
+        "l2": 0.3
+      },
+      "huella_coeficientes_sha256": "95b7271af9500e486ca55ddcccb5aa3102299913a75cfb0a044e33f4ea441865",
+      "razon_tasa_por_anio_tendencia": 1.0536262694716931,
+      "verificacion_2024": {
+        "tolerancias_relativas": {
+          "siniestros": 1e-10,
+          "esperados": 1e-10,
+          "observado_esperado": 1e-10,
+          "desvianza_por_hora": 1e-10,
+          "captura5": 1e-10,
+          "captura10": 1e-10,
+          "captura20": 1e-10,
+          "captura5_turno": 1e-10,
+          "mae_12h_calendario": 1e-10
+        },
+        "desvios_relativos": {
+          "siniestros": 0.0,
+          "esperados": 0.0,
+          "observado_esperado": 0.0,
+          "desvianza_por_hora": 2.97446971132602e-15,
+          "captura5": 2.921344423382357e-16,
+          "captura10": 0.0,
+          "captura20": 0.0,
+          "captura5_turno": 3.503489980797739e-16,
+          "mae_12h_calendario": 0.0
+        }
+      },
+      "metricas_2024": {
+        "siniestros": 2605,
+        "esperados": 3374.2501255212874,
+        "observado_esperado": 0.7720233838911257,
+        "desvianza_por_hora": 0.015163311363923845,
+        "captura5": 0.19001919385796545,
+        "captura10": 0.304318618042228,
+        "captura20": 0.472168905950096,
+        "captura5_turno": 0.15844529750479847,
+        "mae_12h_calendario": 1.9703278190618767
+      }
+    },
+    "reajustado2020_2024": {
+      "origen": "artefacto",
+      "archivo": "resultados/modelos/artefactos/candidato_reajustado2020_2024.joblib",
+      "sha256_archivo": "6a4e9ed26ea4ad65333783a70d64675b9ac97aa62217526af3eb4ddc4fed6e48",
+      "parametros": {
+        "l2": 0.3
+      },
+      "huella_coeficientes_sha256": "17cd7a39cf52657d7565c2bf3c704ff25e58293b21cc797e69462ac1be3de55a",
+      "razon_tasa_por_anio_tendencia": 1.0019076471012818
+    },
+    "codigo_sha256": {
+      "codigo/evaluacion/contrastes_poisson.py": "012db11d0a25d2a2d9c5d3cf33f88f45b175dab8ba9701c679665c608a471889",
+      "codigo/datos/datos_modelado.py": "bac2ed4ac520e3e4571cf01d0ad22fad756ed43d99823602046e1de542870df1",
+      "codigo/modelos/modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6"
+    },
+    "fuentes": {
+      "clima_cache_sha256": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+      "clima_cache_registrado": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+      "fuentes_flujo_sha256": {
+        "2023_4t": "aabd11ecf4f181e1eb88d302de48f63ea4f9489dd75d008ba5d26d07bd143911",
+        "2024_4t": "9e399de7f90d612d37322c6397e6322523fb51c9915127b2fd4ff5bb1e05d35b"
+      }
+    }
+  },
+  "artefactos_sha256": {
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2022.joblib": "86c407a06e64b31bf35eb21755931ccb2387f12650fc9a66861e00e7af7200e5",
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2023.joblib": "4313503dbdc59af570aa6225ea565f9f916a854e7e629e530ede8a01f8cc1390",
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2024.joblib": "2d7fb99f790c7e29f5c7de90e63cf658a7fbb17694367e6d19c700b040dbca36",
+    "resultados/modelos/artefactos/candidato_evaluado2024_recalibrado_con2023.joblib": "abf9fed4fb3896222bd76338c28f79617753dad140bee3e4b0b6e648f35136f0",
+    "resultados/modelos/artefactos/candidato_reajustado2020_2024.joblib": "6a4e9ed26ea4ad65333783a70d64675b9ac97aa62217526af3eb4ddc4fed6e48",
+    "resultados/modelos/artefactos/candidato_reajustado2020_2024_recalibrado_con2024.joblib": "0cb2dfd3d3a6a0540128690374f60273b3157d61f4cb7af2d082daf7dcc87d55"
+  },
+  "recibidos_martin_sha256": {
+    "resultados/cierre/contrastes_poisson.csv": "59da93465d3a018998ab68cbce93767f9fc9c5bdf64fb7542928db0874169aec",
+    "resultados/cierre/ejemplo_turno_poisson.csv": "4e23adca9d7ea02f15d328e95112ec60e12eaeaaab1288e702971cbf2f5ecec3",
+    "resultados/cierre/tendencia_anual.csv": "5531a5c0d73995272889fa6b6844f657e2bb6312f0a5a2714795449d471a40b9",
+    "resultados/cierre/version_modelo.json": "a82bd27798d56312fcf36837111fe84c0776105eb8646d436cb7c294d166d206"
+  },
+  "fuentes_sha256": {
+    "resultados/modelos/metricas.csv": "a00a2e20e833c8869dcff2e73634918db2846e6db89a57484c09be6d1d154e07",
+    "resultados/modelos/bootstrap.csv": "189f690468eb4917e9c1d9831c39c630045642902249ef5872db60c17d51a83d",
+    "resultados/modelos/reajuste.json": "8a715560907118147e6e6d60e575fe2cb1cfdac4c9abf3839f44d758ecfca8a8",
+    "resultados/modelos/recalibracion_candidato.csv": "9a28c3b69eaacbc2cc6f5eba85431c249b9263513dda83b374bf1d290bc9e262",
+    "codigo/evaluacion/contrastes_poisson.py": "012db11d0a25d2a2d9c5d3cf33f88f45b175dab8ba9701c679665c608a471889",
+    "codigo/evaluacion/tendencia_anual.py": "895028022cb8a5721c023f83bc831601223a89d83729101589a5aaefef0d3ce1"
+  },
+  "comparacion": {
+    "contrastes": 56,
+    "pares_identicos": true,
+    "max_diferencia_absoluta_razon": 0.00011979351612523281,
+    "max_diferencia_relativa_razon": 0.00015344680482327859,
+    "tendencia_equivalente_rtol": 1e-09,
+    "tendencia_equivalente_atol": 1e-10,
+    "recibidos_conservados": true
+  },
+  "salidas_sha256": {
+    "contrastes_poisson.csv": "2e305870c4b6bd806c7b6c02b715d034bc3be50e6adbb9ef8206cfe0e0b94d0e",
+    "ejemplo_turno_poisson.csv": "3da4555f218472921d729a5e3767849bc9f2c1d4971ba257cdced60d78670b0e",
+    "seleccion_comprobada.csv": "cd3b4908a2655082edb9a2c6bb44df87e36d20c122ab8c31b97b97330ee1930e",
+    "tendencia_anual.csv": "00e1014549946ad446152ff7f06093bbd6d7c6a7435d0c8720f7a59cb6165a65"
+  }
+}

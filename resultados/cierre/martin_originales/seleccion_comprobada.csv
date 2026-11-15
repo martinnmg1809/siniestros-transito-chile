@@ -1,0 +1,11 @@
+modelo,captura_media_2022_2023,equivalente_a_01pp
+GradientBoosting_clima,0.19114206973767,True
+Hibrido_GradientBoosting_clima,0.18812860617035165,False
+Hibrido_GradientBoosting_clima_flujo,0.1884868580999926,False
+Hibrido_Poisson_clima,0.1907654979598146,True
+Hibrido_Poisson_clima_flujo,0.1877620601720169,False
+Hibrido_RandomForest_clima,0.15788438835442253,False
+Hibrido_RandomForest_clima_flujo,0.1590371602269962,False
+M1,0.15143816040874,False
+Poisson_clima,0.19088767995925948,True
+RandomForest_clima,0.15443571459155803,False

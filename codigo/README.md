@@ -45,3 +45,19 @@ MPLCONFIGDIR=/tmp/siniestros-matplotlib .venv/bin/python proyecto.py construir_c
 
 Estas órdenes regeneran los resúmenes en `resultados/cierre` desde las tablas
 existentes; no entrenan modelos. [Revisión de integración](../docs/cierre/integracion_cristobal.md).
+
+
+`sensibilidad` ejecuta el diagnóstico urbano de ranking fijo y dos alternativas
+prefijadas de cortes de lluvia. `sensibilidad_urbana_ajuste` excluye los eventos
+etiquetados urbanos del entrenamiento para un objetivo rural exploratorio.
+Ambos exigen una carpeta de salida nueva y no reemplazan modelos originales.
+`resumir_sensibilidad` genera la figura desde las tablas; `revisar_piloto`
+reproduce emisiones locales y genera un panel fechado sin descargar ni emitir.
+[Protocolos, comandos y resultados](../docs/sensibilidad.md).
+
+
+`contrastes_poisson` genera contrastes e inventario de Poisson_clima con los
+artefactos disponibles, y reajusta si faltan. Para cotejar los originales sin
+sobrescribir la reproducción de Martín, proporcionar otra carpeta `--salida`.
+`tendencia_anual` genera el diagnóstico agregado desde tablas existentes.
+[Integración, evidencia y comandos](../docs/cierre/integracion_martin.md).

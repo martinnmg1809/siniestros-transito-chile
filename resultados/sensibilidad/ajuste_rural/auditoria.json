@@ -1,0 +1,60 @@
+{
+  "inicio_utc": "2026-11-14T22:46:44.393549+00:00",
+  "fin_utc": "2026-11-14T22:47:32.102503+00:00",
+  "commit_entrada": "67830c1865ff4b7fae4a7fcc989e4f88f476305f",
+  "fuentes_sha256": {
+    "config/protocolo_sensibilidad_urbana_ajuste.md": "f5991613a40c86698fd940d67d4bec15cf1a590a6b42841a9a029bd0e134c169",
+    "codigo/evaluacion/sensibilidad_urbana_ajuste.py": "eaeeefb09cbaea3614deee018738628139462b81e531f30f526772157882e57a",
+    "codigo/evaluacion/sensibilidad.py": "87fbff07622af7289a5a29bf0bced4c5a20366269447d087e3eca5946853f7d3",
+    "codigo/datos/datos_modelado.py": "bac2ed4ac520e3e4571cf01d0ad22fad756ed43d99823602046e1de542870df1",
+    "codigo/datos/datos_ruta5.py": "d2367e83cdc317fd02a6e82faf3ffce40eabedbaabf786b1fe2b8f956d3ca4f8",
+    "codigo/modelos/modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6",
+    "codigo/modelos/modelo.py": "a69db1eebf5583ffee516f4e644713a318fd2ef91f4d77d505ed0759b43fed89",
+    "codigo/evaluacion/validar_ruta5.py": "f8028c8e3712a35d04018afce4534a22a3d33ca1db415eb8bfa4d90e69bf5242",
+    "codigo/evaluacion/evaluacion.py": "235e5c64a39dc1b28b2abd8152dc4c0ddfff30cbd2f8639ca52693ac86df48d7",
+    "data/siniestros/ruta5_2020_2024.csv.gz": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+    "data/cache/clima_ruta5.npz": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+    "data/calendario/feriados.json": "1240f908d840f768d46b5f08ce628b901927fb5596c5d365b0694c7a25087b19",
+    "resultados/modelos/seleccion_temporal.csv": "421958b69a75e17a3ad7df3d4deffe0946b21bc0b93891326f429ed08a6d074c",
+    "resultados/modelos/metricas.csv": "a00a2e20e833c8869dcff2e73634918db2846e6db89a57484c09be6d1d154e07"
+  },
+  "ajustes": [
+    {
+      "anio": 2022,
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 101,
+      "objetivo": 30018.538529946876,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 6.4205878369994025
+    },
+    {
+      "anio": 2023,
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 87,
+      "objetivo": 51205.222068812014,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 9.416718382999534
+    },
+    {
+      "anio": 2024,
+      "parametros": {
+        "l2": 0.3
+      },
+      "convergio": true,
+      "iteraciones": 191,
+      "objetivo": 69640.23418444146,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 24.629221878998578
+    }
+  ],
+  "objetivo": "Conteos etiquetados RURAL; comparación exploratoria sin cambio de candidata",
+  "prueba_identica_al_original": true,
+  "seleccion_nueva": false,
+  "metricas_sha256": "e0fd460419b3ccb14633683ae0e13d00effe9c8e74756722c789d1db433048b0"
+}

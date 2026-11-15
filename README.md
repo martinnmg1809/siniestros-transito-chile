@@ -25,6 +25,9 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [EDA y decisiones de calidad de datos](docs/eda.md).
 - [Guía de reproducción de Diego](docs/cierre/01_reproducibilidad.md).
 - [Ficha de datos y flujo de Vicente](docs/cierre/02_datos_flujo.md).
+- [Modelo final: selección y versiones, aporte de Martín](docs/cierre/03_modelo_final.md).
+- [Ficha breve del modelo para la entrega](docs/cierre/03b_ficha_modelo.md).
+- [Integración de Martín y comprobación con artefactos originales](docs/cierre/integracion_martin.md).
 - [Ficha final de evaluación e interpretación](docs/cierre/04_interpretacion.md).
 - [Aporte de Cristóbal: integración, comprobaciones e interpretación](docs/cierre/integracion_cristobal.md).
 - [Fuentes CONASET para actualizar datos y evaluar el piloto](docs/fuentes_conaset.md).
@@ -32,6 +35,7 @@ constituye exposición por vehículo-km. La evaluación es retrospectiva.
 - [Ubicación vial: ensayo ejecutado, resultados y decisión sobre 2025](docs/validacion_ubicacion_vial.md).
 - [Cierre de la ampliación 2025 y alcance final 2020–2024](docs/cierre_ubicacion_2025.md).
 - [Piloto de 12 horas en modo sombra, primera emisión y límites](docs/piloto_12h.md).
+- [Sensibilidad urbana y de lluvia: experimentos y hallazgos](docs/sensibilidad.md).
 - [Plan del equipo para dos días](docs/planificacion/Plan_cierre_tecnico_2_dias.pdf).
 
 [Nombre oficial y estado del cambio en GitHub](docs/identidad_proyecto.md).
@@ -108,12 +112,37 @@ falta reentrenar para verificar tablas, cobertura o modelos existentes.
   sin acreditarse. Un proxy trimestral no permite estimar riesgo por conductor.
 - Las fichas de datos/flujo e interpretación están completas, con revisión técnica
   realizada por encargo de Diego y asistencia de Codex sobre los aportes de Vicente
-  y Cristóbal. Sigue pendiente la ficha de selección de Martín y su revisión humana
-  de reproducción. Sensibilidad urbana y de umbrales de lluvia no se ejecutaron.
+  y Cristóbal. La ficha de selección y reproducción independiente de Martín ya
+  están integradas y verificadas con los artefactos originales. Quedan la lectura
+  y firma del acta por el equipo. Las sensibilidades urbana y de lluvia están ejecutadas; la
+  etiqueta urbana aparece solo en 2020–2021 y limita la interpretación geográfica.
 - Notebook y presentación se preparan al estabilizar código y resultados; Máximo
   tiene a cargo la presentación. El prototipo HTML anterior usa otra versión.
 
 ## Bitácora y colaboración
+
+El **14/11/2026** se integró por fast-forward la rama de Martín hasta `df3f6df`,
+conservando autoría e historial. Se recibieron las fichas 03/03b, contrastes,
+diagnóstico de tendencia y reproducción independiente. Se comprobaron los
+artefactos originales sin entrenar: las nueve métricas de 2024 coinciden a 1e-10,
+los 56 contrastes mantienen los pares y sus pequeñas diferencias quedan registradas
+junto a las dos versiones. El verificador con artefactos pasa y las **85 pruebas**
+aprueban sin omisiones. Se completó además la publicación del avance de sensibilidad
+y panel del piloto que estaba en curso. La [revisión de integración](docs/cierre/integracion_martin.md)
+precisa las limitaciones de la explicación temporal y conserva los archivos recibidos.
+Quedan el acta del equipo, el notebook documentado y la presentación; la evaluación
+observada del piloto sigue pendiente de datos completos.
+
+El **14/11/2026** se ejecutó la [sensibilidad planificada](docs/sensibilidad.md).
+Los 975 eventos urbanos aparecen solo en 2020–2021: no existe prueba urbana en
+2022–2024. Además del diagnóstico con ranking congelado, se ajustó un objetivo
+rural exploratorio con dominio y parámetros fijos; la captura cambia poco y el
+MAE empeora en 2023/2024. Los cortes de lluvia A (0,05/0,5) y B (0,1/1,0)
+se aplicaron a entrenamiento y prueba, sin selección: B varía la captura entre
+−0,327 y +0,307 pp. Se conservan candidata y cortes originales. Se añadieron
+protocolos, tablas, figura y auditorías. Pasan 78 pruebas y el cierre técnico.
+El piloto conserva la emisión original, reproducida sin red; `revisar_piloto`
+genera un panel local con estados temporales y evaluación observada pendiente.
 
 El **14/11/2026**, a petición de Diego, se completaron la
 [ficha 04 de interpretación](docs/cierre/04_interpretacion.md) y la revisión de la

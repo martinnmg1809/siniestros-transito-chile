@@ -9,7 +9,8 @@ integrantes siguen pendientes; no se firma todavía el cierre de todo el equipo.
 
 Estado posterior al cierre de fichas del 14/11/2026: los aportes de Vicente y
 Cristóbal están integrados y las fichas 02/04 completadas por encargo de Diego con
-asistencia de Codex. La revisión humana de Martín sigue pendiente. Los recuentos
+asistencia de Codex. Después se recibió la ficha 03 y la reproducción independiente
+de Martín, comprobada también con los originales; ver [integración](integracion_martin.md). Los recuentos
 y pendientes del registro anterior describen sus respectivas etapas; consultar
 el [estado vigente](00_estado_entrega3.md) antes de preparar la entrega.
 

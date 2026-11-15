@@ -1,0 +1,126 @@
+{
+  "inicio_utc": "2026-11-14T22:43:28.225236+00:00",
+  "fin_utc": "2026-11-14T22:45:16.646686+00:00",
+  "commit_entrada": "67830c1865ff4b7fae4a7fcc989e4f88f476305f",
+  "escenarios": {
+    "actual": [
+      0.1,
+      0.5
+    ],
+    "A": [
+      0.05,
+      0.5
+    ],
+    "B": [
+      0.1,
+      1.0
+    ]
+  },
+  "fuentes_sha256": {
+    "config/protocolo_sensibilidad.md": "6dc8b9e1a45e77d700440b44b22f2e3c333ee3a4af1e8794da409515047c0e1f",
+    "codigo/evaluacion/sensibilidad.py": "87fbff07622af7289a5a29bf0bced4c5a20366269447d087e3eca5946853f7d3",
+    "codigo/datos/datos_modelado.py": "bac2ed4ac520e3e4571cf01d0ad22fad756ed43d99823602046e1de542870df1",
+    "codigo/modelos/modelos_conteo.py": "ea5c4afc196635ef96a02c46223548864bb8c0b4fb5e25c9c9e4ce988820d7d6",
+    "codigo/modelos/modelo.py": "a69db1eebf5583ffee516f4e644713a318fd2ef91f4d77d505ed0759b43fed89",
+    "codigo/evaluacion/evaluacion.py": "235e5c64a39dc1b28b2abd8152dc4c0ddfff30cbd2f8639ca52693ac86df48d7",
+    "codigo/evaluacion/validar_ruta5.py": "f8028c8e3712a35d04018afce4534a22a3d33ca1db415eb8bfa4d90e69bf5242",
+    "codigo/datos/datos_ruta5.py": "d2367e83cdc317fd02a6e82faf3ffce40eabedbaabf786b1fe2b8f956d3ca4f8",
+    "data/siniestros/ruta5_2020_2024.csv.gz": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+    "data/cache/clima_ruta5.npz": "6dbd686c70789bb61655f680746d1b969e26268bd2fe0329781960e0cda8ff4c",
+    "data/calendario/feriados.json": "1240f908d840f768d46b5f08ce628b901927fb5596c5d365b0694c7a25087b19",
+    "resultados/modelos/metricas.csv": "a00a2e20e833c8869dcff2e73634918db2846e6db89a57484c09be6d1d154e07",
+    "resultados/modelos/seleccion_temporal.csv": "421958b69a75e17a3ad7df3d4deffe0946b21bc0b93891326f429ed08a6d074c",
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2022.joblib": "86c407a06e64b31bf35eb21755931ccb2387f12650fc9a66861e00e7af7200e5",
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2023.joblib": "4313503dbdc59af570aa6225ea565f9f916a854e7e629e530ede8a01f8cc1390",
+    "resultados/modelos/artefactos/ruta_completa_Poisson_clima_2024.joblib": "2d7fb99f790c7e29f5c7de90e63cf658a7fbb17694367e6d19c700b040dbca36"
+  },
+  "ajustes": [
+    {
+      "anio": 2022,
+      "escenario": "A",
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 106,
+      "objetivo": 35230.22590645497,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 7.790952743000162
+    },
+    {
+      "anio": 2022,
+      "escenario": "B",
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 93,
+      "objetivo": 35223.47157420934,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 6.477154419999351
+    },
+    {
+      "anio": 2023,
+      "escenario": "A",
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 112,
+      "objetivo": 56443.12626812794,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 11.534226789999593
+    },
+    {
+      "anio": 2023,
+      "escenario": "B",
+      "parametros": {
+        "l2": 3.0
+      },
+      "convergio": true,
+      "iteraciones": 100,
+      "objetivo": 56418.77706525716,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 9.347247678999338
+    },
+    {
+      "anio": 2024,
+      "escenario": "A",
+      "parametros": {
+        "l2": 0.3
+      },
+      "convergio": true,
+      "iteraciones": 188,
+      "objetivo": 74822.81927425324,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 28.481203437999284
+    },
+    {
+      "anio": 2024,
+      "escenario": "B",
+      "parametros": {
+        "l2": 0.3
+      },
+      "convergio": true,
+      "iteraciones": 177,
+      "objetivo": 74759.99994124779,
+      "mensaje": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+      "segundos_ajuste": 21.34095352499935
+    }
+  ],
+  "controles_metricas_originales": "Poisson y M1, nueve métricas por año, rtol=1e-8 atol=1e-10",
+  "urbana": "ranking fijo; presupuesto en todos los tramos; no ajuste rural",
+  "lluvia": "sin selección de umbral; no reemplaza candidata",
+  "salidas_sha256": {
+    "categorias.csv": "43569c246cd2a1f08e88c9838752d593b38e1688197a26ae3bae62527da5e0e0",
+    "lluvia.csv": "1bea9fd20a2047b0112b2712f5a9836a7d4c7d3d090205300446decca0d8e439",
+    "poblacion_zona.csv": "d7fe8cf3f0966de0073a01ef9924030fc8ddb0bb2d6b18dd4d3bf5635c80a093",
+    "ranking.csv": "b6b334d841d22d324b73ec050e38de55633c8b071640376477962969d177c583",
+    "urbana.csv": "ad61e1b69f5fed9c6d06372e76811dae8287532fa9d0ecfed0dfcf331c070364",
+    "urbana_ic.csv": "19ab686d33e3d174ab6b0cec65a78fbaa4bff7f25bf74d2074ba92ca03121d3c"
+  },
+  "versiones": {
+    "numpy": "2.2.3",
+    "pandas": "2.2.3"
+  }
+}

@@ -31,7 +31,7 @@ que se evaluó en 2024 y no tiene una evaluación posterior acreditada.
 Evidencia: [comparación](../../resultados/cierre/comparacion_final.csv),
 [selección temporal](../../resultados/modelos/seleccion_temporal.csv) y
 [reproducción](01_reproducibilidad.md). La justificación de elección de Martín
-corresponde a la ficha 03; esta ficha interpreta la evaluación disponible.
+está en la [ficha 03](03_modelo_final.md), ya integrada; esta ficha interpreta la evaluación disponible.
 
 ## 2. Qué mide cada resultado
 
@@ -175,18 +175,20 @@ explícitas y no se convierten en supuestos cumplidos al cerrar la documentació
 La solución aporta un ranking dinámico de conteos y supera la referencia espacial
 en captura global histórica. La ganancia con tramos fijos por turno es menor y
 la estimación del número total requiere atención a la calibración. La selección
-temporal ya fijada mantiene Poisson_clima; corresponde a Martín cerrar su ficha
-de elección y describir los artefactos finales.
+temporal ya fijada mantiene Poisson_clima; la [ficha 03 de Martín](03_modelo_final.md) ya incorporada describe la elección
+y los artefactos finales.
 
 El alcance verificable sigue siendo Ruta 5 Sur 2020–2024. 2025 se excluye por falta
 de ubicación vial comparable acreditada. No se estima riesgo por vehículo y no
 se ha acreditado disponibilidad histórica DGC. El reanálisis ERA5 no equivale a un
 pronóstico disponible al decidir. La emisión en modo sombra es reproducible, pero
 carece de evaluación con siniestros posteriores; además extrapola al año 2026.
-La sensibilidad urbana y la variación de umbrales de lluvia no se ejecutaron y se
-mantienen como análisis pendientes del equipo, sin afirmar que se hayan completado.
+Posteriormente se ejecutaron la [sensibilidad urbana y los umbrales](../sensibilidad.md):
+los urbanos solo aparecen en el entrenamiento inicial; la exclusión rural exploratoria
+no mejora uniformemente el nivel. Las alternativas de lluvia tampoco justifican un
+cambio de cortes basado en 2024. Se mantiene la candidata original.
 
 Las fichas 02 y 04 quedan completadas para integrar al notebook y la presentación.
-La preparación y defensa humana del equipo, la ficha 03 de Martín y los archivos
-finales de entrega son tareas posteriores. La reproducción de tablas y figuras
+La preparación y defensa humana del equipo y los archivos
+finales de entrega son tareas posteriores; la ficha 03 ya está incorporada. La reproducción de tablas y figuras
 se describe en [la integración de Cristóbal](integracion_cristobal.md).

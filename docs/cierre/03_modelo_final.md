@@ -1,10 +1,13 @@
 # Cierre técnico 3/4: modelo final
 
 **Responsable:** Martín · **Revisor:** Diego (reproducción) · **Cifras:** Cristóbal
-**Base:** commit `0c5e42c` (los hashes de código coinciden con `resultados/modelos/auditoria.json`)
+**Base del experimento:** `0c5e42c`; aporte adaptado a `codigo/` en `df3f6df`.
+**Integración:** artefactos originales comprobados por Diego con asistencia de Codex;
+[registro y diferencias respecto del reajuste independiente](integracion_martin.md).
 **Estado al 14/11/2026:** completo para revisión. La selección, las versiones, la
-recalibración y los contrastes están verificados. Faltan la firma del acta y la revisión
-cruzada del Día 2 (véase [Pendientes](#pendientes)).
+recalibración y los contrastes están verificados. La reproducción independiente de Martín fue recibida y la comprobación con
+artefactos originales está realizada. Queda la lectura y firma del acta por el equipo
+(véase [Pendientes](#pendientes)).
 
 Resumen de una página para la presentación: [03b_ficha_modelo.md](03b_ficha_modelo.md).
 
@@ -82,9 +85,9 @@ protocolo, pero hay que explicarlas para que no parezca un cambio de parámetros
 
 | Versión | Ajuste | Parámetros | Recalibración | Evidencia fuera de muestra | Archivo y huella |
 |---|---|---|---|---|---|
-| Pruebas 2022 / 2023 | 2020–2021 / 2020–2022 | `l2 = 3,0` | no | sí: 2022 y 2023 (selección) | `ruta_completa_Poisson_clima_{2022,2023}.joblib`; sin hash registrado |
-| **Evaluado 2024** | 2020–2023 | `l2 = 0,3` | no | **sí: 2024 (histórica reutilizada)** | `ruta_completa_Poisson_clima_2024.joblib`; sin hash registrado |
-| Evaluado 2024 recalibrado | 2020–2023 | `l2 = 0,3` | × 0,6687 (O/E de 2023) | sí: 2024 | `candidato_evaluado2024_recalibrado_con2023.joblib`; sin hash registrado |
+| Pruebas 2022 / 2023 | 2020–2021 / 2020–2022 | `l2 = 3,0` | no | sí: 2022 y 2023 (selección) | `ruta_completa_Poisson_clima_{2022,2023}.joblib`; hashes originales en `martin_originales/auditoria.json` |
+| **Evaluado 2024** | 2020–2023 | `l2 = 0,3` | no | **sí: 2024 (histórica reutilizada)** | `ruta_completa_Poisson_clima_2024.joblib`; hashes originales en `martin_originales/auditoria.json` |
+| Evaluado 2024 recalibrado | 2020–2023 | `l2 = 0,3` | × 0,6687 (O/E de 2023) | sí: 2024 | `candidato_evaluado2024_recalibrado_con2023.joblib`; hashes originales en `martin_originales/auditoria.json` |
 | Reajustado | 2020–2024 | `l2 = 0,3` | no | **ninguna** | `candidato_reajustado2020_2024.joblib`, sha256 `6a4e9ed2…6e48`; 175 iteraciones, objetivo 91 903,604 |
 | Reajustado recalibrado | 2020–2024 | `l2 = 0,3` | × 0,7720 (O/E de 2024) | **ninguna** | `candidato_reajustado2020_2024_recalibrado_con2024.joblib`, sha256 `0cb2dfd3…7d55` |
 
@@ -98,8 +101,9 @@ Los artefactos están en `resultados/modelos/artefactos/`, que Git excluye. Seg�
 - El **reajustado 2020–2024** es un artefacto de investigación para un horizonte
   posterior. No tiene evaluación propia y no reemplaza al prototipo operativo de la página.
 
-**Brecha detectada:** el repositorio no registra el sha256 de los artefactos evaluados
-(2022–2024). [`contrastes_poisson.py`](../../codigo/evaluacion/contrastes_poisson.py) agrega a
+**Brecha detectada en la revisión inicial:** faltaba un inventario conjunto de
+los artefactos evaluados (2022–2024). Sus hashes originales se registraron durante
+la integración en `resultados/cierre/martin_originales/auditoria.json`. [`contrastes_poisson.py`](../../codigo/evaluacion/contrastes_poisson.py) agrega a
 `resultados/cierre/version_modelo.json` una huella de los coeficientes y del
 transformador. Esa huella no depende de la serialización de joblib.
 
@@ -115,7 +119,8 @@ versiones se reajustaron desde cero con:
 | Evaluado 2024 | 74 822,81131 | 74 822,81113 | 2,4e-9 | 179 / 198 |
 | Reajustado 2020–2024 | 91 903,60439 | 91 903,60430 | 9,7e-9 | 175 / 182 |
 
-Los dos ajustes alcanzan el mismo óptimo; el local queda incluso marginalmente más abajo.
+Los dos ajustes alcanzan objetivos numéricamente muy próximos; el local queda
+marginalmente más abajo. Esto no acredita identidad de coeficientes o predicciones.
 L-BFGS se detiene en otro punto de una región casi plana según el orden de las
 operaciones de punto flotante. Por eso las métricas de 2024 del evaluado reajustado
 coinciden así con `metricas.csv`:
@@ -132,8 +137,8 @@ archivos de Diego.
 ## 3. Recalibración: escala de conteos, separada del ranking
 
 Las cifras provienen de `recalibracion_candidato.csv` y coinciden con la sección 6 de
-[04_interpretacion.md](04_interpretacion.md) (Cristóbal). Esta ficha añade la causa de la
-sobreestimación y las consecuencias para el artefacto reajustado:
+[04_interpretacion.md](04_interpretacion.md) (Cristóbal). Esta ficha añade evidencia sobre la extrapolación temporal
+y sus consecuencias para el artefacto reajustado:
 
 | Año evaluado | Factor (año) | O/E original → recalibrado | MAE/turno original → recalibrado | Captura 5 % |
 |---|---|---|---|---|
@@ -153,11 +158,11 @@ sobreestimación y las consecuencias para el artefacto reajustado:
   hereda una corrección pensada para otro sesgo (véase la subsección siguiente).
 - No se reutiliza el multiplicador de lluvia del prototipo antiguo ni sus intervalos.
 
-### Por qué Poisson sobreestima: la tendencia anual aprende de 2020
+### Diagnóstico de sobreestimación: extrapolación de la tendencia anual
 
 En los tres años de prueba, O/E ≈ 1 en entrenamiento y O/E < 1 en prueba. El modelo
-incluye una tendencia anual numérica, y 2020 (pandemia, 2.295 siniestros) deprime el
-inicio de la serie. El modelo aprende un "aumento" y lo proyecta hacia años en que los
+incluye una tendencia anual numérica, y el total de 2020 (2.295 siniestros) es menor que el de los años siguientes.
+El modelo ajusta una tendencia creciente y la proyecta hacia años en que los
 siniestros bajaron: 3.369 en 2022, 2.863 en 2023 y 2.605 en 2024.
 
 [`tendencia_anual.py`](../../codigo/evaluacion/tendencia_anual.py) lo comprueba solo con salidas versionadas.
@@ -172,8 +177,9 @@ totales de entrenamiento y compara su O/E extrapolado con el registrado
 | 2024 | 2020–2023 | × 1,06 | 0,76 | 0,77 | 0,87 | 0,88 |
 
 La extrapolación de la tendencia por sí sola reproduce casi exactamente la sobreestimación
-registrada en los tres años. Gradient Boosting no extrapola: sus árboles mantienen el
-último nivel aprendido, y por eso su O/E es mejor. M1 usa la tasa media de los años de
+registrada en los tres años. En una estructura de árboles la respuesta al atributo año
+fuera del rango aprendido permanece en sus hojas. Esa diferencia es compatible
+con el mejor O/E observado de GB, pero esta comparación no aísla su causa. M1 usa la tasa media de los años de
 entrenamiento, sin tendencia.
 
 Alcance de esta evidencia:
@@ -189,9 +195,9 @@ Alcance de esta evidencia:
 - **No afecta la elección:** el término de tendencia multiplica por igual a todas las
   filas de un mismo año, así que no cambia el orden de priorización ni la captura.
   Afecta solo la escala de los conteos, que es lo que corrige la recalibración.
-- Explica por qué la recalibración con el año anterior **corrige de más** en los dos
-  años con prueba (O/E recalibrado 0,965 en 2023 y 1,154 en 2024). El factor hereda el
-  sesgo de un ajuste con una tendencia distinta. Por la misma razón, el factor 0,7720 del
+- Es compatible con los cambios de escala tras la recalibración (O/E 0,965 en
+  2023 y 1,154 en 2024). En 2024 pasa al otro lado de 1. El factor procede de un
+  ajuste con una tendencia distinta; esta evidencia no separa todos los motivos del sesgo. Por la misma razón, el factor 0,7720 del
   reajustado 2020–2024 no debe tomarse como calibración validada.
 - **No se modifica el modelo ahora:** cambiar la tendencia sería una nueva
   especificación elegida después de ver 2024. Queda como trabajo futuro, por ejemplo con
@@ -249,11 +255,11 @@ siniestro. La utilidad está en sumar y ordenar muchas horas-tramo, no en predec
 **Cómo leer y cómo no leer estas cifras:**
 - Son **asociaciones del modelo**, no efectos causales. El modelo predice conteos, no
   riesgo por vehículo-km.
-- Lluvia, hora y feriado también cambian cuánto tráfico hay. Por ejemplo, ×0,44 a las
-  02:00 refleja sobre todo menos vehículos, no conducción más segura. Las puntas de
-  08:00 y 18:00 coinciden con los desplazamientos diarios. En feriados, el aumento al
-  inicio y al final y la baja en los días intermedios coinciden con el patrón de salida
-  y regreso.
+- Lluvia, hora y feriado también cambian cuánto tráfico hay. La razón ×0,44 a las 02:00
+  es compatible con diferencias de circulación, pero el modelo no permite medir
+  cuánto se debe al tráfico ni inferir conducción más segura. Las puntas de
+  08:00 y 18:00 coinciden con los desplazamientos diarios. En feriados, las diferencias de inicio, final y días intermedios son
+  compatibles con patrones de salida y regreso, sin acreditarlos causalmente.
 - La lluvia es de reanálisis ERA5 en celdas de 0,25°, no la medida en la carretera ni un
   pronóstico emitido antes del turno.
 - La penalización L2 acerca las razones a 1, así que pueden estar levemente atenuadas.
@@ -269,8 +275,9 @@ viernes 12/07/2024, de 12:00 a 24:00, hora local, con el modelo evaluado.
   km 190, 270, 220, 195 y 185, con 0,09–0,14 siniestros esperados en el turno.
 - **En los tramos priorizados:** ocurrieron 2 de los 5 siniestros del turno (km 190 y
   km 95).
-- **Agregado de la ruta:** 6,35 esperados (4,24 recalibrados con ×0,6687) frente a 5
-  observados.
+- **Agregado de la ruta, artefacto original:** 6,34 esperados (4,24 recalibrados
+  con ×0,6687) frente a 5 observados. El reajuste independiente de Martín daba
+  6,35; ambas salidas se conservan y se identifican en la revisión de integración.
 
 Es un ejemplo histórico ilustrativo: un turno no mide la precisión del modelo. El MAE
 registrado (1,97; 1,68 recalibrado) es el error del **total de la ruta** por turno en
@@ -303,10 +310,11 @@ completó el 14/11 con reintentos espaciados. Pruebas: `tests/test_contrastes.py
 > la solución más simple a ≤0,1 pp del mejor promedio. El año 2024 no se usó para elegir.
 > En la evaluación histórica de 2024 captura 19,00 %, frente a 14,89 % de M1
 > (+4,11 pp, IC 95 % [2,10; 6,08]). En ese año, Gradient Boosting obtuvo mejores
-> métricas, lo que no cambia la elección. Los conteos esperados requieren recalibración
-> con el O/E del año anterior. La recalibración cambia la escala, no el orden. Su
-> resultado en 2024 pasó de sobreestimar a subestimar. La sobreestimación se explica por
-> la tendencia anual aprendida desde 2020 (×1,054/año), sin efecto sobre el orden. El
+> métricas, lo que no cambia la elección. La escala de los conteos se estudió mediante
+> una variante de recalibración con el O/E del año anterior. La recalibración cambia la escala, no el orden. Su
+> resultado en 2024 pasó de sobreestimar a subestimar. El diagnóstico es compatible con
+> la extrapolación de la tendencia anual (×1,054/año), constante dentro de cada año
+> y por ello sin efecto directo sobre el orden de ese año. El
 > artefacto reajustado con 2020–2024 no tiene prueba futura y queda como artefacto de
 > investigación; su factor de recalibración no se presenta como calibración validada.
 > Asociaciones del modelo: lluvia ≥0,5 mm/h ×2,11 frente a seco; 18:00 ×1,41 y 02:00
@@ -318,7 +326,17 @@ completó el 14/11 con reintentos espaciados. Pruebas: `tests/test_contrastes.py
 
 - [x] Contrastes calculados y verificados (sección 4).
 - [x] Tendencia confirmada con el modelo real (×1,054/año evaluado; ×1,002/año reajustado).
-- [ ] Cristóbal: verificar las cifras de las secciones 1, 3 y 4 contra su tabla maestra.
-- [ ] Diego: si conserva los artefactos originales, ejecutar `python proyecto.py contrastes_poisson` con
-      ellos (verificación a 1e-10) y registrar su sha256.
+- [x] Verificación técnica de cifras contra métricas y tablas de Cristóbal, realizada
+      por Diego con asistencia de Codex; no se registra como firma personal de Cristóbal.
+- [x] Contrastes con artefactos originales verificados a 1e-10; hashes registrados
+      en `resultados/cierre/martin_originales/auditoria.json`. Reproducción independiente
+      de Martín recibida y diferencias numéricas documentadas.
 - [ ] Día 2: firmar el acta (sección 5).
+
+
+Actualización de integración: la [sensibilidad urbana y de umbrales](../sensibilidad.md)
+se ejecutó en paralelo al cierre de esta ficha. No se cambió el criterio de selección,
+la candidata ni la calibración. El [piloto experimental](../piloto_12h.md) usa el
+reajustado original y muestra la variante recalibrada solo como referencia;
+carece de evaluación observada. Esta ficha mantiene identificado el prototipo
+HTML histórico como una versión distinta.

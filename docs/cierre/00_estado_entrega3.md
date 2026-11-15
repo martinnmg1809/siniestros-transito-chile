@@ -15,8 +15,8 @@ que siguen son acuerdos del equipo, no nuevas exigencias atribuidas al profesor.
 |---|---|---|
 | Iteraciones y correcciones | README; matriz_compromisos.csv; cuarentena, captura con empates, UTC/DST y revisión de fuentes | Diego integra la matriz y las comprobaciones; Máximo utiliza sus conclusiones en la presentación |
 | Comparación de modelos | metricas.csv, busqueda_temporal.csv y bootstrap.csv en resultados/modelos; Poisson, GB y RF, con/sin flujo | Tablas, figuras y ficha 04 completas; llevar sus conclusiones al notebook y presentación |
-| Selección del modelo final | auditoria.json: candidata Poisson_clima, elegida con 2022/2023 y regla de simplicidad; reajuste.json | Martín entrega la ficha 03 y justifica elección, variantes de calibración y artefacto; no elegir retrospectivamente con 2024 |
-| Validación y generalización | Ventanas expansivas; train/prueba; IC semanales; verificar_cierre.py; pruebas automatizadas | Ficha 04 explica estabilidad, brechas y límites; Martín completa la justificación del modelo en ficha 03 |
+| Selección del modelo final | auditoria.json: candidata Poisson_clima, elegida con 2022/2023 y regla de simplicidad; reajuste.json | Fichas 03/03b integradas y comprobadas con artefactos originales; llevar la justificación a los entregables y revisar el acta |
+| Validación y generalización | Ventanas expansivas; train/prueba; IC semanales; verificar_cierre.py; pruebas automatizadas | Ficha 04 explica estabilidad, brechas y límites; la ficha 03 integrada justifica elección y versiones |
 | Interpretación | Fichas 02/04, diferencias e IC; calibración, MAE y ejemplos interpretativos | Ficha 04 completada; integrar su interpretación en los entregables y preparar la defensa del equipo |
 | Conexión con el problema | Conteos por tramo/hora y priorización de vigilancia, captura global y por turno de 12 h | Explicar por separado dónde priorizar y cuántos eventos esperar; MAE actual agregado por cohorte/turno no acredita error por tramo |
 
@@ -61,23 +61,37 @@ Codex. El cierre se documenta en la [ficha 04](04_interpretacion.md) y el
 [registro de revisión de datos](../../resultados/cierre/revision_vicente.md).
 No se atribuye esa revisión a los integrantes originales.
 
+## Integración recibida de Martín
+
+Se incorporó por fast-forward `claude/planning-pending-work-asvuvw` hasta `df3f6df`,
+con seis commits de Martín y el merge de main ya incluido en su rama. Se recibieron
+fichas 03/03b, contrastes, ejemplo de turno, diagnóstico temporal, reproducción
+independiente y siete pruebas. La revisión solicitada a Diego se completó con los
+joblib originales: nueve métricas de 2024 a tolerancia 1e-10; el verificador con
+artefactos y las 85 pruebas pasan. Se conservan intactos los archivos recibidos y
+se añade evidencia identificada de la reproducción con originales. Ver
+[integración de Martín](integracion_martin.md). La firma del acta corresponde al equipo.
+
 ## Pendientes reales y responsables
 
-- **Diego:** fichas 02 y 04 integradas y revisadas. Recibir la ficha 03 de Martín,
-  coordinar el notebook documentado y comprobar coherencia del paquete final.
+- **Diego:** fichas 02, 03 y 04 integradas y revisadas. Coordinar el notebook
+  documentado y comprobar la coherencia con la presentación y el paquete final.
 - **Vicente:** aporte de datos y flujo completado y revisado técnicamente por
   encargo de Diego. Exposición vehicular y publicación histórica permanecen como
   limitaciones documentadas; no se exige resolverlas para afirmar este cierre.
-- **Martín:** ficha 03 de modelo final y artefactos; revisión cruzada humana de
-  la reproducción de Diego. Estos trabajos siguen pendientes.
+- **Martín:** ficha 03/03b y reproducción independiente recibidas. La integración
+  cotejó su evidencia con los artefactos originales; preparar con el equipo la
+  lectura y firma del acta, sin registrarla como realizada anticipadamente.
 - **Cristóbal:** aporte técnico integrado y ficha narrativa 04 completada por
   encargo de Diego. La interpretación y revisión de la ficha 02 están documentadas.
   Corresponde al equipo leer las conclusiones y preparar su defensa.
 - **Máximo:** preparar la presentación con las tablas, figuras y conclusiones
   verificadas. No se ha modificado su presentación.
 
-Sensibilidad urbana y de umbrales de lluvia siguen como análisis no ejecutados
-del equipo, visibles en la matriz. El cierre de estas fichas no los da por cumplidos.
+La [sensibilidad urbana y de lluvia](../sensibilidad.md) ya se ejecutó con protocolos
+separados, sin reseleccionar la candidata. La etiqueta urbana solo aparece en
+2020–2021; el ajuste rural exploratorio no acredita generalización urbana física.
+La evaluación observada del piloto sigue pendiente de una fuente completa.
 
 El notebook anotado sigue siendo obligatorio. Se prepara después de estabilizar
 código y resultados, como acordó el equipo, y debe poder ejecutar las conclusiones.
@@ -97,9 +111,9 @@ Se mantiene Ruta 5 Sur como alcance principal. Extensión a otras rutas y actual
 del prototipo quedan para después de resolver este caso. Se estudian conteos y
 priorización retrospectiva; se implementó una emisión reproducible del piloto en
 modo sombra, pero no se acredita un servicio operativo ni riesgo por vehículo-km.
-Su evaluación con siniestros observados, sensibilidad urbana y umbrales sigue
-pendiente. La ampliación 2025 se cerró por falta de ubicación comparable, no por
-data leakage; la separación temporal de entrenamiento y evaluación se mantiene.
+Su evaluación con siniestros observados sigue pendiente. Las sensibilidades
+retrospectivas urbana y de umbrales están documentadas con sus límites. La
+ampliación 2025 se cerró por falta de ubicación comparable, no por data leakage; la separación temporal de entrenamiento y evaluación se mantiene.
 
 Antes de enviar, Diego debe comprobar que cada cifra tiene tabla, población, año y
 unidad, que la candidata coincide con el artefacto citado y que las fichas aprobadas,

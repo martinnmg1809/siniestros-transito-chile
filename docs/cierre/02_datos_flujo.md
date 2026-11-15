@@ -146,8 +146,8 @@ El TMDA del MOP (PNCV) no se usa. Motivos: ningún registro con año de medició
 | Resumen e integración | Incorporados al README y al estado de entrega |
 | Fecha de publicación DGC | No acreditada; limitación documentada. Requiere evidencia fechada antes de afirmar disponibilidad operativa histórica |
 | TMDA como exposición | No validado; limitación documentada. Su validación corresponde a una ampliación futura |
-| Sensibilidad urbana y umbrales de lluvia | Análisis del equipo no ejecutados; no se declaran resueltos |
-| Selección y artefactos finales | Ficha 03 a cargo de Martín |
+| Sensibilidad urbana y umbrales de lluvia | Ejecutadas posteriormente; ver [experimentos y límites](../sensibilidad.md). Etiquetas urbanas solo en 2020–2021 |
+| Selección y artefactos finales | [Ficha 03 de Martín](03_modelo_final.md) recibida y comprobada; acta del equipo pendiente |
 
 La parte técnica y documental de Vicente queda cerrada para el alcance
 retrospectivo acordado. La matriz mantiene separados los compromisos cumplidos,

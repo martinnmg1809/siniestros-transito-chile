@@ -43,3 +43,6 @@ resultados/modelos_pre_normalizacion/
 data/cache/*
 !data/cache/README.md
 resultados/prototipo/*
+
+# Panel local de emisiones fechadas; no es un servicio operativo.
+resultados/piloto/panel/

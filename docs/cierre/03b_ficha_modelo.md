@@ -2,7 +2,9 @@
 
 Ficha de una página para la presentación (Máximo) y el notebook. El detalle y la
 justificación están en [03_modelo_final.md](03_modelo_final.md). Todas las cifras
-provienen de `resultados/modelos/` en el commit `0c5e42c`.
+proceden del experimento en `resultados/modelos/` (base `0c5e42c`) y de los
+contrastes de Martín. La [integración](integracion_martin.md) verificó los
+artefactos originales y conserva ambas reproducciones.
 
 ## Qué es
 
@@ -12,7 +14,7 @@ provienen de `resultados/modelos/` en el commit `0c5e42c`.
 | **Salida** | Conteo esperado de siniestros por tramo y hora local. Sirve para ordenar dónde y cuándo priorizar. |
 | **No es** | Riesgo por vehículo-km, probabilidad de accidente por conductor ni efecto causal de la lluvia. |
 | **Tipo** | Regresión de Poisson log-lineal con exposición horaria como offset y penalización L2 (`l2 = 0,3`). Sin interacciones. |
-| **Atributos** | Tramo (255 tramos de 5 km), hora (24), día de la semana (7), mes (12), posición de feriado (no / inicio / intermedio / final), lluvia ERA5 en 3 niveles (<0,1, 0,1–0,5 y ≥0,5 mm/h) y tendencia anual numérica. **Sin flujo vehicular.** |
+| **Atributos** | Tramo (255 tramos de 5 km), hora (24), día de la semana (7), mes (12), posición de feriado (no / inicio / intermedio / final), lluvia ERA5 en 3 niveles (<0,1, 0,1 ≤ p < 0,5 y ≥0,5 mm/h) y tendencia anual numérica. **Sin flujo vehicular.** |
 | **Población** | 14.420 siniestros de 2020–2024 tras poner en cuarentena 5 registros con ubicación incompatible. No se imputa su ubicación. |
 | **Código** | `modelos_conteo.py` (modelo), `datos_modelado.py` (atributos), `entrenar_comparacion.py` (evaluación), `reajustar_candidato.py` (reajuste). |
 
@@ -57,8 +59,9 @@ Poisson_clima obtuvo 19,09 % y Gradient Boosting, 19,11 %.
    caían en las horas-tramo priorizadas.
 5. **Los intervalos** (2.000 remuestreos semanales) dejan fijas las predicciones. No
    incluyen la incertidumbre del reentrenamiento ni corrigen comparaciones múltiples.
-6. **Sobreestima el total por la tendencia anual.** 2020 (pandemia) deprime el inicio de
-   la serie y el modelo proyecta un aumento que no ocurrió. Una tendencia sola reproduce
+6. **La extrapolación temporal contribuye al diagnóstico del sesgo.** El total de
+   2020 es menor que los posteriores y la tendencia proyecta un aumento. Una
+   aproximación de tendencia sola reproduce
    el O/E de 2022–2024 (0,71/0,67/0,76 frente a 0,69/0,67/0,77); en el modelo, × 1,054/año. Esto afecta la escala,
    no el orden de priorización (`tendencia_anual.py`).
 7. **El flujo vehicular no se incluye.** El proxy DGC cubre 153 de 255 tramos y no mostró
@@ -69,12 +72,13 @@ Poisson_clima obtuvo 19,09 % y Gradient Boosting, 19,11 %.
 | Condición | Frente a | El modelo espera |
 |---|---|---|
 | Lluvia ≥0,5 mm/h | seco | **× 2,11** siniestros por hora |
-| Llovizna 0,1–0,5 mm/h | seco | × 1,28 |
+| Llovizna 0,1 ≤ p < 0,5 mm/h | seco | × 1,28 |
 | 18:00 (hora más alta) | 12:00 | × 1,41 (08:00: × 1,38) |
 | 02:00 (hora más baja) | 12:00 | × 0,44 |
 | Inicio de feriado largo | día normal | × 1,18 (regreso: × 1,12; días intermedios: × 0,93) |
 
-Son asociaciones del modelo, no causas. Las horas y los feriados reflejan sobre todo
-cuánto tráfico hay; la lluvia es de reanálisis. Las cifras no tienen intervalos de
+Son asociaciones del modelo, no causas. Las asociaciones horarias y de
+feriados pueden incluir diferencias de circulación, cuya contribución no se midió;
+la lluvia es de reanálisis. Las cifras no tienen intervalos de
 confianza. La versión reajustada con 2020–2024 da razones casi iguales. Detalle y
 reproducción en `03_modelo_final.md`, sección 4.
