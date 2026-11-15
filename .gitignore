@@ -1,6 +1,11 @@
 # Datos crudos regenerables con descargar_conaset.py
 *.json
 !package.json
+!config/protocolo_asignacion_vial*.json
+!config/piloto_12h.json
+!config/calendario_piloto.csv
+!resultados/piloto/modelo_poisson.json
+resultados/piloto/20*/
 
 # Python
 __pycache__/
@@ -33,3 +38,8 @@ resultados/flujo/ramas_mop.csv
 !resultados/modelos/reajuste.json
 !resultados/cierre/version_modelo.json
 resultados/modelos_pre_normalizacion/
+
+# Ubicaciones ordenadas de datos y salidas locales.
+data/cache/*
+!data/cache/README.md
+resultados/prototipo/*

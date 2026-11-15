@@ -1,0 +1,5 @@
+tolerancia_numerica_m,bordes_reclasificados_total,bordes_positivos_reclasificados,tp_exploratorios,fp_exploratorios,sensibilidad_exploratoria,precision_solo_etiquetados,tramos_correctos_entre_tp,asignables_desconocidos,uso
+0.001,419,419,2452,64,0.9412667946257197,0.9745627980922098,2452,512,Diagnóstico post hoc; no método aprobado para 2025
+0.01,432,432,2465,64,0.946257197696737,0.9746935547647292,2465,512,Diagnóstico post hoc; no método aprobado para 2025
+0.1,432,432,2465,64,0.946257197696737,0.9746935547647292,2465,512,Diagnóstico post hoc; no método aprobado para 2025
+1.0,435,433,2466,66,0.9466410748560461,0.9739336492890995,2466,512,Diagnóstico post hoc; no método aprobado para 2025

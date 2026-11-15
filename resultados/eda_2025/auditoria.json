@@ -1,0 +1,1514 @@
+{
+  "fuente": "https://services3.arcgis.com/vaJl1B5HEzZj7154/arcgis/rest/services/Base_SINIESTROS_2020_2025/FeatureServer/0",
+  "consulta_utc": "2026-11-14T19:16:51.558107+00:00",
+  "anios": {
+    "2024": 72043,
+    "2025": 68994
+  },
+  "campos": [
+    "FID",
+    "ID",
+    "AÑO",
+    "FECHA",
+    "Dia_semana",
+    "Mes",
+    "Hora",
+    "Hora_aprox",
+    "REGION",
+    "COMUNA",
+    "TIPO_SINIE",
+    "ZONA",
+    "Ruta",
+    "Ubicación",
+    "FALLECIDOS",
+    "TOTAL_LESI",
+    "GRAVES",
+    "MENOS_GRAV",
+    "LEVES",
+    "Latitud",
+    "longitud"
+  ],
+  "editingInfo": {
+    "lastEditDate": 1790281159920,
+    "schemaLastEditDate": 1790281159920,
+    "dataLastEditDate": 1790042163102
+  },
+  "dateFieldsTimeReference": {
+    "timeZone": "UTC",
+    "timeZoneIANA": "Etc/UTC",
+    "respectsDaylightSaving": false
+  },
+  "verificacion_completa": true,
+  "manifiesto_sha256": "af1f0198c7280870c5737e3f5b7427c4d565f854e1114c99000edbd5d8f42069",
+  "id_compartidos_2024_2025": 0,
+  "filas_crudas_publicadas": false,
+  "integrado_al_modelo": false,
+  "historico_sha256": "e45041e37af3f0122973c83361bf501b6a0b15e7c14ed064ab03a3db0f15b1ba",
+  "versiones": {
+    "python": "3.13.3",
+    "pandas": "2.2.3",
+    "numpy": "2.2.3",
+    "matplotlib": "3.8.3"
+  },
+  "codigo_sha256": {
+    "codigo/datos/descargar_revision_conaset.py": "1b26870c82d14de01fd27fe3224e9c99db5f7e4fa9e21ffa00688b18aabedf5e",
+    "codigo/evaluacion/explorar_conaset_2025.py": "37cc38942271b3516b3e2f3418bfc5730b280a7cf38b28e96d25d5a5a5fd2ba7"
+  },
+  "archivos": [
+    {
+      "archivo": "metadatos_antes.json.gz",
+      "sha256_respuesta": "a4afe8d11067366d55ca4cefd0ce8bb8d2f54169512b2a853297ab3a7e5e841c",
+      "registros": null
+    },
+    {
+      "archivo": "conteo_2024.json.gz",
+      "sha256_respuesta": "d48af6fda4336663501114d2546bc9b938c2e3ce09c8eb7205a353cf55e8d691",
+      "registros": 72043
+    },
+    {
+      "archivo": "ids_2024.json.gz",
+      "sha256_respuesta": "77b2253f86ca3824756943550270a5940480b8f70e56f2e252d6f394d5e52184",
+      "registros": 72043
+    },
+    {
+      "archivo": "eventos_2024_000.json.gz",
+      "sha256_respuesta": "dad50a3b0d8e822d14190ea9db9bfe65c8941d6a0759f3ab9960c811155a3cb1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_001.json.gz",
+      "sha256_respuesta": "6c11795eeae05c7fb48d6aff04e2a58a6b32d8e5d4896a92aa1f7e5724589fda",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_002.json.gz",
+      "sha256_respuesta": "dfb2f16ba76229e1e932efec8073299e42187ac85e324fcddfbe01d1683d40d3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_003.json.gz",
+      "sha256_respuesta": "7ab19fdf4f9a0275953dae43a11e5ab8f3b7f3142b6d99a88b835b2196eaf7e6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_004.json.gz",
+      "sha256_respuesta": "22f58c4572fde2581a9662882ccdf673182f65109fbb1a5250c9933f4b288ed3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_005.json.gz",
+      "sha256_respuesta": "93144a4f99fdb4a35a5ea7c37a55e47905e8e9b8f2348bbfe7af388aa1a1f8ed",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_006.json.gz",
+      "sha256_respuesta": "ef1dc2220cbaa363f16aca1f876a2f73deab9bcd94a880add2223d7e25ab29bc",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_007.json.gz",
+      "sha256_respuesta": "f8a944bd663b7162a82d6327a989619a94ad9d4d66343b47cb06547629c066b4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_008.json.gz",
+      "sha256_respuesta": "39dac5717ee4480ca724857da07f4d06d025bb5f3815e75a24b3dd57033b1032",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_009.json.gz",
+      "sha256_respuesta": "1d88908ed76f36184b9bd3e7bd465f0ca3349286c89b851729f7dca364a7e145",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_010.json.gz",
+      "sha256_respuesta": "e447781b589d5ec5d9f209d606d5eb05dc874eb2ccb04d30884e3d76ac4d5163",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_011.json.gz",
+      "sha256_respuesta": "6c91963a58d67a55f63b28244799765b27c62f22221a6266d6d88dc053f08d30",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_012.json.gz",
+      "sha256_respuesta": "826d69c02c3e1dd34721624dd03ab7a3d2654d5a877523adfe37648797ddda6f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_013.json.gz",
+      "sha256_respuesta": "7d402cc5f864830975a6fbe736b153a2c9e5a1179e584037e8896ec7f36646ec",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_014.json.gz",
+      "sha256_respuesta": "5c014c81bf469e57986b7e4289c76f61dc58b261e85c25ec68f45c3d157c590d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_015.json.gz",
+      "sha256_respuesta": "d7f711ac78020c232363f1228c259bd7f5b5679edc68631a53cfd44171d56971",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_016.json.gz",
+      "sha256_respuesta": "670ce584cf4b92436d6a240ff4d7f6a608c309cfe42e67a578f4aabe9ea6fc61",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_017.json.gz",
+      "sha256_respuesta": "820d97ed539ac0c0cd4a976210d90127e18da02e03970094b9457e027d765139",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_018.json.gz",
+      "sha256_respuesta": "104ee4446bd7dccc37ceec23848c6392617363ed674568cf3961651339fe83b9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_019.json.gz",
+      "sha256_respuesta": "5fd396f622f6e7fb2c77e0fa5aedfcacc2f4093206179ab0d6183be144f04bb4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_020.json.gz",
+      "sha256_respuesta": "5e159ac7cbed5f7c40584dec74980ef8ac7ef9278e9b89a6c05dcbc1e4383e38",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_021.json.gz",
+      "sha256_respuesta": "246b42cee0bf5724fe924b77d80ab881b9edefe095de20a8015f428bc2baf0eb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_022.json.gz",
+      "sha256_respuesta": "cf7c7ea765ac612c475356879b1888276a3536c0cc5b0bdb83d909e457b4946c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_023.json.gz",
+      "sha256_respuesta": "5e7aedad07e0a9120506142e4a03450d2427ed7a52871565e8fbd56fe2c0cf07",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_024.json.gz",
+      "sha256_respuesta": "c9a3e021a57ad2034cfda04ded63e680dd27c2577a2162b6a42137d62fe5db8f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_025.json.gz",
+      "sha256_respuesta": "e196a3ec91e6ad4fa8d34a068593de4cfa6044fb644242024378e2b69e051b2a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_026.json.gz",
+      "sha256_respuesta": "283b527b0178ac4e9ce4a810fce9dca541e59fd097fdca8dc50e87e199d85d61",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_027.json.gz",
+      "sha256_respuesta": "ff5e599fecdc4ca023340db58f0c6a297330b00bdf753749f28fbcd1f0681b1c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_028.json.gz",
+      "sha256_respuesta": "c9b5480e7c7680bc30b0a4e1ef5e6c25fb61cd67084503478fef5e81d043ccee",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_029.json.gz",
+      "sha256_respuesta": "5ff8de43d876931f63b55d974192551f32f9f2b25dfac37c2fa424b917ab499d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_030.json.gz",
+      "sha256_respuesta": "afbf5284c2437a7e8ad3a5863cc01ebb14a7eac7acaee89aac8f44d37d67fc93",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_031.json.gz",
+      "sha256_respuesta": "31047d2d88ac3cfe4a17c201a1cd6a91c0dc74de3389385372ffc737559262dc",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_032.json.gz",
+      "sha256_respuesta": "cc472374d4f4c28407945cd2ecdf432d2810102acd7a49987f9d57dad4e683ee",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_033.json.gz",
+      "sha256_respuesta": "2a3b90ab48591a08d3908d69ea95b26fd8535c98dee3c3964e750ef82d4d126d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_034.json.gz",
+      "sha256_respuesta": "6e151e02af66872a3536040d6f0e3adbd194e21453f431bb5d28e1743aa7686a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_035.json.gz",
+      "sha256_respuesta": "4294ed40ba40b5e113c71d8d9f8211f34e6c5bf65ac339b4be8fa8111afbddf9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_036.json.gz",
+      "sha256_respuesta": "9810505f1cd6c2c0920ac40f63a2d999a7f9a9a617a13745c5f1133ef78962b6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_037.json.gz",
+      "sha256_respuesta": "76086d68e5a649deaaf2bf811145416fb154bd9349bd6a7f3395cf7fbb7a65d0",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_038.json.gz",
+      "sha256_respuesta": "6cc4cd777f251732306f1d4bd4bb3e7ead5301f3e99f5a054ad6b5316f0d45bf",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_039.json.gz",
+      "sha256_respuesta": "5b5e54e1946b5cfe60079d38bc06bac3234e974c6117ba8e4e083a2d29596446",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_040.json.gz",
+      "sha256_respuesta": "3b56f76f2ba38d752ae8131116290d435f0a8dab07710de42161486a282705a5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_041.json.gz",
+      "sha256_respuesta": "30ecebe36561783c743789281b299c48e6aaff790ce201cf0c52314be165c649",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_042.json.gz",
+      "sha256_respuesta": "75324f0b713855a6d8a0879bae0155acdcd9333c351e6bcdf50b9fa18fa60b72",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_043.json.gz",
+      "sha256_respuesta": "c40211e0460cc73d65aab5ba09fd3891ad1ffe21a3c2fc69ed073daddca0e1c9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_044.json.gz",
+      "sha256_respuesta": "7cf6415edaaec18582ccc24705e59953961a99b38bb17c17ab95edf241821d20",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_045.json.gz",
+      "sha256_respuesta": "f536eaac0a7d641eb6988621d28e96c4df4ba84c7f1cb9839bf0f774b01aada1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_046.json.gz",
+      "sha256_respuesta": "626caa7a9902dd1e602adc4b6d811e7fc5b0a8b856f9e1d1a51b0df81544a4ee",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_047.json.gz",
+      "sha256_respuesta": "dfc5d1679b9e2340c25500627f385d8d485bb83921732b35fd1665bc1c7f4d7b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_048.json.gz",
+      "sha256_respuesta": "cd3fcc5dba34af19667ec62aa59eec50ac002519fa9ed78c69604671ec537d34",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_049.json.gz",
+      "sha256_respuesta": "af4fbd138bed2a680dbfea1e104aaa9781fb106130c618df83a2844e8a9d0b87",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_050.json.gz",
+      "sha256_respuesta": "4d47f7326e64cb1ed697279b399cc686a6e180fa0b504cbbe0dee18c4987680b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_051.json.gz",
+      "sha256_respuesta": "d566ac0af0034e11aa19c2245d295039bfacbd21cfe8a53653b97b1110595d17",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_052.json.gz",
+      "sha256_respuesta": "dcc7bb8e91068038bbdebce30a71b3f04f6e0af5f626c71082b22c263bd9a07a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_053.json.gz",
+      "sha256_respuesta": "8ba48b0ea590b86b2b5c32a75c1a88e74238f682c45a2af3828fae5a5c0a75be",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_054.json.gz",
+      "sha256_respuesta": "4fee4115f739b26a48b4fbde912a038b63034e809bac9b9662fbd7f50e35cec3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_055.json.gz",
+      "sha256_respuesta": "03a7d8f7dbdbdbbde8c9889881cf5518588bb118a9df36e7882c0ff8ec2f7e91",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_056.json.gz",
+      "sha256_respuesta": "2497a01c3a3cf91632ebbfc8766c27717ad1b016b0ceb4f2566b6b5de6a9c760",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_057.json.gz",
+      "sha256_respuesta": "d8ec171d0ce74bf55fca57a722bc00dad68e0ad7485e14a02d151e266b6b5a62",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_058.json.gz",
+      "sha256_respuesta": "9f852477c0f6134a82e6e9ec989a1ddb05849537ffd294dd40dbd16e7fefaa4a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_059.json.gz",
+      "sha256_respuesta": "826cceb40731e3094edae6f57fa010590e2876ace58a4ab0d8e7a2d98e8d5d0c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_060.json.gz",
+      "sha256_respuesta": "3f3d734add892f74cebe85592da69e9df0f8856a3d44ba4600d3008b9eb82654",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_061.json.gz",
+      "sha256_respuesta": "72ca6d7daa939f2aadcd61af12ecb0dbd9b1c519dc2c595ab519400e484de540",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_062.json.gz",
+      "sha256_respuesta": "61d060cc313764448ce61b0a9b83272499ece3031ba5a22a76fb574f7910d989",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_063.json.gz",
+      "sha256_respuesta": "e436adbe7ef5c9a1a7221e4dbb056d7e833552cb9b7c72a609df73867e602002",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_064.json.gz",
+      "sha256_respuesta": "a997c1a29d84ba5bb88c392df88b70a7fbd0c2622b445e5926c6c1525b349108",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_065.json.gz",
+      "sha256_respuesta": "57234927a556b825a64f103173a798f4c5f5103fbdd62427041129aad80b0c52",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_066.json.gz",
+      "sha256_respuesta": "664c4945dfa50ece96e1754a5eac5c398871cfd94d4eee393c68588fe755f677",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_067.json.gz",
+      "sha256_respuesta": "1d6a3fd102deca8dec66dbc7cd2f0d4fe179c26bc9cfe8568c5307d2febf4e3c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_068.json.gz",
+      "sha256_respuesta": "bd1dadb61c96934bb29811639e148bb03f4a7be6c6836c5ca1cabb781c6b2d7f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_069.json.gz",
+      "sha256_respuesta": "36e542e16c6c831e2425a977c119b8e2c3cc30cbee6c2bbe6dfa39d7707979f1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_070.json.gz",
+      "sha256_respuesta": "284711fd254d24c68da5cf94a37fcc6ebcf4f51899f57b00bcdced8ef3ae343f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_071.json.gz",
+      "sha256_respuesta": "e1f596a620cad602b9e284235de87394158aed2639b237a231e4d2e30e342090",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_072.json.gz",
+      "sha256_respuesta": "2bd4ea881c4567baf3fdbb94a87b34c0e486e2d789273ca9a8c0d3f45a082ecb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_073.json.gz",
+      "sha256_respuesta": "0d74f627eea3348b46b98c138f5c82b31badbbebfe411c2cd61cfaee2d325260",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_074.json.gz",
+      "sha256_respuesta": "9f06fce6b8e06236891850072cd39d5c4914c93424618d888fae9b4485869002",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_075.json.gz",
+      "sha256_respuesta": "e8b4a123ee22822e9cd78292614cdd392070b526f2b9f47601c992fbf0aeb8cf",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_076.json.gz",
+      "sha256_respuesta": "b99552ff5e8ac692f17783031193bd0c04adbd3a07a4d7738eccd161a732f2f3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_077.json.gz",
+      "sha256_respuesta": "6e63b1fd93d128f712399929b1684ab35456d1df384aa86ce4044742c41b5571",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_078.json.gz",
+      "sha256_respuesta": "aa921807ec94eeb75b7b1ec607094c7cd2985b0a26b67582b894fc149ce9e2af",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_079.json.gz",
+      "sha256_respuesta": "1901caf649b94003a49540ff4e14e79db3982257fb7f42c386d890c80601ccf8",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_080.json.gz",
+      "sha256_respuesta": "01e527921402eb07f811225468bd6570cadddd035fa85bb752ba39cea8ba317b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_081.json.gz",
+      "sha256_respuesta": "b520292558154d08671531ce98811f881ef5ad32d30d40796ef812f85b16aba4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_082.json.gz",
+      "sha256_respuesta": "f0710dedcf2315bcf64fe039c103b03ea5f3cdde6767ec2f85267ee0d78c1d89",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_083.json.gz",
+      "sha256_respuesta": "33e04b10441f4ec296bdbd5a833114be8eeb5ee28977259765ebc06fe5e1d155",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_084.json.gz",
+      "sha256_respuesta": "1f21a606c7ddbfe4f5101540df32609181c3618bd5f38b7acceed524e9c5de52",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_085.json.gz",
+      "sha256_respuesta": "5d26e2a87d18a41bad80e9b86e17020932455ec11455973a097081a8b57817aa",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_086.json.gz",
+      "sha256_respuesta": "59b84b27c0c744fc2e2867396da4d1ee3ba7a9d32bfb86cb07139bcb96b1258b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_087.json.gz",
+      "sha256_respuesta": "db906e34dc4142786ce4fda122e28c5ace4aba544297b9a299f3307c14182964",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_088.json.gz",
+      "sha256_respuesta": "03ec322f775b902e75b8a9109b6694c1c416b3d76e57fa18b861d17e82e7449d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_089.json.gz",
+      "sha256_respuesta": "a41e1b75289412abc573f59ee18b1dbf28f00ca65cf338304d65a3e664323d55",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_090.json.gz",
+      "sha256_respuesta": "ff14a3e58944c8e14be11cf33fd73ecdf88d128db820d7226c55774b6c5b57fc",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_091.json.gz",
+      "sha256_respuesta": "c67d3300964a8d25dbe9663c7ee4e85c190d5c4f602ec1c45979a6036916cc94",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_092.json.gz",
+      "sha256_respuesta": "74ce4618eb6a765a9dabee98061da8866d7d704b85f3e5fe8990c172f6e404a4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_093.json.gz",
+      "sha256_respuesta": "9f1238b07a39683b589fa826a75bcc24e4f0b0dbae13686077a164974d7c75a7",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_094.json.gz",
+      "sha256_respuesta": "abff3de821a0d1145d995f5750bf3705f07f406316e6ebd2d9402074867d9c3a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_095.json.gz",
+      "sha256_respuesta": "6d2863587889a3bfb2e7686de482b093ea389b7aba3ceee815eabf17e6cd3498",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_096.json.gz",
+      "sha256_respuesta": "73b2b36caebf64ea50df467b10093ab5677cf25362433ac839b1fe6c850f0572",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_097.json.gz",
+      "sha256_respuesta": "15525e3ae9b23a2788c2d7a3e1935715b1d6240b75f7e446620c8c1fb900e34a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_098.json.gz",
+      "sha256_respuesta": "933fbbd966a74c2b34fe4186999b5c06d617f6345d113cab6704a9ef46c2fb66",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_099.json.gz",
+      "sha256_respuesta": "8e474bfdd4ff91156839b3720e9b2f1dfde3a69584ceb0826e1d8f563bd2ef24",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_100.json.gz",
+      "sha256_respuesta": "5f2e0970157ed98662be26fd1c7859aafd252c02af5c7b98569247a28768146c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_101.json.gz",
+      "sha256_respuesta": "4cd50ad3e82da54b41073bfe31de44aae21606b54fbcf1f7e3c08204ef57d40b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_102.json.gz",
+      "sha256_respuesta": "3c218b307c59b325c053e546d1b037cfeb2283d473eaf6a4a37073047d4a3c2a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_103.json.gz",
+      "sha256_respuesta": "303e5b453dc4a98887703ebe5504d0c197153ef0be83d2d9fd3405145e0e775a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_104.json.gz",
+      "sha256_respuesta": "6ff7550ba4f253be0b9fc7f7cd0e70f8c9db9a3c25222f90a9192b651d82725e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_105.json.gz",
+      "sha256_respuesta": "9bd753a4c54726b4ffe83674748eb24ad34646c3b0c8f2164c98f872d51dbf7e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_106.json.gz",
+      "sha256_respuesta": "f534289125f54ddbd3324039d1fc7aed9437e9fdaeff7f72f1795f9ad243d3d1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_107.json.gz",
+      "sha256_respuesta": "2523d868e42e4b194253f377a269f023e31f15fca199fb29ac2edc25d106d7c9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_108.json.gz",
+      "sha256_respuesta": "feea6af27d2d0fa6dd617870f2148557fd248bc22ff4a807919cb41d6c8914d6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_109.json.gz",
+      "sha256_respuesta": "729cd110811bf4dbb8b200c7798d700569d2dcd7fd7c9633ec4e371ee92e6bca",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_110.json.gz",
+      "sha256_respuesta": "4e6428632a2c854f2e96fe97f37e669556eadd80b551fccb6fd05cfb48d8ec25",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_111.json.gz",
+      "sha256_respuesta": "a9910b9e165f335e1c5691c72c98d631ea6aad755204c4c7ef97e5157b2b5908",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_112.json.gz",
+      "sha256_respuesta": "b9be3ac082aeae029378c12bb846b3d702538e29ffab0acbbf0b9a571d110871",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_113.json.gz",
+      "sha256_respuesta": "de0aa15a4af6e1738f9d47de420f186288b70cb06a312243280263a475cea092",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_114.json.gz",
+      "sha256_respuesta": "e15e1f61f730feeaa49fe57fda43cad0492c8fb4af496c964348b43e463bb5d3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_115.json.gz",
+      "sha256_respuesta": "4bd9fd48709f23c47485bd768e3f1458f76b60aced939f9556bb3d558025b912",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_116.json.gz",
+      "sha256_respuesta": "0b5f4f96a7316bbe895622fa84a4e7d30f027a781d606602d13b937809587444",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_117.json.gz",
+      "sha256_respuesta": "8b569ac97a9ee5c9ff0b04e3fbe6573b897492d64c0398a3378df6bb9781bb15",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_118.json.gz",
+      "sha256_respuesta": "87fa9bcce91c5b10b0665dd4aaa30f502b58163b040db6231de45f309a4fbb16",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_119.json.gz",
+      "sha256_respuesta": "b998fd0424ed5387625833364cdaf849039bb1046474db0d7819853c169931b8",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_120.json.gz",
+      "sha256_respuesta": "2cbb552c4cb75a8c731bb3a58cdcc3488b211d9e2f4dbc216c45651e8470028e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_121.json.gz",
+      "sha256_respuesta": "3aade30218e3ce2dd723049f2054caff30756eef4c1a6607eaeca9955741c4a1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_122.json.gz",
+      "sha256_respuesta": "e028061bd8ecb1a9bebff7f89b1f3035ac4b90676ad0274addaab0a71573ee63",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_123.json.gz",
+      "sha256_respuesta": "49e0c5cadfeee765f44cb019c85186094364b74a62de45c0db3efc6e4b10cf80",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_124.json.gz",
+      "sha256_respuesta": "cf31bf777c8e8eab17cba8243894b4f20fed41ced0bc4ec38f06f83a7bbc08a6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_125.json.gz",
+      "sha256_respuesta": "93a0d4b19578cbd203c23c0d569c22673739cc8ad106d635cf361121be83a4df",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_126.json.gz",
+      "sha256_respuesta": "17e34cf89ffae982f398f83bde9f0cc718286e4235ae752654f0ccfd3b9a9f39",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_127.json.gz",
+      "sha256_respuesta": "abe5ae98985f005e73d8a03d9fcbeacf29a0cd8cc6ad749be89f62fec5072b26",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_128.json.gz",
+      "sha256_respuesta": "d7eec964dba801bfd9eea6a0e46e3423fdf0783458ddfd33f572b860119c9d05",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_129.json.gz",
+      "sha256_respuesta": "a10d616593e0592e5d9c76eb2da0a5c1807ccbb310f7252f988baa85a971e4e1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_130.json.gz",
+      "sha256_respuesta": "b21f9707000aeeea6a9f2906710664363c62a98a6d7a999b393d05589775c6ee",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_131.json.gz",
+      "sha256_respuesta": "bfcec3ff3b532448a422e4f1b3876fa5b0f7e1f3e3fe7fc935c0ca8316f7b726",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_132.json.gz",
+      "sha256_respuesta": "b411e4cda6305026d137a694ae13545f70c572d7d15165e82314b3d2f399e0ee",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_133.json.gz",
+      "sha256_respuesta": "880fca3bf4e692a6d0783b996e6eddc1b4f8fa52c1e436aaccf57aebfb8a4f9d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_134.json.gz",
+      "sha256_respuesta": "2ced9357a27a3628a70051ab6c39098615cc25e0ccc8b6dd956f64f47ae573a3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_135.json.gz",
+      "sha256_respuesta": "d6d1164dc3af01c16980afe10fd1dc82d04ccff41e444ee25997e11bffb965e2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_136.json.gz",
+      "sha256_respuesta": "473302ef7831429cf0389dedffdb00ba15f2e1ddc25a3b803e8207a79a9eb42c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_137.json.gz",
+      "sha256_respuesta": "242b0a0a86a264b2b36019ad6c913a5bf8842ca3b35bcf690c9a7993c1d61ecd",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_138.json.gz",
+      "sha256_respuesta": "f34aa23332d35ceb32d511558b9b030cb5da7235428948977f8867ea66c8da52",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_139.json.gz",
+      "sha256_respuesta": "a6293631f22aa3824a6f3996a3a192f8d87716fee1fbff6b6bbb8b01365fb306",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_140.json.gz",
+      "sha256_respuesta": "c0cea0ed022ed56143063a55a3cc0e4447ca2c151c109e5f2cd70ae247518cb4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_141.json.gz",
+      "sha256_respuesta": "5c160cd9787df576ab1163d4e7ce0a688eaa558ca8bf623b404eac9f8c38516f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_142.json.gz",
+      "sha256_respuesta": "4cecb101c713d2a10b2a1b472ecab50fcd4a6439f98b8deddc984ae5997b0a58",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_143.json.gz",
+      "sha256_respuesta": "f0e34c27a7ab54f9d443c98765898f63f7e76bff7b6c546fbe3fc1be19e1e28c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2024_144.json.gz",
+      "sha256_respuesta": "a044f3e0f920cce543ac9554727ef9fcb160baed71885aa0d67e698f23ecfcb2",
+      "registros": 43
+    },
+    {
+      "archivo": "ids_finales_2024.json.gz",
+      "sha256_respuesta": "77b2253f86ca3824756943550270a5940480b8f70e56f2e252d6f394d5e52184",
+      "registros": 72043
+    },
+    {
+      "archivo": "conteo_2025.json.gz",
+      "sha256_respuesta": "b91a820090dbf1ae2195a7219b5a9746ff17e8f83def98a68ed6a4cbcabac964",
+      "registros": 68994
+    },
+    {
+      "archivo": "ids_2025.json.gz",
+      "sha256_respuesta": "111481c47dec13108f5bc93dd6d7d265be292637ed478bf35d567cbb8218aa05",
+      "registros": 68994
+    },
+    {
+      "archivo": "eventos_2025_000.json.gz",
+      "sha256_respuesta": "27eacc33d52bf8bb66021a8aae737e45d1e039e3dbb23939e77e904b7676fe72",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_001.json.gz",
+      "sha256_respuesta": "e656097f3e6b2f9bd698b2e123eb67eba7c2b13a07f75a5256ab3da041296a9a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_002.json.gz",
+      "sha256_respuesta": "43df27e44b501f0e3f511a8be8abd066686fb6f8e14f80d07e8fdbd2999ec75e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_003.json.gz",
+      "sha256_respuesta": "a892fb44747edf1c3cc382bee56674ddbcaea15460cb97a401dd696a1f320704",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_004.json.gz",
+      "sha256_respuesta": "8652f02fd0822666ababe7db5cc09c14a8b4d86632d66f3f64ee286010e6dfa6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_005.json.gz",
+      "sha256_respuesta": "83ba8141e57b5b64328cc369fe14e291c5cdd5f7fdcb39188754b2fde8d836a2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_006.json.gz",
+      "sha256_respuesta": "e401bdef5785990d7460d5699b7885438963202422045fb6ca8e55f5b80f39e2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_007.json.gz",
+      "sha256_respuesta": "7a251ab75554c617cb3964849922af8cee5411685ad18fae525e7ebd10e158f1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_008.json.gz",
+      "sha256_respuesta": "ddd98b6d5dab2bf52de8e5f9163cf427f0973c8e3d44b84f14a8dfb8de220fa1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_009.json.gz",
+      "sha256_respuesta": "443d6a63680f07eca8ff0cf779b3c0dd2c5ef42a54d5041a21a4277206225d3e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_010.json.gz",
+      "sha256_respuesta": "b240bc708f3418614c42c8d2888f55673f956305b4f0cdaf6cd222dbb60f644f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_011.json.gz",
+      "sha256_respuesta": "da8829c30b8713970df7af99cc2fd974446196894ca6c5e180de8333ea129823",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_012.json.gz",
+      "sha256_respuesta": "01476349f0b759bc1bba4e85d95541a1ffe41302343b88cf7f297dd5ac4a3485",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_013.json.gz",
+      "sha256_respuesta": "9e46f8871d0e5a80f7b7118b0728c7b1d5eaee8d24ed6351daa3d3d03b62c751",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_014.json.gz",
+      "sha256_respuesta": "fa4abdadad7b3ecce1aca4dc319c587e46e2c95b58793acf29f311ebd6629ca9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_015.json.gz",
+      "sha256_respuesta": "27268ad1be04bce29454d7aafb1a26a435e5cbd5a4ed55ff231445947b8352e2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_016.json.gz",
+      "sha256_respuesta": "6dde36cd70f81f652e6c40c79b08489ed7f7206902c10a0f63ff0714f932aec6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_017.json.gz",
+      "sha256_respuesta": "7ba30e18e6524112868c1462b6b9bb0c2406391dc6f947aabf5df3a43b6a1e66",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_018.json.gz",
+      "sha256_respuesta": "fc96c11a60928fec26339827c09b0a3afce6723eb6c41c5c31f11aa565e6ddf4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_019.json.gz",
+      "sha256_respuesta": "eb2a74453e5d571fdec087eeb77ee9656b844a732a22911ce2ffcb69e57c1840",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_020.json.gz",
+      "sha256_respuesta": "46849f2e940bb9cd498ab997b7978d13eeb6dd5456ce4eedd0e3ee0b448a8bf1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_021.json.gz",
+      "sha256_respuesta": "4ff04a9f2477fdfef95eaa93eadb6c008a1c3ea9d8abe2b6b77cac0775a88f62",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_022.json.gz",
+      "sha256_respuesta": "d9ca34a2b4c580a1bbe84e9d9ddc377e8aa2511b92a924f5155e488bb3274d4d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_023.json.gz",
+      "sha256_respuesta": "57a7ce0138ceef945dad8110e88cab78c392f69d7fef59b37132c26e751a15c4",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_024.json.gz",
+      "sha256_respuesta": "48f562086d5b8cd788135740191f9202d39610cbfe11dfc7081c3f36a3d1bd9a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_025.json.gz",
+      "sha256_respuesta": "0888ba11a184b7bd2d5c4b9e77f32d83f0fae6544cf0bd3672633e927d1938df",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_026.json.gz",
+      "sha256_respuesta": "93b668c180325fe1f5a0ab1c5fdabbceca94e11779cc24b75143442655befd0e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_027.json.gz",
+      "sha256_respuesta": "522fd239898f93af9d096b48ae247e0434129e98a20a577c98b2ce51c9071ebb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_028.json.gz",
+      "sha256_respuesta": "63e7d8590a9ba5084c280eab0d87c843eff44293400fc2df13946b19f3c115eb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_029.json.gz",
+      "sha256_respuesta": "e8a555a024bf777181bf85c99b77d305bfe14d8cb447cd36eefd1cfb1e3c5deb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_030.json.gz",
+      "sha256_respuesta": "510f83695059e398ad28209a4be40735832dfc88fff89715e8c0d2166a3fcdc0",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_031.json.gz",
+      "sha256_respuesta": "9a7ef738a614dcc9b114f256ffdae2d428df68d9c5513961cc818f12c4138029",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_032.json.gz",
+      "sha256_respuesta": "422aa673d45b7bdb966c35110ef8a9b8db167fc41691b8ff9dbc8b460813ce98",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_033.json.gz",
+      "sha256_respuesta": "2ea579316240d3266f5ff260176175c2022f1ad1425f16e1ca2e392771d823ad",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_034.json.gz",
+      "sha256_respuesta": "c60d473dd6db9d7660096225f6f31628980399083d8fc521794b3fd7daa3f3c8",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_035.json.gz",
+      "sha256_respuesta": "a8127126625067abd175588d4963077eedb0128eb115f976aa74526a32c4e645",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_036.json.gz",
+      "sha256_respuesta": "1f08299704f4e9d81498766d8b247b83711f0319229d6c27f7ea7c3b23d80861",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_037.json.gz",
+      "sha256_respuesta": "6b18f6634cc6326cd83d520bd9f4abaa200b3a7a90382c562d6773bcdf058e19",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_038.json.gz",
+      "sha256_respuesta": "48d3bfe82accc23697e67eb74504b5669be828908798fdfdff803153364bad8d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_039.json.gz",
+      "sha256_respuesta": "13c449e2c0b7f7ee6d20f3d5609f0907c067fbb6d6f2328d6a1465a6df5b57ef",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_040.json.gz",
+      "sha256_respuesta": "e94dcdc5f06cee6183f557be88902a3ecb56db4597de96f2c4d388d746f02c1c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_041.json.gz",
+      "sha256_respuesta": "6de8e769a06398bbea38a9d7723c5b0dab5fade08d4c4f479c152629dc3db2fa",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_042.json.gz",
+      "sha256_respuesta": "0f0e7fb5464cba6879eb82ef6887938fd4b02501cf0120dfc9166cd97eeacedd",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_043.json.gz",
+      "sha256_respuesta": "3f12b5324bc2e10b332179361fcf134e57bf86d8f941d01953bc0db50899d611",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_044.json.gz",
+      "sha256_respuesta": "162e6bbf869ab3092a79a8f39c4757a4ab4c8307c4a81e62150791fd3391a800",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_045.json.gz",
+      "sha256_respuesta": "6e04b28693abd23c87291f8c6101fe4f2e1a2ca8742ddc6c7b07de5bb80ba9c3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_046.json.gz",
+      "sha256_respuesta": "18812122fa3e01a86c8605bf69ea537f1df7b34c39896669db139e01436e73cd",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_047.json.gz",
+      "sha256_respuesta": "d86a4692c8f98f219d2419b0c9ef1f45ac92b3780e65f4d83eaa56777f83fbf9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_048.json.gz",
+      "sha256_respuesta": "2c9f0113bfb12b2ab8b32ce466f966e00840c2ca18de2c39e75018034179688c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_049.json.gz",
+      "sha256_respuesta": "7de9f762af248c560787883af18966a304909faea043615c752700513c2019cc",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_050.json.gz",
+      "sha256_respuesta": "77215a07761f6be28d1358a10ffc06a878e88bcd5f504e6f75fed8a62d243e88",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_051.json.gz",
+      "sha256_respuesta": "49b4a86186d28b98ff47dc47879565b7cdff12ed1efedf9d1c030361cb51c8f5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_052.json.gz",
+      "sha256_respuesta": "ca8aebee1584645cfa2602a79456156734ef5fd39b5e9229743e2123549c4587",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_053.json.gz",
+      "sha256_respuesta": "72384a361339ebba9c66f2e1a1ab01edbd816e34d14968ddce25d81a7472c9c3",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_054.json.gz",
+      "sha256_respuesta": "8e140df379d0eddec05409bfefe91973a49037752d9ac7390827da933b3469ad",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_055.json.gz",
+      "sha256_respuesta": "82042305c6a795687e02b65779dd97098bc67846780979b82cf3c8af8749d89b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_056.json.gz",
+      "sha256_respuesta": "6e28ebeac490f8dbf2e39395f4d3a17bc36df779c1706ea0f501219cb8032f70",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_057.json.gz",
+      "sha256_respuesta": "0c63b0b9c8d5f99dc9b7160d04eddcfe44732280c29b406433629ba64c30f957",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_058.json.gz",
+      "sha256_respuesta": "6c06eef4c5eb8a76597afedba71ee02797abbd3953a3c0f58ba872b904badd0a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_059.json.gz",
+      "sha256_respuesta": "c59b6861c819b35cd38e7a71c786bd4dd0bf9b9814049e615533a3fa046f8bf1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_060.json.gz",
+      "sha256_respuesta": "86a348b9fe230b2faa61a5daae0bcd736df7417a3d62e25ff9f378dcadd461ba",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_061.json.gz",
+      "sha256_respuesta": "608d8cef97f628cfc96223919017dacb92195c4985da7bec212550bdca71865d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_062.json.gz",
+      "sha256_respuesta": "0e1dabbc1e5a78f18c135a74e17ce1064a0e8f99b0025eca95b5628f882fd1e5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_063.json.gz",
+      "sha256_respuesta": "3f9fef0e501e187ad03eede30a3b7df0c0c3346953290eedad6fdf69da516089",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_064.json.gz",
+      "sha256_respuesta": "1e534bb5ecb80f83a7cd8ef6ca90000208445f90aac78b2d2abe210850fbe8d9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_065.json.gz",
+      "sha256_respuesta": "d0ceb52d26d790fee16f208860dc4f958eed7e3005dfe90034eb371b67ae6a67",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_066.json.gz",
+      "sha256_respuesta": "a22109de34c3b8b23fe2ae0061210143a7fc1837917f7cbfec03733ec272edaf",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_067.json.gz",
+      "sha256_respuesta": "645edb9ba1212bccd8e8bf2426f8341e2ed25d7e91f12d7a24b80f3d36133f2c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_068.json.gz",
+      "sha256_respuesta": "771718c2f1811aa934324f96e28e783c6826bffbc6ec4b81d91601b0490637b5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_069.json.gz",
+      "sha256_respuesta": "f3c4656cbda5046c3be4d546626f5c64e50792462988bd76f38411517c1654cd",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_070.json.gz",
+      "sha256_respuesta": "27870c0981428ea9fc5a35b1a34306d7fc4aec5d8c5363f71d52ce482fb42bde",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_071.json.gz",
+      "sha256_respuesta": "a86964ede141f593bcf69057e7769fd91ef5b31d3c5a514a40e8aaec71d024d1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_072.json.gz",
+      "sha256_respuesta": "c888e246e724a57f305d746d3a55a860f3b59489a807b3a20f830bb518275701",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_073.json.gz",
+      "sha256_respuesta": "51b88a9df7acb06cba87daaf6b451482ddf0da6f7a4bc1abb72e4bd985d6caf9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_074.json.gz",
+      "sha256_respuesta": "92eba850276c555cb9f90b487dedfcd504d94ea528359d75ad0bdfabac74766f",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_075.json.gz",
+      "sha256_respuesta": "4a694fa2badb8df78fc80a57470d22988401b7151f09f638401bc802c3883f5c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_076.json.gz",
+      "sha256_respuesta": "84e4d2ad32e2333f3cd90f7e1cdaf8d6afc51a779a5763f8a664060b18ad88e0",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_077.json.gz",
+      "sha256_respuesta": "11f13082bc9619c5faab9e6df94953ee8df9bc2c6a53a3c1ea94cb81e620c787",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_078.json.gz",
+      "sha256_respuesta": "f9fabe7e67ec3b55dfcbb354a7df8fb0a97ec8d9146a0925786af0e0fb99baf5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_079.json.gz",
+      "sha256_respuesta": "5526b181411e85213fc57bc2d275fa2cfeb753a3cb63135add814efa89d81686",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_080.json.gz",
+      "sha256_respuesta": "0a3a240ed024f48b947cd148984b0b152b8c460f2b040d8e4a9dc3ec99989ad2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_081.json.gz",
+      "sha256_respuesta": "46a4dced2a6cb5bd064b203d150df8ccfc8ca641df36d98788ef0791f83d615c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_082.json.gz",
+      "sha256_respuesta": "c65bc3e328139cc9e7030c8e919617120d3329a320c9a2726f7e6e29f1be480d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_083.json.gz",
+      "sha256_respuesta": "96443b17152a2fa9d9777eda5c211c6465f45c0c01f38fc107090a14e0794cad",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_084.json.gz",
+      "sha256_respuesta": "cc90f59b4956ae0e9b74c2c2be8f4ebea442fee609f01ac8a1131ec07d1f0fac",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_085.json.gz",
+      "sha256_respuesta": "40499334790897623933a399bdb0ffa51fced8059e5081d100f3854ef9af43f6",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_086.json.gz",
+      "sha256_respuesta": "63a7d24fecbbdbf6ce1c6982f58fd81270bbae01c1f3ae5b20ea3cdf1340c4f1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_087.json.gz",
+      "sha256_respuesta": "23ca5c3d51d49450fd8221545c4b9b91bc717ca3f4a956c52abe69212d95157c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_088.json.gz",
+      "sha256_respuesta": "153b87bcedeb4bf3242fc93fb52a79569701d498a283a11afa2447ced10fdefb",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_089.json.gz",
+      "sha256_respuesta": "6991469d597237bffcfefd0c2076d5183bc16503109e4a8e88a56f54d6181425",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_090.json.gz",
+      "sha256_respuesta": "34f51de0628c5d7237250bce5c892db4cc7f5d7aa39a0192e5f908a4b11a535b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_091.json.gz",
+      "sha256_respuesta": "8af11ad914bdd1d842d4c495ea42ce256146fb95830c90967114b669f8631168",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_092.json.gz",
+      "sha256_respuesta": "23795b6fa75056ee8420fadab4b43538f2440c1b14f9fcefa0a9d69eccda1b4b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_093.json.gz",
+      "sha256_respuesta": "1c9539a5e24fab0ecd9de84c0baea4790e79bbc29e9a121f7fecc75e3bb9e0f7",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_094.json.gz",
+      "sha256_respuesta": "d3ba209a1857ed3c4cacb39a18241aba359aa2dd8d081f239706d020d060d42e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_095.json.gz",
+      "sha256_respuesta": "c4771d84b6d64d7dfe8040b0a817d1b2d45cc1a8d37d80a86519a4b87850f18a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_096.json.gz",
+      "sha256_respuesta": "0585c7a7412016d61621b78ae980a1959c107e008cc03e0a199a4e4840f3a292",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_097.json.gz",
+      "sha256_respuesta": "d452701c77c9d36c82f3042678ca6e059baa9ce5e1a29194b2437642c1429d20",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_098.json.gz",
+      "sha256_respuesta": "a63384fe99aa97fbbef5348f0c4ef221c7204d31d15942b5a1ffc6afeb19be14",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_099.json.gz",
+      "sha256_respuesta": "6d9cd796a7bb68153085f7c85828c76074a118601a53273201e7dc50da6a8a54",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_100.json.gz",
+      "sha256_respuesta": "7cbe1b623924e0b3e6fc112d6978c4deaaa87c7145361019dbf0fb65d010102d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_101.json.gz",
+      "sha256_respuesta": "7ba895fdff2695f604998c9fe4f98f7e8298183a6e74e8d0f8df4f242ab46f13",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_102.json.gz",
+      "sha256_respuesta": "ee4dd16bb052898ec9fc8d26897c92167289e2d597104ad45cb42339fe331f33",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_103.json.gz",
+      "sha256_respuesta": "933b50d33c335870c72935d61e4dc8287028a681e4df34cf79aa2221c9c7f4d8",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_104.json.gz",
+      "sha256_respuesta": "b7d248663cf9b7782a1143f70fcdcd3668a674a9d6915046f916f139f7d325ef",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_105.json.gz",
+      "sha256_respuesta": "8797b74874952a9214d79d26e2d5adefa3107e591160790794fdc64e80e58baa",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_106.json.gz",
+      "sha256_respuesta": "05b5b543bea4fb5fab89bb1fb500bd5d46149a7e89205c661974b9ccbe4c53e1",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_107.json.gz",
+      "sha256_respuesta": "4c0721caf9485e02f2dac254b9cc40f5dfe70e49cd216b55d64d90a02b3ecfe2",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_108.json.gz",
+      "sha256_respuesta": "85988c91585f807f70f078760e0fe2689c8781ad09b2659ff216c631a36e74f9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_109.json.gz",
+      "sha256_respuesta": "59e9e8d46613716cae8d38d2e00f2f64cf270d06485bc5814f236ca02bc78eb9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_110.json.gz",
+      "sha256_respuesta": "25c2b4490198419ca54200b426f944e83e13d166d4cfa7b013d01faad248307e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_111.json.gz",
+      "sha256_respuesta": "556b6edefb9551d3740b4df25758ff3cf03f91509f096efef7ba4e6c28a71226",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_112.json.gz",
+      "sha256_respuesta": "66615eac2b933ecf9b3a31825a5a42e558d54e99bbad3a18f61c35721c5a098a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_113.json.gz",
+      "sha256_respuesta": "7f57c259322e5b1e398a06976d754cd79aac35b058f1f87c2417b0bc7c2c2259",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_114.json.gz",
+      "sha256_respuesta": "f2dfe8d5ab1faa44f84925972dc2bb4712ec419d0d5ec838d01ed65da3b9b435",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_115.json.gz",
+      "sha256_respuesta": "4303e9af4a237e2715c22b684416f301dfd1bef0a2243a7ced08dc8c9aba6d89",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_116.json.gz",
+      "sha256_respuesta": "2562eb42d9062cdb1c8965f65a3ae6cde4d5b275741b1b676ed3f0644f1094f5",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_117.json.gz",
+      "sha256_respuesta": "4710a96609610da3761a0bc4081fbfb2ceafbf80d918f4d18f7f7aba6e1bb992",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_118.json.gz",
+      "sha256_respuesta": "85f48359ad12b5a78d2453107accdc4cf55781296081c2922e1c3322fe6c8f5e",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_119.json.gz",
+      "sha256_respuesta": "82876cafc4b9c7e8b300e45c7e55adf67bdb547259bbcff08315d598e8871ad0",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_120.json.gz",
+      "sha256_respuesta": "ef70b5a622d282731df3a7fbe6daa38e4c96c3e0cf6083f905a2569df6067779",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_121.json.gz",
+      "sha256_respuesta": "181d25beafe369fb1ebcc8748fa7737946a3e58d654dae3a2fb945299191c541",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_122.json.gz",
+      "sha256_respuesta": "e858a30e47e78bfce31e4c7b7360413c728bc42b91f0f945b9cbdd994190a016",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_123.json.gz",
+      "sha256_respuesta": "e34b51aea0d7860d208c489129fd966a7f7fc65b01dbff059995fdc7c551247d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_124.json.gz",
+      "sha256_respuesta": "9d900febf77eaa81edae283c01cbf84c331946d654a6ded736d60e3312ece61a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_125.json.gz",
+      "sha256_respuesta": "083ab7fcec4dd9c90d601283ce492618225fae4cfe359a1576d9833d66eab93c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_126.json.gz",
+      "sha256_respuesta": "b3cac3042e5fa1d7800e6cb1b60fb5c84751f99c0919f0fd1f0a786bf115ac2c",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_127.json.gz",
+      "sha256_respuesta": "e392b0d7c2ceb0ccc45e5840aec44c0cd0418659b5266b234f4831ebf039192a",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_128.json.gz",
+      "sha256_respuesta": "2974a7c8c31d7261dd4985b00966702f3fcab8060097bab8f794caef410c5bc9",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_129.json.gz",
+      "sha256_respuesta": "e740eb678acd761df07ae05d19e694d4be1bba228b95e060be25e1bf8ec53585",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_130.json.gz",
+      "sha256_respuesta": "983bf05667624e4f022a69978ec9278120a5082e29bc22b2fc04b6dd6e5b0259",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_131.json.gz",
+      "sha256_respuesta": "c6dc47269cf0f7a9d2a01012e703bff965e24d92a77b7ad717988b4ce6e27c5b",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_132.json.gz",
+      "sha256_respuesta": "acb14451282702b85d9bdf01bb006a6535990d9d5b9564308e4aec52c8afbf6d",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_133.json.gz",
+      "sha256_respuesta": "36c5caa145f6bfd4370a7c82b04a5eac1542bb4d7ce50d7b4ece4d875babb7ff",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_134.json.gz",
+      "sha256_respuesta": "bfe5a89b24a156147f4d4603fb35090a8d4dd34e4cbc3daf890fdd8badd4e306",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_135.json.gz",
+      "sha256_respuesta": "df8d988fe7658b338883000463cbb9cf22862ceea1d8d38670b66c10b5509dbf",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_136.json.gz",
+      "sha256_respuesta": "8374aa1963f1509caa720a06862ba449cdfd7d5286941951f4795434794984ab",
+      "registros": 500
+    },
+    {
+      "archivo": "eventos_2025_137.json.gz",
+      "sha256_respuesta": "56effca1c128cd785d880385dc47f297236110cc0e4397d0c76d3ddd64b4ae56",
+      "registros": 494
+    },
+    {
+      "archivo": "ids_finales_2025.json.gz",
+      "sha256_respuesta": "111481c47dec13108f5bc93dd6d7d265be292637ed478bf35d567cbb8218aa05",
+      "registros": 68994
+    },
+    {
+      "archivo": "metadatos_despues.json.gz",
+      "sha256_respuesta": "a4afe8d11067366d55ca4cefd0ce8bb8d2f54169512b2a853297ab3a7e5e841c",
+      "registros": null
+    }
+  ]
+}

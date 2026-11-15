@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import proyecto
 from explorar_datos import (perfil_numerico, comparar_versiones, cobertura_espacial,
                             discordancias_espaciales, actualizar_readme, MARCAS)
 from flujo_vehicular import clasificar_rol

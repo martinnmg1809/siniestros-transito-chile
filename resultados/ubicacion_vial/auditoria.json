@@ -1,0 +1,161 @@
+{
+  "consulta_utc": "2026-11-14T19:35:14.323943+00:00",
+  "pagina_procedencia": "https://mapasvialidad.mop.gob.cl/descargas/",
+  "fuentes": [
+    {
+      "fuente": "enlace_descargas",
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3",
+      "entidades_ruta5": 71,
+      "orientacion_SUR": 10,
+      "km_i_y_f_cero": 0,
+      "muestra_objectid": 150586,
+      "vertices_muestra": 1324,
+      "vertices_con_m_numerica": 1324,
+      "m_inicial_muestra": 681155.9244,
+      "m_final_muestra": 715216.1867,
+      "hasM_capa": true
+    },
+    {
+      "fuente": "alternativa_indexada",
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3",
+      "entidades_ruta5": 79,
+      "orientacion_SUR": 26,
+      "km_i_y_f_cero": 7,
+      "muestra_objectid": 5078,
+      "vertices_muestra": 4113,
+      "vertices_con_m_numerica": 4113,
+      "m_inicial_muestra": 449278,
+      "m_final_muestra": 564650,
+      "hasM_capa": true
+    }
+  ],
+  "consultas": [
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer",
+      "parametros": {
+        "f": "json"
+      },
+      "original": "enlace_descargas_servicio.json",
+      "sha256": "3001873cf292f03de3ec99715ed949ec761ce353a953624f1a057815c694a9ac"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3",
+      "parametros": {
+        "f": "json"
+      },
+      "original": "enlace_descargas_capa.json",
+      "sha256": "714a78417c515542726054f60c1fb0f30e2cf410fd9e97237c7049a8eb78155b"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnCountOnly": "true"
+      },
+      "original": "enlace_descargas_conteo.json",
+      "sha256": "1a88dc0f3ffcf27c4ff0bdb9f04d75100944bd5999bfa5ab21cd669d1f062b16"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnIdsOnly": "true"
+      },
+      "original": "enlace_descargas_ids.json",
+      "sha256": "250bf4a70c476959056aaf46d1be6acd10f66cd68212c7fa315ae259b68dfe06"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnGeometry": "false",
+        "outFields": "OBJECTID,ROL,ROL_LABEL,ORIENTACION,CALZADA,KM_I,KM_F,REGION,NOMBRE_CAMINO"
+      },
+      "original": "enlace_descargas_atributos.json",
+      "sha256": "418dc5c54fb99b59e7fa10cdfaf449b6d73a2ec77f80bbdf701bd9946b9eb801"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "objectIds": 150586,
+        "outFields": "OBJECTID,KM_I,KM_F,ROL,ORIENTACION",
+        "returnGeometry": "true",
+        "returnM": "true",
+        "returnZ": "false",
+        "outSR": 4326
+      },
+      "original": "enlace_descargas_geometria_muestra.json",
+      "sha256": "3960b95b6c5370610b3376918e1693c7a5d5030bf3090131661aa73c5f633e5e"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer",
+      "parametros": {
+        "f": "json"
+      },
+      "original": "alternativa_indexada_servicio.json",
+      "sha256": "6a73a2f900a0267ff2bba1785952db16d4db5df79fe7a7610ebfe94f2360e9d7"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3",
+      "parametros": {
+        "f": "json"
+      },
+      "original": "alternativa_indexada_capa.json",
+      "sha256": "c1971d87231bc6751abb7fb437a485bab8a136fee0d75fe3782cfb0a42129acb"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnCountOnly": "true"
+      },
+      "original": "alternativa_indexada_conteo.json",
+      "sha256": "1f533741d5872cf64778866e339e39551bca410b6645703390b78619f78bb1e1"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnIdsOnly": "true"
+      },
+      "original": "alternativa_indexada_ids.json",
+      "sha256": "f6c9ec7f9e6cfb34d13c3ae0d9722ba76baf9700b0ecd14bb9a62b59247c7620"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "where": "ROL_LABEL='5'",
+        "returnGeometry": "false",
+        "outFields": "OBJECTID,ROL,ROL_LABEL,ORIENTACION,CALZADA,KM_I,KM_F,REGION,NOMBRE_CAMINO"
+      },
+      "original": "alternativa_indexada_atributos.json",
+      "sha256": "c7bb5d4b0d50cea1b40a7a6a4e0adb12fe47010e9489f3c29f2b538c7227df48"
+    },
+    {
+      "url": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3/query",
+      "parametros": {
+        "f": "json",
+        "objectIds": 5078,
+        "outFields": "OBJECTID,KM_I,KM_F,ROL,ORIENTACION",
+        "returnGeometry": "true",
+        "returnM": "true",
+        "returnZ": "false",
+        "outSR": 4326
+      },
+      "original": "alternativa_indexada_geometria_muestra.json",
+      "sha256": "87f349c0a609bbba2e3ab9cc4e0a84680f3315980da3880c36930414e63f3cff"
+    }
+  ],
+  "limites": [
+    "Se consultaron atributos completos de Ruta 5 y solo una geometría de muestra por servicio.",
+    "No se validaron unidades ni vigencia histórica de la cartografía.",
+    "No se asignaron eventos ni se alteraron modelos."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0-alternativa-rest",
+  "fuente_mop": "https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3",
+  "crs_calculo": "EPSG:32719",
+  "buffer_competidoras_m": 2000,
+  "distancia_max_m": 75,
+  "margen_competidora_m": 30,
+  "tolerancia_alternativas_ruta5_m": 200,
+  "distancia_borde_tramo_m": 50,
+  "sensibilidad_distancias_m": [
+    25,
+    50,
+    75,
+    100,
+    200
+  ],
+  "tramo_km": 5,
+  "km_min": 0,
+  "km_max_exclusivo": 1275,
+  "anio_comprobacion": 2024,
+  "anios_control_medidas": [
+    2020,
+    2021
+  ],
+  "criterios_propuestos_no_rubrica": {
+    "limite_inferior_wilson95_precision": 0.95,
+    "limite_inferior_wilson95_sensibilidad": 0.9,
+    "limite_inferior_wilson95_tramo_correcto": 0.9,
+    "vigencia_cartografica_acreditada": false,
+    "cobertura_competidoras_urbanas_acreditada": false
+  },
+  "alcance": "Ensayo separado; no cambia particiones, cuarentena ni modelos. No aplicar a 2025 si falla la comprobación. No escoger umbrales con 2024.",
+  "motivo_fuente": "Ensayo independiente de la alternativa oficial ya inventariada; servicio preferido con errores 500 y timeouts. No se mezclan geometrías. Criterios numéricos sin cambios y sin resultados aún."
+}

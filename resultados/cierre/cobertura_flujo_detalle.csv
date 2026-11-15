@@ -1,0 +1,46 @@
+anio,grupo,contrato,tramos,siniestros,siniestros_total_anio,porcentaje_eventos,poblacion,fuente
+2020,antes_primer_contrato,(sin contrato),43,815,2295,35.51,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Chillán-Collipulli,30,205,2295,8.93,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Collipulli-Temuco,20,135,2295,5.88,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Puerto Montt-Pargua,10,29,2295,1.26,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Río Bueno-Puerto Montt,23,119,2295,5.19,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Talca-Chillán,37,521,2295,22.7,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,con_contrato,Temuco-Río Bueno,33,140,2295,6.1,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,despues_ultimo_contrato,(sin contrato),39,136,2295,5.93,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2020,frontera_bypass_margen,(sin contrato),20,195,2295,8.5,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,antes_primer_contrato,(sin contrato),43,1131,3288,34.4,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Chillán-Collipulli,30,283,3288,8.61,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Collipulli-Temuco,20,264,3288,8.03,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Puerto Montt-Pargua,10,41,3288,1.25,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Río Bueno-Puerto Montt,23,169,3288,5.14,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Talca-Chillán,37,697,3288,21.2,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,con_contrato,Temuco-Río Bueno,33,215,3288,6.54,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,despues_ultimo_contrato,(sin contrato),39,155,3288,4.71,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2021,frontera_bypass_margen,(sin contrato),20,333,3288,10.13,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,antes_primer_contrato,(sin contrato),43,929,3369,27.57,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Chillán-Collipulli,30,283,3369,8.4,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Collipulli-Temuco,20,284,3369,8.43,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Puerto Montt-Pargua,10,53,3369,1.57,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Río Bueno-Puerto Montt,23,220,3369,6.53,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Talca-Chillán,37,782,3369,23.21,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,con_contrato,Temuco-Río Bueno,33,250,3369,7.42,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,despues_ultimo_contrato,(sin contrato),39,242,3369,7.18,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2022,frontera_bypass_margen,(sin contrato),20,326,3369,9.68,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,antes_primer_contrato,(sin contrato),43,830,2863,28.99,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Chillán-Collipulli,30,258,2863,9.01,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Collipulli-Temuco,20,199,2863,6.95,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Puerto Montt-Pargua,10,50,2863,1.75,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Río Bueno-Puerto Montt,23,208,2863,7.27,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Talca-Chillán,37,667,2863,23.3,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,con_contrato,Temuco-Río Bueno,33,195,2863,6.81,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,despues_ultimo_contrato,(sin contrato),39,238,2863,8.31,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2023,frontera_bypass_margen,(sin contrato),20,218,2863,7.61,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,antes_primer_contrato,(sin contrato),43,728,2605,27.95,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Chillán-Collipulli,30,228,2605,8.75,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Collipulli-Temuco,20,217,2605,8.33,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Puerto Montt-Pargua,10,72,2605,2.76,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Río Bueno-Puerto Montt,23,203,2605,7.79,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Talca-Chillán,37,598,2605,22.96,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,con_contrato,Temuco-Río Bueno,33,173,2605,6.64,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,despues_ultimo_contrato,(sin contrato),39,179,2605,6.87,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv
+2024,frontera_bypass_margen,(sin contrato),20,207,2605,7.95,14420,ruta5_2020_2024.csv.gz sin ids_cuarentena; asignacion_contratos.csv

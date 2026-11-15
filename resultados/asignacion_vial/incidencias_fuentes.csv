@@ -1,0 +1,4 @@
+url,estado,detalle
+https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile/MapServer/3/query,No utilizable en esta ejecución,ArcGIS 500 Error performing query operation y posteriores tiempos de espera; no se completó instantánea.
+https://mapasvialidad.mop.gob.cl/archivos/sites/10/2026/08/Red_Vial_shp2026_08_05.zip,Inspección no completada,Se comprobó cabecera PK; la lectura excedió el límite de 64 MiB. No se guardó ni utilizó el archivo incompleto.
+https://rest-sit.mop.gob.cl/arcgis/rest/services/VIALIDAD/Red_Vial_Chile_/MapServer/3,Instantánea REST completada,"79 entidades Ruta 5 y 1218 competidoras, conteos e identificadores comprobados. Sin mezcla con otras versiones."

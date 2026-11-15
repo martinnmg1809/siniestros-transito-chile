@@ -1,5 +1,10 @@
 # Autoría de los commits
 
+Nombre oficial del proyecto: **Predicción dinámica de siniestros en carreteras chilenas**.
+Usarlo en documentos y títulos vigentes. El caso validado actual sigue siendo
+Ruta 5 Sur; el nombre no amplía el alcance científico. El identificador propuesto
+de GitHub y su estado administrativo están en `docs/identidad_proyecto.md`.
+
 - Mantener la identidad de Git configurada para el usuario y usarla como committer.
 - Por defecto, mantener al usuario como autor principal. Si solicita atribuir un commit
   realizado por Codex a la cuenta Codex, usar únicamente para ese commit
@@ -17,6 +22,22 @@
   no atribuirle cambios ajenos o realizados íntegramente por una persona.
 - Conservar la autoría y el historial de los commits publicados. Esta configuración se
   aplica a commits nuevos; no requiere reescribir el historial ni hacer force-push.
+
+## Organización y ejecución
+
+- El código vive en `codigo/datos`, `codigo/modelos`, `codigo/evaluacion`,
+  `codigo/visualizacion` y `codigo/historico`. No volver a crear scripts en la raíz.
+- Ejecutar tareas con `.venv/bin/python proyecto.py <comando> [opciones]`.
+  El lanzador prepara los módulos y el directorio de trabajo; `--listar` muestra el catálogo.
+- Conservar nombres de módulos y clases para cargar los modelos joblib anteriores.
+- Los CSV CONASET están en `data/siniestros`, el calendario en `data/calendario`
+  y los cachés en `data/cache`. Los dos últimos son insumos locales excluidos de Git.
+- El README principal es un índice. Resultados y EDA se documentan en
+  `docs/resultados.md` y `docs/eda.md`; los generadores mantienen allí sus bloques.
+- Las auditorías originales conservan sus hashes. `config/migracion_estructura.csv`
+  registra exclusivamente la reorganización. No actualizarlo para eludir cambios
+  científicos o aceptar código alterado: esos cambios requieren validar y auditar
+  el experimento correspondiente.
 
 ## Mantenimiento programado
 
